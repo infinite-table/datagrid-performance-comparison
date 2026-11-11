@@ -91,13 +91,22 @@ jobs:
           cache: npm
 
       - name: Install
+        timeout-minutes: 15
         run: |
           npm ci
           npm install --save-exact \
             "@infinite-table/infinite-react@$INFINITE" \
             "ag-grid-community@$AG_GRID" \
             "ag-grid-react@$AG_GRID"
-          npx playwright install --with-deps chromium
+          npx playwright install chromium
+
+      # Chromium's apt packages. The runner image already has its libraries
+      # and only fonts are missing, so an unreachable Ubuntu mirror must not
+      # hold up or fail the run
+      - name: Install Chromium's system dependencies
+        timeout-minutes: 10
+        continue-on-error: true
+        run: npx playwright install-deps chromium
 
       # Chromium's sandbox needs unprivileged user namespaces, which the
       # Ubuntu 24.04 runners restrict - see "Sandboxed Chromium" in the README
