@@ -49,6 +49,8 @@ The absolute numbers depend on the machine - compare the two grids, not the mill
   <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 3,088 ms, Infinite Table 1,380 ms; String column, descending: AG Grid 3,034 ms, Infinite Table 1,586 ms; Number column, ascending: AG Grid 2,710 ms, Infinite Table 1,140 ms; Number column, descending: AG Grid 2,728 ms, Infinite Table 1,142 ms.">
 </picture>
 
+The string column is lowercase a-z text, sorted in an `en-US` browser. That is the best case for how Infinite Table compares strings - see [String sorting](#string-sorting) before reading too much into it. The number column has no such condition.
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-jump-dark.svg">
   <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: AG Grid 28.4 ms, Infinite Table 28.4 ms; 1M rows: AG Grid 27.4 ms, Infinite Table 30 ms.">
@@ -267,6 +269,24 @@ set:
 | `correctness-vertical`   | during a very fast vertical scroll: is every cell there, and is it the right one?          |
 | `correctness-horizontal` | the same, horizontally                                                                     |
 | `visual-blank-vertical`  | a screencast of a very fast scroll: how many blank rows does the compositor actually show? |
+
+### String sorting
+
+The string result is for **an `en-US` browser and ASCII text**, and does not
+carry over to every setup:
+
+- By default the two grids don't compare strings the same way. Infinite Table
+  uses the order of the browser's locale (`localeCompare`). AG Grid compares
+  character codes (`<`), which is cheaper, but puts "Zebra" before "apple".
+  The sorted column is lowercase a-z, where both give the same order.
+- Chrome has a fast path for locale-aware comparison of ASCII text, in
+  `en-US` and a few other locales (`en-GB`, `de`, `fr`, but not `en-AU`,
+  `de-DE` or `fr-FR`). The benchmark browser runs as `en-US`.
+- In the other locales, or when the text has accented characters, that
+  comparison is several times slower. There, sorting a string column in
+  Infinite Table 10.1.4 takes about as long as in AG Grid, not half as long.
+
+Sorting a number column doesn't depend on any of this.
 
 ## License key
 

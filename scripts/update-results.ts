@@ -89,6 +89,8 @@ type ChartSpec = {
   /** what the rows of this chart are called in the table */
   context: string;
   rows: Row[];
+  /** a paragraph for the README, under the chart */
+  note?: string;
 };
 
 const SIZE_LABELS: Record<string, string> = { '300k': '300k', '1m': '1M' };
@@ -166,6 +168,11 @@ const CHARTS: ChartSpec[] = [
     title: 'Sorting 1,000,000 rows: click to sorted rows painted',
     subtitle: 'ascending is the first, cold sort',
     rows: sortRows('1m'),
+    note:
+      'The string column is lowercase a-z text, sorted in an `en-US` browser. ' +
+      'That is the best case for how Infinite Table compares strings - see ' +
+      '[String sorting](#string-sorting) before reading too much into it. ' +
+      'The number column has no such condition.',
   },
   {
     file: 'scroll-jump',
@@ -529,6 +536,10 @@ function buildReadmeSection(latest: HistoryEntry, history: HistoryEntry[]) {
         )}">\n` +
         `</picture>`,
     );
+    if (spec.note) {
+      out.push('');
+      out.push(spec.note);
+    }
 
     // the "at a glance" rows come back in the charts that follow
     if (spec.file !== 'at-a-glance') {
