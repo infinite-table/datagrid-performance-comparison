@@ -1,4 +1,4 @@
-# Runs the benchmark and publishes the results:
+# Runs the benchmark for new versions of the two grids and publishes the results:
 #
 #  - every 6 hours it looks on npm for a new version of
 #    @infinite-table/infinite-react or ag-grid-react, and measures it
