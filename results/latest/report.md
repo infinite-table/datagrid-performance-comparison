@@ -1,13 +1,13 @@
 # AG Grid vs Infinite Table — benchmark report
 
-- Run: `2026-11-11` · 2026-11-11T16:52:14.998Z
+- Run: `2026-11-11` · 2026-11-11T17:22:32.873Z
 - AG Grid 36.3.0 · Infinite Table 10.1.4
 - 300,000 rows (data checksum `300000:72377c6e`) · 1,000,000 rows (data checksum `1000000:19e5eebe`) × 20 columns, identical data for both grids
 - Chrome 136.0.7103.25 · headless · CPU throttling 1× · viewport 1400×1000
 - 7 measured runs per grid per scenario (+1 warmup, discarded), A/B interleaved, fresh browser context per run
 - Darwin 24.1.0 arm64 · Apple M1 Pro × 10
 - Served from http://localhost:5560/
-- Grid body: 757 px high in both grids (the Infinite box is 21 px taller to make up for what it renders outside the body - the footer Infinite Table shows without a license key)
+- Grid body: 757 px high in both grids (to get there, the setup made the boxes taller: Infinite +21 px)
 
 "Infinite / AG" < 1 means Infinite has the lower value. "Better" is only set when the 95% bootstrap CI of the ratio of medians excludes 1. When AG Grid has zeros among its values (e.g. 0% blank samples) a ratio means nothing, so the difference of medians (Infinite − AG) and its CI are shown instead, and "Better" needs that CI to exclude 0.
 
@@ -27,12 +27,12 @@ Mount the grid with all the rows (data already in memory). "Visible" = from setS
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Time to first rows painted (lower is better) | 199 ms (±5.95) | 139 ms (±7.38) | 0.70 × | 0.67–0.72 | Infinite |
-| Time until settled (lower is better) | 303 ms (±5.91) | 142 ms (±2.87) | 0.47 × | 0.45–0.48 | Infinite |
-| Main thread: scripting (lower is better) | 182 ms (±5.91) | 126 ms (±6.21) | 0.69 × | 0.66–0.71 | Infinite |
-| Main thread: layout (lower is better) | 7.32 ms (±0.21) | 2.16 ms (±0.14) | 0.30 × | 0.28–0.31 | Infinite |
-| Main thread: style recalc (lower is better) | 7.61 ms (±0.25) | 3.80 ms (±0.13) | 0.50 × | 0.47–0.51 | Infinite |
-| Main thread: all tasks (lower is better) | 209 ms (±6.62) | 144 ms (±5.59) | 0.69 × | 0.66–0.70 | Infinite |
+| Time to first rows painted (lower is better) | 198 ms (±14.2) | 140 ms (±9.82) | 0.71 × | 0.64–0.78 | Infinite |
+| Time until settled (lower is better) | 302 ms (±14.5) | 140 ms (±8.64) | 0.46 × | 0.43–0.51 | Infinite |
+| Main thread: scripting (lower is better) | 180 ms (±13.1) | 126 ms (±9.66) | 0.70 × | 0.64–0.80 | Infinite |
+| Main thread: layout (lower is better) | 7.64 ms (±0.55) | 2.33 ms (±0.14) | 0.31 × | 0.28–0.34 | Infinite |
+| Main thread: style recalc (lower is better) | 7.76 ms (±0.45) | 3.82 ms (±0.27) | 0.49 × | 0.46–0.55 | Infinite |
+| Main thread: all tasks (lower is better) | 205 ms (±14.3) | 145 ms (±8.09) | 0.71 × | 0.65–0.77 | Infinite |
 | JS heap retained by grid (lower is better) | 67.5 MB (±0.00) | 36.6 MB (±0.35) | 0.54 × | 0.54–0.54 | Infinite |
 | DOM elements in grid (lower is better) | 637 (±0.00) | 609 (±0.00) | 0.96 × | 0.96–0.96 | Infinite |
 
@@ -42,12 +42,12 @@ Click the "code" column header (string column, unique-ish values) - first click 
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Ascending: click to sorted rows painted (lower is better) | 793 ms (±66.6) | 344 ms (±6.98) | 0.43 × | 0.37–0.45 | Infinite |
-| Ascending: click to settled (lower is better) | 793 ms (±66.6) | 347 ms (±8.21) | 0.44 × | 0.38–0.46 | Infinite |
-| Descending: click to sorted rows painted (lower is better) | 832 ms (±16.9) | 346 ms (±10.3) | 0.42 × | 0.40–0.43 | Infinite |
-| Descending: click to settled (lower is better) | 832 ms (±16.9) | 346 ms (±10.3) | 0.42 × | 0.40–0.43 | Infinite |
-| Ascending: main thread scripting (lower is better) | 781 ms (±66.4) | 332 ms (±7.61) | 0.42 × | 0.36–0.44 | Infinite |
-| Descending: main thread scripting (lower is better) | 822 ms (±17.1) | 332 ms (±10.9) | 0.40 × | 0.39–0.42 | Infinite |
+| Ascending: click to sorted rows painted (lower is better) | 774 ms (±65.3) | 348 ms (±19.9) | 0.45 × | 0.38–0.46 | Infinite |
+| Ascending: click to settled (lower is better) | 774 ms (±65.3) | 362 ms (±20.5) | 0.47 × | 0.39–0.48 | Infinite |
+| Descending: click to sorted rows painted (lower is better) | 810 ms (±45.5) | 360 ms (±26.0) | 0.44 × | 0.40–0.49 | Infinite |
+| Descending: click to settled (lower is better) | 810 ms (±45.5) | 360 ms (±26.0) | 0.44 × | 0.40–0.49 | Infinite |
+| Ascending: main thread scripting (lower is better) | 762 ms (±64.5) | 335 ms (±20.6) | 0.44 × | 0.37–0.45 | Infinite |
+| Descending: main thread scripting (lower is better) | 801 ms (±45.4) | 347 ms (±27.4) | 0.43 × | 0.39–0.48 | Infinite |
 
 ## sort-number - 300,000 rows
 
@@ -55,12 +55,12 @@ Click the "salary" column header (number column, unique-ish values) - first clic
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Ascending: click to sorted rows painted (lower is better) | 694 ms (±28.5) | 288 ms (±7.71) | 0.41 × | 0.39–0.43 | Infinite |
-| Ascending: click to settled (lower is better) | 694 ms (±28.5) | 294 ms (±9.49) | 0.42 × | 0.40–0.45 | Infinite |
-| Descending: click to sorted rows painted (lower is better) | 705 ms (±16.3) | 288 ms (±8.54) | 0.41 × | 0.40–0.43 | Infinite |
-| Descending: click to settled (lower is better) | 705 ms (±16.3) | 288 ms (±8.54) | 0.41 × | 0.40–0.43 | Infinite |
-| Ascending: main thread scripting (lower is better) | 683 ms (±28.6) | 281 ms (±6.63) | 0.41 × | 0.38–0.42 | Infinite |
-| Descending: main thread scripting (lower is better) | 696 ms (±16.2) | 274 ms (±8.21) | 0.39 × | 0.39–0.42 | Infinite |
+| Ascending: click to sorted rows painted (lower is better) | 707 ms (±83.4) | 306 ms (±29.0) | 0.43 × | 0.38–0.45 | Infinite |
+| Ascending: click to settled (lower is better) | 707 ms (±83.4) | 312 ms (±25.8) | 0.44 × | 0.39–0.48 | Infinite |
+| Descending: click to sorted rows painted (lower is better) | 714 ms (±77.7) | 314 ms (±22.1) | 0.44 × | 0.37–0.48 | Infinite |
+| Descending: click to settled (lower is better) | 714 ms (±77.7) | 314 ms (±22.1) | 0.44 × | 0.37–0.48 | Infinite |
+| Ascending: main thread scripting (lower is better) | 695 ms (±83.8) | 295 ms (±27.5) | 0.42 × | 0.37–0.45 | Infinite |
+| Descending: main thread scripting (lower is better) | 705 ms (±77.7) | 305 ms (±21.9) | 0.43 × | 0.36–0.48 | Infinite |
 
 ## scroll-jump - 300,000 rows
 
@@ -68,10 +68,10 @@ Programmatic jumps to 10 far-away scroll positions (like dragging the scrollbar 
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Jump to rows painted (median of jumps) (lower is better) | 28.3 ms (±1.58) | 27.9 ms (±1.77) | 0.99 × | 0.95–1.14 | ≈ |
-| Jump to rows painted (worst jump) (lower is better) | 39.4 ms (±5.32) | 34.1 ms (±8.58) | 0.87 × | 0.80–1.05 | ≈ |
-| Jump to settled (median of jumps) (lower is better) | 28.3 ms (±1.58) | 27.9 ms (±1.77) | 0.99 × | 0.95–1.14 | ≈ |
-| Main thread scripting (all jumps) (lower is better) | 155 ms (±6.65) | 169 ms (±7.45) | 1.09 × | 1.06–1.17 | AG Grid |
+| Jump to rows painted (median of jumps) (lower is better) | 21.0 ms (±5.19) | 27.1 ms (±3.54) | 1.29 × | 0.90–1.47 | ≈ |
+| Jump to rows painted (worst jump) (lower is better) | 39.9 ms (±7.74) | 36.7 ms (±4.87) | 0.92 × | 0.72–1.18 | ≈ |
+| Jump to settled (median of jumps) (lower is better) | 21.0 ms (±5.19) | 27.1 ms (±3.54) | 1.29 × | 0.90–1.47 | ≈ |
+| Main thread scripting (all jumps) (lower is better) | 133 ms (±20.9) | 163 ms (±18.9) | 1.22 × | 0.96–1.36 | ≈ |
 
 ## scroll-vertical - 300,000 rows
 
@@ -79,18 +79,18 @@ Wheel-scroll down 24000px at 8000px/s (Input.synthesizeScrollGesture - real inpu
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Frames fully presented (higher is better) | 52.1 % (±2.21) | 56.6 % (±1.11) | 1.09 × | 1.07–1.09 | Infinite |
-| Frames presented without main-thread update (lower is better) | 47.9 % (±2.21) | 43.4 % (±1.11) | 0.91 × | 0.90–0.93 | Infinite |
-| Frames dropped (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % | 0.00 to 0.00 | ≈ |
-| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.00) | 60.0 fps (±0.17) | 1.00 × | 0.99–1.00 | ≈ |
-| p95 rAF frame interval (lower is better) | 17.3 ms (±0.17) | 17.2 ms (±0.22) | 1.00 × | 0.98–1.02 | ≈ |
-| Worst rAF frame interval (lower is better) | 17.6 ms (±0.05) | 17.7 ms (±8.62) | 1.01 × | 0.99–1.94 | ≈ |
-| rAF intervals > 25ms (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.29) | 0.00 % | 0.00 to +0.54 | ≈ |
+| Frames fully presented (higher is better) | 52.3 % (±1.62) | 56.0 % (±3.34) | 1.07 × | 0.99–1.14 | ≈ |
+| Frames presented without main-thread update (lower is better) | 47.7 % (±1.68) | 44.0 % (±3.45) | 0.92 × | 0.84–1.02 | ≈ |
+| Frames dropped (lower is better) | 0.00 % (±0.21) | 0.00 % (±0.21) | 0.00 % | 0.00 to 0.00 | ≈ |
+| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.24) | 59.9 fps (±0.84) | 1.00 × | 0.99–1.00 | ≈ |
+| p95 rAF frame interval (lower is better) | 17.5 ms (±0.10) | 17.5 ms (±0.14) | 1.00 × | 0.99–1.01 | ≈ |
+| Worst rAF frame interval (lower is better) | 17.7 ms (±6.27) | 17.7 ms (±18.5) | 1.00 × | 1.00–1.90 | ≈ |
+| rAF intervals > 25ms (lower is better) | 0.00 % (±0.41) | 0.00 % (±1.04) | 0.00 % | 0.00 to +0.54 | ≈ |
 | Long animation frames: total blocking (lower is better) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms | 0.00 to 0.00 | ≈ |
-| Main thread: scripting (lower is better) | 410 ms (±9.69) | 495 ms (±6.35) | 1.21 × | 1.18–1.25 | AG Grid |
-| Main thread: layout (lower is better) | 77.9 ms (±1.50) | 55.9 ms (±0.82) | 0.72 × | 0.70–0.73 | Infinite |
-| Main thread: style recalc (lower is better) | 179 ms (±4.38) | 126 ms (±1.07) | 0.71 × | 0.69–0.72 | Infinite |
-| Main thread: all tasks (lower is better) | 1017 ms (±18.7) | 1063 ms (±11.4) | 1.04 × | 1.02–1.06 | AG Grid |
+| Main thread: scripting (lower is better) | 398 ms (±21.4) | 474 ms (±22.6) | 1.19 × | 1.10–1.32 | AG Grid |
+| Main thread: layout (lower is better) | 78.3 ms (±7.48) | 53.7 ms (±2.85) | 0.68 × | 0.60–0.78 | Infinite |
+| Main thread: style recalc (lower is better) | 172 ms (±11.2) | 122 ms (±5.16) | 0.71 × | 0.65–0.76 | Infinite |
+| Main thread: all tasks (lower is better) | 1020 ms (±80.2) | 1029 ms (±82.7) | 1.01 × | 0.89–1.11 | ≈ |
 
 ## scroll-horizontal - 300,000 rows
 
@@ -98,18 +98,18 @@ Wheel-scroll right/left over all columns, 4 sweeps at 4000px/s (Input.synthesize
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Frames fully presented (higher is better) | 85.3 % (±2.93) | 88.4 % (±5.01) | 1.04 × | 0.96–1.05 | ≈ |
-| Frames presented without main-thread update (lower is better) | 14.7 % (±2.93) | 11.6 % (±5.01) | 0.79 × | 0.69–1.26 | ≈ |
+| Frames fully presented (higher is better) | 88.9 % (±3.96) | 95.8 % (±5.49) | 1.08 × | 0.94–1.12 | ≈ |
+| Frames presented without main-thread update (lower is better) | 11.1 % (±3.96) | 4.23 % (±5.49) | 0.38 × | 0.26–1.93 | ≈ |
 | Frames dropped (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % | 0.00 to 0.00 | ≈ |
-| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.01) | 60.0 fps (±0.01) | 1.00 × | 1.00–1.00 | ≈ |
-| p95 rAF frame interval (lower is better) | 17.1 ms (±0.21) | 17.3 ms (±0.25) | 1.01 × | 0.99–1.02 | ≈ |
-| Worst rAF frame interval (lower is better) | 17.6 ms (±0.05) | 17.7 ms (±0.08) | 1.01 × | 0.99–1.01 | ≈ |
+| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.02) | 60.0 fps (±0.02) | 1.00 × | 1.00–1.00 | ≈ |
+| p95 rAF frame interval (lower is better) | 17.3 ms (±0.22) | 17.2 ms (±0.14) | 0.99 × | 0.98–1.01 | ≈ |
+| Worst rAF frame interval (lower is better) | 17.7 ms (±0.13) | 17.6 ms (±0.07) | 0.99 × | 0.99–1.01 | ≈ |
 | rAF intervals > 25ms (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % | 0.00 to 0.00 | ≈ |
 | Long animation frames: total blocking (lower is better) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms | 0.00 to 0.00 | ≈ |
-| Main thread: scripting (lower is better) | 167 ms (±5.58) | 111 ms (±5.39) | 0.67 × | 0.62–0.70 | Infinite |
-| Main thread: layout (lower is better) | 49.0 ms (±1.44) | 8.21 ms (±0.38) | 0.17 × | 0.16–0.18 | Infinite |
-| Main thread: style recalc (lower is better) | 30.2 ms (±1.06) | 34.4 ms (±1.77) | 1.14 × | 1.07–1.21 | AG Grid |
-| Main thread: all tasks (lower is better) | 416 ms (±9.51) | 319 ms (±20.9) | 0.77 × | 0.71–0.83 | Infinite |
+| Main thread: scripting (lower is better) | 171 ms (±7.70) | 108 ms (±4.64) | 0.63 × | 0.60–0.70 | Infinite |
+| Main thread: layout (lower is better) | 48.8 ms (±1.91) | 8.20 ms (±0.20) | 0.17 × | 0.16–0.18 | Infinite |
+| Main thread: style recalc (lower is better) | 30.6 ms (±1.90) | 34.1 ms (±1.28) | 1.11 × | 1.00–1.17 | AG Grid |
+| Main thread: all tasks (lower is better) | 414 ms (±16.7) | 317 ms (±9.94) | 0.77 × | 0.73–0.80 | Infinite |
 
 ## correctness-vertical - 300,000 rows
 
@@ -117,10 +117,10 @@ Same kind of vertical wheel gesture, faster (20000px/s). After every painted fra
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Blank samples (lower is better) | 2.60 % (±0.39) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Wrong/stale samples (lower is better) | 0.00 % (±0.00) | 38.4 % (±0.71) | +38.4 % | +37.4 to +39.0 | AG Grid |
-| Frames with any blank/wrong sample (lower is better) | 13.0 % (±1.93) | 90.8 % (±1.60) | 6.99 × | 6.52–8.89 | AG Grid |
-| Worst frame: correct samples (higher is better) | 80.0 % (±0.00) | 12.6 % (±18.7) | 0.16 × | 0.14–0.61 | AG Grid |
+| Blank samples (lower is better) | 2.03 % (±0.65) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
+| Wrong/stale samples (lower is better) | 0.00 % (±0.00) | 38.3 % (±0.95) | +38.3 % | +37.8 to +39.6 | AG Grid |
+| Frames with any blank/wrong sample (lower is better) | 10.1 % (±3.24) | 90.7 % (±0.57) | 8.95 × | 6.43–10.3 | AG Grid |
+| Worst frame: correct samples (higher is better) | 80.0 % (±0.00) | 9.47 % (±16.1) | 0.12 × | 0.08–0.13 | AG Grid |
 
 ## correctness-horizontal - 300,000 rows
 
@@ -139,10 +139,10 @@ Fast vertical wheel gesture (20000px/s) while recording what the compositor actu
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Captured frames with blank rows (lower is better) | 4.17 % (±4.60) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Blank body area (avg over frames) (lower is better) | 0.45 % (±1.65) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Worst frame: blank rows (lower is better) | 3.00 rows (±5.35) | 0.00 rows (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Captured frames (higher is better) | 74.0 (±0.76) | 74.0 (±0.00) | 1.00 × | 1.00–1.00 | ≈ |
+| Captured frames with blank rows (lower is better) | 4.00 % (±5.76) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
+| Blank body area (avg over frames) (lower is better) | 0.29 % (±0.67) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
+| Worst frame: blank rows (lower is better) | 2.00 rows (±0.53) | 0.00 rows (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
+| Captured frames (higher is better) | 74.0 (±0.69) | 74.0 (±0.58) | 1.00 × | 0.99–1.00 | ≈ |
 
 # 1,000,000 rows
 
@@ -160,13 +160,13 @@ Mount the grid with all the rows (data already in memory). "Visible" = from setS
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Time to first rows painted (lower is better) | 504 ms (±34.1) | 379 ms (±44.3) | 0.75 × | 0.72–0.88 | Infinite |
-| Time until settled (lower is better) | 607 ms (±34.3) | 379 ms (±47.2) | 0.62 × | 0.60–0.75 | Infinite |
-| Main thread: scripting (lower is better) | 485 ms (±33.1) | 368 ms (±44.5) | 0.76 × | 0.72–0.89 | Infinite |
-| Main thread: layout (lower is better) | 7.40 ms (±0.35) | 2.32 ms (±0.14) | 0.31 × | 0.29–0.33 | Infinite |
-| Main thread: style recalc (lower is better) | 7.79 ms (±0.72) | 3.73 ms (±0.18) | 0.48 × | 0.43–0.51 | Infinite |
-| Main thread: all tasks (lower is better) | 511 ms (±34.1) | 382 ms (±44.9) | 0.75 × | 0.71–0.88 | Infinite |
-| JS heap retained by grid (lower is better) | 213 MB (±0.00) | 90.7 MB (±0.37) | 0.42 × | 0.42–0.42 | Infinite |
+| Time to first rows painted (lower is better) | 498 ms (±48.1) | 352 ms (±37.6) | 0.71 × | 0.57–0.79 | Infinite |
+| Time until settled (lower is better) | 602 ms (±48.1) | 352 ms (±37.6) | 0.59 × | 0.48–0.65 | Infinite |
+| Main thread: scripting (lower is better) | 480 ms (±47.4) | 342 ms (±37.3) | 0.71 × | 0.57–0.80 | Infinite |
+| Main thread: layout (lower is better) | 7.13 ms (±0.32) | 2.13 ms (±0.05) | 0.30 × | 0.28–0.31 | Infinite |
+| Main thread: style recalc (lower is better) | 7.84 ms (±0.42) | 3.62 ms (±0.18) | 0.46 × | 0.43–0.50 | Infinite |
+| Main thread: all tasks (lower is better) | 510 ms (±47.7) | 355 ms (±37.7) | 0.70 × | 0.57–0.78 | Infinite |
+| JS heap retained by grid (lower is better) | 213 MB (±0.00) | 90.7 MB (±0.00) | 0.42 × | 0.42–0.42 | Infinite |
 | DOM elements in grid (lower is better) | 637 (±0.00) | 609 (±0.00) | 0.96 × | 0.96–0.96 | Infinite |
 
 ## sort-string - 1,000,000 rows
@@ -175,12 +175,12 @@ Click the "code" column header (string column, unique-ish values) - first click 
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Ascending: click to sorted rows painted (lower is better) | 3350 ms (±166) | 1346 ms (±57.1) | 0.40 × | 0.36–0.43 | Infinite |
-| Ascending: click to settled (lower is better) | 3350 ms (±166) | 1363 ms (±55.5) | 0.41 × | 0.36–0.43 | Infinite |
-| Descending: click to sorted rows painted (lower is better) | 3510 ms (±174) | 1384 ms (±41.5) | 0.39 × | 0.38–0.43 | Infinite |
-| Descending: click to settled (lower is better) | 3510 ms (±174) | 1384 ms (±41.5) | 0.39 × | 0.38–0.43 | Infinite |
-| Ascending: main thread scripting (lower is better) | 3339 ms (±166) | 1333 ms (±57.3) | 0.40 × | 0.36–0.43 | Infinite |
-| Descending: main thread scripting (lower is better) | 3502 ms (±174) | 1369 ms (±41.8) | 0.39 × | 0.37–0.43 | Infinite |
+| Ascending: click to sorted rows painted (lower is better) | 3384 ms (±198) | 1395 ms (±72.7) | 0.41 × | 0.37–0.44 | Infinite |
+| Ascending: click to settled (lower is better) | 3384 ms (±198) | 1412 ms (±73.1) | 0.42 × | 0.38–0.44 | Infinite |
+| Descending: click to sorted rows painted (lower is better) | 3279 ms (±99.6) | 1380 ms (±99.9) | 0.42 × | 0.38–0.45 | Infinite |
+| Descending: click to settled (lower is better) | 3279 ms (±99.6) | 1380 ms (±99.9) | 0.42 × | 0.38–0.45 | Infinite |
+| Ascending: main thread scripting (lower is better) | 3373 ms (±198) | 1383 ms (±72.5) | 0.41 × | 0.37–0.43 | Infinite |
+| Descending: main thread scripting (lower is better) | 3271 ms (±99.6) | 1366 ms (±98.3) | 0.42 × | 0.38–0.45 | Infinite |
 
 ## sort-number - 1,000,000 rows
 
@@ -188,12 +188,12 @@ Click the "salary" column header (number column, unique-ish values) - first clic
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Ascending: click to sorted rows painted (lower is better) | 2913 ms (±79.2) | 1114 ms (±51.7) | 0.38 × | 0.37–0.39 | Infinite |
-| Ascending: click to settled (lower is better) | 2913 ms (±79.2) | 1128 ms (±49.2) | 0.39 × | 0.37–0.40 | Infinite |
-| Descending: click to sorted rows painted (lower is better) | 2948 ms (±87.4) | 1142 ms (±45.3) | 0.39 × | 0.37–0.41 | Infinite |
-| Descending: click to settled (lower is better) | 2948 ms (±87.4) | 1142 ms (±45.3) | 0.39 × | 0.37–0.41 | Infinite |
-| Ascending: main thread scripting (lower is better) | 2901 ms (±78.8) | 1101 ms (±52.2) | 0.38 × | 0.36–0.39 | Infinite |
-| Descending: main thread scripting (lower is better) | 2940 ms (±87.6) | 1126 ms (±45.4) | 0.38 × | 0.37–0.41 | Infinite |
+| Ascending: click to sorted rows painted (lower is better) | 3061 ms (±242) | 1205 ms (±107) | 0.39 × | 0.34–0.47 | Infinite |
+| Ascending: click to settled (lower is better) | 3061 ms (±242) | 1213 ms (±105) | 0.40 × | 0.34–0.47 | Infinite |
+| Descending: click to sorted rows painted (lower is better) | 3096 ms (±211) | 1289 ms (±107) | 0.42 × | 0.40–0.44 | Infinite |
+| Descending: click to settled (lower is better) | 3096 ms (±211) | 1289 ms (±107) | 0.42 × | 0.40–0.44 | Infinite |
+| Ascending: main thread scripting (lower is better) | 3049 ms (±242) | 1193 ms (±107) | 0.39 × | 0.34–0.46 | Infinite |
+| Descending: main thread scripting (lower is better) | 3088 ms (±211) | 1275 ms (±107) | 0.41 × | 0.39–0.44 | Infinite |
 
 ## scroll-jump - 1,000,000 rows
 
@@ -201,10 +201,10 @@ Programmatic jumps to 10 far-away scroll positions (like dragging the scrollbar 
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Jump to rows painted (median of jumps) (lower is better) | 21.1 ms (±1.33) | 24.6 ms (±1.31) | 1.16 × | 1.08–1.22 | AG Grid |
-| Jump to rows painted (worst jump) (lower is better) | 34.8 ms (±2.04) | 35.5 ms (±4.40) | 1.02 × | 0.83–1.14 | ≈ |
-| Jump to settled (median of jumps) (lower is better) | 21.1 ms (±1.33) | 24.6 ms (±1.31) | 1.16 × | 1.08–1.22 | AG Grid |
-| Main thread scripting (all jumps) (lower is better) | 128 ms (±6.19) | 152 ms (±12.6) | 1.19 × | 1.06–1.30 | AG Grid |
+| Jump to rows painted (median of jumps) (lower is better) | 20.9 ms (±1.84) | 23.6 ms (±2.13) | 1.13 × | 1.01–1.27 | AG Grid |
+| Jump to rows painted (worst jump) (lower is better) | 35.6 ms (±2.62) | 28.3 ms (±1.64) | 0.79 × | 0.70–0.84 | Infinite |
+| Jump to settled (median of jumps) (lower is better) | 20.9 ms (±1.84) | 23.6 ms (±2.13) | 1.13 × | 1.01–1.27 | AG Grid |
+| Main thread scripting (all jumps) (lower is better) | 127 ms (±11.7) | 143 ms (±12.6) | 1.12 × | 0.98–1.17 | ≈ |
 
 ## scroll-vertical - 1,000,000 rows
 
@@ -212,18 +212,18 @@ Wheel-scroll down 24000px at 8000px/s (Input.synthesizeScrollGesture - real inpu
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Frames fully presented (higher is better) | 52.2 % (±1.25) | 54.0 % (±1.99) | 1.03 × | 1.03–1.10 | Infinite |
-| Frames presented without main-thread update (lower is better) | 47.8 % (±1.25) | 46.0 % (±1.99) | 0.96 × | 0.89–0.97 | Infinite |
-| Frames dropped (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % | 0.00 to 0.00 | ≈ |
-| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.38) | 60.0 fps (±0.26) | 1.00 × | 1.00–1.01 | ≈ |
-| p95 rAF frame interval (lower is better) | 17.3 ms (±0.12) | 17.5 ms (±0.13) | 1.01 × | 1.00–1.01 | ≈ |
-| Worst rAF frame interval (lower is better) | 17.7 ms (±18.7) | 17.7 ms (±6.01) | 1.00 × | 0.53–1.01 | ≈ |
-| rAF intervals > 25ms (lower is better) | 0.00 % (±0.27) | 0.00 % (±0.41) | 0.00 % | -0.54 to 0.00 | ≈ |
+| Frames fully presented (higher is better) | 52.3 % (±0.52) | 58.5 % (±2.51) | 1.12 × | 1.03–1.14 | Infinite |
+| Frames presented without main-thread update (lower is better) | 47.7 % (±0.30) | 41.4 % (±2.65) | 0.87 × | 0.86–0.96 | Infinite |
+| Frames dropped (lower is better) | 0.00 % (±0.27) | 0.00 % (±0.27) | 0.00 % | -0.56 to +0.55 | ≈ |
+| Main thread frame rate (rAF) (higher is better) | 59.9 fps (±0.47) | 59.7 fps (±0.34) | 1.00 × | 0.99–1.02 | ≈ |
+| p95 rAF frame interval (lower is better) | 17.5 ms (±0.12) | 17.5 ms (±0.14) | 1.00 × | 1.00–1.02 | ≈ |
+| Worst rAF frame interval (lower is better) | 17.7 ms (±23.0) | 33.5 ms (±8.63) | 1.89 × | 0.27–1.92 | ≈ |
+| rAF intervals > 25ms (lower is better) | 0.00 % (±0.29) | 0.54 % (±0.54) | +0.54 % | -0.55 to +1.09 | ≈ |
 | Long animation frames: total blocking (lower is better) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms | 0.00 to 0.00 | ≈ |
-| Main thread: scripting (lower is better) | 482 ms (±7.06) | 564 ms (±11.8) | 1.17 × | 1.13–1.19 | AG Grid |
-| Main thread: layout (lower is better) | 80.1 ms (±1.57) | 62.8 ms (±1.05) | 0.78 × | 0.77–0.80 | Infinite |
-| Main thread: style recalc (lower is better) | 265 ms (±3.78) | 141 ms (±2.07) | 0.53 × | 0.52–0.54 | Infinite |
-| Main thread: all tasks (lower is better) | 1278 ms (±14.1) | 1180 ms (±22.5) | 0.92 × | 0.91–0.94 | Infinite |
+| Main thread: scripting (lower is better) | 502 ms (±16.3) | 593 ms (±25.9) | 1.18 × | 1.11–1.26 | AG Grid |
+| Main thread: layout (lower is better) | 86.6 ms (±4.56) | 69.6 ms (±4.67) | 0.80 × | 0.74–0.88 | Infinite |
+| Main thread: style recalc (lower is better) | 274 ms (±10.1) | 153 ms (±7.26) | 0.56 × | 0.52–0.59 | Infinite |
+| Main thread: all tasks (lower is better) | 1319 ms (±55.7) | 1269 ms (±70.0) | 0.96 × | 0.89–1.00 | Infinite |
 
 ## scroll-horizontal - 1,000,000 rows
 
@@ -231,18 +231,18 @@ Wheel-scroll right/left over all columns, 4 sweeps at 4000px/s (Input.synthesize
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Frames fully presented (higher is better) | 86.0 % (±1.79) | 89.7 % (±3.31) | 1.04 × | 1.00–1.12 | Infinite |
-| Frames presented without main-thread update (lower is better) | 14.0 % (±1.79) | 10.3 % (±3.31) | 0.73 × | 0.30–0.97 | Infinite |
+| Frames fully presented (higher is better) | 86.3 % (±4.02) | 89.0 % (±5.20) | 1.03 × | 0.94–1.04 | ≈ |
+| Frames presented without main-thread update (lower is better) | 13.7 % (±4.02) | 11.0 % (±5.20) | 0.81 × | 0.75–1.64 | ≈ |
 | Frames dropped (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % | 0.00 to 0.00 | ≈ |
-| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.03) | 60.0 fps (±0.02) | 1.00 × | 1.00–1.00 | ≈ |
-| p95 rAF frame interval (lower is better) | 17.4 ms (±0.13) | 17.4 ms (±0.16) | 1.00 × | 0.99–1.02 | ≈ |
-| Worst rAF frame interval (lower is better) | 17.7 ms (±0.07) | 17.7 ms (±0.08) | 1.00 × | 0.99–1.01 | ≈ |
+| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.01) | 60.0 fps (±0.01) | 1.00 × | 1.00–1.00 | ≈ |
+| p95 rAF frame interval (lower is better) | 17.4 ms (±0.08) | 17.4 ms (±0.11) | 1.00 × | 0.99–1.01 | ≈ |
+| Worst rAF frame interval (lower is better) | 17.7 ms (±0.05) | 17.6 ms (±0.05) | 0.99 × | 0.99–1.01 | ≈ |
 | rAF intervals > 25ms (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % | 0.00 to 0.00 | ≈ |
 | Long animation frames: total blocking (lower is better) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms | 0.00 to 0.00 | ≈ |
-| Main thread: scripting (lower is better) | 166 ms (±2.81) | 110 ms (±2.56) | 0.66 × | 0.65–0.68 | Infinite |
-| Main thread: layout (lower is better) | 49.3 ms (±1.00) | 8.42 ms (±0.16) | 0.17 × | 0.16–0.17 | Infinite |
-| Main thread: style recalc (lower is better) | 31.7 ms (±0.71) | 34.1 ms (±0.60) | 1.07 × | 1.06–1.12 | AG Grid |
-| Main thread: all tasks (lower is better) | 390 ms (±5.23) | 335 ms (±11.8) | 0.86 × | 0.84–0.87 | Infinite |
+| Main thread: scripting (lower is better) | 165 ms (±8.32) | 111 ms (±7.34) | 0.67 × | 0.61–0.75 | Infinite |
+| Main thread: layout (lower is better) | 51.5 ms (±2.59) | 8.79 ms (±0.43) | 0.17 × | 0.16–0.19 | Infinite |
+| Main thread: style recalc (lower is better) | 30.3 ms (±2.52) | 35.4 ms (±1.92) | 1.17 × | 1.00–1.30 | ≈ |
+| Main thread: all tasks (lower is better) | 402 ms (±48.9) | 353 ms (±25.5) | 0.88 × | 0.71–0.94 | Infinite |
 
 ## correctness-vertical - 1,000,000 rows
 
@@ -250,9 +250,9 @@ Same kind of vertical wheel gesture, faster (20000px/s). After every painted fra
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Blank samples (lower is better) | 2.47 % (±0.30) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Wrong/stale samples (lower is better) | 0.00 % (±0.00) | 55.1 % (±14.4) | +55.1 % | +51.2 to +77.7 | AG Grid |
-| Frames with any blank/wrong sample (lower is better) | 12.3 % (±1.50) | 87.3 % (±4.19) | 7.08 × | 6.48–8.46 | AG Grid |
+| Blank samples (lower is better) | 2.54 % (±0.56) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
+| Wrong/stale samples (lower is better) | 0.00 % (±0.00) | 71.0 % (±10.1) | +71.0 % | +68.5 to +78.5 | AG Grid |
+| Frames with any blank/wrong sample (lower is better) | 12.7 % (±2.79) | 87.5 % (±2.92) | 6.90 × | 5.94–8.37 | AG Grid |
 | Worst frame: correct samples (higher is better) | 80.0 % (±0.00) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | AG Grid |
 
 ## correctness-horizontal - 1,000,000 rows
@@ -272,7 +272,7 @@ Fast vertical wheel gesture (20000px/s) while recording what the compositor actu
 
 | Metric | AG Grid median (sd) | Infinite median (sd) | Infinite / AG (or Infinite − AG) | 95% CI | Better |
 |---|---:|---:|---:|---:|:---:|
-| Captured frames with blank rows (lower is better) | 9.46 % (±3.37) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Blank body area (avg over frames) (lower is better) | 3.14 % (±2.10) | 0.00 % (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Worst frame: blank rows (lower is better) | 14.0 rows (±3.21) | 0.00 rows (±0.00) | 0.00 × | 0.00–0.00 | Infinite |
-| Captured frames (higher is better) | 74.0 (±0.38) | 74.0 (±0.58) | 1.00 × | 1.00–1.00 | ≈ |
+| Captured frames with blank rows (lower is better) | 16.2 % (±26.6) | 0.00 % (±0.00) | -16.2 % | -25.7 to -6.85 | Infinite |
+| Blank body area (avg over frames) (lower is better) | 5.76 % (±8.91) | 0.00 % (±0.00) | -5.76 % | -11.7 to -2.66 | Infinite |
+| Worst frame: blank rows (lower is better) | 15.0 rows (±5.88) | 0.00 rows (±0.00) | -15.0 rows | -16.0 to -11.0 | Infinite |
+| Captured frames (higher is better) | 74.0 (±1.62) | 74.0 (±0.98) | 1.00 × | 0.99–1.01 | ≈ |
