@@ -1,0 +1,15 @@
+node_modules
+.next
+next-env.d.ts
+*.tsbuildinfo
+
+# results of local runs - see results/ for the published ones
+benchmark-results
+test-results
+playwright-report
+
+# may hold a license key
+.env*
+!.env.example
+
+.DS_Store

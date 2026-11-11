@@ -1,0 +1,3332 @@
+{
+  "environment": {
+    "runId": "2026-11-11",
+    "date": "2026-11-11T16:52:14.998Z",
+    "chrome": "136.0.7103.25",
+    "headless": true,
+    "cpuThrottle": 1,
+    "runs": 7,
+    "warmup": 1,
+    "os": "Darwin 24.1.0 arm64",
+    "cpu": "Apple M1 Pro × 10",
+    "viewport": "1400×1000",
+    "versions": {
+      "ag-grid": "36.3.0",
+      "infinite": "10.1.4"
+    },
+    "baseURL": "http://localhost:5560/",
+    "bodyHeight": 757,
+    "boxExtraHeight": {
+      "ag-grid": 0,
+      "infinite": 21
+    }
+  },
+  "sizes": {
+    "300k": {
+      "size": "300k",
+      "rowCount": 300000,
+      "checksum": "300000:72377c6e",
+      "scroll": {
+        "ag-grid": {
+          "ratio": 1,
+          "linearRatio": 1,
+          "scrollMax": 11999243,
+          "lastVisibleRow": 300000,
+          "rowCount": 300000
+        },
+        "infinite": {
+          "ratio": 1,
+          "linearRatio": 1,
+          "scrollMax": 11999243,
+          "lastVisibleRow": 300000,
+          "rowCount": 300000
+        }
+      },
+      "results": {
+        "mount": {
+          "scenario": "mount",
+          "description": "Mount the grid with all the rows (data already in memory). \"Visible\" = from setState to the end of the first frame committed with the whole viewport (first/last visible row and column) showing the right content. \"Settled\" = until the first frame committed after the grid's last DOM mutation. Memory is the JS heap retained by the grid after GC (heap after mount - heap before mount).",
+          "metrics": [
+            {
+              "key": "visibleMs",
+              "label": "Time to first rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "settledMs",
+              "label": "Time until settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread: scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "layoutMs",
+              "label": "Main thread: layout",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "styleMs",
+              "label": "Main thread: style recalc",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "taskMs",
+              "label": "Main thread: all tasks",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "heapMB",
+              "label": "JS heap retained by grid",
+              "unit": "MB",
+              "better": "lower"
+            },
+            {
+              "key": "gridElements",
+              "label": "DOM elements in grid",
+              "unit": "",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "visibleMs": 200.572,
+                "settledMs": 303.586,
+                "taskMs": 209.33500000000004,
+                "scriptMs": 182.39100000000002,
+                "layoutMs": 7.497000000000001,
+                "styleMs": 7.222,
+                "layoutCount": 24,
+                "heapMB": 67.48442840576172,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 208.361,
+                "settledMs": 311.083,
+                "taskMs": 219.344,
+                "scriptMs": 190.28400000000002,
+                "layoutMs": 7.581999999999999,
+                "styleMs": 7.781,
+                "layoutCount": 24,
+                "heapMB": 67.48443222045898,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 199.416,
+                "settledMs": 302.595,
+                "taskMs": 208.86100000000002,
+                "scriptMs": 181.46499999999997,
+                "layoutMs": 7.324999999999999,
+                "styleMs": 7.608999999999999,
+                "layoutCount": 24,
+                "heapMB": 67.48442840576172,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 198.81,
+                "settledMs": 301.873,
+                "taskMs": 209.034,
+                "scriptMs": 182.24300000000002,
+                "layoutMs": 7.1049999999999995,
+                "styleMs": 7.482,
+                "layoutCount": 24,
+                "heapMB": 67.48442840576172,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 190.898,
+                "settledMs": 294.094,
+                "taskMs": 198.38700000000003,
+                "scriptMs": 172.358,
+                "layoutMs": 7.306,
+                "styleMs": 7.556,
+                "layoutCount": 24,
+                "heapMB": 67.48458862304688,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 199.196,
+                "settledMs": 302.067,
+                "taskMs": 208.28599999999997,
+                "scriptMs": 180.617,
+                "layoutMs": 7.398,
+                "styleMs": 7.8069999999999995,
+                "layoutCount": 24,
+                "heapMB": 67.48442840576172,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 207.803,
+                "settledMs": 311.159,
+                "taskMs": 215.961,
+                "scriptMs": 188.932,
+                "layoutMs": 6.989,
+                "styleMs": 7.985999999999998,
+                "layoutCount": 24,
+                "heapMB": 67.48442840576172,
+                "gridElements": 637
+              }
+            ],
+            "infinite": [
+              {
+                "visibleMs": 146.534,
+                "settledMs": 146.534,
+                "taskMs": 149.347,
+                "scriptMs": 134.538,
+                "layoutMs": 2.479,
+                "styleMs": 3.9379999999999997,
+                "layoutCount": 12,
+                "heapMB": 36.56585693359375,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 138.873,
+                "settledMs": 138.873,
+                "taskMs": 141.494,
+                "scriptMs": 124.48100000000004,
+                "layoutMs": 2.1609999999999996,
+                "styleMs": 3.798,
+                "layoutCount": 12,
+                "heapMB": 36.567874908447266,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 142.025,
+                "settledMs": 142.025,
+                "taskMs": 146.25199999999998,
+                "scriptMs": 128.315,
+                "layoutMs": 2.047,
+                "styleMs": 3.65,
+                "layoutCount": 12,
+                "heapMB": 36.565887451171875,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 143.787,
+                "settledMs": 143.787,
+                "taskMs": 146.721,
+                "scriptMs": 129.09,
+                "layoutMs": 2.2030000000000003,
+                "styleMs": 3.803,
+                "layoutCount": 12,
+                "heapMB": 36.565887451171875,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 139.48,
+                "settledMs": 139.48,
+                "taskMs": 141.93999999999994,
+                "scriptMs": 124.78299999999997,
+                "layoutMs": 2.08,
+                "styleMs": 3.5269999999999997,
+                "layoutCount": 12,
+                "heapMB": 36.56790542602539,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 123.579,
+                "settledMs": 141.843,
+                "taskMs": 132.12099999999998,
+                "scriptMs": 114.18699999999998,
+                "layoutMs": 2.2379999999999995,
+                "styleMs": 3.7219999999999995,
+                "layoutCount": 13,
+                "heapMB": 35.64263916015625,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 138.761,
+                "settledMs": 138.761,
+                "taskMs": 143.903,
+                "scriptMs": 126.10700000000003,
+                "layoutMs": 2.1410000000000005,
+                "styleMs": 3.836,
+                "layoutCount": 12,
+                "heapMB": 36.56666564941406,
+                "gridElements": 609
+              }
+            ]
+          }
+        },
+        "sort-string": {
+          "scenario": "sort-string",
+          "description": "Click the \"code\" column header (string column, unique-ish values) - first click sorts ascending (cold), second click descending. Measured from pointerdown to the end of the first frame committed with all visible rows sorted (and each row consistent: its cells belong to the same data row).",
+          "metrics": [
+            {
+              "key": "ascVisibleMs",
+              "label": "Ascending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascSettledMs",
+              "label": "Ascending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descVisibleMs",
+              "label": "Descending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descSettledMs",
+              "label": "Descending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascScriptMs",
+              "label": "Ascending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descScriptMs",
+              "label": "Descending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "ascVisibleMs": 793.292,
+                "ascSettledMs": 793.292,
+                "ascScriptMs": 781.2950000000001,
+                "descVisibleMs": 817.193,
+                "descSettledMs": 817.193,
+                "descScriptMs": 808.0160000000001
+              },
+              {
+                "ascVisibleMs": 816.641,
+                "ascSettledMs": 816.641,
+                "ascScriptMs": 804.4150000000001,
+                "descVisibleMs": 810.437,
+                "descSettledMs": 810.437,
+                "descScriptMs": 800.9080000000001
+              },
+              {
+                "ascVisibleMs": 920.638,
+                "ascSettledMs": 920.638,
+                "ascScriptMs": 908.674,
+                "descVisibleMs": 860.535,
+                "descSettledMs": 860.535,
+                "descScriptMs": 851.4699999999999
+              },
+              {
+                "ascVisibleMs": 927.118,
+                "ascSettledMs": 927.118,
+                "ascScriptMs": 914.6320000000001,
+                "descVisibleMs": 826.101,
+                "descSettledMs": 826.101,
+                "descScriptMs": 816.538
+              },
+              {
+                "ascVisibleMs": 763.564,
+                "ascSettledMs": 763.564,
+                "ascScriptMs": 751.4239999999999,
+                "descVisibleMs": 837.172,
+                "descSettledMs": 837.172,
+                "descScriptMs": 828.357
+              },
+              {
+                "ascVisibleMs": 791.076,
+                "ascSettledMs": 791.076,
+                "ascScriptMs": 779.389,
+                "descVisibleMs": 832.305,
+                "descSettledMs": 832.305,
+                "descScriptMs": 822.452
+              },
+              {
+                "ascVisibleMs": 791.316,
+                "ascSettledMs": 791.316,
+                "ascScriptMs": 780.3419999999999,
+                "descVisibleMs": 844.643,
+                "descSettledMs": 844.643,
+                "descScriptMs": 835.696
+              }
+            ],
+            "infinite": [
+              {
+                "ascVisibleMs": 339.43,
+                "ascSettledMs": 345.596,
+                "ascScriptMs": 326.26500000000004,
+                "descVisibleMs": 347.631,
+                "descSettledMs": 347.631,
+                "descScriptMs": 333.467
+              },
+              {
+                "ascVisibleMs": 353.558,
+                "ascSettledMs": 361.438,
+                "ascScriptMs": 343.5,
+                "descVisibleMs": 346.327,
+                "descSettledMs": 346.327,
+                "descScriptMs": 332.49899999999997
+              },
+              {
+                "ascVisibleMs": 344.023,
+                "ascSettledMs": 346.637,
+                "ascScriptMs": 331.91599999999994,
+                "descVisibleMs": 341.254,
+                "descSettledMs": 341.254,
+                "descScriptMs": 327.54800000000006
+              },
+              {
+                "ascVisibleMs": 354.735,
+                "ascSettledMs": 360.042,
+                "ascScriptMs": 343.959,
+                "descVisibleMs": 349.88,
+                "descSettledMs": 349.88,
+                "descScriptMs": 339.13599999999997
+              },
+              {
+                "ascVisibleMs": 353.247,
+                "ascSettledMs": 361.301,
+                "ascScriptMs": 341.471,
+                "descVisibleMs": 333.904,
+                "descSettledMs": 333.904,
+                "descScriptMs": 322.9280000000001
+              },
+              {
+                "ascVisibleMs": 341.718,
+                "ascSettledMs": 345.743,
+                "ascScriptMs": 329.20799999999997,
+                "descVisibleMs": 364.695,
+                "descSettledMs": 364.695,
+                "descScriptMs": 354.849
+              },
+              {
+                "ascVisibleMs": 339.385,
+                "ascSettledMs": 344.563,
+                "ascScriptMs": 329.15299999999996,
+                "descVisibleMs": 335.955,
+                "descSettledMs": 335.955,
+                "descScriptMs": 324.4940000000001
+              }
+            ]
+          }
+        },
+        "sort-number": {
+          "scenario": "sort-number",
+          "description": "Click the \"salary\" column header (number column, unique-ish values) - first click sorts ascending (cold), second click descending. Measured from pointerdown to the end of the first frame committed with all visible rows sorted (and each row consistent: its cells belong to the same data row).",
+          "metrics": [
+            {
+              "key": "ascVisibleMs",
+              "label": "Ascending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascSettledMs",
+              "label": "Ascending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descVisibleMs",
+              "label": "Descending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descSettledMs",
+              "label": "Descending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascScriptMs",
+              "label": "Ascending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descScriptMs",
+              "label": "Descending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "ascVisibleMs": 757.509,
+                "ascSettledMs": 757.509,
+                "ascScriptMs": 746.091,
+                "descVisibleMs": 732.365,
+                "descSettledMs": 732.365,
+                "descScriptMs": 723.8249999999999
+              },
+              {
+                "ascVisibleMs": 684.189,
+                "ascSettledMs": 684.189,
+                "ascScriptMs": 672.0949999999999,
+                "descVisibleMs": 710.662,
+                "descSettledMs": 710.662,
+                "descScriptMs": 700.8689999999999
+              },
+              {
+                "ascVisibleMs": 711.443,
+                "ascSettledMs": 711.443,
+                "ascScriptMs": 699.748,
+                "descVisibleMs": 705.005,
+                "descSettledMs": 705.005,
+                "descScriptMs": 695.764
+              },
+              {
+                "ascVisibleMs": 694.325,
+                "ascSettledMs": 694.325,
+                "ascScriptMs": 683.3399999999999,
+                "descVisibleMs": 699.91,
+                "descSettledMs": 699.91,
+                "descScriptMs": 691.1719999999999
+              },
+              {
+                "ascVisibleMs": 687.803,
+                "ascSettledMs": 687.803,
+                "ascScriptMs": 675.4769999999999,
+                "descVisibleMs": 707.886,
+                "descSettledMs": 707.886,
+                "descScriptMs": 698.834
+              },
+              {
+                "ascVisibleMs": 740.414,
+                "ascSettledMs": 740.414,
+                "ascScriptMs": 727.7679999999999,
+                "descVisibleMs": 683.758,
+                "descSettledMs": 683.758,
+                "descScriptMs": 675.0279999999999
+              },
+              {
+                "ascVisibleMs": 692.646,
+                "ascSettledMs": 692.646,
+                "ascScriptMs": 680.034,
+                "descVisibleMs": 686.613,
+                "descSettledMs": 686.613,
+                "descScriptMs": 678.2470000000001
+              }
+            ],
+            "infinite": [
+              {
+                "ascVisibleMs": 290.914,
+                "ascSettledMs": 293.267,
+                "ascScriptMs": 280.66999999999996,
+                "descVisibleMs": 301.807,
+                "descSettledMs": 301.807,
+                "descScriptMs": 288.24000000000007
+              },
+              {
+                "ascVisibleMs": 304.957,
+                "ascSettledMs": 313.445,
+                "ascScriptMs": 291.37500000000006,
+                "descVisibleMs": 286.681,
+                "descSettledMs": 286.681,
+                "descScriptMs": 272.79599999999994
+              },
+              {
+                "ascVisibleMs": 296.955,
+                "ascSettledMs": 311.284,
+                "ascScriptMs": 286.66100000000006,
+                "descVisibleMs": 305.894,
+                "descSettledMs": 305.894,
+                "descScriptMs": 292.168
+              },
+              {
+                "ascVisibleMs": 287.017,
+                "ascSettledMs": 290.081,
+                "ascScriptMs": 281.327,
+                "descVisibleMs": 288.098,
+                "descSettledMs": 288.098,
+                "descScriptMs": 273.59899999999993
+              },
+              {
+                "ascVisibleMs": 287.737,
+                "ascSettledMs": 293.822,
+                "ascScriptMs": 278.77399999999994,
+                "descVisibleMs": 285.144,
+                "descSettledMs": 285.144,
+                "descScriptMs": 273.42900000000003
+              },
+              {
+                "ascVisibleMs": 283.054,
+                "ascSettledMs": 294.396,
+                "ascScriptMs": 272.31999999999994,
+                "descVisibleMs": 285.528,
+                "descSettledMs": 285.528,
+                "descScriptMs": 272.12500000000006
+              },
+              {
+                "ascVisibleMs": 284.916,
+                "ascSettledMs": 294.469,
+                "ascScriptMs": 274.356,
+                "descVisibleMs": 287.882,
+                "descSettledMs": 287.882,
+                "descScriptMs": 278.25500000000005
+              }
+            ]
+          }
+        },
+        "scroll-jump": {
+          "scenario": "scroll-jump",
+          "description": "Programmatic jumps to 10 far-away scroll positions (like dragging the scrollbar thumb). Measured from setting scrollTop to the end of the first frame committed with the first and last visible rows showing the right content, at the right position.",
+          "metrics": [
+            {
+              "key": "visibleMs",
+              "label": "Jump to rows painted (median of jumps)",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "visibleMaxMs",
+              "label": "Jump to rows painted (worst jump)",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "settledMs",
+              "label": "Jump to settled (median of jumps)",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread scripting (all jumps)",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "visibleMs": 26.630499999999998,
+                "visibleMaxMs": 33.631,
+                "settledMs": 26.630499999999998,
+                "scriptMs": 146.03299999999996
+              },
+              {
+                "visibleMs": 29.378500000000003,
+                "visibleMaxMs": 39.358,
+                "settledMs": 29.378500000000003,
+                "scriptMs": 154.804
+              },
+              {
+                "visibleMs": 27.5815,
+                "visibleMaxMs": 38.841,
+                "settledMs": 27.5815,
+                "scriptMs": 155.78400000000002
+              },
+              {
+                "visibleMs": 27.055,
+                "visibleMaxMs": 41.3,
+                "settledMs": 27.055,
+                "scriptMs": 147.202
+              },
+              {
+                "visibleMs": 28.637,
+                "visibleMaxMs": 48.324,
+                "settledMs": 28.637,
+                "scriptMs": 165.358
+              },
+              {
+                "visibleMs": 31.301499999999997,
+                "visibleMaxMs": 41.859,
+                "settledMs": 31.301499999999997,
+                "scriptMs": 158.69699999999997
+              },
+              {
+                "visibleMs": 28.262999999999998,
+                "visibleMaxMs": 32.531,
+                "settledMs": 28.262999999999998,
+                "scriptMs": 152.582
+              }
+            ],
+            "infinite": [
+              {
+                "visibleMs": 27.820999999999998,
+                "visibleMaxMs": 35.393,
+                "settledMs": 27.820999999999998,
+                "scriptMs": 167.34500000000003
+              },
+              {
+                "visibleMs": 31.52,
+                "visibleMaxMs": 33.985,
+                "settledMs": 31.52,
+                "scriptMs": 178.649
+              },
+              {
+                "visibleMs": 27.4605,
+                "visibleMaxMs": 31.761,
+                "settledMs": 27.4605,
+                "scriptMs": 163.00199999999998
+              },
+              {
+                "visibleMs": 27.7115,
+                "visibleMaxMs": 34.126,
+                "settledMs": 27.7115,
+                "scriptMs": 171.18100000000004
+              },
+              {
+                "visibleMs": 27.945999999999998,
+                "visibleMaxMs": 34.644,
+                "settledMs": 27.945999999999998,
+                "scriptMs": 168.921
+              },
+              {
+                "visibleMs": 28.875,
+                "visibleMaxMs": 33.385,
+                "settledMs": 28.875,
+                "scriptMs": 168.05900000000003
+              },
+              {
+                "visibleMs": 31.452,
+                "visibleMaxMs": 56.38,
+                "settledMs": 31.452,
+                "scriptMs": 184.68800000000002
+              }
+            ]
+          }
+        },
+        "scroll-vertical": {
+          "scenario": "scroll-vertical",
+          "description": "Wheel-scroll down 24000px at 8000px/s (Input.synthesizeScrollGesture - real input pipeline, same gesture for both grids). Frame outcomes come from Chrome's compositor (PipelineReporter): \"partial\" = frame shown without the main thread's update, \"dropped\" = no new frame. rAF frame intervals and Long Animation Frames come from the page.",
+          "metrics": [
+            {
+              "key": "presentedAllPct",
+              "label": "Frames fully presented",
+              "unit": "%",
+              "better": "higher"
+            },
+            {
+              "key": "partialPct",
+              "label": "Frames presented without main-thread update",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "droppedPct",
+              "label": "Frames dropped",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "rafFps",
+              "label": "Main thread frame rate (rAF)",
+              "unit": "fps",
+              "better": "higher"
+            },
+            {
+              "key": "p95FrameMs",
+              "label": "p95 rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "maxFrameMs",
+              "label": "Worst rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "longFramesPct",
+              "label": "rAF intervals > 25ms",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "loafBlockingMs",
+              "label": "Long animation frames: total blocking",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread: scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "layoutMs",
+              "label": "Main thread: layout",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "styleMs",
+              "label": "Main thread: style recalc",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "taskMs",
+              "label": "Main thread: all tasks",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "presentedAllPct": 57.85123966942148,
+                "partialPct": 42.14876033057851,
+                "droppedPct": 0,
+                "rafFps": 59.9961292819818,
+                "p95FrameMs": 17.300000000000182,
+                "maxFrameMs": 17.600000000000136,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1038.83,
+                "scriptMs": 416.89500000000004,
+                "layoutMs": 78.384,
+                "styleMs": 181.052,
+                "layoutCount": 357
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.99806457856197,
+                "p95FrameMs": 17.050000000000296,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1024.972,
+                "scriptMs": 413.098,
+                "layoutMs": 79.817,
+                "styleMs": 181.06900000000002,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 51.790633608815426,
+                "partialPct": 48.209366391184574,
+                "droppedPct": 0,
+                "rafFps": 59.993536180295415,
+                "p95FrameMs": 17,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1004.0420000000001,
+                "scriptMs": 405.68699999999995,
+                "layoutMs": 77.042,
+                "styleMs": 177.63899999999998,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.99806457856197,
+                "p95FrameMs": 17.399999999999977,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1030.802,
+                "scriptMs": 417.83,
+                "layoutMs": 79.14699999999999,
+                "styleMs": 183.849,
+                "layoutCount": 357
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.995471309585014,
+                "p95FrameMs": 17.27499999999975,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1017.306,
+                "scriptMs": 410.449,
+                "layoutMs": 77.894,
+                "styleMs": 178.644,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.99160117583538,
+                "p95FrameMs": 17.200000000000273,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 984.3380000000002,
+                "scriptMs": 391.549,
+                "layoutMs": 75.55199999999999,
+                "styleMs": 170.25099999999998,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.994811259566745,
+                "p95FrameMs": 17.480000000000018,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1004.3039999999999,
+                "scriptMs": 399.03099999999995,
+                "layoutMs": 76.532,
+                "styleMs": 176.38899999999998,
+                "layoutCount": 359
+              }
+            ],
+            "infinite": [
+              {
+                "presentedAllPct": 56.043956043956044,
+                "partialPct": 43.956043956043956,
+                "droppedPct": 0,
+                "rafFps": 59.99806457856197,
+                "p95FrameMs": 17.475000000000023,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1065.714,
+                "scriptMs": 500.597,
+                "layoutMs": 56.422000000000004,
+                "styleMs": 126.507,
+                "layoutCount": 180
+              },
+              {
+                "presentedAllPct": 56.71232876712329,
+                "partialPct": 43.28767123287671,
+                "droppedPct": 0,
+                "rafFps": 59.99612928198181,
+                "p95FrameMs": 17.199999999999818,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1062.98,
+                "scriptMs": 494.76300000000003,
+                "layoutMs": 55.91799999999999,
+                "styleMs": 125.71499999999999,
+                "layoutCount": 181
+              },
+              {
+                "presentedAllPct": 56.59340659340659,
+                "partialPct": 43.40659340659341,
+                "droppedPct": 0,
+                "rafFps": 59.675494338892285,
+                "p95FrameMs": 17.480000000000018,
+                "maxFrameMs": 34.100000000000136,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1066.809,
+                "scriptMs": 502.8119999999999,
+                "layoutMs": 55.663000000000004,
+                "styleMs": 126.16000000000003,
+                "layoutCount": 180
+              },
+              {
+                "presentedAllPct": 59.065934065934066,
+                "partialPct": 40.934065934065934,
+                "droppedPct": 0,
+                "rafFps": 59.674839861760816,
+                "p95FrameMs": 17.27999999999979,
+                "maxFrameMs": 32.799999999999955,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1072.125,
+                "scriptMs": 502.64200000000005,
+                "layoutMs": 56.56699999999999,
+                "styleMs": 126.526,
+                "layoutCount": 180
+              },
+              {
+                "presentedAllPct": 56.31868131868132,
+                "partialPct": 43.68131868131868,
+                "droppedPct": 0,
+                "rafFps": 59.67291501222165,
+                "p95FrameMs": 17.2,
+                "maxFrameMs": 34.299999999999955,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1060.6170000000002,
+                "scriptMs": 492.703,
+                "layoutMs": 56.21500000000001,
+                "styleMs": 126.283,
+                "layoutCount": 180
+              },
+              {
+                "presentedAllPct": 55.61643835616439,
+                "partialPct": 44.38356164383562,
+                "droppedPct": 0,
+                "rafFps": 59.997406563716275,
+                "p95FrameMs": 16.975000000000023,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1044.061,
+                "scriptMs": 488.8,
+                "layoutMs": 54.123999999999995,
+                "styleMs": 124.067,
+                "layoutCount": 181
+              },
+              {
+                "presentedAllPct": 56.74931129476584,
+                "partialPct": 43.25068870523416,
+                "droppedPct": 0,
+                "rafFps": 59.99481125956675,
+                "p95FrameMs": 16.90000000000009,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1042.7379999999998,
+                "scriptMs": 487.83,
+                "layoutMs": 55.823,
+                "styleMs": 124.161,
+                "layoutCount": 180
+              }
+            ]
+          }
+        },
+        "scroll-horizontal": {
+          "scenario": "scroll-horizontal",
+          "description": "Wheel-scroll right/left over all columns, 4 sweeps at 4000px/s (Input.synthesizeScrollGesture - real input pipeline, same gesture for both grids). Frame outcomes come from Chrome's compositor (PipelineReporter): \"partial\" = frame shown without the main thread's update, \"dropped\" = no new frame. rAF frame intervals and Long Animation Frames come from the page.",
+          "metrics": [
+            {
+              "key": "presentedAllPct",
+              "label": "Frames fully presented",
+              "unit": "%",
+              "better": "higher"
+            },
+            {
+              "key": "partialPct",
+              "label": "Frames presented without main-thread update",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "droppedPct",
+              "label": "Frames dropped",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "rafFps",
+              "label": "Main thread frame rate (rAF)",
+              "unit": "fps",
+              "better": "higher"
+            },
+            {
+              "key": "p95FrameMs",
+              "label": "p95 rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "maxFrameMs",
+              "label": "Worst rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "longFramesPct",
+              "label": "rAF intervals > 25ms",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "loafBlockingMs",
+              "label": "Long animation frames: total blocking",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread: scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "layoutMs",
+              "label": "Main thread: layout",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "styleMs",
+              "label": "Main thread: style recalc",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "taskMs",
+              "label": "Main thread: all tasks",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "presentedAllPct": 86.98630136986301,
+                "partialPct": 13.013698630136986,
+                "droppedPct": 0,
+                "rafFps": 60.00778637618345,
+                "p95FrameMs": 16.99000000000001,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 400.24499999999995,
+                "scriptMs": 156.586,
+                "layoutMs": 46.345000000000006,
+                "styleMs": 28.738999999999997,
+                "layoutCount": 144
+              },
+              {
+                "presentedAllPct": 85.3146853146853,
+                "partialPct": 14.685314685314685,
+                "droppedPct": 0,
+                "rafFps": 59.993152001186196,
+                "p95FrameMs": 17.3900000000001,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 424.86800000000005,
+                "scriptMs": 172.96199999999996,
+                "layoutMs": 49.128,
+                "styleMs": 30.914,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 92.90780141843972,
+                "partialPct": 7.092198581560284,
+                "droppedPct": 0,
+                "rafFps": 59.99900489455297,
+                "p95FrameMs": 17.200000000000273,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 412.0929999999999,
+                "scriptMs": 166.572,
+                "layoutMs": 48.598,
+                "styleMs": 30.199,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 85.81560283687944,
+                "partialPct": 14.184397163120568,
+                "droppedPct": 0,
+                "rafFps": 60.026353033038895,
+                "p95FrameMs": 17,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 415.86500000000007,
+                "scriptMs": 166.34500000000003,
+                "layoutMs": 49.077999999999996,
+                "styleMs": 30.347999999999995,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 85.1063829787234,
+                "partialPct": 14.893617021276595,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 16.99000000000001,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 428.72900000000004,
+                "scriptMs": 173.33300000000003,
+                "layoutMs": 51.197,
+                "styleMs": 32.256,
+                "layoutCount": 144
+              },
+              {
+                "presentedAllPct": 85.1063829787234,
+                "partialPct": 14.893617021276595,
+                "droppedPct": 0,
+                "rafFps": 60.00778637618345,
+                "p95FrameMs": 17.5,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 411.21,
+                "scriptMs": 166.84900000000002,
+                "layoutMs": 48.230999999999995,
+                "styleMs": 30.073000000000004,
+                "layoutCount": 144
+              },
+              {
+                "presentedAllPct": 84.39716312056737,
+                "partialPct": 15.602836879432624,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 17.089999999999918,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 419.94699999999995,
+                "scriptMs": 168.67900000000003,
+                "layoutMs": 49.048,
+                "styleMs": 29.951999999999998,
+                "layoutCount": 144
+              }
+            ],
+            "infinite": [
+              {
+                "presentedAllPct": 88.19444444444444,
+                "partialPct": 11.805555555555555,
+                "droppedPct": 0,
+                "rafFps": 59.995021900662124,
+                "p95FrameMs": 17.40000000000009,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 300.09100000000007,
+                "scriptMs": 105.22500000000001,
+                "layoutMs": 7.998,
+                "styleMs": 32.873,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 81.69014084507043,
+                "partialPct": 18.30985915492958,
+                "droppedPct": 0,
+                "rafFps": 59.99702965525313,
+                "p95FrameMs": 17.094999999999914,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 350.188,
+                "scriptMs": 119.062,
+                "layoutMs": 8.875999999999998,
+                "styleMs": 36.488,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 96.52777777777779,
+                "partialPct": 3.4722222222222223,
+                "droppedPct": 0,
+                "rafFps": 59.9999803278753,
+                "p95FrameMs": 17.395000000000085,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 295.39799999999997,
+                "scriptMs": 104.42699999999999,
+                "layoutMs": 7.837999999999999,
+                "styleMs": 32.178,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 89.72602739726028,
+                "partialPct": 10.273972602739725,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 17.289999999999782,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 318.703,
+                "scriptMs": 112.49100000000001,
+                "layoutMs": 8.753,
+                "styleMs": 36.17,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 88.35616438356165,
+                "partialPct": 11.643835616438356,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 17.30000000000016,
+                "maxFrameMs": 17.700000000000045,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 340.55500000000006,
+                "scriptMs": 116.57399999999996,
+                "layoutMs": 8.336,
+                "styleMs": 36.413,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 89.04109589041096,
+                "partialPct": 10.95890410958904,
+                "droppedPct": 0,
+                "rafFps": 60.01364212547828,
+                "p95FrameMs": 17.589999999999918,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 304.7920000000001,
+                "scriptMs": 110.371,
+                "layoutMs": 8.206000000000001,
+                "styleMs": 33.899,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 82.1917808219178,
+                "partialPct": 17.80821917808219,
+                "droppedPct": 0,
+                "rafFps": 60.026353033038895,
+                "p95FrameMs": 16.80000000000016,
+                "maxFrameMs": 17.5,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 326.67400000000004,
+                "scriptMs": 111.38799999999999,
+                "layoutMs": 8.197,
+                "styleMs": 34.393,
+                "layoutCount": 36
+              }
+            ]
+          }
+        },
+        "correctness-vertical": {
+          "scenario": "correctness-vertical",
+          "description": "Same kind of vertical wheel gesture, faster (20000px/s). After every painted frame, samples points across the body and checks the cell there is the one that should be there for the current scroll position: \"blank\" = no cell, \"wrong\" = a cell for another row/column (stale content, or position lagging behind the scroll). This is the main thread's view of the frame; it reads layout, so it is never combined with the timing passes.",
+          "metrics": [
+            {
+              "key": "blankPct",
+              "label": "Blank samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "wrongPct",
+              "label": "Wrong/stale samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "badFramesPct",
+              "label": "Frames with any blank/wrong sample",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "worstFrameOkPct",
+              "label": "Worst frame: correct samples",
+              "unit": "%",
+              "better": "higher"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "blankPct": 2.7848101265822782,
+                "wrongPct": 0,
+                "badFramesPct": 13.924050632911392,
+                "worstFrameOkPct": 80,
+                "frames": 79
+              },
+              {
+                "blankPct": 2.5974025974025974,
+                "wrongPct": 0,
+                "badFramesPct": 12.987012987012985,
+                "worstFrameOkPct": 80,
+                "frames": 77
+              },
+              {
+                "blankPct": 3.116883116883117,
+                "wrongPct": 0,
+                "badFramesPct": 15.584415584415584,
+                "worstFrameOkPct": 80,
+                "frames": 77
+              },
+              {
+                "blankPct": 2.666666666666667,
+                "wrongPct": 0,
+                "badFramesPct": 13.333333333333334,
+                "worstFrameOkPct": 80,
+                "frames": 75
+              },
+              {
+                "blankPct": 2.051282051282051,
+                "wrongPct": 0,
+                "badFramesPct": 10.256410256410255,
+                "worstFrameOkPct": 80,
+                "frames": 78
+              },
+              {
+                "blankPct": 2.051282051282051,
+                "wrongPct": 0,
+                "badFramesPct": 10.256410256410255,
+                "worstFrameOkPct": 80,
+                "frames": 78
+              },
+              {
+                "blankPct": 2.564102564102564,
+                "wrongPct": 0,
+                "badFramesPct": 12.82051282051282,
+                "worstFrameOkPct": 80,
+                "frames": 78
+              }
+            ],
+            "infinite": [
+              {
+                "blankPct": 0,
+                "wrongPct": 38.739612188365655,
+                "badFramesPct": 90.78947368421053,
+                "worstFrameOkPct": 11.578947368421053,
+                "frames": 76
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 39.03157894736842,
+                "badFramesPct": 93.33333333333333,
+                "worstFrameOkPct": 16.842105263157894,
+                "frames": 75
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 38.421052631578945,
+                "badFramesPct": 89.47368421052632,
+                "worstFrameOkPct": 12.631578947368421,
+                "frames": 76
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 38.365650969529085,
+                "badFramesPct": 88.1578947368421,
+                "worstFrameOkPct": 6.315789473684211,
+                "frames": 76
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 37.428381079280484,
+                "badFramesPct": 91.13924050632912,
+                "worstFrameOkPct": 48.421052631578945,
+                "frames": 79
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 37.388407728181214,
+                "badFramesPct": 91.13924050632912,
+                "worstFrameOkPct": 50.526315789473685,
+                "frames": 79
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 39.14127423822715,
+                "badFramesPct": 90.78947368421053,
+                "worstFrameOkPct": 11.578947368421053,
+                "frames": 76
+              }
+            ]
+          }
+        },
+        "correctness-horizontal": {
+          "scenario": "correctness-horizontal",
+          "description": "Same kind of horizontal wheel gesture. After every painted frame, samples points across the body and checks the cell there is the one that should be there for the current scroll position: \"blank\" = no cell, \"wrong\" = a cell for another row/column (stale content, or position lagging behind the scroll). This is the main thread's view of the frame; it reads layout, so it is never combined with the timing passes.",
+          "metrics": [
+            {
+              "key": "blankPct",
+              "label": "Blank samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "wrongPct",
+              "label": "Wrong/stale samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "badFramesPct",
+              "label": "Frames with any blank/wrong sample",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "worstFrameOkPct",
+              "label": "Worst frame: correct samples",
+              "unit": "%",
+              "better": "higher"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 122
+              }
+            ],
+            "infinite": [
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 125
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              }
+            ]
+          }
+        },
+        "visual-blank-vertical": {
+          "scenario": "visual-blank-vertical",
+          "description": "Fast vertical wheel gesture (20000px/s) while recording what the compositor actually displays (CDP screencast). Each frame is checked for blank areas: vertical runs of the body with no text where rows should be. Unlike the correctness probe, this also catches the compositor scrolling ahead of the main thread. Screencast capture skips frames under load and adds overhead - compare the two grids, not absolute numbers.",
+          "metrics": [
+            {
+              "key": "blankFramesPct",
+              "label": "Captured frames with blank rows",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "blankAreaPct",
+              "label": "Blank body area (avg over frames)",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "maxBlankRows",
+              "label": "Worst frame: blank rows",
+              "unit": "rows",
+              "better": "lower"
+            },
+            {
+              "key": "capturedFrames",
+              "label": "Captured frames",
+              "unit": "",
+              "better": "higher"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "blankFramesPct": 6.756756756756757,
+                "blankAreaPct": 1.82368603421235,
+                "maxBlankRows": 9,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 9.45945945945946,
+                "blankAreaPct": 1.240106503264398,
+                "maxBlankRows": 3,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 2.7027027027027026,
+                "blankAreaPct": 0.218842324105482,
+                "maxBlankRows": 2,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 2.7027027027027026,
+                "blankAreaPct": 0.218842324105482,
+                "maxBlankRows": 2,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 2.7027027027027026,
+                "blankAreaPct": 0.218842324105482,
+                "maxBlankRows": 2,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 4.166666666666666,
+                "blankAreaPct": 0.44984255510571297,
+                "maxBlankRows": 3,
+                "capturedFrames": 72
+              },
+              {
+                "blankFramesPct": 14.864864864864865,
+                "blankAreaPct": 4.74158368895211,
+                "maxBlankRows": 16,
+                "capturedFrames": 74
+              }
+            ],
+            "infinite": [
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              }
+            ]
+          }
+        }
+      }
+    },
+    "1m": {
+      "size": "1m",
+      "rowCount": 1000000,
+      "checksum": "1000000:19e5eebe",
+      "scroll": {
+        "ag-grid": {
+          "ratio": 1.2500058595137973,
+          "linearRatio": 1.250005953266018,
+          "scrollMax": 31999242,
+          "lastVisibleRow": 1000000,
+          "rowCount": 1000000
+        },
+        "infinite": {
+          "ratio": 1.2500059142024615,
+          "linearRatio": 1.2500059142024078,
+          "scrollMax": 31999243,
+          "lastVisibleRow": 1000000,
+          "rowCount": 1000000
+        }
+      },
+      "results": {
+        "mount": {
+          "scenario": "mount",
+          "description": "Mount the grid with all the rows (data already in memory). \"Visible\" = from setState to the end of the first frame committed with the whole viewport (first/last visible row and column) showing the right content. \"Settled\" = until the first frame committed after the grid's last DOM mutation. Memory is the JS heap retained by the grid after GC (heap after mount - heap before mount).",
+          "metrics": [
+            {
+              "key": "visibleMs",
+              "label": "Time to first rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "settledMs",
+              "label": "Time until settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread: scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "layoutMs",
+              "label": "Main thread: layout",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "styleMs",
+              "label": "Main thread: style recalc",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "taskMs",
+              "label": "Main thread: all tasks",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "heapMB",
+              "label": "JS heap retained by grid",
+              "unit": "MB",
+              "better": "lower"
+            },
+            {
+              "key": "gridElements",
+              "label": "DOM elements in grid",
+              "unit": "",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "visibleMs": 493.739,
+                "settledMs": 595.957,
+                "taskMs": 500.07900000000006,
+                "scriptMs": 473.932,
+                "layoutMs": 7.488999999999999,
+                "styleMs": 7.792999999999999,
+                "layoutCount": 24,
+                "heapMB": 213.4604034423828,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 515.644,
+                "settledMs": 617.832,
+                "taskMs": 521.938,
+                "scriptMs": 496.859,
+                "layoutMs": 7.020999999999999,
+                "styleMs": 7.383000000000001,
+                "layoutCount": 24,
+                "heapMB": 213.4535369873047,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 511.131,
+                "settledMs": 614.738,
+                "taskMs": 518.127,
+                "scriptMs": 490.91799999999995,
+                "layoutMs": 7.375,
+                "styleMs": 8.379,
+                "layoutCount": 24,
+                "heapMB": 213.46117401123047,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 459.656,
+                "settledMs": 562.955,
+                "taskMs": 466.646,
+                "scriptMs": 441.601,
+                "layoutMs": 6.955,
+                "styleMs": 7.386,
+                "layoutCount": 24,
+                "heapMB": 213.46117401123047,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 503.74,
+                "settledMs": 606.869,
+                "taskMs": 511.02600000000007,
+                "scriptMs": 484.585,
+                "layoutMs": 7.3999999999999995,
+                "styleMs": 7.539,
+                "layoutCount": 24,
+                "heapMB": 213.45864868164062,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 485.671,
+                "settledMs": 588.691,
+                "taskMs": 493.45099999999996,
+                "scriptMs": 466.12000000000006,
+                "layoutMs": 7.424000000000001,
+                "styleMs": 7.894,
+                "layoutCount": 24,
+                "heapMB": 213.4604034423828,
+                "gridElements": 637
+              },
+              {
+                "visibleMs": 570.401,
+                "settledMs": 674.036,
+                "taskMs": 577.4870000000001,
+                "scriptMs": 548.5319999999999,
+                "layoutMs": 8.03,
+                "styleMs": 9.394,
+                "layoutCount": 24,
+                "heapMB": 213.4611701965332,
+                "gridElements": 637
+              }
+            ],
+            "infinite": [
+              {
+                "visibleMs": 350.088,
+                "settledMs": 350.088,
+                "taskMs": 352.6210000000001,
+                "scriptMs": 339.725,
+                "layoutMs": 2.145,
+                "styleMs": 3.407,
+                "layoutCount": 13,
+                "heapMB": 90.68179321289062,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 379.109,
+                "settledMs": 379.109,
+                "taskMs": 381.62999999999994,
+                "scriptMs": 367.77199999999993,
+                "layoutMs": 2.329,
+                "styleMs": 3.7250000000000005,
+                "layoutCount": 13,
+                "heapMB": 90.68209075927734,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 376.463,
+                "settledMs": 376.463,
+                "taskMs": 379.61100000000016,
+                "scriptMs": 365.21500000000003,
+                "layoutMs": 2.504,
+                "styleMs": 3.7520000000000007,
+                "layoutCount": 13,
+                "heapMB": 90.68206405639648,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 406.923,
+                "settledMs": 406.923,
+                "taskMs": 409.2719999999999,
+                "scriptMs": 395.193,
+                "layoutMs": 2.394,
+                "styleMs": 3.788,
+                "layoutCount": 13,
+                "heapMB": 90.6817626953125,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 425.524,
+                "settledMs": 447.221,
+                "taskMs": 433.87399999999997,
+                "scriptMs": 419.75299999999993,
+                "layoutMs": 2.2189999999999994,
+                "styleMs": 3.641,
+                "layoutCount": 13,
+                "heapMB": 89.70541000366211,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 482.034,
+                "settledMs": 482.034,
+                "taskMs": 484.664,
+                "scriptMs": 470.123,
+                "layoutMs": 2.3150000000000004,
+                "styleMs": 3.9700000000000006,
+                "layoutCount": 13,
+                "heapMB": 90.68206405639648,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 370.192,
+                "settledMs": 370.192,
+                "taskMs": 372.7179999999999,
+                "scriptMs": 359.38399999999996,
+                "layoutMs": 2.0940000000000003,
+                "styleMs": 3.5589999999999997,
+                "layoutCount": 13,
+                "heapMB": 90.68209457397461,
+                "gridElements": 609
+              }
+            ]
+          }
+        },
+        "sort-string": {
+          "scenario": "sort-string",
+          "description": "Click the \"code\" column header (string column, unique-ish values) - first click sorts ascending (cold), second click descending. Measured from pointerdown to the end of the first frame committed with all visible rows sorted (and each row consistent: its cells belong to the same data row).",
+          "metrics": [
+            {
+              "key": "ascVisibleMs",
+              "label": "Ascending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascSettledMs",
+              "label": "Ascending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descVisibleMs",
+              "label": "Descending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descSettledMs",
+              "label": "Descending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascScriptMs",
+              "label": "Ascending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descScriptMs",
+              "label": "Descending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "ascVisibleMs": 3630.967,
+                "ascSettledMs": 3630.967,
+                "ascScriptMs": 3619.5020000000004,
+                "descVisibleMs": 3510.473,
+                "descSettledMs": 3510.473,
+                "descScriptMs": 3501.5739999999996
+              },
+              {
+                "ascVisibleMs": 3309.965,
+                "ascSettledMs": 3309.965,
+                "ascScriptMs": 3297.698,
+                "descVisibleMs": 3661.622,
+                "descSettledMs": 3661.622,
+                "descScriptMs": 3652.1639999999998
+              },
+              {
+                "ascVisibleMs": 3653.447,
+                "ascSettledMs": 3653.447,
+                "ascScriptMs": 3642.0589999999997,
+                "descVisibleMs": 3594.148,
+                "descSettledMs": 3594.148,
+                "descScriptMs": 3584.688
+              },
+              {
+                "ascVisibleMs": 3644.78,
+                "ascSettledMs": 3644.78,
+                "ascScriptMs": 3633.2870000000003,
+                "descVisibleMs": 3701.802,
+                "descSettledMs": 3701.802,
+                "descScriptMs": 3693.092
+              },
+              {
+                "ascVisibleMs": 3345.912,
+                "ascSettledMs": 3345.912,
+                "ascScriptMs": 3334.266,
+                "descVisibleMs": 3304.556,
+                "descSettledMs": 3304.556,
+                "descScriptMs": 3295.4519999999993
+              },
+              {
+                "ascVisibleMs": 3349.751,
+                "ascSettledMs": 3349.751,
+                "ascScriptMs": 3338.6079999999997,
+                "descVisibleMs": 3324.901,
+                "descSettledMs": 3324.901,
+                "descScriptMs": 3315.9280000000003
+              },
+              {
+                "ascVisibleMs": 3329.839,
+                "ascSettledMs": 3329.839,
+                "ascScriptMs": 3319.0869999999995,
+                "descVisibleMs": 3302.693,
+                "descSettledMs": 3302.693,
+                "descScriptMs": 3294.164
+              }
+            ],
+            "infinite": [
+              {
+                "ascVisibleMs": 1441.545,
+                "ascSettledMs": 1447.578,
+                "ascScriptMs": 1429.3560000000002,
+                "descVisibleMs": 1374.249,
+                "descSettledMs": 1374.249,
+                "descScriptMs": 1359.313
+              },
+              {
+                "ascVisibleMs": 1401.727,
+                "ascSettledMs": 1413.418,
+                "ascScriptMs": 1388.7699999999995,
+                "descVisibleMs": 1438.748,
+                "descSettledMs": 1438.748,
+                "descScriptMs": 1424.125
+              },
+              {
+                "ascVisibleMs": 1330.112,
+                "ascSettledMs": 1345.929,
+                "ascScriptMs": 1317.0829999999999,
+                "descVisibleMs": 1432.395,
+                "descSettledMs": 1432.395,
+                "descScriptMs": 1417.6830000000002
+              },
+              {
+                "ascVisibleMs": 1429.972,
+                "ascSettledMs": 1445.147,
+                "ascScriptMs": 1417.5270000000003,
+                "descVisibleMs": 1371.327,
+                "descSettledMs": 1371.327,
+                "descScriptMs": 1356.1129999999996
+              },
+              {
+                "ascVisibleMs": 1295.871,
+                "ascSettledMs": 1313.182,
+                "ascScriptMs": 1282.9130000000002,
+                "descVisibleMs": 1384.384,
+                "descSettledMs": 1384.384,
+                "descScriptMs": 1369.183
+              },
+              {
+                "ascVisibleMs": 1322.528,
+                "ascSettledMs": 1328.548,
+                "ascScriptMs": 1310.4250000000002,
+                "descVisibleMs": 1431.202,
+                "descSettledMs": 1431.202,
+                "descScriptMs": 1417.8419999999999
+              },
+              {
+                "ascVisibleMs": 1346.462,
+                "ascSettledMs": 1363.137,
+                "ascScriptMs": 1333.113,
+                "descVisibleMs": 1327.229,
+                "descSettledMs": 1327.229,
+                "descScriptMs": 1312.5449999999996
+              }
+            ]
+          }
+        },
+        "sort-number": {
+          "scenario": "sort-number",
+          "description": "Click the \"salary\" column header (number column, unique-ish values) - first click sorts ascending (cold), second click descending. Measured from pointerdown to the end of the first frame committed with all visible rows sorted (and each row consistent: its cells belong to the same data row).",
+          "metrics": [
+            {
+              "key": "ascVisibleMs",
+              "label": "Ascending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascSettledMs",
+              "label": "Ascending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descVisibleMs",
+              "label": "Descending: click to sorted rows painted",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descSettledMs",
+              "label": "Descending: click to settled",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "ascScriptMs",
+              "label": "Ascending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "descScriptMs",
+              "label": "Descending: main thread scripting",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "ascVisibleMs": 2999.878,
+                "ascSettledMs": 2999.878,
+                "ascScriptMs": 2987.116,
+                "descVisibleMs": 2970.984,
+                "descSettledMs": 2970.984,
+                "descScriptMs": 2962.1190000000006
+              },
+              {
+                "ascVisibleMs": 2771.251,
+                "ascSettledMs": 2771.251,
+                "ascScriptMs": 2759.0750000000003,
+                "descVisibleMs": 2915.796,
+                "descSettledMs": 2915.796,
+                "descScriptMs": 2906.514
+              },
+              {
+                "ascVisibleMs": 2973.512,
+                "ascSettledMs": 2973.512,
+                "ascScriptMs": 2960.3019999999997,
+                "descVisibleMs": 3095.053,
+                "descSettledMs": 3095.053,
+                "descScriptMs": 3086.608
+              },
+              {
+                "ascVisibleMs": 2858.924,
+                "ascSettledMs": 2858.924,
+                "ascScriptMs": 2846.357,
+                "descVisibleMs": 2891.398,
+                "descSettledMs": 2891.398,
+                "descScriptMs": 2882.5220000000004
+              },
+              {
+                "ascVisibleMs": 2839.941,
+                "ascSettledMs": 2839.941,
+                "ascScriptMs": 2828.5139999999997,
+                "descVisibleMs": 2818.531,
+                "descSettledMs": 2818.531,
+                "descScriptMs": 2809.4400000000005
+              },
+              {
+                "ascVisibleMs": 2913.4,
+                "ascSettledMs": 2913.4,
+                "ascScriptMs": 2901.322,
+                "descVisibleMs": 3000.084,
+                "descSettledMs": 3000.084,
+                "descScriptMs": 2990.841
+              },
+              {
+                "ascVisibleMs": 2916.621,
+                "ascSettledMs": 2916.621,
+                "ascScriptMs": 2904.5679999999998,
+                "descVisibleMs": 2948.149,
+                "descSettledMs": 2948.149,
+                "descScriptMs": 2939.5389999999993
+              }
+            ],
+            "infinite": [
+              {
+                "ascVisibleMs": 1121.142,
+                "ascSettledMs": 1128.007,
+                "ascScriptMs": 1108.457,
+                "descVisibleMs": 1157.05,
+                "descSettledMs": 1157.05,
+                "descScriptMs": 1149.2220000000002
+              },
+              {
+                "ascVisibleMs": 1114.035,
+                "ascSettledMs": 1129.441,
+                "ascScriptMs": 1101.41,
+                "descVisibleMs": 1102.251,
+                "descSettledMs": 1102.251,
+                "descScriptMs": 1087.542
+              },
+              {
+                "ascVisibleMs": 1225.236,
+                "ascSettledMs": 1228.661,
+                "ascScriptMs": 1213.871,
+                "descVisibleMs": 1213.545,
+                "descSettledMs": 1213.545,
+                "descScriptMs": 1198.2370000000003
+              },
+              {
+                "ascVisibleMs": 1087.533,
+                "ascSettledMs": 1096.215,
+                "ascScriptMs": 1074.792,
+                "descVisibleMs": 1190.383,
+                "descSettledMs": 1190.383,
+                "descScriptMs": 1175.0279999999998
+              },
+              {
+                "ascVisibleMs": 1120.349,
+                "ascSettledMs": 1129.526,
+                "ascScriptMs": 1107.96,
+                "descVisibleMs": 1120.282,
+                "descSettledMs": 1120.282,
+                "descScriptMs": 1105.4730000000002
+              },
+              {
+                "ascVisibleMs": 1069.184,
+                "ascSettledMs": 1078.773,
+                "ascScriptMs": 1056.8629999999998,
+                "descVisibleMs": 1141.609,
+                "descSettledMs": 1141.609,
+                "descScriptMs": 1126.3110000000004
+              },
+              {
+                "ascVisibleMs": 1083.553,
+                "ascSettledMs": 1096.827,
+                "ascScriptMs": 1070.1779999999999,
+                "descVisibleMs": 1090.565,
+                "descSettledMs": 1090.565,
+                "descScriptMs": 1076.003
+              }
+            ]
+          }
+        },
+        "scroll-jump": {
+          "scenario": "scroll-jump",
+          "description": "Programmatic jumps to 10 far-away scroll positions (like dragging the scrollbar thumb). Measured from setting scrollTop to the end of the first frame committed with the first and last visible rows showing the right content, at the right position.",
+          "metrics": [
+            {
+              "key": "visibleMs",
+              "label": "Jump to rows painted (median of jumps)",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "visibleMaxMs",
+              "label": "Jump to rows painted (worst jump)",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "settledMs",
+              "label": "Jump to settled (median of jumps)",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread scripting (all jumps)",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "visibleMs": 21.149500000000003,
+                "visibleMaxMs": 36.606,
+                "settledMs": 21.149500000000003,
+                "scriptMs": 130.88500000000002
+              },
+              {
+                "visibleMs": 21.3965,
+                "visibleMaxMs": 34.801,
+                "settledMs": 21.3965,
+                "scriptMs": 127.97500000000007
+              },
+              {
+                "visibleMs": 24.221,
+                "visibleMaxMs": 37.31,
+                "settledMs": 24.221,
+                "scriptMs": 139.6440000000001
+              },
+              {
+                "visibleMs": 22.6,
+                "visibleMaxMs": 33.384,
+                "settledMs": 22.6,
+                "scriptMs": 136.80000000000004
+              },
+              {
+                "visibleMs": 20.146500000000003,
+                "visibleMaxMs": 33.274,
+                "settledMs": 20.146500000000003,
+                "scriptMs": 123.12200000000007
+              },
+              {
+                "visibleMs": 21.130000000000003,
+                "visibleMaxMs": 36.982,
+                "settledMs": 21.130000000000003,
+                "scriptMs": 126.11399999999995
+              },
+              {
+                "visibleMs": 21.075000000000003,
+                "visibleMaxMs": 32.27,
+                "settledMs": 21.075000000000003,
+                "scriptMs": 125.14999999999998
+              }
+            ],
+            "infinite": [
+              {
+                "visibleMs": 24.360999999999997,
+                "visibleMaxMs": 38.004,
+                "settledMs": 24.360999999999997,
+                "scriptMs": 141.14799999999994
+              },
+              {
+                "visibleMs": 24.201500000000003,
+                "visibleMaxMs": 30.634,
+                "settledMs": 24.201500000000003,
+                "scriptMs": 144.95499999999996
+              },
+              {
+                "visibleMs": 24.567500000000003,
+                "visibleMaxMs": 30.813,
+                "settledMs": 24.567500000000003,
+                "scriptMs": 151.7630000000001
+              },
+              {
+                "visibleMs": 25.7845,
+                "visibleMaxMs": 38.373,
+                "settledMs": 25.7845,
+                "scriptMs": 163.65399999999997
+              },
+              {
+                "visibleMs": 27.401,
+                "visibleMaxMs": 35.535,
+                "settledMs": 27.401,
+                "scriptMs": 173.75799999999998
+              },
+              {
+                "visibleMs": 25.6505,
+                "visibleMaxMs": 36.876,
+                "settledMs": 25.6505,
+                "scriptMs": 156.64900000000003
+              },
+              {
+                "visibleMs": 23.493499999999997,
+                "visibleMaxMs": 26.996,
+                "settledMs": 23.493499999999997,
+                "scriptMs": 139.50099999999998
+              }
+            ]
+          }
+        },
+        "scroll-vertical": {
+          "scenario": "scroll-vertical",
+          "description": "Wheel-scroll down 24000px at 8000px/s (Input.synthesizeScrollGesture - real input pipeline, same gesture for both grids). Frame outcomes come from Chrome's compositor (PipelineReporter): \"partial\" = frame shown without the main thread's update, \"dropped\" = no new frame. rAF frame intervals and Long Animation Frames come from the page.",
+          "metrics": [
+            {
+              "key": "presentedAllPct",
+              "label": "Frames fully presented",
+              "unit": "%",
+              "better": "higher"
+            },
+            {
+              "key": "partialPct",
+              "label": "Frames presented without main-thread update",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "droppedPct",
+              "label": "Frames dropped",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "rafFps",
+              "label": "Main thread frame rate (rAF)",
+              "unit": "fps",
+              "better": "higher"
+            },
+            {
+              "key": "p95FrameMs",
+              "label": "p95 rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "maxFrameMs",
+              "label": "Worst rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "longFramesPct",
+              "label": "rAF intervals > 25ms",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "loafBlockingMs",
+              "label": "Long animation frames: total blocking",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread: scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "layoutMs",
+              "label": "Main thread: layout",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "styleMs",
+              "label": "Main thread: style recalc",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "taskMs",
+              "label": "Main thread: all tasks",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "presentedAllPct": 52.22222222222223,
+                "partialPct": 47.77777777777778,
+                "droppedPct": 0,
+                "rafFps": 58.97728208056297,
+                "p95FrameMs": 17.40000000000009,
+                "maxFrameMs": 67.20000000000027,
+                "longFramesPct": 0.5494505494505495,
+                "loafBlockingMs": 0,
+                "taskMs": 1280.9709999999998,
+                "scriptMs": 472.8330000000001,
+                "layoutMs": 79.068,
+                "styleMs": 258.71099999999996,
+                "layoutCount": 353
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.950994896429826,
+                "p95FrameMs": 17.300000000000182,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1277.9340000000002,
+                "scriptMs": 486.1159999999999,
+                "layoutMs": 80.374,
+                "styleMs": 268.135,
+                "layoutCount": 359
+              },
+              {
+                "presentedAllPct": 52.34159779614325,
+                "partialPct": 47.658402203856745,
+                "droppedPct": 0,
+                "rafFps": 59.99806457856197,
+                "p95FrameMs": 17.300000000000182,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1308.559,
+                "scriptMs": 493.08399999999995,
+                "layoutMs": 83.52799999999999,
+                "styleMs": 269.19100000000003,
+                "layoutCount": 359
+              },
+              {
+                "presentedAllPct": 55.371900826446286,
+                "partialPct": 44.62809917355372,
+                "droppedPct": 0,
+                "rafFps": 59.99612928198181,
+                "p95FrameMs": 17.299999999999955,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1284.849,
+                "scriptMs": 482.3280000000001,
+                "layoutMs": 81.69200000000001,
+                "styleMs": 265.3,
+                "layoutCount": 359
+              },
+              {
+                "presentedAllPct": 51.66666666666667,
+                "partialPct": 48.333333333333336,
+                "droppedPct": 0,
+                "rafFps": 59.67245013783039,
+                "p95FrameMs": 17.09999999999984,
+                "maxFrameMs": 33.40000000000009,
+                "longFramesPct": 0.5434782608695652,
+                "loafBlockingMs": 0,
+                "taskMs": 1277.134,
+                "scriptMs": 483.8610000000001,
+                "layoutMs": 80.13799999999999,
+                "styleMs": 264.867,
+                "layoutCount": 355
+              },
+              {
+                "presentedAllPct": 52.066115702479344,
+                "partialPct": 47.93388429752066,
+                "droppedPct": 0,
+                "rafFps": 59.99675693205773,
+                "p95FrameMs": 17.40000000000009,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1266.9210000000003,
+                "scriptMs": 476.9500000000001,
+                "layoutMs": 79.14699999999999,
+                "styleMs": 261.912,
+                "layoutCount": 359
+              },
+              {
+                "presentedAllPct": 52.34159779614325,
+                "partialPct": 47.658402203856745,
+                "droppedPct": 0,
+                "rafFps": 60.01427366508792,
+                "p95FrameMs": 17.48000000000011,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1266.8400000000001,
+                "scriptMs": 475.06499999999994,
+                "layoutMs": 79.984,
+                "styleMs": 261.337,
+                "layoutCount": 359
+              }
+            ],
+            "infinite": [
+              {
+                "presentedAllPct": 58.40220385674931,
+                "partialPct": 41.59779614325069,
+                "droppedPct": 0,
+                "rafFps": 59.30701047542305,
+                "p95FrameMs": 17.59999999999991,
+                "maxFrameMs": 33.59999999999991,
+                "longFramesPct": 1.0869565217391304,
+                "loafBlockingMs": 0,
+                "taskMs": 1213.699,
+                "scriptMs": 572.6269999999998,
+                "layoutMs": 64.832,
+                "styleMs": 142.54,
+                "layoutCount": 178
+              },
+              {
+                "presentedAllPct": 57.14285714285714,
+                "partialPct": 42.857142857142854,
+                "droppedPct": 0,
+                "rafFps": 59.95009559609838,
+                "p95FrameMs": 17.5,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1179.13,
+                "scriptMs": 566.985,
+                "layoutMs": 62.765,
+                "styleMs": 141.35699999999997,
+                "layoutCount": 181
+              },
+              {
+                "presentedAllPct": 53.97260273972603,
+                "partialPct": 46.02739726027397,
+                "droppedPct": 0,
+                "rafFps": 59.99612928198181,
+                "p95FrameMs": 17.374999999999773,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1188.0059999999999,
+                "scriptMs": 563.9910000000001,
+                "layoutMs": 63.05,
+                "styleMs": 141.565,
+                "layoutCount": 181
+              },
+              {
+                "presentedAllPct": 53.71900826446281,
+                "partialPct": 46.28099173553719,
+                "droppedPct": 0,
+                "rafFps": 59.99609538925142,
+                "p95FrameMs": 17.379999999999747,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1161.4560000000001,
+                "scriptMs": 545.9929999999999,
+                "layoutMs": 62.737,
+                "styleMs": 138.132,
+                "layoutCount": 180
+              },
+              {
+                "presentedAllPct": 53.97260273972603,
+                "partialPct": 46.02739726027397,
+                "droppedPct": 0,
+                "rafFps": 59.9961292819818,
+                "p95FrameMs": 17.20000000000016,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1179.616,
+                "scriptMs": 555.797,
+                "layoutMs": 62.165,
+                "styleMs": 138.652,
+                "layoutCount": 181
+              },
+              {
+                "presentedAllPct": 53.278688524590166,
+                "partialPct": 46.72131147540984,
+                "droppedPct": 0,
+                "rafFps": 60.01095683921644,
+                "p95FrameMs": 17.5,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1197.499,
+                "scriptMs": 567.5060000000001,
+                "layoutMs": 63.788,
+                "styleMs": 143.121,
+                "layoutCount": 181
+              },
+              {
+                "presentedAllPct": 54.09836065573771,
+                "partialPct": 45.90163934426229,
+                "droppedPct": 0,
+                "rafFps": 59.99612928198181,
+                "p95FrameMs": 17.5,
+                "maxFrameMs": 17.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1145.4419999999998,
+                "scriptMs": 541.382,
+                "layoutMs": 61.635999999999996,
+                "styleMs": 138.56400000000002,
+                "layoutCount": 181
+              }
+            ]
+          }
+        },
+        "scroll-horizontal": {
+          "scenario": "scroll-horizontal",
+          "description": "Wheel-scroll right/left over all columns, 4 sweeps at 4000px/s (Input.synthesizeScrollGesture - real input pipeline, same gesture for both grids). Frame outcomes come from Chrome's compositor (PipelineReporter): \"partial\" = frame shown without the main thread's update, \"dropped\" = no new frame. rAF frame intervals and Long Animation Frames come from the page.",
+          "metrics": [
+            {
+              "key": "presentedAllPct",
+              "label": "Frames fully presented",
+              "unit": "%",
+              "better": "higher"
+            },
+            {
+              "key": "partialPct",
+              "label": "Frames presented without main-thread update",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "droppedPct",
+              "label": "Frames dropped",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "rafFps",
+              "label": "Main thread frame rate (rAF)",
+              "unit": "fps",
+              "better": "higher"
+            },
+            {
+              "key": "p95FrameMs",
+              "label": "p95 rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "maxFrameMs",
+              "label": "Worst rAF frame interval",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "longFramesPct",
+              "label": "rAF intervals > 25ms",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "loafBlockingMs",
+              "label": "Long animation frames: total blocking",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "scriptMs",
+              "label": "Main thread: scripting",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "layoutMs",
+              "label": "Main thread: layout",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "styleMs",
+              "label": "Main thread: style recalc",
+              "unit": "ms",
+              "better": "lower"
+            },
+            {
+              "key": "taskMs",
+              "label": "Main thread: all tasks",
+              "unit": "ms",
+              "better": "lower"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "presentedAllPct": 88.65248226950354,
+                "partialPct": 11.347517730496454,
+                "droppedPct": 0,
+                "rafFps": 59.99607830512542,
+                "p95FrameMs": 17.289999999999736,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 399.0530000000001,
+                "scriptMs": 167.88099999999994,
+                "layoutMs": 50.748999999999995,
+                "styleMs": 31.331999999999997,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 85.81560283687944,
+                "partialPct": 14.184397163120568,
+                "droppedPct": 0,
+                "rafFps": 60.01756611691228,
+                "p95FrameMs": 17.40000000000009,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 388.97400000000016,
+                "scriptMs": 164.89899999999992,
+                "layoutMs": 49.341,
+                "styleMs": 30.572000000000003,
+                "layoutCount": 144
+              },
+              {
+                "presentedAllPct": 85.1063829787234,
+                "partialPct": 14.893617021276595,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 17.189999999999827,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 395.7089999999999,
+                "scriptMs": 166.164,
+                "layoutMs": 50.76,
+                "styleMs": 31.918999999999997,
+                "layoutCount": 144
+              },
+              {
+                "presentedAllPct": 86.01398601398601,
+                "partialPct": 13.986013986013987,
+                "droppedPct": 0,
+                "rafFps": 59.96390465446652,
+                "p95FrameMs": 17.199999999999818,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 389.262,
+                "scriptMs": 163.21200000000002,
+                "layoutMs": 49.338,
+                "styleMs": 31.739000000000004,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 85.1063829787234,
+                "partialPct": 14.893617021276595,
+                "droppedPct": 0,
+                "rafFps": 59.950285129404875,
+                "p95FrameMs": 17.38000000000011,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 390.2430000000001,
+                "scriptMs": 165.944,
+                "layoutMs": 50.274,
+                "styleMs": 32.247,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 89.65517241379311,
+                "partialPct": 10.344827586206897,
+                "droppedPct": 0,
+                "rafFps": 59.950859950859964,
+                "p95FrameMs": 17.495000000000005,
+                "maxFrameMs": 17.799999999999727,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 391.6710000000001,
+                "scriptMs": 166.31899999999987,
+                "layoutMs": 48.749,
+                "styleMs": 32.109,
+                "layoutCount": 144
+              },
+              {
+                "presentedAllPct": 86.01398601398601,
+                "partialPct": 13.986013986013987,
+                "droppedPct": 0,
+                "rafFps": 59.97852476235339,
+                "p95FrameMs": 17.49000000000001,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 382.692,
+                "scriptMs": 159.331,
+                "layoutMs": 48.192,
+                "styleMs": 30.526,
+                "layoutCount": 144
+              }
+            ],
+            "infinite": [
+              {
+                "presentedAllPct": 88.35616438356165,
+                "partialPct": 11.643835616438356,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 17.189999999999852,
+                "maxFrameMs": 17.600000000000364,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 338.6660000000001,
+                "scriptMs": 110.90500000000003,
+                "layoutMs": 8.441,
+                "styleMs": 34.105000000000004,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 89.72602739726028,
+                "partialPct": 10.273972602739725,
+                "droppedPct": 0,
+                "rafFps": 59.997073313496905,
+                "p95FrameMs": 17.5,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 360.55799999999994,
+                "scriptMs": 109.58299999999998,
+                "layoutMs": 8.42,
+                "styleMs": 33.864000000000004,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 95.8904109589041,
+                "partialPct": 4.10958904109589,
+                "droppedPct": 0,
+                "rafFps": 59.99414691249635,
+                "p95FrameMs": 17.300000000000136,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 331.4570000000001,
+                "scriptMs": 108.24200000000006,
+                "layoutMs": 8.455999999999998,
+                "styleMs": 34.035999999999994,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 89.04109589041096,
+                "partialPct": 10.95890410958904,
+                "droppedPct": 0,
+                "rafFps": 59.950285129404875,
+                "p95FrameMs": 17.39000000000008,
+                "maxFrameMs": 17.59999999999991,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 323.399,
+                "scriptMs": 105.91500000000009,
+                "layoutMs": 8.066000000000003,
+                "styleMs": 33.015,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 95.8041958041958,
+                "partialPct": 4.195804195804196,
+                "droppedPct": 0,
+                "rafFps": 59.9504343681472,
+                "p95FrameMs": 17.5,
+                "maxFrameMs": 17.700000000000273,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 330.55999999999983,
+                "scriptMs": 108.16800000000003,
+                "layoutMs": 8.343,
+                "styleMs": 34.10000000000001,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 89.72602739726028,
+                "partialPct": 10.273972602739725,
+                "droppedPct": 0,
+                "rafFps": 59.96489859594384,
+                "p95FrameMs": 17.179999999999836,
+                "maxFrameMs": 17.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 335.073,
+                "scriptMs": 113.17500000000003,
+                "layoutMs": 8.337000000000002,
+                "styleMs": 34.812999999999995,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 88.81118881118881,
+                "partialPct": 11.188811188811188,
+                "droppedPct": 0,
+                "rafFps": 59.951020016646396,
+                "p95FrameMs": 17.59999999999991,
+                "maxFrameMs": 17.699999999999818,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 340.18799999999993,
+                "scriptMs": 112.36999999999998,
+                "layoutMs": 8.602,
+                "styleMs": 34.756,
+                "layoutCount": 36
+              }
+            ]
+          }
+        },
+        "correctness-vertical": {
+          "scenario": "correctness-vertical",
+          "description": "Same kind of vertical wheel gesture, faster (20000px/s). After every painted frame, samples points across the body and checks the cell there is the one that should be there for the current scroll position: \"blank\" = no cell, \"wrong\" = a cell for another row/column (stale content, or position lagging behind the scroll). This is the main thread's view of the frame; it reads layout, so it is never combined with the timing passes.",
+          "metrics": [
+            {
+              "key": "blankPct",
+              "label": "Blank samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "wrongPct",
+              "label": "Wrong/stale samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "badFramesPct",
+              "label": "Frames with any blank/wrong sample",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "worstFrameOkPct",
+              "label": "Worst frame: correct samples",
+              "unit": "%",
+              "better": "higher"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "blankPct": 2.1333333333333333,
+                "wrongPct": 0,
+                "badFramesPct": 10.666666666666668,
+                "worstFrameOkPct": 80,
+                "frames": 75
+              },
+              {
+                "blankPct": 2.1621621621621623,
+                "wrongPct": 0,
+                "badFramesPct": 10.81081081081081,
+                "worstFrameOkPct": 80,
+                "frames": 74
+              },
+              {
+                "blankPct": 1.866666666666667,
+                "wrongPct": 0,
+                "badFramesPct": 9.333333333333334,
+                "worstFrameOkPct": 80,
+                "frames": 75
+              },
+              {
+                "blankPct": 2.5974025974025974,
+                "wrongPct": 0,
+                "badFramesPct": 12.987012987012985,
+                "worstFrameOkPct": 80,
+                "frames": 77
+              },
+              {
+                "blankPct": 2.5,
+                "wrongPct": 0,
+                "badFramesPct": 12.5,
+                "worstFrameOkPct": 80,
+                "frames": 72
+              },
+              {
+                "blankPct": 2.4657534246575343,
+                "wrongPct": 0,
+                "badFramesPct": 12.32876712328767,
+                "worstFrameOkPct": 80,
+                "frames": 73
+              },
+              {
+                "blankPct": 2.7027027027027026,
+                "wrongPct": 0,
+                "badFramesPct": 13.513513513513514,
+                "worstFrameOkPct": 80,
+                "frames": 74
+              }
+            ],
+            "infinite": [
+              {
+                "blankPct": 0,
+                "wrongPct": 79.77968176254589,
+                "badFramesPct": 83.72093023255815,
+                "worstFrameOkPct": 0,
+                "frames": 43
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 48.53333333333333,
+                "badFramesPct": 89.33333333333333,
+                "worstFrameOkPct": 0,
+                "frames": 75
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 51.203007518796994,
+                "badFramesPct": 91.42857142857143,
+                "worstFrameOkPct": 0,
+                "frames": 70
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 51.26315789473684,
+                "badFramesPct": 92.85714285714286,
+                "worstFrameOkPct": 0,
+                "frames": 70
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 76.81818181818181,
+                "badFramesPct": 81.81818181818183,
+                "worstFrameOkPct": 0,
+                "frames": 44
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 55.08771929824562,
+                "badFramesPct": 87.3015873015873,
+                "worstFrameOkPct": 0,
+                "frames": 63
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 77.72727272727272,
+                "badFramesPct": 84.0909090909091,
+                "worstFrameOkPct": 0,
+                "frames": 44
+              }
+            ]
+          }
+        },
+        "correctness-horizontal": {
+          "scenario": "correctness-horizontal",
+          "description": "Same kind of horizontal wheel gesture. After every painted frame, samples points across the body and checks the cell there is the one that should be there for the current scroll position: \"blank\" = no cell, \"wrong\" = a cell for another row/column (stale content, or position lagging behind the scroll). This is the main thread's view of the frame; it reads layout, so it is never combined with the timing passes.",
+          "metrics": [
+            {
+              "key": "blankPct",
+              "label": "Blank samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "wrongPct",
+              "label": "Wrong/stale samples",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "badFramesPct",
+              "label": "Frames with any blank/wrong sample",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "worstFrameOkPct",
+              "label": "Worst frame: correct samples",
+              "unit": "%",
+              "better": "higher"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              }
+            ],
+            "infinite": [
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 121
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 121
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 124
+              }
+            ]
+          }
+        },
+        "visual-blank-vertical": {
+          "scenario": "visual-blank-vertical",
+          "description": "Fast vertical wheel gesture (20000px/s) while recording what the compositor actually displays (CDP screencast). Each frame is checked for blank areas: vertical runs of the body with no text where rows should be. Unlike the correctness probe, this also catches the compositor scrolling ahead of the main thread. Screencast capture skips frames under load and adds overhead - compare the two grids, not absolute numbers.",
+          "metrics": [
+            {
+              "key": "blankFramesPct",
+              "label": "Captured frames with blank rows",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "blankAreaPct",
+              "label": "Blank body area (avg over frames)",
+              "unit": "%",
+              "better": "lower"
+            },
+            {
+              "key": "maxBlankRows",
+              "label": "Worst frame: blank rows",
+              "unit": "rows",
+              "better": "lower"
+            },
+            {
+              "key": "capturedFrames",
+              "label": "Captured frames",
+              "unit": "",
+              "better": "higher"
+            }
+          ],
+          "samples": {
+            "ag-grid": [
+              {
+                "blankFramesPct": 8.108108108108109,
+                "blankAreaPct": 2.115475799686326,
+                "maxBlankRows": 10,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 9.45945945945946,
+                "blankAreaPct": 2.042528358317832,
+                "maxBlankRows": 9,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 5.405405405405405,
+                "blankAreaPct": 2.261370682423314,
+                "maxBlankRows": 14,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 10.666666666666668,
+                "blankAreaPct": 5.326135852451642,
+                "maxBlankRows": 16,
+                "capturedFrames": 75
+              },
+              {
+                "blankFramesPct": 8.108108108108109,
+                "blankAreaPct": 3.866214392530182,
+                "maxBlankRows": 16,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 10.81081081081081,
+                "blankAreaPct": 3.1367399788452417,
+                "maxBlankRows": 10,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 16.216216216216218,
+                "blankAreaPct": 7.732428785060364,
+                "maxBlankRows": 16,
+                "capturedFrames": 74
+              }
+            ],
+            "infinite": [
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 74
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 75
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 73
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

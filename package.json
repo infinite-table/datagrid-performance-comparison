@@ -1,0 +1,38 @@
+{
+  "name": "infinite-ag-grid-performance-comparison",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A reproducible benchmark comparing the Infinite Table and AG Grid React DataGrids at 300,000 and 1,000,000 rows",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/infinite-table/infinite-ag-grid-performance-comparison.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "benchmark": "npm run benchmark:build && npm run benchmark:run",
+    "benchmark:build": "next build",
+    "benchmark:run": "playwright test",
+    "benchmark:serve": "next start",
+    "results": "node --no-warnings scripts/update-results.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@infinite-table/infinite-react": "10.1.4",
+    "ag-grid-community": "36.3.0",
+    "ag-grid-react": "36.3.0",
+    "next": "15.5.4",
+    "normalize.css": "8.0.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.52.0",
+    "@types/node": "22.18.8",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

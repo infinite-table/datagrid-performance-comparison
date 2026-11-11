@@ -1,0 +1,177 @@
+# Runs the benchmark and publishes the results:
+#
+#  - every 6 hours it looks on npm for a new version of
+#    @infinite-table/infinite-react or ag-grid-react, and measures it
+#  - `repository_dispatch` (type `new-version`) does the same right away -
+#    for a release pipeline that doesn't want to wait for the schedule
+#  - by hand (Actions > Benchmark > Run workflow), for any pair of versions
+#
+# The newest versions go to master: package.json, results/latest, the charts
+# and the summary in the README. Every measured pair of versions also gets a
+# branch (versions/infinite-<x>_ag-grid-<y>) with the code, the lockfile and
+# the full results of that run, and a row in the history table on master.
+name: Benchmark
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  repository_dispatch:
+    types: [new-version]
+  workflow_dispatch:
+    inputs:
+      infinite_version:
+        description: '@infinite-table/infinite-react version'
+        default: latest
+      ag_grid_version:
+        description: 'ag-grid-react + ag-grid-community version'
+        default: latest
+      publish:
+        description: 'Commit the results (off = only upload them as an artifact)'
+        type: boolean
+        default: true
+      sizes:
+        description: 'BENCH_SIZES - empty = all. Partial runs are for trying things out: turn "publish" off'
+        default: ''
+      scenarios:
+        description: 'BENCH_SCENARIOS - empty = all'
+        default: ''
+      runs:
+        description: 'BENCH_RUNS - empty = 7'
+        default: ''
+
+permissions:
+  contents: write
+  issues: write
+
+# one benchmark at a time - two would also push over each other
+concurrency:
+  group: benchmark
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: Which versions?
+    runs-on: ubuntu-24.04
+    outputs:
+      run: ${{ steps.versions.outputs.run }}
+      infinite: ${{ steps.versions.outputs.infinite }}
+      ag_grid: ${{ steps.versions.outputs.ag_grid }}
+      newest: ${{ steps.versions.outputs.newest }}
+      branch: ${{ steps.versions.outputs.branch }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - id: versions
+        run: node scripts/check-versions.mjs
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INFINITE: ${{ inputs.infinite_version || github.event.client_payload.infinite_version }}
+          AG_GRID: ${{ inputs.ag_grid_version || github.event.client_payload.ag_grid_version }}
+          GH_TOKEN: ${{ github.token }}
+
+  benchmark:
+    name: Infinite Table ${{ needs.check.outputs.infinite }} vs AG Grid ${{ needs.check.outputs.ag_grid }}
+    needs: check
+    if: needs.check.outputs.run == 'true'
+    # pinned, so runs stay comparable for as long as possible
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    env:
+      INFINITE: ${{ needs.check.outputs.infinite }}
+      AG_GRID: ${{ needs.check.outputs.ag_grid }}
+      BRANCH: ${{ needs.check.outputs.branch }}
+      PUBLISH: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: |
+          npm ci
+          npm install --save-exact \
+            "@infinite-table/infinite-react@$INFINITE" \
+            "ag-grid-community@$AG_GRID" \
+            "ag-grid-react@$AG_GRID"
+          npx playwright install --with-deps chromium
+
+      # Chromium's sandbox needs unprivileged user namespaces, which the
+      # Ubuntu 24.04 runners restrict - see "Sandboxed Chromium" in the README
+      - name: Allow the Chromium sandbox
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
+      - name: Run the benchmark
+        run: npm run benchmark
+        env:
+          BENCH_HEADLESS: 1
+          BENCH_RUN_ID: ci
+          BENCH_SIZES: ${{ inputs.sizes }}
+          BENCH_SCENARIOS: ${{ inputs.scenarios }}
+          BENCH_RUNS: ${{ inputs.runs }}
+
+      - name: Add the report to the run summary
+        if: always()
+        run: |
+          if [ -f benchmark-results/ci/report.md ]; then
+            cat benchmark-results/ci/report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: benchmark-results
+          path: benchmark-results/ci
+          if-no-files-found: ignore
+
+      - name: Publish the results
+        if: env.PUBLISH == 'true'
+        env:
+          NEWEST: ${{ needs.check.outputs.newest }}
+          BENCH_RUNNER: GitHub Actions, ubuntu-24.04
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          message="Results: Infinite Table $INFINITE, AG Grid $AG_GRID"
+
+          # the branch of this pair of versions: the code, the lockfile and
+          # the full results of this run
+          node --no-warnings scripts/update-results.ts ci
+          git add package.json package-lock.json README.md results
+          git commit -m "$message"
+          git push --force origin "HEAD:refs/heads/$BRANCH"
+
+          if [ "$NEWEST" = "true" ]; then
+            # the newest versions: the same commit goes to master
+            git pull --rebase origin master
+            git push origin HEAD:master
+          else
+            # an older pair: master only gets its row in the history table
+            git fetch origin master
+            git checkout -B master origin/master
+            node --no-warnings scripts/update-results.ts ci --history-only
+            git add README.md results
+            git commit -m "History: Infinite Table $INFINITE, AG Grid $AG_GRID"
+            git push origin HEAD:master
+          fi
+
+      # a scheduled run does not try the same versions again while this issue
+      # is open
+      - name: Open an issue when the benchmark fails
+        if: failure() && github.event_name != 'workflow_dispatch'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Benchmark failed: Infinite Table $INFINITE, AG Grid $AG_GRID"
+          gh label create benchmark-failed --color B60205 --force \
+            --description "The scheduled benchmark failed for a pair of versions"
+          if ! gh issue list --state open --label benchmark-failed --limit 200 \
+              --json title --jq '.[].title' | grep -Fxq "$title"; then
+            gh issue create --title "$title" --label benchmark-failed --body \
+              "The benchmark failed for these versions: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          Scheduled runs skip this pair of versions while this issue is open. Close it to have them try again."
+          fi

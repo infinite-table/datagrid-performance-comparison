@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="258" viewBox="0 0 760 258" role="img">
+<title>Memory: JavaScript heap retained by the grid</title>
+<rect x="0.5" y="0.5" width="759" height="257" rx="10" fill="#ffffff" stroke="#d1d9e0"/>
+<text x="20" y="36" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#0b0b0b">Memory: JavaScript heap retained by the grid</text>
+<text x="20" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6b6a66">after garbage collection · MB · lower is better</text>
+<rect x="20" y="70" width="12" height="12" rx="3" fill="#eb6834"/>
+<text x="38" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
+<rect x="108.4" y="70" width="12" height="12" rx="3" fill="#2a78d6"/>
+<text x="126.4" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
+<text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">300k rows</text>
+<path d="M20,134H205.7a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
+<text x="218" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">67.5 MB</text>
+<path d="M20,152H118.8a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
+<text x="131" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">36.6 MB</text>
+<line x1="19.5" y1="132" x2="19.5" y2="168" stroke="#c3c2b7" stroke-width="1"/>
+<text x="20" y="198" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">1M rows</text>
+<path d="M20,206H616a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
+<text x="628" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">213 MB</text>
+<path d="M20,224H270.9a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
+<text x="283" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">90.7 MB</text>
+<line x1="19.5" y1="204" x2="19.5" y2="240" stroke="#c3c2b7" stroke-width="1"/>
+</svg>

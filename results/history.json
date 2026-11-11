@@ -1,0 +1,855 @@
+[
+  {
+    "infinite": "10.1.4",
+    "agGrid": "36.3.0",
+    "date": "2026-11-11T16:52:14.998Z",
+    "chrome": "136.0.7103.25",
+    "headless": true,
+    "runs": 7,
+    "machine": "Apple M1 Pro × 10",
+    "os": "Darwin 24.1.0 arm64",
+    "runner": null,
+    "metrics": {
+      "300k/mount/visibleMs": {
+        "ag": 199.416,
+        "infinite": 139.48,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/mount/settledMs": {
+        "ag": 302.595,
+        "infinite": 141.843,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/mount/scriptMs": {
+        "ag": 182.24300000000002,
+        "infinite": 126.10700000000003,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/mount/layoutMs": {
+        "ag": 7.324999999999999,
+        "infinite": 2.1609999999999996,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/mount/styleMs": {
+        "ag": 7.608999999999999,
+        "infinite": 3.798,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/mount/taskMs": {
+        "ag": 209.034,
+        "infinite": 143.903,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/mount/heapMB": {
+        "ag": 67.48442840576172,
+        "infinite": 36.565887451171875,
+        "winner": "Infinite",
+        "unit": "MB",
+        "better": "lower"
+      },
+      "300k/mount/gridElements": {
+        "ag": 637,
+        "infinite": 609,
+        "winner": "Infinite",
+        "unit": "",
+        "better": "lower"
+      },
+      "300k/sort-string/ascVisibleMs": {
+        "ag": 793.292,
+        "infinite": 344.023,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-string/ascSettledMs": {
+        "ag": 793.292,
+        "infinite": 346.637,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-string/descVisibleMs": {
+        "ag": 832.305,
+        "infinite": 346.327,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-string/descSettledMs": {
+        "ag": 832.305,
+        "infinite": 346.327,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-string/ascScriptMs": {
+        "ag": 781.2950000000001,
+        "infinite": 331.91599999999994,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-string/descScriptMs": {
+        "ag": 822.452,
+        "infinite": 332.49899999999997,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-number/ascVisibleMs": {
+        "ag": 694.325,
+        "infinite": 287.737,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-number/ascSettledMs": {
+        "ag": 694.325,
+        "infinite": 294.396,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-number/descVisibleMs": {
+        "ag": 705.005,
+        "infinite": 287.882,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-number/descSettledMs": {
+        "ag": 705.005,
+        "infinite": 287.882,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-number/ascScriptMs": {
+        "ag": 683.3399999999999,
+        "infinite": 280.66999999999996,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/sort-number/descScriptMs": {
+        "ag": 695.764,
+        "infinite": 273.59899999999993,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-jump/visibleMs": {
+        "ag": 28.262999999999998,
+        "infinite": 27.945999999999998,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-jump/visibleMaxMs": {
+        "ag": 39.358,
+        "infinite": 34.126,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-jump/settledMs": {
+        "ag": 28.262999999999998,
+        "infinite": 27.945999999999998,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-jump/scriptMs": {
+        "ag": 154.804,
+        "infinite": 168.921,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/presentedAllPct": {
+        "ag": 52.066115702479344,
+        "infinite": 56.59340659340659,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "higher"
+      },
+      "300k/scroll-vertical/partialPct": {
+        "ag": 47.93388429752066,
+        "infinite": 43.40659340659341,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/droppedPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/rafFps": {
+        "ag": 59.995471309585014,
+        "infinite": 59.99481125956675,
+        "winner": "≈",
+        "unit": "fps",
+        "better": "higher"
+      },
+      "300k/scroll-vertical/p95FrameMs": {
+        "ag": 17.27499999999975,
+        "infinite": 17.2,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/maxFrameMs": {
+        "ag": 17.600000000000364,
+        "infinite": 17.699999999999818,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/longFramesPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/loafBlockingMs": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/scriptMs": {
+        "ag": 410.449,
+        "infinite": 494.76300000000003,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/layoutMs": {
+        "ag": 77.894,
+        "infinite": 55.91799999999999,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/styleMs": {
+        "ag": 178.644,
+        "infinite": 126.16000000000003,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-vertical/taskMs": {
+        "ag": 1017.306,
+        "infinite": 1062.98,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/presentedAllPct": {
+        "ag": 85.3146853146853,
+        "infinite": 88.35616438356165,
+        "winner": "≈",
+        "unit": "%",
+        "better": "higher"
+      },
+      "300k/scroll-horizontal/partialPct": {
+        "ag": 14.685314685314685,
+        "infinite": 11.643835616438356,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/droppedPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/rafFps": {
+        "ag": 59.99900489455297,
+        "infinite": 59.997073313496905,
+        "winner": "≈",
+        "unit": "fps",
+        "better": "higher"
+      },
+      "300k/scroll-horizontal/p95FrameMs": {
+        "ag": 17.089999999999918,
+        "infinite": 17.30000000000016,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/maxFrameMs": {
+        "ag": 17.600000000000364,
+        "infinite": 17.700000000000273,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/longFramesPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/loafBlockingMs": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/scriptMs": {
+        "ag": 166.84900000000002,
+        "infinite": 111.38799999999999,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/layoutMs": {
+        "ag": 49.048,
+        "infinite": 8.206000000000001,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/styleMs": {
+        "ag": 30.199,
+        "infinite": 34.393,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/scroll-horizontal/taskMs": {
+        "ag": 415.86500000000007,
+        "infinite": 318.703,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "300k/correctness-vertical/blankPct": {
+        "ag": 2.5974025974025974,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/correctness-vertical/wrongPct": {
+        "ag": 0,
+        "infinite": 38.421052631578945,
+        "winner": "AG Grid",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/correctness-vertical/badFramesPct": {
+        "ag": 12.987012987012985,
+        "infinite": 90.78947368421053,
+        "winner": "AG Grid",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/correctness-vertical/worstFrameOkPct": {
+        "ag": 80,
+        "infinite": 12.631578947368421,
+        "winner": "AG Grid",
+        "unit": "%",
+        "better": "higher"
+      },
+      "300k/correctness-horizontal/blankPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/correctness-horizontal/wrongPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/correctness-horizontal/badFramesPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/correctness-horizontal/worstFrameOkPct": {
+        "ag": 100,
+        "infinite": 100,
+        "winner": "≈",
+        "unit": "%",
+        "better": "higher"
+      },
+      "300k/visual-blank-vertical/blankFramesPct": {
+        "ag": 4.166666666666666,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/visual-blank-vertical/blankAreaPct": {
+        "ag": 0.44984255510571297,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "300k/visual-blank-vertical/maxBlankRows": {
+        "ag": 3,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "rows",
+        "better": "lower"
+      },
+      "300k/visual-blank-vertical/capturedFrames": {
+        "ag": 74,
+        "infinite": 74,
+        "winner": "≈",
+        "unit": "",
+        "better": "higher"
+      },
+      "1m/mount/visibleMs": {
+        "ag": 503.74,
+        "infinite": 379.109,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/settledMs": {
+        "ag": 606.869,
+        "infinite": 379.109,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/scriptMs": {
+        "ag": 484.585,
+        "infinite": 367.77199999999993,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/layoutMs": {
+        "ag": 7.3999999999999995,
+        "infinite": 2.3150000000000004,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/styleMs": {
+        "ag": 7.792999999999999,
+        "infinite": 3.7250000000000005,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/taskMs": {
+        "ag": 511.02600000000007,
+        "infinite": 381.62999999999994,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/heapMB": {
+        "ag": 213.4604034423828,
+        "infinite": 90.68206405639648,
+        "winner": "Infinite",
+        "unit": "MB",
+        "better": "lower"
+      },
+      "1m/mount/gridElements": {
+        "ag": 637,
+        "infinite": 609,
+        "winner": "Infinite",
+        "unit": "",
+        "better": "lower"
+      },
+      "1m/sort-string/ascVisibleMs": {
+        "ag": 3349.751,
+        "infinite": 1346.462,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/ascSettledMs": {
+        "ag": 3349.751,
+        "infinite": 1363.137,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/descVisibleMs": {
+        "ag": 3510.473,
+        "infinite": 1384.384,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/descSettledMs": {
+        "ag": 3510.473,
+        "infinite": 1384.384,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/ascScriptMs": {
+        "ag": 3338.6079999999997,
+        "infinite": 1333.113,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/descScriptMs": {
+        "ag": 3501.5739999999996,
+        "infinite": 1369.183,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/ascVisibleMs": {
+        "ag": 2913.4,
+        "infinite": 1114.035,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/ascSettledMs": {
+        "ag": 2913.4,
+        "infinite": 1128.007,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/descVisibleMs": {
+        "ag": 2948.149,
+        "infinite": 1141.609,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/descSettledMs": {
+        "ag": 2948.149,
+        "infinite": 1141.609,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/ascScriptMs": {
+        "ag": 2901.322,
+        "infinite": 1101.41,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/descScriptMs": {
+        "ag": 2939.5389999999993,
+        "infinite": 1126.3110000000004,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/visibleMs": {
+        "ag": 21.149500000000003,
+        "infinite": 24.567500000000003,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/visibleMaxMs": {
+        "ag": 34.801,
+        "infinite": 35.535,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/settledMs": {
+        "ag": 21.149500000000003,
+        "infinite": 24.567500000000003,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/scriptMs": {
+        "ag": 127.97500000000007,
+        "infinite": 151.7630000000001,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/presentedAllPct": {
+        "ag": 52.22222222222223,
+        "infinite": 53.97260273972603,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/scroll-vertical/partialPct": {
+        "ag": 47.77777777777778,
+        "infinite": 46.02739726027397,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/droppedPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/rafFps": {
+        "ag": 59.99612928198181,
+        "infinite": 59.9961292819818,
+        "winner": "≈",
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/scroll-vertical/p95FrameMs": {
+        "ag": 17.300000000000182,
+        "infinite": 17.5,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/maxFrameMs": {
+        "ag": 17.699999999999818,
+        "infinite": 17.699999999999818,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/longFramesPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/loafBlockingMs": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/scriptMs": {
+        "ag": 482.3280000000001,
+        "infinite": 563.9910000000001,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/layoutMs": {
+        "ag": 80.13799999999999,
+        "infinite": 62.765,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/styleMs": {
+        "ag": 264.867,
+        "infinite": 141.35699999999997,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/taskMs": {
+        "ag": 1277.9340000000002,
+        "infinite": 1179.616,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/presentedAllPct": {
+        "ag": 86.01398601398601,
+        "infinite": 89.72602739726028,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/scroll-horizontal/partialPct": {
+        "ag": 13.986013986013987,
+        "infinite": 10.273972602739725,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/droppedPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/rafFps": {
+        "ag": 59.97852476235339,
+        "infinite": 59.96489859594384,
+        "winner": "≈",
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/scroll-horizontal/p95FrameMs": {
+        "ag": 17.38000000000011,
+        "infinite": 17.39000000000008,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/maxFrameMs": {
+        "ag": 17.700000000000273,
+        "infinite": 17.699999999999818,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/longFramesPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/loafBlockingMs": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/scriptMs": {
+        "ag": 165.944,
+        "infinite": 109.58299999999998,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/layoutMs": {
+        "ag": 49.341,
+        "infinite": 8.42,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/styleMs": {
+        "ag": 31.739000000000004,
+        "infinite": 34.10000000000001,
+        "winner": "AG Grid",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/taskMs": {
+        "ag": 390.2430000000001,
+        "infinite": 335.073,
+        "winner": "Infinite",
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/blankPct": {
+        "ag": 2.4657534246575343,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/wrongPct": {
+        "ag": 0,
+        "infinite": 55.08771929824562,
+        "winner": "AG Grid",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/badFramesPct": {
+        "ag": 12.32876712328767,
+        "infinite": 87.3015873015873,
+        "winner": "AG Grid",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/worstFrameOkPct": {
+        "ag": 80,
+        "infinite": 0,
+        "winner": "AG Grid",
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/correctness-horizontal/blankPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-horizontal/wrongPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-horizontal/badFramesPct": {
+        "ag": 0,
+        "infinite": 0,
+        "winner": "≈",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-horizontal/worstFrameOkPct": {
+        "ag": 100,
+        "infinite": 100,
+        "winner": "≈",
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/visual-blank-vertical/blankFramesPct": {
+        "ag": 9.45945945945946,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/visual-blank-vertical/blankAreaPct": {
+        "ag": 3.1367399788452417,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/visual-blank-vertical/maxBlankRows": {
+        "ag": 14,
+        "infinite": 0,
+        "winner": "Infinite",
+        "unit": "rows",
+        "better": "lower"
+      },
+      "1m/visual-blank-vertical/capturedFrames": {
+        "ag": 74,
+        "infinite": 74,
+        "winner": "≈",
+        "unit": "",
+        "better": "higher"
+      }
+    }
+  }
+]

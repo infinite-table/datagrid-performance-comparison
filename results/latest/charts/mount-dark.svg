@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="402" viewBox="0 0 760 402" role="img">
+<title>Mount time</title>
+<rect x="0.5" y="0.5" width="759" height="401" rx="10" fill="#0d1117" stroke="#30363d"/>
+<text x="20" y="36" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#f0efec">Mount time</text>
+<text x="20" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#99a1b3">from setState, with all the rows already in memory · ms · lower is better</text>
+<rect x="20" y="70" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="38" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">AG Grid</text>
+<rect x="108.4" y="70" width="12" height="12" rx="3" fill="#3987e5"/>
+<text x="126.4" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Infinite Table</text>
+<text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">First rows painted, 300k rows</text>
+<path d="M20,134H213.2a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="225" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">199 ms</text>
+<path d="M20,152H153.9a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="166" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">139 ms</text>
+<line x1="19.5" y1="132" x2="19.5" y2="168" stroke="#484f58" stroke-width="1"/>
+<text x="20" y="198" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Settled (no more DOM changes), 300k rows</text>
+<path d="M20,206H315.2a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="327" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">303 ms</text>
+<path d="M20,224H156.2a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="168" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">142 ms</text>
+<line x1="19.5" y1="204" x2="19.5" y2="240" stroke="#484f58" stroke-width="1"/>
+<text x="20" y="270" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">First rows painted, 1M rows</text>
+<path d="M20,278H514a4,4 0 0 1 4,4V288a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="526" y="289.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">504 ms</text>
+<path d="M20,296H390.8a4,4 0 0 1 4,4V306a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="403" y="307.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">379 ms</text>
+<line x1="19.5" y1="276" x2="19.5" y2="312" stroke="#484f58" stroke-width="1"/>
+<text x="20" y="342" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Settled, 1M rows</text>
+<path d="M20,350H616a4,4 0 0 1 4,4V360a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="628" y="361.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">607 ms</text>
+<path d="M20,368H390.8a4,4 0 0 1 4,4V378a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="403" y="379.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">379 ms</text>
+<line x1="19.5" y1="348" x2="19.5" y2="384" stroke="#484f58" stroke-width="1"/>
+</svg>

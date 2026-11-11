@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="258" viewBox="0 0 760 258" role="img">
+<title>Jumping to a far-away scroll position</title>
+<rect x="0.5" y="0.5" width="759" height="257" rx="10" fill="#0d1117" stroke="#30363d"/>
+<text x="20" y="36" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#f0efec">Jumping to a far-away scroll position</text>
+<text x="20" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#99a1b3">jump to rows painted, median of 10 jumps · ms · lower is better</text>
+<rect x="20" y="70" width="12" height="12" rx="3" fill="#d95926"/>
+<text x="38" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">AG Grid</text>
+<rect x="108.4" y="70" width="12" height="12" rx="3" fill="#3987e5"/>
+<text x="126.4" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Infinite Table</text>
+<text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">300k rows<tspan dx="10" fill="#99a1b3">no significant difference</tspan></text>
+<path d="M20,134H616a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="628" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">28.3 ms</text>
+<path d="M20,152H609.3a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="621" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">27.9 ms</text>
+<line x1="19.5" y1="132" x2="19.5" y2="168" stroke="#484f58" stroke-width="1"/>
+<text x="20" y="198" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">1M rows</text>
+<path d="M20,206H465a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="477" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">21.1 ms</text>
+<path d="M20,224H537.5a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="550" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">24.6 ms</text>
+<line x1="19.5" y1="204" x2="19.5" y2="240" stroke="#484f58" stroke-width="1"/>
+</svg>
