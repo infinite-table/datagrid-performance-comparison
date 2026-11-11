@@ -1,14 +1,14 @@
 {
   "environment": {
-    "runId": "2026-11-11-clean",
-    "date": "2026-11-11T17:22:32.873Z",
+    "runId": "ci",
+    "date": "2026-11-11T17:48:25.714Z",
     "chrome": "136.0.7103.25",
     "headless": true,
     "cpuThrottle": 1,
     "runs": 7,
     "warmup": 1,
-    "os": "Darwin 24.1.0 arm64",
-    "cpu": "Apple M1 Pro × 10",
+    "os": "Linux 7.0.0-1017-azure x64",
+    "cpu": "AMD EPYC 9V45 96-Core Processor × 4",
     "viewport": "1400×1000",
     "versions": {
       "ag-grid": "36.3.0",
@@ -99,159 +99,159 @@
           "samples": {
             "ag-grid": [
               {
-                "visibleMs": 197.897,
-                "settledMs": 301.815,
-                "taskMs": 204.777,
-                "scriptMs": 179.77700000000002,
-                "layoutMs": 6.884,
-                "styleMs": 7.496,
+                "visibleMs": 275.761,
+                "settledMs": 378.329,
+                "taskMs": 282.61299999999994,
+                "scriptMs": 254.22400000000002,
+                "layoutMs": 6.003,
+                "styleMs": 9.731,
                 "layoutCount": 24,
-                "heapMB": 67.48442840576172,
+                "heapMB": 67.43533325195312,
                 "gridElements": 637
               },
               {
-                "visibleMs": 213.404,
-                "settledMs": 316.646,
-                "taskMs": 221.50600000000003,
-                "scriptMs": 192.67999999999998,
-                "layoutMs": 8.269,
-                "styleMs": 8.213,
+                "visibleMs": 283.433,
+                "settledMs": 385.404,
+                "taskMs": 289.8059999999999,
+                "scriptMs": 255.62099999999998,
+                "layoutMs": 8.023,
+                "styleMs": 10.579,
                 "layoutCount": 24,
-                "heapMB": 67.48442840576172,
+                "heapMB": 67.43738174438477,
                 "gridElements": 637
               },
               {
-                "visibleMs": 200.591,
-                "settledMs": 302.988,
-                "taskMs": 206.762,
-                "scriptMs": 180.84499999999997,
-                "layoutMs": 7.691,
-                "styleMs": 7.873,
+                "visibleMs": 253.525,
+                "settledMs": 355.835,
+                "taskMs": 259.953,
+                "scriptMs": 232.13,
+                "layoutMs": 6.099,
+                "styleMs": 9.843000000000002,
                 "layoutCount": 24,
-                "heapMB": 67.48442840576172,
+                "heapMB": 67.43519592285156,
                 "gridElements": 637
               },
               {
-                "visibleMs": 197.904,
-                "settledMs": 300.786,
-                "taskMs": 204.22299999999998,
-                "scriptMs": 179.068,
-                "layoutMs": 7.16,
-                "styleMs": 7.436,
+                "visibleMs": 253.711,
+                "settledMs": 355.52,
+                "taskMs": 259.276,
+                "scriptMs": 232.165,
+                "layoutMs": 5.962000000000001,
+                "styleMs": 9.736,
                 "layoutCount": 24,
-                "heapMB": 67.48442840576172,
+                "heapMB": 67.43425750732422,
                 "gridElements": 637
               },
               {
-                "visibleMs": 232.158,
-                "settledMs": 335.877,
-                "taskMs": 239.05900000000003,
-                "scriptMs": 211.005,
-                "layoutMs": 7.969,
-                "styleMs": 8.408,
+                "visibleMs": 252.526,
+                "settledMs": 354.986,
+                "taskMs": 259.926,
+                "scriptMs": 230.57699999999997,
+                "layoutMs": 5.9030000000000005,
+                "styleMs": 10.18,
                 "layoutCount": 24,
-                "heapMB": 67.48566055297852,
+                "heapMB": 67.43521118164062,
                 "gridElements": 637
               },
               {
-                "visibleMs": 192.064,
-                "settledMs": 295.168,
-                "taskMs": 198.973,
-                "scriptMs": 174.415,
-                "layoutMs": 6.827,
-                "styleMs": 7.118,
+                "visibleMs": 257.101,
+                "settledMs": 359.652,
+                "taskMs": 264.79499999999996,
+                "scriptMs": 235.638,
+                "layoutMs": 5.928000000000001,
+                "styleMs": 9.974,
                 "layoutCount": 24,
-                "heapMB": 67.48442840576172,
+                "heapMB": 67.43519592285156,
                 "gridElements": 637
               },
               {
-                "visibleMs": 194.008,
-                "settledMs": 296.75,
-                "taskMs": 201.511,
-                "scriptMs": 174.516,
-                "layoutMs": 7.636,
-                "styleMs": 7.760999999999999,
+                "visibleMs": 251.437,
+                "settledMs": 353.843,
+                "taskMs": 258.323,
+                "scriptMs": 229.777,
+                "layoutMs": 6.175999999999999,
+                "styleMs": 9.979,
                 "layoutCount": 24,
-                "heapMB": 67.48442840576172,
+                "heapMB": 67.43339157104492,
                 "gridElements": 637
               }
             ],
             "infinite": [
               {
-                "visibleMs": 135.777,
-                "settledMs": 135.777,
-                "taskMs": 139.23600000000002,
-                "scriptMs": 122.17000000000003,
-                "layoutMs": 2.059,
-                "styleMs": 3.6759999999999997,
+                "visibleMs": 200.453,
+                "settledMs": 200.453,
+                "taskMs": 203.91299999999995,
+                "scriptMs": 183.246,
+                "layoutMs": 3.102999999999998,
+                "styleMs": 5.675999999999999,
                 "layoutCount": 12,
-                "heapMB": 36.56666564941406,
+                "heapMB": 36.56273651123047,
                 "gridElements": 609
               },
               {
-                "visibleMs": 137.239,
-                "settledMs": 137.239,
-                "taskMs": 145.439,
-                "scriptMs": 125.78599999999999,
-                "layoutMs": 2.3289999999999993,
-                "styleMs": 3.8249999999999997,
-                "layoutCount": 12,
-                "heapMB": 36.56616973876953,
-                "gridElements": 609
-              },
-              {
-                "visibleMs": 154.86,
-                "settledMs": 154.86,
-                "taskMs": 157.57099999999997,
-                "scriptMs": 142.863,
-                "layoutMs": 2.3350000000000004,
-                "styleMs": 3.8240000000000003,
-                "layoutCount": 12,
-                "heapMB": 36.566978454589844,
-                "gridElements": 609
-              },
-              {
-                "visibleMs": 146.288,
-                "settledMs": 146.288,
-                "taskMs": 150.40499999999994,
-                "scriptMs": 134.78500000000003,
-                "layoutMs": 2.3420000000000005,
-                "styleMs": 4.1209999999999996,
-                "layoutCount": 12,
-                "heapMB": 36.56585693359375,
-                "gridElements": 609
-              },
-              {
-                "visibleMs": 155.346,
-                "settledMs": 155.346,
-                "taskMs": 158.181,
-                "scriptMs": 142.779,
-                "layoutMs": 2.5109999999999992,
-                "styleMs": 4.373,
-                "layoutCount": 12,
-                "heapMB": 36.565887451171875,
-                "gridElements": 609
-              },
-              {
-                "visibleMs": 139.899,
-                "settledMs": 139.899,
-                "taskMs": 143.484,
-                "scriptMs": 123.61500000000004,
-                "layoutMs": 2.1600000000000006,
-                "styleMs": 3.595999999999999,
-                "layoutCount": 12,
-                "heapMB": 36.56666564941406,
-                "gridElements": 609
-              },
-              {
-                "visibleMs": 129.572,
-                "settledMs": 135.788,
-                "taskMs": 138.53899999999996,
-                "scriptMs": 120.562,
-                "layoutMs": 2.304,
-                "styleMs": 3.7699999999999996,
+                "visibleMs": 154.563,
+                "settledMs": 172.945,
+                "taskMs": 177.17700000000002,
+                "scriptMs": 145.46000000000004,
+                "layoutMs": 3.665999999999999,
+                "styleMs": 6.069,
                 "layoutCount": 13,
-                "heapMB": 35.64263916015625,
+                "heapMB": 35.63303756713867,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 195.373,
+                "settledMs": 195.373,
+                "taskMs": 198.817,
+                "scriptMs": 178.85700000000003,
+                "layoutMs": 3.0700000000000003,
+                "styleMs": 5.441,
+                "layoutCount": 12,
+                "heapMB": 36.60734176635742,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 185.378,
+                "settledMs": 185.378,
+                "taskMs": 188.749,
+                "scriptMs": 168.648,
+                "layoutMs": 3.077,
+                "styleMs": 5.698999999999999,
+                "layoutCount": 12,
+                "heapMB": 36.565773010253906,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 196.498,
+                "settledMs": 196.498,
+                "taskMs": 200.03300000000002,
+                "scriptMs": 179.01600000000002,
+                "layoutMs": 3.202,
+                "styleMs": 5.726,
+                "layoutCount": 12,
+                "heapMB": 36.60686111450195,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 243.05,
+                "settledMs": 243.05,
+                "taskMs": 246.54199999999997,
+                "scriptMs": 225.30599999999998,
+                "layoutMs": 3.294,
+                "styleMs": 5.856,
+                "layoutCount": 12,
+                "heapMB": 36.61646270751953,
+                "gridElements": 609
+              },
+              {
+                "visibleMs": 199.7,
+                "settledMs": 199.7,
+                "taskMs": 203.19499999999996,
+                "scriptMs": 183.21,
+                "layoutMs": 3.1080000000000005,
+                "styleMs": 5.2490000000000006,
+                "layoutCount": 12,
+                "heapMB": 36.60746765136719,
                 "gridElements": 609
               }
             ]
@@ -301,118 +301,118 @@
           "samples": {
             "ag-grid": [
               {
-                "ascVisibleMs": 751.889,
-                "ascSettledMs": 751.889,
-                "ascScriptMs": 740.2979999999999,
-                "descVisibleMs": 751.867,
-                "descSettledMs": 751.867,
-                "descScriptMs": 743.2650000000001
+                "ascVisibleMs": 690.173,
+                "ascSettledMs": 690.173,
+                "ascScriptMs": 674.8539999999999,
+                "descVisibleMs": 717.278,
+                "descSettledMs": 717.278,
+                "descScriptMs": 705.4499999999999
               },
               {
-                "ascVisibleMs": 762.932,
-                "ascSettledMs": 762.932,
-                "ascScriptMs": 751.017,
-                "descVisibleMs": 775.176,
-                "descSettledMs": 775.176,
-                "descScriptMs": 766.44
+                "ascVisibleMs": 651.282,
+                "ascSettledMs": 651.282,
+                "ascScriptMs": 635.9299999999998,
+                "descVisibleMs": 633.881,
+                "descSettledMs": 633.881,
+                "descScriptMs": 621.5509999999999
               },
               {
-                "ascVisibleMs": 852.63,
-                "ascSettledMs": 852.63,
-                "ascScriptMs": 840.5409999999999,
-                "descVisibleMs": 892.225,
-                "descSettledMs": 892.225,
-                "descScriptMs": 883.5640000000002
+                "ascVisibleMs": 740.123,
+                "ascSettledMs": 740.123,
+                "ascScriptMs": 725.5149999999999,
+                "descVisibleMs": 646.463,
+                "descSettledMs": 646.463,
+                "descScriptMs": 635.119
               },
               {
-                "ascVisibleMs": 773.614,
-                "ascSettledMs": 773.614,
-                "ascScriptMs": 762.22,
-                "descVisibleMs": 782.471,
-                "descSettledMs": 782.471,
-                "descScriptMs": 774.198
+                "ascVisibleMs": 686.742,
+                "ascSettledMs": 686.742,
+                "ascScriptMs": 670.9420000000001,
+                "descVisibleMs": 703.056,
+                "descSettledMs": 703.056,
+                "descScriptMs": 691.1100000000001
               },
               {
-                "ascVisibleMs": 929.487,
-                "ascSettledMs": 929.487,
-                "ascScriptMs": 915.397,
-                "descVisibleMs": 814.854,
-                "descSettledMs": 814.854,
-                "descScriptMs": 805.8109999999998
+                "ascVisibleMs": 802.958,
+                "ascSettledMs": 802.958,
+                "ascScriptMs": 788.213,
+                "descVisibleMs": 797.549,
+                "descSettledMs": 797.549,
+                "descScriptMs": 785.0629999999999
               },
               {
-                "ascVisibleMs": 768.203,
-                "ascSettledMs": 768.203,
-                "ascScriptMs": 756.669,
-                "descVisibleMs": 827.396,
-                "descSettledMs": 827.396,
-                "descScriptMs": 818.64
+                "ascVisibleMs": 781.043,
+                "ascSettledMs": 781.043,
+                "ascScriptMs": 766.0600000000001,
+                "descVisibleMs": 752.403,
+                "descSettledMs": 752.403,
+                "descScriptMs": 739.752
               },
               {
-                "ascVisibleMs": 838.891,
-                "ascSettledMs": 838.891,
-                "ascScriptMs": 826.912,
-                "descVisibleMs": 810.352,
-                "descSettledMs": 810.352,
-                "descScriptMs": 801.275
+                "ascVisibleMs": 731.568,
+                "ascSettledMs": 731.568,
+                "ascScriptMs": 715.9810000000001,
+                "descVisibleMs": 697.682,
+                "descSettledMs": 697.682,
+                "descScriptMs": 685.7690000000001
               }
             ],
             "infinite": [
               {
-                "ascVisibleMs": 373.941,
-                "ascSettledMs": 376.36,
-                "ascScriptMs": 365.66900000000004,
-                "descVisibleMs": 328.499,
-                "descSettledMs": 328.499,
-                "descScriptMs": 314.113
+                "ascVisibleMs": 340.377,
+                "ascSettledMs": 346.812,
+                "ascScriptMs": 326.129,
+                "descVisibleMs": 336.67,
+                "descSettledMs": 336.67,
+                "descScriptMs": 320.79099999999994
               },
               {
-                "ascVisibleMs": 320.753,
-                "ascSettledMs": 326.876,
-                "ascScriptMs": 311.756,
-                "descVisibleMs": 327.536,
-                "descSettledMs": 327.536,
-                "descScriptMs": 313.22
+                "ascVisibleMs": 341.955,
+                "ascSettledMs": 350.812,
+                "ascScriptMs": 327.349,
+                "descVisibleMs": 342.412,
+                "descSettledMs": 342.412,
+                "descScriptMs": 325.7279999999999
               },
               {
-                "ascVisibleMs": 348.725,
-                "ascSettledMs": 363.135,
-                "ascScriptMs": 335.493,
-                "descVisibleMs": 377.326,
-                "descSettledMs": 377.326,
-                "descScriptMs": 363.8210000000001
+                "ascVisibleMs": 357.386,
+                "ascSettledMs": 364.304,
+                "ascScriptMs": 341.417,
+                "descVisibleMs": 354.649,
+                "descSettledMs": 354.649,
+                "descScriptMs": 337.95499999999987
               },
               {
-                "ascVisibleMs": 321.555,
-                "ascSettledMs": 329.585,
-                "ascScriptMs": 308.51800000000003,
-                "descVisibleMs": 335.346,
-                "descSettledMs": 335.346,
-                "descScriptMs": 321.056
+                "ascVisibleMs": 328.029,
+                "ascSettledMs": 335.08,
+                "ascScriptMs": 313.495,
+                "descVisibleMs": 338.245,
+                "descSettledMs": 338.245,
+                "descScriptMs": 322.032
               },
               {
-                "ascVisibleMs": 324.004,
-                "ascSettledMs": 329.746,
-                "ascScriptMs": 311.044,
-                "descVisibleMs": 382.375,
-                "descSettledMs": 382.375,
-                "descScriptMs": 370.931
+                "ascVisibleMs": 368.155,
+                "ascSettledMs": 379.929,
+                "ascScriptMs": 352.1460000000001,
+                "descVisibleMs": 358.297,
+                "descSettledMs": 358.297,
+                "descScriptMs": 342.002
               },
               {
-                "ascVisibleMs": 350.945,
-                "ascSettledMs": 362.651,
-                "ascScriptMs": 338.028,
-                "descVisibleMs": 386.143,
-                "descSettledMs": 386.143,
-                "descScriptMs": 375.79200000000003
+                "ascVisibleMs": 358.036,
+                "ascSettledMs": 365.166,
+                "ascScriptMs": 344.22700000000003,
+                "descVisibleMs": 357.509,
+                "descSettledMs": 357.509,
+                "descScriptMs": 341.147
               },
               {
-                "ascVisibleMs": 347.928,
-                "ascSettledMs": 361.994,
-                "ascScriptMs": 334.7319999999999,
-                "descVisibleMs": 360.45,
-                "descSettledMs": 360.45,
-                "descScriptMs": 346.86400000000003
+                "ascVisibleMs": 353.194,
+                "ascSettledMs": 365.56,
+                "ascScriptMs": 337.12700000000007,
+                "descVisibleMs": 343.288,
+                "descSettledMs": 343.288,
+                "descScriptMs": 326.676
               }
             ]
           }
@@ -461,118 +461,118 @@
           "samples": {
             "ag-grid": [
               {
-                "ascVisibleMs": 915.779,
-                "ascSettledMs": 915.779,
-                "ascScriptMs": 904.701,
-                "descVisibleMs": 831.285,
-                "descSettledMs": 831.285,
-                "descScriptMs": 822.0590000000001
+                "ascVisibleMs": 627.787,
+                "ascSettledMs": 627.787,
+                "ascScriptMs": 612.8710000000001,
+                "descVisibleMs": 635.707,
+                "descSettledMs": 635.707,
+                "descScriptMs": 622.9
               },
               {
-                "ascVisibleMs": 802.095,
-                "ascSettledMs": 802.095,
-                "ascScriptMs": 789.919,
-                "descVisibleMs": 838.87,
-                "descSettledMs": 838.87,
-                "descScriptMs": 829.3660000000001
+                "ascVisibleMs": 596.591,
+                "ascSettledMs": 596.591,
+                "ascScriptMs": 582.462,
+                "descVisibleMs": 597.263,
+                "descSettledMs": 597.263,
+                "descScriptMs": 585.6239999999999
               },
               {
-                "ascVisibleMs": 771.124,
-                "ascSettledMs": 771.124,
-                "ascScriptMs": 759.389,
-                "descVisibleMs": 779.978,
-                "descSettledMs": 779.978,
-                "descScriptMs": 769.8860000000001
+                "ascVisibleMs": 640.381,
+                "ascSettledMs": 640.381,
+                "ascScriptMs": 625.7650000000001,
+                "descVisibleMs": 592.588,
+                "descSettledMs": 592.588,
+                "descScriptMs": 579.6600000000001
               },
               {
-                "ascVisibleMs": 690.443,
-                "ascSettledMs": 690.443,
-                "ascScriptMs": 677.8230000000001,
-                "descVisibleMs": 700.009,
-                "descSettledMs": 700.009,
-                "descScriptMs": 690.939
+                "ascVisibleMs": 614.619,
+                "ascSettledMs": 614.619,
+                "ascScriptMs": 599.604,
+                "descVisibleMs": 606.868,
+                "descSettledMs": 606.868,
+                "descScriptMs": 594.9440000000001
               },
               {
-                "ascVisibleMs": 688.118,
-                "ascSettledMs": 688.118,
-                "ascScriptMs": 676.147,
-                "descVisibleMs": 657.852,
-                "descSettledMs": 657.852,
-                "descScriptMs": 648.392
+                "ascVisibleMs": 630.226,
+                "ascSettledMs": 630.226,
+                "ascScriptMs": 615.529,
+                "descVisibleMs": 631.853,
+                "descSettledMs": 631.853,
+                "descScriptMs": 618.9700000000001
               },
               {
-                "ascVisibleMs": 706.569,
-                "ascSettledMs": 706.569,
-                "ascScriptMs": 695.1489999999999,
-                "descVisibleMs": 714.299,
-                "descSettledMs": 714.299,
-                "descScriptMs": 704.9619999999999
+                "ascVisibleMs": 624.973,
+                "ascSettledMs": 624.973,
+                "ascScriptMs": 610.101,
+                "descVisibleMs": 679.924,
+                "descSettledMs": 679.924,
+                "descScriptMs": 668.152
               },
               {
-                "ascVisibleMs": 706.121,
-                "ascSettledMs": 706.121,
-                "ascScriptMs": 692.478,
-                "descVisibleMs": 653.19,
-                "descSettledMs": 653.19,
-                "descScriptMs": 643.7290000000003
+                "ascVisibleMs": 630.663,
+                "ascSettledMs": 630.663,
+                "ascScriptMs": 616.29,
+                "descVisibleMs": 652.268,
+                "descSettledMs": 652.268,
+                "descScriptMs": 639.668
               }
             ],
             "infinite": [
               {
-                "ascVisibleMs": 312.836,
-                "ascSettledMs": 327.186,
-                "ascScriptMs": 302.99899999999997,
-                "descVisibleMs": 308.309,
-                "descSettledMs": 308.309,
-                "descScriptMs": 295.4560000000001
+                "ascVisibleMs": 293.16,
+                "ascSettledMs": 299.748,
+                "ascScriptMs": 278.38199999999995,
+                "descVisibleMs": 298.261,
+                "descSettledMs": 298.261,
+                "descScriptMs": 282.14000000000004
               },
               {
-                "ascVisibleMs": 372.315,
-                "ascSettledMs": 375.878,
-                "ascScriptMs": 357.27299999999997,
-                "descVisibleMs": 313.89,
-                "descSettledMs": 313.89,
-                "descScriptMs": 309.59999999999997
+                "ascVisibleMs": 293.509,
+                "ascSettledMs": 300.347,
+                "ascScriptMs": 280.248,
+                "descVisibleMs": 306.194,
+                "descSettledMs": 306.194,
+                "descScriptMs": 289.003
               },
               {
-                "ascVisibleMs": 314.317,
-                "ascSettledMs": 328.378,
-                "ascScriptMs": 301.23100000000005,
-                "descVisibleMs": 318.64,
-                "descSettledMs": 318.64,
-                "descScriptMs": 305.017
+                "ascVisibleMs": 279.213,
+                "ascSettledMs": 296.745,
+                "ascScriptMs": 264.386,
+                "descVisibleMs": 273.123,
+                "descSettledMs": 273.123,
+                "descScriptMs": 256.2279999999999
               },
               {
-                "ascVisibleMs": 300.803,
-                "ascSettledMs": 311.7,
-                "ascScriptMs": 289.59599999999995,
-                "descVisibleMs": 360.935,
-                "descSettledMs": 360.935,
-                "descScriptMs": 345.8949999999999
+                "ascVisibleMs": 283.432,
+                "ascSettledMs": 301.432,
+                "ascScriptMs": 268.328,
+                "descVisibleMs": 278.325,
+                "descSettledMs": 278.325,
+                "descScriptMs": 262.177
               },
               {
-                "ascVisibleMs": 278.177,
-                "ascSettledMs": 294.573,
-                "ascScriptMs": 267.99999999999994,
-                "descVisibleMs": 323.018,
-                "descSettledMs": 323.018,
-                "descScriptMs": 308.37500000000006
+                "ascVisibleMs": 280.632,
+                "ascSettledMs": 297.827,
+                "ascScriptMs": 265.537,
+                "descVisibleMs": 277.52,
+                "descSettledMs": 277.52,
+                "descScriptMs": 261.07199999999995
               },
               {
-                "ascVisibleMs": 301.986,
-                "ascSettledMs": 312.222,
-                "ascScriptMs": 290.07399999999996,
-                "descVisibleMs": 304.083,
-                "descSettledMs": 304.083,
-                "descScriptMs": 287.55999999999995
+                "ascVisibleMs": 288.472,
+                "ascSettledMs": 300.533,
+                "ascScriptMs": 273.67,
+                "descVisibleMs": 300.481,
+                "descSettledMs": 300.481,
+                "descScriptMs": 283.7540000000001
               },
               {
-                "ascVisibleMs": 306.499,
-                "ascSettledMs": 312.486,
-                "ascScriptMs": 294.822,
-                "descVisibleMs": 290.288,
-                "descSettledMs": 290.288,
-                "descScriptMs": 277.2340000000001
+                "ascVisibleMs": 310.674,
+                "ascSettledMs": 317.746,
+                "ascScriptMs": 295.95500000000004,
+                "descVisibleMs": 286.508,
+                "descSettledMs": 286.508,
+                "descScriptMs": 270.11299999999994
               }
             ]
           }
@@ -609,90 +609,90 @@
           "samples": {
             "ag-grid": [
               {
-                "visibleMs": 28.285,
-                "visibleMaxMs": 35.923,
-                "settledMs": 28.285,
-                "scriptMs": 153.298
+                "visibleMs": 29.5235,
+                "visibleMaxMs": 48.093,
+                "settledMs": 29.5235,
+                "scriptMs": 184.67600000000007
               },
               {
-                "visibleMs": 19.996,
-                "visibleMaxMs": 42.082,
-                "settledMs": 19.996,
-                "scriptMs": 128.56100000000004
+                "visibleMs": 28.39,
+                "visibleMaxMs": 47.936,
+                "settledMs": 28.39,
+                "scriptMs": 182.991
               },
               {
-                "visibleMs": 29.305,
-                "visibleMaxMs": 47.537,
-                "settledMs": 29.305,
-                "scriptMs": 161.67899999999997
+                "visibleMs": 28.609,
+                "visibleMaxMs": 43.165,
+                "settledMs": 28.609,
+                "scriptMs": 174.16500000000002
               },
               {
-                "visibleMs": 19.7065,
-                "visibleMaxMs": 39.884,
-                "settledMs": 19.7065,
-                "scriptMs": 133.38300000000004
+                "visibleMs": 27.7535,
+                "visibleMaxMs": 48.629,
+                "settledMs": 27.7535,
+                "scriptMs": 181.55699999999996
               },
               {
-                "visibleMs": 20.53,
-                "visibleMaxMs": 31.912,
-                "settledMs": 20.53,
-                "scriptMs": 128.35399999999996
+                "visibleMs": 29.253500000000003,
+                "visibleMaxMs": 46.759,
+                "settledMs": 29.253500000000003,
+                "scriptMs": 181.23699999999994
               },
               {
-                "visibleMs": 21.015500000000003,
-                "visibleMaxMs": 30.742,
-                "settledMs": 21.015500000000003,
-                "scriptMs": 126.73499999999999
+                "visibleMs": 28.148,
+                "visibleMaxMs": 46.634,
+                "settledMs": 28.148,
+                "scriptMs": 176.35000000000005
               },
               {
-                "visibleMs": 31.774,
-                "visibleMaxMs": 51.447,
-                "settledMs": 31.774,
-                "scriptMs": 180.50399999999993
+                "visibleMs": 26.9225,
+                "visibleMaxMs": 45.376,
+                "settledMs": 26.9225,
+                "scriptMs": 169.06599999999995
               }
             ],
             "infinite": [
               {
-                "visibleMs": 28.109,
-                "visibleMaxMs": 36.656,
-                "settledMs": 28.109,
-                "scriptMs": 170.05599999999998
+                "visibleMs": 27.146500000000003,
+                "visibleMaxMs": 36.034,
+                "settledMs": 27.146500000000003,
+                "scriptMs": 156.719
               },
               {
-                "visibleMs": 34.275999999999996,
-                "visibleMaxMs": 37.802,
-                "settledMs": 34.275999999999996,
-                "scriptMs": 189.295
+                "visibleMs": 28.822,
+                "visibleMaxMs": 42.704,
+                "settledMs": 28.822,
+                "scriptMs": 176.286
               },
               {
-                "visibleMs": 30.223,
-                "visibleMaxMs": 35.748,
-                "settledMs": 30.223,
-                "scriptMs": 175.138
+                "visibleMs": 28.4045,
+                "visibleMaxMs": 36.175,
+                "settledMs": 28.4045,
+                "scriptMs": 157.65799999999996
               },
               {
-                "visibleMs": 27.0975,
-                "visibleMaxMs": 38.628,
-                "settledMs": 27.0975,
-                "scriptMs": 162.918
+                "visibleMs": 28.3885,
+                "visibleMaxMs": 37.824,
+                "settledMs": 28.3885,
+                "scriptMs": 164.036
               },
               {
-                "visibleMs": 23.113999999999997,
-                "visibleMaxMs": 28.429,
-                "settledMs": 23.113999999999997,
-                "scriptMs": 131.228
+                "visibleMs": 29.314500000000002,
+                "visibleMaxMs": 39.535,
+                "settledMs": 29.314500000000002,
+                "scriptMs": 170.29699999999997
               },
               {
-                "visibleMs": 26.2045,
-                "visibleMaxMs": 30.117,
-                "settledMs": 26.2045,
-                "scriptMs": 147.687
+                "visibleMs": 29.4665,
+                "visibleMaxMs": 40.417,
+                "settledMs": 29.4665,
+                "scriptMs": 168.94200000000004
               },
               {
-                "visibleMs": 26.238500000000002,
-                "visibleMaxMs": 42.341,
-                "settledMs": 26.238500000000002,
-                "scriptMs": 162.316
+                "visibleMs": 27.836,
+                "visibleMaxMs": 38.733,
+                "settledMs": 27.836,
+                "scriptMs": 162.08200000000005
               }
             ]
           }
@@ -777,216 +777,216 @@
           "samples": {
             "ag-grid": [
               {
-                "presentedAllPct": 52.066115702479344,
-                "partialPct": 47.93388429752066,
-                "droppedPct": 0,
-                "rafFps": 59.956792427650534,
-                "p95FrameMs": 17.475000000000023,
-                "maxFrameMs": 17.699999999999818,
+                "presentedAllPct": 52.29885057471264,
+                "partialPct": 47.41379310344828,
+                "droppedPct": 0.28735632183908044,
+                "rafFps": 60.00321307528081,
+                "p95FrameMs": 16.800000000000125,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 961.0229999999998,
-                "scriptMs": 378.7289999999999,
-                "layoutMs": 73.351,
-                "styleMs": 163.856,
-                "layoutCount": 357
-              },
-              {
-                "presentedAllPct": 52.32876712328767,
-                "partialPct": 47.671232876712324,
-                "droppedPct": 0,
-                "rafFps": 59.95165189363416,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1019.6700000000001,
-                "scriptMs": 398.039,
-                "layoutMs": 79.32600000000001,
-                "styleMs": 171.86,
-                "layoutCount": 359
-              },
-              {
-                "presentedAllPct": 52.066115702479344,
-                "partialPct": 47.93388429752066,
-                "droppedPct": 0,
-                "rafFps": 59.95165189363417,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000045,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1023.39,
-                "scriptMs": 397.728,
-                "layoutMs": 78.346,
-                "styleMs": 173.695,
+                "taskMs": 1325.049,
+                "scriptMs": 516.646,
+                "layoutMs": 86.92099999999999,
+                "styleMs": 238.72099999999998,
                 "layoutCount": 358
               },
               {
-                "presentedAllPct": 52.602739726027394,
-                "partialPct": 47.397260273972606,
-                "droppedPct": 0,
-                "rafFps": 59.95165189363416,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.699999999999818,
+                "presentedAllPct": 52,
+                "partialPct": 47.714285714285715,
+                "droppedPct": 0.2857142857142857,
+                "rafFps": 60.0038712174979,
+                "p95FrameMs": 16.774999999999523,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 975.6830000000001,
-                "scriptMs": 378.5439999999999,
-                "layoutMs": 72.948,
-                "styleMs": 163.48,
-                "layoutCount": 359
+                "taskMs": 1330.6429999999998,
+                "scriptMs": 511.32800000000003,
+                "layoutMs": 90.666,
+                "styleMs": 230.599,
+                "layoutCount": 358
               },
               {
-                "presentedAllPct": 54.016620498614955,
-                "partialPct": 45.42936288088642,
-                "droppedPct": 0.554016620498615,
-                "rafFps": 59.308178116885195,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 34.299999999999955,
-                "longFramesPct": 1.0810810810810811,
-                "loafBlockingMs": 0,
-                "taskMs": 1146.328,
-                "scriptMs": 423.046,
-                "layoutMs": 88.514,
-                "styleMs": 187.496,
-                "layoutCount": 354
-              },
-              {
-                "presentedAllPct": 56.473829201101935,
-                "partialPct": 43.52617079889807,
+                "presentedAllPct": 52.29885057471264,
+                "partialPct": 47.701149425287355,
                 "droppedPct": 0,
-                "rafFps": 59.94971959002127,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 17.700000000000273,
+                "rafFps": 60.00193554630794,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 1143.9650000000001,
-                "scriptMs": 432.45599999999996,
-                "layoutMs": 91.011,
-                "styleMs": 192.431,
-                "layoutCount": 359
+                "taskMs": 1258.1670000000001,
+                "scriptMs": 501.201,
+                "layoutMs": 85.076,
+                "styleMs": 226.22400000000002,
+                "layoutCount": 358
               },
               {
-                "presentedAllPct": 52.34159779614325,
-                "partialPct": 47.658402203856745,
+                "presentedAllPct": 52,
+                "partialPct": 48,
                 "droppedPct": 0,
-                "rafFps": 59.95292728225645,
-                "p95FrameMs": 17.27499999999975,
-                "maxFrameMs": 17.700000000000045,
+                "rafFps": 60.00321307528081,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 964.3329999999999,
-                "scriptMs": 383.955,
-                "layoutMs": 73.156,
-                "styleMs": 169.462,
-                "layoutCount": 357
+                "taskMs": 1288.092,
+                "scriptMs": 494.272,
+                "layoutMs": 86.63900000000001,
+                "styleMs": 223.606,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 52,
+                "partialPct": 47.714285714285715,
+                "droppedPct": 0.2857142857142857,
+                "rafFps": 60.00193554630794,
+                "p95FrameMs": 16.700000000000614,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1280.748,
+                "scriptMs": 503.47599999999994,
+                "layoutMs": 88.70400000000001,
+                "styleMs": 226.89999999999998,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 71.65354330708661,
+                "partialPct": 27.95275590551181,
+                "droppedPct": 0.39370078740157477,
+                "rafFps": 60.00193554630795,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1255.3780000000004,
+                "scriptMs": 491.8419999999999,
+                "layoutMs": 86.351,
+                "styleMs": 221.352,
+                "layoutCount": 358
+              },
+              {
+                "presentedAllPct": 52,
+                "partialPct": 47.714285714285715,
+                "droppedPct": 0.2857142857142857,
+                "rafFps": 60.00193554630794,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 1302.215,
+                "scriptMs": 497.44899999999996,
+                "layoutMs": 87.719,
+                "styleMs": 227.627,
+                "layoutCount": 358
               }
             ],
             "infinite": [
               {
-                "presentedAllPct": 59.83606557377049,
-                "partialPct": 40.16393442622951,
+                "presentedAllPct": 61.15702479338842,
+                "partialPct": 38.84297520661157,
                 "droppedPct": 0,
-                "rafFps": 59.95165189363417,
-                "p95FrameMs": 17.57499999999959,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
+                "rafFps": 59.35866830118073,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 33.5,
+                "longFramesPct": 1.0869565217391304,
                 "loafBlockingMs": 0,
-                "taskMs": 1011.89,
-                "scriptMs": 461.25399999999996,
-                "layoutMs": 53.169000000000004,
-                "styleMs": 117.528,
-                "layoutCount": 181
+                "taskMs": 1408.805,
+                "scriptMs": 601.202,
+                "layoutMs": 75.368,
+                "styleMs": 164.375,
+                "layoutCount": 178
               },
               {
-                "presentedAllPct": 50.68493150684932,
-                "partialPct": 49.31506849315068,
+                "presentedAllPct": 61.60220994475139,
+                "partialPct": 38.39779005524862,
                 "droppedPct": 0,
-                "rafFps": 59.94971959002127,
-                "p95FrameMs": 17.300000000000182,
-                "maxFrameMs": 17.699999999999818,
-                "longFramesPct": 0,
+                "rafFps": 59.035419316002084,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 49.90000000000009,
+                "longFramesPct": 1.092896174863388,
                 "loafBlockingMs": 0,
-                "taskMs": 1028.507,
-                "scriptMs": 473.54799999999994,
-                "layoutMs": 53.657,
-                "styleMs": 122.21300000000001,
-                "layoutCount": 181
+                "taskMs": 1238.757,
+                "scriptMs": 552.3149999999999,
+                "layoutMs": 63.166,
+                "styleMs": 141.916,
+                "layoutCount": 178
               },
               {
-                "presentedAllPct": 53.278688524590166,
-                "partialPct": 46.72131147540984,
+                "presentedAllPct": 56.31868131868132,
+                "partialPct": 43.68131868131868,
                 "droppedPct": 0,
-                "rafFps": 59.93942292364101,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1015.822,
-                "scriptMs": 466.66799999999995,
-                "layoutMs": 53.338,
-                "styleMs": 116.14600000000002,
-                "layoutCount": 181
-              },
-              {
-                "presentedAllPct": 59.49720670391061,
-                "partialPct": 39.94413407821229,
-                "droppedPct": 0.5586592178770949,
-                "rafFps": 57.69045863914618,
-                "p95FrameMs": 17.59999999999993,
-                "maxFrameMs": 66.70000000000005,
-                "longFramesPct": 2.7777777777777777,
-                "loafBlockingMs": 0,
-                "taskMs": 1243.133,
-                "scriptMs": 520.4570000000001,
-                "layoutMs": 60.760999999999996,
-                "styleMs": 129.322,
-                "layoutCount": 172
-              },
-              {
-                "presentedAllPct": 56.557377049180324,
-                "partialPct": 43.44262295081967,
-                "droppedPct": 0,
-                "rafFps": 59.95165189363418,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 17.699999999999818,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1087.008,
-                "scriptMs": 505.33699999999993,
-                "layoutMs": 57.19400000000001,
-                "styleMs": 124.499,
-                "layoutCount": 181
-              },
-              {
-                "presentedAllPct": 56.043956043956044,
-                "partialPct": 43.956043956043956,
-                "droppedPct": 0,
-                "rafFps": 59.60819693259441,
-                "p95FrameMs": 17.279999999999973,
-                "maxFrameMs": 33.59999999999991,
+                "rafFps": 59.68126975933931,
+                "p95FrameMs": 16.79999999999991,
+                "maxFrameMs": 33.30000000000018,
                 "longFramesPct": 0.5405405405405406,
                 "loafBlockingMs": 0,
-                "taskMs": 1070.212,
-                "scriptMs": 491.336,
-                "layoutMs": 55.55499999999999,
-                "styleMs": 129.265,
+                "taskMs": 1279.421,
+                "scriptMs": 571.9620000000001,
+                "layoutMs": 65.53699999999999,
+                "styleMs": 154.00699999999998,
+                "layoutCount": 179
+              },
+              {
+                "presentedAllPct": 62.08791208791209,
+                "partialPct": 37.91208791208791,
+                "droppedPct": 0,
+                "rafFps": 59.680615155521224,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 33.299999999999955,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1297.944,
+                "scriptMs": 573.9239999999999,
+                "layoutMs": 63.26000000000001,
+                "styleMs": 144.719,
                 "layoutCount": 180
               },
               {
-                "presentedAllPct": 53.84615384615385,
-                "partialPct": 46.15384615384615,
+                "presentedAllPct": 61.15702479338842,
+                "partialPct": 38.84297520661157,
                 "droppedPct": 0,
-                "rafFps": 59.95137781228672,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000045,
-                "longFramesPct": 0,
+                "rafFps": 59.35866830118073,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 33.30000000000018,
+                "longFramesPct": 1.0869565217391304,
                 "loafBlockingMs": 0,
-                "taskMs": 1017.728,
-                "scriptMs": 466.805,
-                "layoutMs": 53.239000000000004,
-                "styleMs": 122.25599999999999,
-                "layoutCount": 181
+                "taskMs": 1274.7480000000003,
+                "scriptMs": 558.4979999999999,
+                "layoutMs": 66.376,
+                "styleMs": 146.51099999999997,
+                "layoutCount": 179
+              },
+              {
+                "presentedAllPct": 56.31868131868132,
+                "partialPct": 43.68131868131868,
+                "droppedPct": 0,
+                "rafFps": 59.68126975933931,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 33.299999999999955,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1322.537,
+                "scriptMs": 584.0070000000001,
+                "layoutMs": 68.5,
+                "styleMs": 152.23700000000002,
+                "layoutCount": 180
+              },
+              {
+                "presentedAllPct": 59.22865013774105,
+                "partialPct": 40.77134986225895,
+                "droppedPct": 0,
+                "rafFps": 59.35866830118073,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 50,
+                "longFramesPct": 0.5434782608695652,
+                "loafBlockingMs": 0,
+                "taskMs": 1363.927,
+                "scriptMs": 600.352,
+                "layoutMs": 69.52499999999999,
+                "styleMs": 156.822,
+                "layoutCount": 179
               }
             ]
           }
@@ -1071,215 +1071,215 @@
           "samples": {
             "ag-grid": [
               {
-                "presentedAllPct": 85.81560283687944,
-                "partialPct": 14.184397163120568,
+                "presentedAllPct": 90.75630252100841,
+                "partialPct": 7.563025210084033,
+                "droppedPct": 1.680672268907563,
+                "rafFps": 59.509172281512804,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 33.40000000000009,
+                "longFramesPct": 0.8264462809917356,
+                "loafBlockingMs": 0,
+                "taskMs": 628.798,
+                "scriptMs": 234.25999999999996,
+                "layoutMs": 70.8,
+                "styleMs": 41.56,
+                "layoutCount": 146
+              },
+              {
+                "presentedAllPct": 100,
+                "partialPct": 0,
                 "droppedPct": 0,
-                "rafFps": 59.96197533271584,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 17.700000000000273,
+                "rafFps": 60.00293129074174,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 443.122,
-                "scriptMs": 180.031,
-                "layoutMs": 51.803,
-                "styleMs": 33.115,
+                "taskMs": 567.4359999999999,
+                "scriptMs": 218.43999999999997,
+                "layoutMs": 63.30999999999999,
+                "styleMs": 38.69500000000001,
                 "layoutCount": 148
               },
               {
-                "presentedAllPct": 94.32624113475178,
-                "partialPct": 5.673758865248227,
-                "droppedPct": 0,
-                "rafFps": 59.95028512940489,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000273,
+                "presentedAllPct": 93.96551724137932,
+                "partialPct": 3.4482758620689653,
+                "droppedPct": 2.586206896551724,
+                "rafFps": 60.00292697204741,
+                "p95FrameMs": 16.789999999999782,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 413.5799999999999,
-                "scriptMs": 170.86599999999996,
-                "layoutMs": 48.818,
-                "styleMs": 30.565999999999995,
-                "layoutCount": 148
-              },
-              {
-                "presentedAllPct": 88.88888888888889,
-                "partialPct": 11.11111111111111,
-                "droppedPct": 0,
-                "rafFps": 60.00778637618343,
-                "p95FrameMs": 17.089999999999918,
-                "maxFrameMs": 17.40000000000009,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 415.51000000000005,
-                "scriptMs": 171.42300000000006,
-                "layoutMs": 49.352,
-                "styleMs": 32.422999999999995,
-                "layoutCount": 142
-              },
-              {
-                "presentedAllPct": 94.36619718309859,
-                "partialPct": 5.633802816901409,
-                "droppedPct": 0,
-                "rafFps": 60.01170960187353,
-                "p95FrameMs": 17.289999999999782,
-                "maxFrameMs": 17.5,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 398.459,
-                "scriptMs": 158.56800000000004,
-                "layoutMs": 47.077,
-                "styleMs": 27.908999999999995,
+                "taskMs": 602.1529999999999,
+                "scriptMs": 233.19699999999997,
+                "layoutMs": 67.33800000000001,
+                "styleMs": 39.04600000000001,
                 "layoutCount": 150
               },
               {
-                "presentedAllPct": 86.80555555555556,
-                "partialPct": 13.194444444444445,
+                "presentedAllPct": 81.95488721804512,
+                "partialPct": 18.045112781954884,
                 "droppedPct": 0,
-                "rafFps": 59.99702965525313,
-                "p95FrameMs": 17.09999999999991,
-                "maxFrameMs": 17.700000000000045,
+                "rafFps": 60.003934684241585,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 391.6499999999999,
-                "scriptMs": 158.35299999999995,
-                "layoutMs": 46.095,
-                "styleMs": 30.185999999999996,
-                "layoutCount": 140
+                "taskMs": 599.7629999999999,
+                "scriptMs": 228.77200000000002,
+                "layoutMs": 66.637,
+                "styleMs": 39.228,
+                "layoutCount": 146
               },
               {
-                "presentedAllPct": 85.61643835616438,
-                "partialPct": 14.383561643835616,
+                "presentedAllPct": 100,
+                "partialPct": 0,
                 "droppedPct": 0,
-                "rafFps": 59.997073313496905,
-                "p95FrameMs": 17.300000000000136,
-                "maxFrameMs": 17.5,
+                "rafFps": 60.00588254389528,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 421.4359999999999,
-                "scriptMs": 170.57799999999995,
-                "layoutMs": 49.101,
-                "styleMs": 32.603,
-                "layoutCount": 144
+                "taskMs": 591.098,
+                "scriptMs": 225.40000000000003,
+                "layoutMs": 66.59399999999998,
+                "styleMs": 39.288999999999994,
+                "layoutCount": 150
               },
               {
-                "presentedAllPct": 92.90780141843972,
-                "partialPct": 7.092198581560284,
+                "presentedAllPct": 100,
+                "partialPct": 0,
                 "droppedPct": 0,
-                "rafFps": 59.99998032787529,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 17.700000000000273,
+                "rafFps": 60.0049590875279,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 407.6679999999999,
-                "scriptMs": 166.57999999999996,
-                "layoutMs": 47.07299999999999,
-                "styleMs": 29.526,
+                "taskMs": 599.7960000000002,
+                "scriptMs": 225.40799999999993,
+                "layoutMs": 67.593,
+                "styleMs": 38.452,
+                "layoutCount": 148
+              },
+              {
+                "presentedAllPct": 81.48148148148148,
+                "partialPct": 17.77777777777778,
+                "droppedPct": 0.7407407407407408,
+                "rafFps": 60.00292697204741,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 571.496,
+                "scriptMs": 222.68499999999997,
+                "layoutMs": 63.67099999999999,
+                "styleMs": 37.748999999999995,
                 "layoutCount": 146
               }
             ],
             "infinite": [
               {
-                "presentedAllPct": 82.3943661971831,
-                "partialPct": 17.6056338028169,
+                "presentedAllPct": 82.75862068965517,
+                "partialPct": 17.24137931034483,
                 "droppedPct": 0,
-                "rafFps": 59.95203836930456,
-                "p95FrameMs": 17.310000000000173,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
+                "rafFps": 59.52092910718606,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 33.399999999999864,
+                "longFramesPct": 0.8130081300813009,
                 "loafBlockingMs": 0,
-                "taskMs": 317.05300000000005,
-                "scriptMs": 113.44300000000001,
-                "layoutMs": 8.43,
-                "styleMs": 34.832,
+                "taskMs": 386.3859999999999,
+                "scriptMs": 130.89800000000002,
+                "layoutMs": 10.565999999999999,
+                "styleMs": 40.413000000000004,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 89.04109589041096,
-                "partialPct": 10.95890410958904,
+                "presentedAllPct": 93.75,
+                "partialPct": 6.25,
                 "droppedPct": 0,
-                "rafFps": 59.99707331349689,
-                "p95FrameMs": 17.190000000000236,
-                "maxFrameMs": 17.700000000000273,
+                "rafFps": 60.003947367116055,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 318.607,
-                "scriptMs": 106.398,
-                "layoutMs": 8.214,
-                "styleMs": 33.821999999999996,
+                "taskMs": 399.482,
+                "scriptMs": 135.66400000000002,
+                "layoutMs": 10.866999999999997,
+                "styleMs": 42.492000000000004,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 96.55172413793103,
-                "partialPct": 3.4482758620689653,
+                "presentedAllPct": 96.45390070921985,
+                "partialPct": 3.546099290780142,
                 "droppedPct": 0,
-                "rafFps": 59.99702965525313,
-                "p95FrameMs": 16.90000000000009,
-                "maxFrameMs": 17.600000000000136,
+                "rafFps": 60.00100842030959,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.799999999999955,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 307.92600000000004,
-                "scriptMs": 108.14799999999997,
-                "layoutMs": 8.202000000000002,
-                "styleMs": 34.399,
+                "taskMs": 406.509,
+                "scriptMs": 135.93699999999998,
+                "layoutMs": 11.120999999999999,
+                "styleMs": 43.24,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 88.81118881118881,
-                "partialPct": 11.188811188811188,
+                "presentedAllPct": 96.5034965034965,
+                "partialPct": 3.4965034965034967,
                 "droppedPct": 0,
-                "rafFps": 59.9989800173397,
-                "p95FrameMs": 17.205000000000247,
-                "maxFrameMs": 17.59999999999991,
+                "rafFps": 60,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 308.27700000000004,
-                "scriptMs": 102.65799999999997,
-                "layoutMs": 7.9190000000000005,
-                "styleMs": 32.499,
+                "taskMs": 371.729,
+                "scriptMs": 127.50499999999998,
+                "layoutMs": 10.383,
+                "styleMs": 39.02199999999999,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 95.77464788732394,
-                "partialPct": 4.225352112676056,
+                "presentedAllPct": 96.5034965034965,
+                "partialPct": 3.4965034965034967,
                 "droppedPct": 0,
-                "rafFps": 59.99495840685656,
-                "p95FrameMs": 17.299999999999976,
-                "maxFrameMs": 17.600000000000136,
+                "rafFps": 60.00198006534215,
+                "p95FrameMs": 16.737299999999912,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 306.086,
-                "scriptMs": 100.97699999999999,
-                "layoutMs": 7.917000000000001,
-                "styleMs": 31.631000000000007,
+                "taskMs": 412.14099999999996,
+                "scriptMs": 137.74999999999997,
+                "layoutMs": 11.386000000000001,
+                "styleMs": 43.652,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 96.55172413793103,
-                "partialPct": 3.4482758620689653,
+                "presentedAllPct": 82.84023668639054,
+                "partialPct": 17.159763313609467,
                 "droppedPct": 0,
-                "rafFps": 59.998032851381915,
-                "p95FrameMs": 17.299999999999944,
-                "maxFrameMs": 17.5,
+                "rafFps": 60,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.799999999999955,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 330.796,
-                "scriptMs": 111.342,
-                "layoutMs": 8.366999999999999,
-                "styleMs": 35.184999999999995,
+                "taskMs": 395.51099999999997,
+                "scriptMs": 135.56,
+                "layoutMs": 10.946000000000002,
+                "styleMs": 42.969,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 95.77464788732394,
-                "partialPct": 4.225352112676056,
+                "presentedAllPct": 95.83333333333334,
+                "partialPct": 4.166666666666666,
                 "droppedPct": 0,
-                "rafFps": 59.99495840685656,
-                "p95FrameMs": 17.199999999999818,
-                "maxFrameMs": 17.600000000000364,
+                "rafFps": 60.000971916569895,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 328.094,
-                "scriptMs": 110.89899999999997,
-                "layoutMs": 8.188,
-                "styleMs": 34.056000000000004,
+                "taskMs": 389.37999999999994,
+                "scriptMs": 131.12699999999998,
+                "layoutMs": 10.696,
+                "styleMs": 40.865,
                 "layoutCount": 36
               }
             ]
@@ -1317,23 +1317,37 @@
           "samples": {
             "ag-grid": [
               {
-                "blankPct": 2.8205128205128207,
+                "blankPct": 3.0379746835443036,
                 "wrongPct": 0,
-                "badFramesPct": 14.102564102564102,
-                "worstFrameOkPct": 80,
-                "frames": 78
-              },
-              {
-                "blankPct": 2.0253164556962027,
-                "wrongPct": 0,
-                "badFramesPct": 10.126582278481013,
+                "badFramesPct": 15.18987341772152,
                 "worstFrameOkPct": 80,
                 "frames": 79
               },
               {
-                "blankPct": 2.0253164556962027,
+                "blankPct": 0.7594936708860759,
                 "wrongPct": 0,
-                "badFramesPct": 10.126582278481013,
+                "badFramesPct": 3.79746835443038,
+                "worstFrameOkPct": 80,
+                "frames": 79
+              },
+              {
+                "blankPct": 3.5897435897435894,
+                "wrongPct": 0,
+                "badFramesPct": 17.94871794871795,
+                "worstFrameOkPct": 80,
+                "frames": 78
+              },
+              {
+                "blankPct": 2.7848101265822782,
+                "wrongPct": 0,
+                "badFramesPct": 13.924050632911392,
+                "worstFrameOkPct": 80,
+                "frames": 79
+              },
+              {
+                "blankPct": 0.7594936708860759,
+                "wrongPct": 0,
+                "badFramesPct": 3.79746835443038,
                 "worstFrameOkPct": 80,
                 "frames": 79
               },
@@ -1345,23 +1359,9 @@
                 "frames": 79
               },
               {
-                "blankPct": 1.7721518987341773,
+                "blankPct": 2.278481012658228,
                 "wrongPct": 0,
-                "badFramesPct": 8.860759493670885,
-                "worstFrameOkPct": 80,
-                "frames": 79
-              },
-              {
-                "blankPct": 1.5189873417721518,
-                "wrongPct": 0,
-                "badFramesPct": 7.59493670886076,
-                "worstFrameOkPct": 80,
-                "frames": 79
-              },
-              {
-                "blankPct": 3.2911392405063293,
-                "wrongPct": 0,
-                "badFramesPct": 16.455696202531644,
+                "badFramesPct": 11.39240506329114,
                 "worstFrameOkPct": 80,
                 "frames": 79
               }
@@ -1369,52 +1369,52 @@
             "infinite": [
               {
                 "blankPct": 0,
-                "wrongPct": 39.84561403508772,
-                "badFramesPct": 90.66666666666666,
-                "worstFrameOkPct": 2.1052631578947367,
-                "frames": 75
+                "wrongPct": 41.38345864661654,
+                "badFramesPct": 88.57142857142857,
+                "worstFrameOkPct": 0,
+                "frames": 70
               },
               {
                 "blankPct": 0,
-                "wrongPct": 37.85425101214575,
-                "badFramesPct": 89.74358974358975,
-                "worstFrameOkPct": 7.368421052631578,
-                "frames": 78
+                "wrongPct": 41.41353383458647,
+                "badFramesPct": 90,
+                "worstFrameOkPct": 0,
+                "frames": 70
               },
               {
                 "blankPct": 0,
-                "wrongPct": 37.281812125249836,
-                "badFramesPct": 91.13924050632912,
-                "worstFrameOkPct": 49.473684210526315,
-                "frames": 79
+                "wrongPct": 42.30358504958047,
+                "badFramesPct": 89.85507246376811,
+                "worstFrameOkPct": 0,
+                "frames": 69
               },
               {
                 "blankPct": 0,
-                "wrongPct": 37.84075573549258,
-                "badFramesPct": 89.74358974358975,
-                "worstFrameOkPct": 10.526315789473683,
-                "frames": 78
+                "wrongPct": 41.6323417238749,
+                "badFramesPct": 89.85507246376811,
+                "worstFrameOkPct": 0,
+                "frames": 69
               },
               {
                 "blankPct": 0,
-                "wrongPct": 38.318523581681475,
-                "badFramesPct": 90.9090909090909,
-                "worstFrameOkPct": 9.473684210526317,
-                "frames": 77
+                "wrongPct": 42.368421052631575,
+                "badFramesPct": 89.70588235294117,
+                "worstFrameOkPct": 0,
+                "frames": 68
               },
               {
                 "blankPct": 0,
-                "wrongPct": 39.63508771929825,
-                "badFramesPct": 90.66666666666666,
-                "worstFrameOkPct": 6.315789473684211,
-                "frames": 75
+                "wrongPct": 51.17266851338873,
+                "badFramesPct": 85.96491228070175,
+                "worstFrameOkPct": 0,
+                "frames": 57
               },
               {
                 "blankPct": 0,
-                "wrongPct": 38.42788790157211,
-                "badFramesPct": 90.9090909090909,
-                "worstFrameOkPct": 9.473684210526317,
-                "frames": 77
+                "wrongPct": 52.41715399610136,
+                "badFramesPct": 85.18518518518519,
+                "worstFrameOkPct": 0,
+                "frames": 54
               }
             ]
           }
@@ -1462,65 +1462,7 @@
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 123
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              }
-            ],
-            "infinite": [
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 123
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 123
+                "frames": 125
               },
               {
                 "blankPct": 0,
@@ -1541,14 +1483,72 @@
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 124
+                "frames": 122
               },
               {
                 "blankPct": 0,
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 124
+                "frames": 122
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              }
+            ],
+            "infinite": [
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 122
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 122
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 122
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 121
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 121
               }
             ]
           }
@@ -1585,46 +1585,46 @@
           "samples": {
             "ag-grid": [
               {
-                "blankFramesPct": 2.7027027027027026,
-                "blankAreaPct": 0.218842324105482,
-                "maxBlankRows": 2,
-                "capturedFrames": 74
+                "blankFramesPct": 4.477611940298507,
+                "blankAreaPct": 1.289101053437267,
+                "maxBlankRows": 7,
+                "capturedFrames": 67
               },
               {
-                "blankFramesPct": 1.3513513513513513,
-                "blankAreaPct": 0.145894882736988,
-                "maxBlankRows": 2,
-                "capturedFrames": 74
+                "blankFramesPct": 8.955223880597014,
+                "blankAreaPct": 0.9668257900779502,
+                "maxBlankRows": 4,
+                "capturedFrames": 67
               },
               {
-                "blankFramesPct": 17.333333333333336,
-                "blankAreaPct": 1.7993702204228519,
-                "maxBlankRows": 3,
-                "capturedFrames": 75
+                "blankFramesPct": 5.970149253731343,
+                "blankAreaPct": 0.7251193425584628,
+                "maxBlankRows": 4,
+                "capturedFrames": 67
               },
               {
-                "blankFramesPct": 4,
-                "blankAreaPct": 0.2878992352676563,
-                "maxBlankRows": 2,
-                "capturedFrames": 75
+                "blankFramesPct": 14.516129032258066,
+                "blankAreaPct": 4.788646554351138,
+                "maxBlankRows": 15,
+                "capturedFrames": 62
               },
               {
-                "blankFramesPct": 6.8493150684931505,
-                "blankAreaPct": 0.9613073780341264,
-                "maxBlankRows": 3,
-                "capturedFrames": 73
+                "blankFramesPct": 7.6923076923076925,
+                "blankAreaPct": 1.1626699885809197,
+                "maxBlankRows": 6,
+                "capturedFrames": 65
               },
               {
-                "blankFramesPct": 1.3513513513513513,
-                "blankAreaPct": 0.145894882736988,
-                "maxBlankRows": 2,
-                "capturedFrames": 74
+                "blankFramesPct": 9.375,
+                "blankAreaPct": 2.1086369770580298,
+                "maxBlankRows": 13,
+                "capturedFrames": 64
               },
               {
-                "blankFramesPct": 9.45945945945946,
-                "blankAreaPct": 1.313053944632892,
-                "maxBlankRows": 3,
-                "capturedFrames": 74
+                "blankFramesPct": 9.230769230769232,
+                "blankAreaPct": 2.076196408180214,
+                "maxBlankRows": 7,
+                "capturedFrames": 65
               }
             ],
             "infinite": [
@@ -1632,13 +1632,7 @@
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 74
-              },
-              {
-                "blankFramesPct": 0,
-                "blankAreaPct": 0,
-                "maxBlankRows": 0,
-                "capturedFrames": 74
+                "capturedFrames": 72
               },
               {
                 "blankFramesPct": 0,
@@ -1650,7 +1644,13 @@
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 74
+                "capturedFrames": 73
+              },
+              {
+                "blankFramesPct": 0,
+                "blankAreaPct": 0,
+                "maxBlankRows": 0,
+                "capturedFrames": 72
               },
               {
                 "blankFramesPct": 0,
@@ -1662,7 +1662,7 @@
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 74
+                "capturedFrames": 72
               },
               {
                 "blankFramesPct": 0,
@@ -1752,159 +1752,159 @@
           "samples": {
             "ag-grid": [
               {
-                "visibleMs": 503.876,
-                "settledMs": 607.111,
-                "taskMs": 510.07200000000006,
-                "scriptMs": 484.74199999999996,
-                "layoutMs": 7.06,
-                "styleMs": 7.839,
+                "visibleMs": 600.37,
+                "settledMs": 702.73,
+                "taskMs": 607.1970000000001,
+                "scriptMs": 579.4800000000001,
+                "layoutMs": 5.774,
+                "styleMs": 9.59,
                 "layoutCount": 24,
-                "heapMB": 213.46128845214844,
+                "heapMB": 213.40999221801758,
                 "gridElements": 637
               },
               {
-                "visibleMs": 563.519,
-                "settledMs": 667.771,
-                "taskMs": 571.085,
-                "scriptMs": 545.116,
-                "layoutMs": 7.128,
-                "styleMs": 7.84,
+                "visibleMs": 617.794,
+                "settledMs": 720.133,
+                "taskMs": 624.259,
+                "scriptMs": 596.238,
+                "layoutMs": 5.952000000000001,
+                "styleMs": 10.047,
                 "layoutCount": 24,
-                "heapMB": 213.45608520507812,
+                "heapMB": 213.4096565246582,
                 "gridElements": 637
               },
               {
-                "visibleMs": 581.996,
-                "settledMs": 684.977,
-                "taskMs": 589.4529999999999,
-                "scriptMs": 561.9810000000001,
-                "layoutMs": 7.518,
-                "styleMs": 8.091,
+                "visibleMs": 612.752,
+                "settledMs": 715.267,
+                "taskMs": 619.6409999999998,
+                "scriptMs": 590.638,
+                "layoutMs": 5.946,
+                "styleMs": 10.142000000000001,
                 "layoutCount": 24,
-                "heapMB": 213.4612579345703,
+                "heapMB": 213.41002655029297,
                 "gridElements": 637
               },
               {
-                "visibleMs": 493.963,
-                "settledMs": 597.168,
-                "taskMs": 500.406,
-                "scriptMs": 474.16600000000005,
-                "layoutMs": 7.479999999999999,
-                "styleMs": 7.711999999999999,
+                "visibleMs": 610.842,
+                "settledMs": 713.383,
+                "taskMs": 618.3389999999999,
+                "scriptMs": 589.2410000000001,
+                "layoutMs": 6.016000000000001,
+                "styleMs": 10.020000000000001,
                 "layoutCount": 24,
-                "heapMB": 213.46028900146484,
+                "heapMB": 213.41070938110352,
                 "gridElements": 637
               },
               {
-                "visibleMs": 498.485,
-                "settledMs": 601.956,
-                "taskMs": 509.55500000000006,
-                "scriptMs": 480.173,
-                "layoutMs": 7.607,
-                "styleMs": 8.267999999999999,
+                "visibleMs": 611.274,
+                "settledMs": 713.78,
+                "taskMs": 618.557,
+                "scriptMs": 589.507,
+                "layoutMs": 5.969,
+                "styleMs": 10.349,
                 "layoutCount": 24,
-                "heapMB": 213.46027755737305,
+                "heapMB": 213.41004943847656,
                 "gridElements": 637
               },
               {
-                "visibleMs": 442.536,
-                "settledMs": 546.198,
-                "taskMs": 449.48999999999995,
-                "scriptMs": 424.983,
-                "layoutMs": 6.728999999999999,
-                "styleMs": 6.979,
+                "visibleMs": 601.49,
+                "settledMs": 703.762,
+                "taskMs": 608.975,
+                "scriptMs": 580.8230000000001,
+                "layoutMs": 5.724,
+                "styleMs": 9.403,
                 "layoutCount": 24,
-                "heapMB": 213.4604034423828,
+                "heapMB": 213.4093360900879,
                 "gridElements": 637
               },
               {
-                "visibleMs": 480.998,
-                "settledMs": 583.74,
-                "taskMs": 493.321,
-                "scriptMs": 464.151,
-                "layoutMs": 7.0569999999999995,
-                "styleMs": 8.085,
+                "visibleMs": 615.579,
+                "settledMs": 717.885,
+                "taskMs": 622.128,
+                "scriptMs": 594.504,
+                "layoutMs": 5.751999999999997,
+                "styleMs": 9.532,
                 "layoutCount": 24,
-                "heapMB": 213.46030044555664,
+                "heapMB": 213.41119003295898,
                 "gridElements": 637
               }
             ],
             "infinite": [
               {
-                "visibleMs": 415.436,
-                "settledMs": 415.436,
-                "taskMs": 418.075,
-                "scriptMs": 404.1989999999999,
-                "layoutMs": 2.1789999999999994,
-                "styleMs": 3.8199999999999994,
+                "visibleMs": 429.177,
+                "settledMs": 429.177,
+                "taskMs": 433.04999999999995,
+                "scriptMs": 408.37800000000004,
+                "layoutMs": 3.726,
+                "styleMs": 7.103999999999999,
                 "layoutCount": 13,
-                "heapMB": 90.6834487915039,
+                "heapMB": 90.67916107177734,
                 "gridElements": 609
               },
               {
-                "visibleMs": 319.99,
-                "settledMs": 319.99,
-                "taskMs": 322.616,
-                "scriptMs": 309.60299999999995,
-                "layoutMs": 2.1980000000000004,
-                "styleMs": 3.5049999999999994,
+                "visibleMs": 410.795,
+                "settledMs": 410.795,
+                "taskMs": 414.24399999999997,
+                "scriptMs": 393.5949999999999,
+                "layoutMs": 3.1540000000000004,
+                "styleMs": 5.365,
                 "layoutCount": 13,
-                "heapMB": 90.68222427368164,
+                "heapMB": 90.67204666137695,
                 "gridElements": 609
               },
               {
-                "visibleMs": 322.517,
-                "settledMs": 322.517,
-                "taskMs": 324.94900000000007,
-                "scriptMs": 311.947,
-                "layoutMs": 2.099,
-                "styleMs": 3.532,
+                "visibleMs": 389.95,
+                "settledMs": 389.95,
+                "taskMs": 393.52500000000015,
+                "scriptMs": 370.2589999999999,
+                "layoutMs": 3.843000000000001,
+                "styleMs": 6.989999999999999,
                 "layoutCount": 13,
-                "heapMB": 90.67649841308594,
+                "heapMB": 90.68001937866211,
                 "gridElements": 609
               },
               {
-                "visibleMs": 365.157,
-                "settledMs": 365.157,
-                "taskMs": 367.94000000000005,
-                "scriptMs": 353.73599999999993,
-                "layoutMs": 2.1329999999999996,
-                "styleMs": 3.8939999999999992,
+                "visibleMs": 490.431,
+                "settledMs": 490.431,
+                "taskMs": 493.84700000000004,
+                "scriptMs": 465.81100000000004,
+                "layoutMs": 5.0390000000000015,
+                "styleMs": 7.856999999999999,
                 "layoutCount": 13,
-                "heapMB": 90.67641830444336,
+                "heapMB": 90.67201232910156,
                 "gridElements": 609
               },
               {
-                "visibleMs": 352.339,
-                "settledMs": 352.339,
-                "taskMs": 355.012,
-                "scriptMs": 341.66900000000004,
-                "layoutMs": 2.085,
-                "styleMs": 3.617,
+                "visibleMs": 385.933,
+                "settledMs": 407.842,
+                "taskMs": 398.23200000000014,
+                "scriptMs": 373.054,
+                "layoutMs": 3.8049999999999993,
+                "styleMs": 7.304,
                 "layoutCount": 13,
-                "heapMB": 90.68198776245117,
+                "heapMB": 89.68862915039062,
                 "gridElements": 609
               },
               {
-                "visibleMs": 313.163,
-                "settledMs": 313.163,
-                "taskMs": 315.623,
-                "scriptMs": 302.74799999999993,
-                "layoutMs": 2.0830000000000006,
-                "styleMs": 3.3609999999999998,
+                "visibleMs": 422.737,
+                "settledMs": 422.737,
+                "taskMs": 426.44300000000015,
+                "scriptMs": 403.41499999999996,
+                "layoutMs": 3.437,
+                "styleMs": 6.7780000000000005,
                 "layoutCount": 13,
-                "heapMB": 90.67646789550781,
+                "heapMB": 90.68000793457031,
                 "gridElements": 609
               },
               {
-                "visibleMs": 381.505,
-                "settledMs": 381.505,
-                "taskMs": 384.539,
-                "scriptMs": 371.00500000000005,
-                "layoutMs": 2.1400000000000006,
-                "styleMs": 3.67,
+                "visibleMs": 407.914,
+                "settledMs": 407.914,
+                "taskMs": 413.00199999999995,
+                "scriptMs": 388.094,
+                "layoutMs": 3.5280000000000005,
+                "styleMs": 7.2090000000000005,
                 "layoutCount": 13,
-                "heapMB": 90.68194580078125,
+                "heapMB": 90.67985916137695,
                 "gridElements": 609
               }
             ]
@@ -1954,118 +1954,118 @@
           "samples": {
             "ag-grid": [
               {
-                "ascVisibleMs": 3384.478,
-                "ascSettledMs": 3384.478,
-                "ascScriptMs": 3373.0969999999998,
-                "descVisibleMs": 3279.365,
-                "descSettledMs": 3279.365,
-                "descScriptMs": 3270.8050000000003
+                "ascVisibleMs": 3113.611,
+                "ascSettledMs": 3113.611,
+                "ascScriptMs": 3097.9,
+                "descVisibleMs": 3081.943,
+                "descSettledMs": 3081.943,
+                "descScriptMs": 3069.6339999999996
               },
               {
-                "ascVisibleMs": 3152.162,
-                "ascSettledMs": 3152.162,
-                "ascScriptMs": 3139.711,
-                "descVisibleMs": 3251.006,
-                "descSettledMs": 3251.006,
-                "descScriptMs": 3242.3969999999995
+                "ascVisibleMs": 3112.152,
+                "ascSettledMs": 3112.152,
+                "ascScriptMs": 3102.69,
+                "descVisibleMs": 3172.526,
+                "descSettledMs": 3172.526,
+                "descScriptMs": 3160.5750000000007
               },
               {
-                "ascVisibleMs": 3547.117,
-                "ascSettledMs": 3547.117,
-                "ascScriptMs": 3535.714,
-                "descVisibleMs": 3222.482,
-                "descSettledMs": 3222.482,
-                "descScriptMs": 3213.354
+                "ascVisibleMs": 3074.632,
+                "ascSettledMs": 3074.632,
+                "ascScriptMs": 3063.454,
+                "descVisibleMs": 3060.817,
+                "descSettledMs": 3060.817,
+                "descScriptMs": 3048.6040000000003
               },
               {
-                "ascVisibleMs": 3544.094,
-                "ascSettledMs": 3544.094,
-                "ascScriptMs": 3530.6450000000004,
-                "descVisibleMs": 3422.9,
-                "descSettledMs": 3422.9,
-                "descScriptMs": 3414.6209999999996
+                "ascVisibleMs": 3059.984,
+                "ascSettledMs": 3059.984,
+                "ascScriptMs": 3045.9299999999994,
+                "descVisibleMs": 3022.064,
+                "descSettledMs": 3022.064,
+                "descScriptMs": 3009.8950000000004
               },
               {
-                "ascVisibleMs": 3306.936,
-                "ascSettledMs": 3306.936,
-                "ascScriptMs": 3295.536,
-                "descVisibleMs": 3219.608,
-                "descSettledMs": 3219.608,
-                "descScriptMs": 3210.381
+                "ascVisibleMs": 3087.5,
+                "ascSettledMs": 3087.5,
+                "ascScriptMs": 3077.7300000000005,
+                "descVisibleMs": 3002.394,
+                "descSettledMs": 3002.394,
+                "descScriptMs": 2989.542999999999
               },
               {
-                "ascVisibleMs": 3723.505,
-                "ascSettledMs": 3723.505,
-                "ascScriptMs": 3711.7180000000003,
-                "descVisibleMs": 3472.731,
-                "descSettledMs": 3472.731,
-                "descScriptMs": 3463.3709999999996
+                "ascVisibleMs": 3052.813,
+                "ascSettledMs": 3052.813,
+                "ascScriptMs": 3038.0520000000006,
+                "descVisibleMs": 3034.113,
+                "descSettledMs": 3034.113,
+                "descScriptMs": 3022.145
               },
               {
-                "ascVisibleMs": 3259.8,
-                "ascSettledMs": 3259.8,
-                "ascScriptMs": 3247.874,
-                "descVisibleMs": 3317.533,
-                "descSettledMs": 3317.533,
-                "descScriptMs": 3308.7309999999998
+                "ascVisibleMs": 3154.33,
+                "ascSettledMs": 3154.33,
+                "ascScriptMs": 3140.7940000000003,
+                "descVisibleMs": 2995.743,
+                "descSettledMs": 2995.743,
+                "descScriptMs": 2984.1300000000006
               }
             ],
             "infinite": [
               {
-                "ascVisibleMs": 1336.163,
-                "ascSettledMs": 1346.413,
-                "ascScriptMs": 1322.9689999999998,
-                "descVisibleMs": 1380.067,
-                "descSettledMs": 1380.067,
-                "descScriptMs": 1365.815
+                "ascVisibleMs": 1380.431,
+                "ascSettledMs": 1397.893,
+                "ascScriptMs": 1365.888,
+                "descVisibleMs": 1595.332,
+                "descSettledMs": 1595.332,
+                "descScriptMs": 1579.214
               },
               {
-                "ascVisibleMs": 1418.637,
-                "ascSettledMs": 1429.692,
-                "ascScriptMs": 1406.001,
-                "descVisibleMs": 1464.522,
-                "descSettledMs": 1464.522,
-                "descScriptMs": 1449.652
+                "ascVisibleMs": 1490.925,
+                "ascSettledMs": 1497.836,
+                "ascScriptMs": 1475.819,
+                "descVisibleMs": 1668.763,
+                "descSettledMs": 1668.763,
+                "descScriptMs": 1662.158
               },
               {
-                "ascVisibleMs": 1327.965,
-                "ascSettledMs": 1330.257,
-                "ascScriptMs": 1315.721,
-                "descVisibleMs": 1305.987,
-                "descSettledMs": 1305.987,
-                "descScriptMs": 1295.163
+                "ascVisibleMs": 1448.396,
+                "ascSettledMs": 1467.467,
+                "ascScriptMs": 1434.987,
+                "descVisibleMs": 1647.426,
+                "descSettledMs": 1647.426,
+                "descScriptMs": 1640.7190000000003
               },
               {
-                "ascVisibleMs": 1395.127,
-                "ascSettledMs": 1412.484,
-                "ascScriptMs": 1382.9560000000001,
-                "descVisibleMs": 1401.732,
-                "descSettledMs": 1401.732,
-                "descScriptMs": 1386.53
+                "ascVisibleMs": 1346.223,
+                "ascSettledMs": 1363.492,
+                "ascScriptMs": 1331.2250000000001,
+                "descVisibleMs": 1525.794,
+                "descSettledMs": 1525.794,
+                "descScriptMs": 1508.9869999999999
               },
               {
-                "ascVisibleMs": 1314.412,
-                "ascSettledMs": 1324.992,
-                "ascScriptMs": 1306.6219999999998,
-                "descVisibleMs": 1301.935,
-                "descSettledMs": 1301.935,
-                "descScriptMs": 1291.0130000000004
+                "ascVisibleMs": 1270.268,
+                "ascSettledMs": 1281.541,
+                "ascScriptMs": 1255.6319999999998,
+                "descVisibleMs": 1539.24,
+                "descSettledMs": 1539.24,
+                "descScriptMs": 1522.2060000000001
               },
               {
-                "ascVisibleMs": 1521.341,
-                "ascSettledMs": 1529.153,
-                "ascScriptMs": 1510.9439999999997,
-                "descVisibleMs": 1568.246,
-                "descSettledMs": 1568.246,
-                "descScriptMs": 1552.695
+                "ascVisibleMs": 1293.777,
+                "ascSettledMs": 1300.782,
+                "ascScriptMs": 1279.776,
+                "descVisibleMs": 1416.411,
+                "descSettledMs": 1416.411,
+                "descScriptMs": 1399.8470000000002
               },
               {
-                "ascVisibleMs": 1424.455,
-                "ascSettledMs": 1431.415,
-                "ascScriptMs": 1410.7459999999999,
-                "descVisibleMs": 1303.598,
-                "descSettledMs": 1303.598,
-                "descScriptMs": 1289.9859999999999
+                "ascVisibleMs": 1379.748,
+                "ascSettledMs": 1397.985,
+                "ascScriptMs": 1365.363,
+                "descVisibleMs": 1585.721,
+                "descSettledMs": 1585.721,
+                "descScriptMs": 1569.533
               }
             ]
           }
@@ -2114,118 +2114,118 @@
           "samples": {
             "ag-grid": [
               {
-                "ascVisibleMs": 3060.905,
-                "ascSettledMs": 3060.905,
-                "ascScriptMs": 3049.499,
-                "descVisibleMs": 3024.666,
-                "descSettledMs": 3024.666,
-                "descScriptMs": 3016.4190000000003
+                "ascVisibleMs": 2899.018,
+                "ascSettledMs": 2899.018,
+                "ascScriptMs": 2884.465,
+                "descVisibleMs": 2685.848,
+                "descSettledMs": 2685.848,
+                "descScriptMs": 2674.142
               },
               {
-                "ascVisibleMs": 2579.109,
-                "ascSettledMs": 2579.109,
-                "ascScriptMs": 2566.4190000000003,
-                "descVisibleMs": 3354.927,
-                "descSettledMs": 3354.927,
-                "descScriptMs": 3345.709
+                "ascVisibleMs": 2688.922,
+                "ascSettledMs": 2688.922,
+                "ascScriptMs": 2675.1009999999997,
+                "descVisibleMs": 2727.606,
+                "descSettledMs": 2727.606,
+                "descScriptMs": 2720.6400000000003
               },
               {
-                "ascVisibleMs": 3155.15,
-                "ascSettledMs": 3155.15,
-                "ascScriptMs": 3144.1949999999997,
-                "descVisibleMs": 3096.462,
-                "descSettledMs": 3096.462,
-                "descScriptMs": 3087.718
+                "ascVisibleMs": 2625.734,
+                "ascSettledMs": 2625.734,
+                "ascScriptMs": 2610.769,
+                "descVisibleMs": 2814.281,
+                "descSettledMs": 2814.281,
+                "descScriptMs": 2812.2889999999998
               },
               {
-                "ascVisibleMs": 3072.698,
-                "ascSettledMs": 3072.698,
-                "ascScriptMs": 3060.9500000000003,
-                "descVisibleMs": 3140.777,
-                "descSettledMs": 3140.777,
-                "descScriptMs": 3131.7960000000003
+                "ascVisibleMs": 2721.452,
+                "ascSettledMs": 2721.452,
+                "ascScriptMs": 2707.478,
+                "descVisibleMs": 2629.617,
+                "descSettledMs": 2629.617,
+                "descScriptMs": 2618.192
               },
               {
-                "ascVisibleMs": 3102.838,
-                "ascSettledMs": 3102.838,
-                "ascScriptMs": 3090.7309999999998,
-                "descVisibleMs": 3148.465,
-                "descSettledMs": 3148.465,
-                "descScriptMs": 3139.3709999999996
+                "ascVisibleMs": 2649.698,
+                "ascSettledMs": 2649.698,
+                "ascScriptMs": 2635.2219999999998,
+                "descVisibleMs": 2886.944,
+                "descSettledMs": 2886.944,
+                "descScriptMs": 2876.3289999999997
               },
               {
-                "ascVisibleMs": 2914.153,
-                "ascSettledMs": 2914.153,
-                "ascScriptMs": 2901.691,
-                "descVisibleMs": 2656.885,
-                "descSettledMs": 2656.885,
-                "descScriptMs": 2648.1320000000005
+                "ascVisibleMs": 2709.757,
+                "ascSettledMs": 2709.757,
+                "ascScriptMs": 2696.095,
+                "descVisibleMs": 2833.973,
+                "descSettledMs": 2833.973,
+                "descScriptMs": 2822.6059999999998
               },
               {
-                "ascVisibleMs": 2597.684,
-                "ascSettledMs": 2597.684,
-                "ascScriptMs": 2586.7309999999998,
-                "descVisibleMs": 3042.787,
-                "descSettledMs": 3042.787,
-                "descScriptMs": 3034.054
+                "ascVisibleMs": 2776.805,
+                "ascSettledMs": 2776.805,
+                "ascScriptMs": 2762.8630000000003,
+                "descVisibleMs": 2689.965,
+                "descSettledMs": 2689.965,
+                "descScriptMs": 2678.7290000000003
               }
             ],
             "infinite": [
               {
-                "ascVisibleMs": 1046.278,
-                "ascSettledMs": 1059.237,
-                "ascScriptMs": 1039.0420000000001,
-                "descVisibleMs": 1059.422,
-                "descSettledMs": 1059.422,
-                "descScriptMs": 1046.756
+                "ascVisibleMs": 1261.146,
+                "ascSettledMs": 1268.214,
+                "ascScriptMs": 1246.8150000000003,
+                "descVisibleMs": 1348.494,
+                "descSettledMs": 1348.494,
+                "descScriptMs": 1331.699
               },
               {
-                "ascVisibleMs": 1019.262,
-                "ascSettledMs": 1029.958,
-                "ascScriptMs": 1005.5260000000002,
-                "descVisibleMs": 1301.542,
-                "descSettledMs": 1301.542,
-                "descScriptMs": 1288.3419999999999
+                "ascVisibleMs": 1108.955,
+                "ascSettledMs": 1115.798,
+                "ascScriptMs": 1094.376,
+                "descVisibleMs": 1141.769,
+                "descSettledMs": 1141.769,
+                "descScriptMs": 1125.215
               },
               {
-                "ascVisibleMs": 1205.483,
-                "ascSettledMs": 1212.613,
-                "ascScriptMs": 1193.028,
-                "descVisibleMs": 1254.614,
-                "descSettledMs": 1254.614,
-                "descScriptMs": 1239.541
+                "ascVisibleMs": 1124.732,
+                "ascSettledMs": 1131.291,
+                "ascScriptMs": 1109.896,
+                "descVisibleMs": 1154.478,
+                "descSettledMs": 1154.478,
+                "descScriptMs": 1138.3490000000002
               },
               {
-                "ascVisibleMs": 1263.456,
-                "ascSettledMs": 1279.614,
-                "ascScriptMs": 1250.4440000000004,
-                "descVisibleMs": 1288.561,
-                "descSettledMs": 1288.561,
-                "descScriptMs": 1274.81
+                "ascVisibleMs": 1045.456,
+                "ascSettledMs": 1051.992,
+                "ascScriptMs": 1030.576,
+                "descVisibleMs": 1135.194,
+                "descSettledMs": 1135.194,
+                "descScriptMs": 1118.632
               },
               {
-                "ascVisibleMs": 1210.06,
-                "ascSettledMs": 1226.005,
-                "ascScriptMs": 1199.425,
-                "descVisibleMs": 1327.002,
-                "descSettledMs": 1327.002,
-                "descScriptMs": 1312.554
+                "ascVisibleMs": 1142.425,
+                "ascSettledMs": 1158.664,
+                "ascScriptMs": 1134.0159999999998,
+                "descVisibleMs": 1122.796,
+                "descSettledMs": 1122.796,
+                "descScriptMs": 1106.217
               },
               {
-                "ascVisibleMs": 1147.696,
-                "ascSettledMs": 1162.844,
-                "ascScriptMs": 1134.9589999999998,
-                "descVisibleMs": 1253.524,
-                "descSettledMs": 1253.524,
-                "descScriptMs": 1238.1209999999999
+                "ascVisibleMs": 1151.905,
+                "ascSettledMs": 1165.201,
+                "ascScriptMs": 1137.4759999999999,
+                "descVisibleMs": 1094.838,
+                "descSettledMs": 1094.838,
+                "descScriptMs": 1078.338
               },
               {
-                "ascVisibleMs": 1304.521,
-                "ascSettledMs": 1307.475,
-                "ascScriptMs": 1297.7309999999998,
-                "descVisibleMs": 1409.587,
-                "descSettledMs": 1409.587,
-                "descScriptMs": 1396.0140000000001
+                "ascVisibleMs": 1140.076,
+                "ascSettledMs": 1152.645,
+                "ascScriptMs": 1131.719,
+                "descVisibleMs": 1269.316,
+                "descSettledMs": 1269.316,
+                "descScriptMs": 1252.3870000000002
               }
             ]
           }
@@ -2262,90 +2262,90 @@
           "samples": {
             "ag-grid": [
               {
-                "visibleMs": 20.305,
-                "visibleMaxMs": 35.629,
-                "settledMs": 20.305,
-                "scriptMs": 126.70199999999998
+                "visibleMs": 26.0685,
+                "visibleMaxMs": 54.803,
+                "settledMs": 26.0685,
+                "scriptMs": 177.1879999999999
               },
               {
-                "visibleMs": 20.119,
-                "visibleMaxMs": 33.686,
-                "settledMs": 20.119,
-                "scriptMs": 121.87100000000007
+                "visibleMs": 27.9115,
+                "visibleMaxMs": 51.278,
+                "settledMs": 27.9115,
+                "scriptMs": 175.55700000000007
               },
               {
-                "visibleMs": 24.5985,
-                "visibleMaxMs": 39.984,
-                "settledMs": 24.5985,
-                "scriptMs": 155.53299999999993
+                "visibleMs": 27.6675,
+                "visibleMaxMs": 53.35,
+                "settledMs": 27.6675,
+                "scriptMs": 185.3999999999999
               },
               {
-                "visibleMs": 20.91,
-                "visibleMaxMs": 34.565,
-                "settledMs": 20.91,
-                "scriptMs": 127.444
+                "visibleMs": 27.356499999999997,
+                "visibleMaxMs": 88.881,
+                "settledMs": 27.356499999999997,
+                "scriptMs": 201.24400000000009
               },
               {
-                "visibleMs": 23.3355,
-                "visibleMaxMs": 40.003,
-                "settledMs": 23.3355,
-                "scriptMs": 142.15800000000002
+                "visibleMs": 26.756500000000003,
+                "visibleMaxMs": 48.705,
+                "settledMs": 26.756500000000003,
+                "scriptMs": 173.1999999999999
               },
               {
-                "visibleMs": 23.3525,
-                "visibleMaxMs": 35.186,
-                "settledMs": 23.3525,
-                "scriptMs": 136.80199999999988
+                "visibleMs": 27.494500000000002,
+                "visibleMaxMs": 53.142,
+                "settledMs": 27.494500000000002,
+                "scriptMs": 179.38600000000005
               },
               {
-                "visibleMs": 20.411,
-                "visibleMaxMs": 38.25,
-                "settledMs": 20.411,
-                "scriptMs": 127.15599999999993
+                "visibleMs": 27.0815,
+                "visibleMaxMs": 52.006,
+                "settledMs": 27.0815,
+                "scriptMs": 176.02399999999994
               }
             ],
             "infinite": [
               {
-                "visibleMs": 23.558999999999997,
-                "visibleMaxMs": 27.794,
-                "settledMs": 23.558999999999997,
-                "scriptMs": 139.51800000000003
+                "visibleMs": 29.3705,
+                "visibleMaxMs": 41.477,
+                "settledMs": 29.3705,
+                "scriptMs": 168.68000000000006
               },
               {
-                "visibleMs": 23.522,
-                "visibleMaxMs": 27.582,
-                "settledMs": 23.522,
-                "scriptMs": 138.75800000000004
+                "visibleMs": 30.008,
+                "visibleMaxMs": 40.71,
+                "settledMs": 30.008,
+                "scriptMs": 172.40299999999996
               },
               {
-                "visibleMs": 29.076500000000003,
-                "visibleMaxMs": 32.177,
-                "settledMs": 29.076500000000003,
-                "scriptMs": 173.70499999999998
+                "visibleMs": 30.878,
+                "visibleMaxMs": 39.416,
+                "settledMs": 30.878,
+                "scriptMs": 176.40900000000005
               },
               {
-                "visibleMs": 24.3645,
-                "visibleMaxMs": 28.257,
-                "settledMs": 24.3645,
-                "scriptMs": 137.282
+                "visibleMs": 29.981499999999997,
+                "visibleMaxMs": 42.207,
+                "settledMs": 29.981499999999997,
+                "scriptMs": 178.72200000000015
               },
               {
-                "visibleMs": 23.083,
-                "visibleMaxMs": 27.575,
-                "settledMs": 23.083,
-                "scriptMs": 142.98699999999997
+                "visibleMs": 30.585,
+                "visibleMaxMs": 44.142,
+                "settledMs": 30.585,
+                "scriptMs": 183.27099999999996
               },
               {
-                "visibleMs": 25.9755,
-                "visibleMaxMs": 28.829,
-                "settledMs": 25.9755,
-                "scriptMs": 148.41899999999995
+                "visibleMs": 29.662999999999997,
+                "visibleMaxMs": 43.517,
+                "settledMs": 29.662999999999997,
+                "scriptMs": 178.96900000000005
               },
               {
-                "visibleMs": 23.646,
-                "visibleMaxMs": 29.456,
-                "settledMs": 23.646,
-                "scriptMs": 143.67299999999994
+                "visibleMs": 31.7605,
+                "visibleMaxMs": 45.884,
+                "settledMs": 31.7605,
+                "scriptMs": 178.98200000000008
               }
             ]
           }
@@ -2430,216 +2430,216 @@
           "samples": {
             "ag-grid": [
               {
-                "presentedAllPct": 52.32876712328767,
-                "partialPct": 47.671232876712324,
-                "droppedPct": 0,
-                "rafFps": 59.99612928198181,
-                "p95FrameMs": 17.300000000000182,
-                "maxFrameMs": 17.699999999999818,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1317.7700000000002,
-                "scriptMs": 483.6170000000001,
-                "layoutMs": 84.08699999999999,
-                "styleMs": 268.78400000000005,
-                "layoutCount": 359
-              },
-              {
-                "presentedAllPct": 52.87671232876713,
-                "partialPct": 47.12328767123288,
-                "droppedPct": 0,
-                "rafFps": 59.99612928198181,
-                "p95FrameMs": 17.399999999999977,
-                "maxFrameMs": 17.699999999999818,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1380.097,
-                "scriptMs": 510.9909999999999,
-                "layoutMs": 90.244,
-                "styleMs": 282.21,
-                "layoutCount": 359
-              },
-              {
-                "presentedAllPct": 52.34159779614325,
-                "partialPct": 47.658402203856745,
-                "droppedPct": 0,
-                "rafFps": 59.99609538925143,
-                "p95FrameMs": 17.27999999999993,
-                "maxFrameMs": 17.699999999999818,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 1273.4230000000002,
-                "scriptMs": 478.02199999999993,
-                "layoutMs": 80.625,
-                "styleMs": 263.729,
-                "layoutCount": 359
-              },
-              {
-                "presentedAllPct": 52.20994475138122,
-                "partialPct": 47.790055248618785,
-                "droppedPct": 0,
-                "rafFps": 59.675494338892285,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 33.40000000000009,
+                "presentedAllPct": 50.700280112044815,
+                "partialPct": 48.739495798319325,
+                "droppedPct": 0.5602240896358543,
+                "rafFps": 59.681269759339315,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 33.29999999999973,
                 "longFramesPct": 0.5405405405405406,
                 "loafBlockingMs": 0,
-                "taskMs": 1339.225,
-                "scriptMs": 502.583,
-                "layoutMs": 86.637,
-                "styleMs": 274.36,
+                "taskMs": 1840.8339999999998,
+                "scriptMs": 719.1019999999999,
+                "layoutMs": 106.99600000000001,
+                "styleMs": 389.931,
                 "layoutCount": 357
               },
               {
-                "presentedAllPct": 52.61707988980716,
-                "partialPct": 47.38292011019284,
-                "droppedPct": 0,
-                "rafFps": 59.949435081890925,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 17.700000000000273,
+                "presentedAllPct": 50.13850415512465,
+                "partialPct": 49.307479224376735,
+                "droppedPct": 0.554016620498615,
+                "rafFps": 59.67934449498372,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 33.40000000000009,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1832.9440000000002,
+                "scriptMs": 710.085,
+                "layoutMs": 105.568,
+                "styleMs": 389.947,
+                "layoutCount": 357
+              },
+              {
+                "presentedAllPct": 50.27624309392266,
+                "partialPct": 49.447513812154696,
+                "droppedPct": 0.2762430939226519,
+                "rafFps": 60.00387121749791,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 1438.1750000000002,
-                "scriptMs": 522.793,
-                "layoutMs": 91.689,
-                "styleMs": 290.52700000000004,
+                "taskMs": 1724.988,
+                "scriptMs": 677.3909999999998,
+                "layoutMs": 96.31400000000001,
+                "styleMs": 361.57800000000003,
                 "layoutCount": 359
               },
               {
-                "presentedAllPct": 51.388888888888886,
-                "partialPct": 48.05555555555556,
-                "droppedPct": 0.5555555555555556,
-                "rafFps": 58.98594458415554,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 66.70000000000027,
-                "longFramesPct": 0.546448087431694,
+                "presentedAllPct": 50.83798882681564,
+                "partialPct": 48.882681564245814,
+                "droppedPct": 0.27932960893854747,
+                "rafFps": 60.003213075280804,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 1319.215,
-                "scriptMs": 502.154,
-                "layoutMs": 87.77300000000001,
-                "styleMs": 274.07300000000004,
-                "layoutCount": 351
+                "taskMs": 1747.592,
+                "scriptMs": 685.572,
+                "layoutMs": 108.40899999999999,
+                "styleMs": 357.214,
+                "layoutCount": 359
               },
               {
-                "presentedAllPct": 51.66666666666667,
-                "partialPct": 47.77777777777778,
-                "droppedPct": 0.5555555555555556,
-                "rafFps": 58.98278862889189,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 66.09999999999945,
-                "longFramesPct": 0.546448087431694,
+                "presentedAllPct": 50.27624309392266,
+                "partialPct": 49.447513812154696,
+                "droppedPct": 0.2762430939226519,
+                "rafFps": 60.00193554630795,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 1294.5939999999998,
-                "scriptMs": 485.359,
-                "layoutMs": 79.806,
-                "styleMs": 262.44700000000006,
-                "layoutCount": 353
+                "taskMs": 1692.466,
+                "scriptMs": 679.1740000000001,
+                "layoutMs": 95.36999999999999,
+                "styleMs": 348.615,
+                "layoutCount": 359
+              },
+              {
+                "presentedAllPct": 50.700280112044815,
+                "partialPct": 48.739495798319325,
+                "droppedPct": 0.5602240896358543,
+                "rafFps": 59.681269759339315,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 33.30000000000018,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1721.018,
+                "scriptMs": 679.665,
+                "layoutMs": 99.25999999999999,
+                "styleMs": 367.197,
+                "layoutCount": 357
+              },
+              {
+                "presentedAllPct": 50.700280112044815,
+                "partialPct": 48.739495798319325,
+                "droppedPct": 0.5602240896358543,
+                "rafFps": 59.68319514791754,
+                "p95FrameMs": 16.799999999999272,
+                "maxFrameMs": 33.19999999999982,
+                "longFramesPct": 0.5405405405405406,
+                "loafBlockingMs": 0,
+                "taskMs": 1509.986,
+                "scriptMs": 604.774,
+                "layoutMs": 84.319,
+                "styleMs": 331.61100000000005,
+                "layoutCount": 357
               }
             ],
             "infinite": [
               {
-                "presentedAllPct": 58.51648351648352,
-                "partialPct": 41.48351648351649,
+                "presentedAllPct": 64.95726495726495,
+                "partialPct": 35.04273504273504,
                 "droppedPct": 0,
-                "rafFps": 59.67356944713244,
-                "p95FrameMs": 17.199999999999818,
-                "maxFrameMs": 33.5,
-                "longFramesPct": 0.5405405405405406,
+                "rafFps": 55.48566082776865,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 100,
+                "longFramesPct": 4.069767441860465,
                 "loafBlockingMs": 0,
-                "taskMs": 1172.23,
-                "scriptMs": 552.341,
-                "layoutMs": 63.552,
-                "styleMs": 141.318,
-                "layoutCount": 179
+                "taskMs": 1765.0179999999998,
+                "scriptMs": 779.031,
+                "layoutMs": 95.78600000000002,
+                "styleMs": 219.479,
+                "layoutCount": 167
               },
               {
-                "presentedAllPct": 59.01639344262295,
-                "partialPct": 40.98360655737705,
+                "presentedAllPct": 61.731843575419,
+                "partialPct": 38.26815642458101,
                 "droppedPct": 0,
-                "rafFps": 59.99740656371628,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
+                "rafFps": 57.74316485447754,
+                "p95FrameMs": 16.799999999999773,
+                "maxFrameMs": 100,
+                "longFramesPct": 1.1173184357541899,
                 "loafBlockingMs": 0,
-                "taskMs": 1381.0349999999999,
-                "scriptMs": 621.4190000000001,
-                "layoutMs": 77.094,
-                "styleMs": 156.048,
-                "layoutCount": 180
+                "taskMs": 1603.3529999999998,
+                "scriptMs": 690.793,
+                "layoutMs": 84.54100000000001,
+                "styleMs": 204.503,
+                "layoutCount": 174
               },
               {
-                "presentedAllPct": 53.84615384615385,
-                "partialPct": 46.15384615384615,
+                "presentedAllPct": 61.06442577030813,
+                "partialPct": 38.37535014005603,
+                "droppedPct": 0.5602240896358543,
+                "rafFps": 57.42428221260277,
+                "p95FrameMs": 16.71500000000051,
+                "maxFrameMs": 100,
+                "longFramesPct": 1.6853932584269662,
+                "loafBlockingMs": 0,
+                "taskMs": 1705.5179999999998,
+                "scriptMs": 743.826,
+                "layoutMs": 95.343,
+                "styleMs": 223.25699999999998,
+                "layoutCount": 169
+              },
+              {
+                "presentedAllPct": 65.15580736543909,
+                "partialPct": 34.844192634560905,
                 "droppedPct": 0,
-                "rafFps": 59.996756932057735,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.800000000000182,
-                "longFramesPct": 0,
+                "rafFps": 56.13084293041712,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 99.90000000000009,
+                "longFramesPct": 3.4482758620689653,
                 "loafBlockingMs": 0,
-                "taskMs": 1262.018,
-                "scriptMs": 592.5830000000001,
-                "layoutMs": 70.42000000000002,
-                "styleMs": 161.618,
-                "layoutCount": 181
+                "taskMs": 1739.4699999999998,
+                "scriptMs": 751.144,
+                "layoutMs": 87.907,
+                "styleMs": 220.394,
+                "layoutCount": 169
               },
               {
-                "presentedAllPct": 54.09836065573771,
-                "partialPct": 45.90163934426229,
+                "presentedAllPct": 62.18487394957983,
+                "partialPct": 37.81512605042017,
                 "droppedPct": 0,
-                "rafFps": 59.954859792659335,
-                "p95FrameMs": 17.599999999999795,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
+                "rafFps": 57.42057734132404,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 100,
+                "longFramesPct": 1.6853932584269662,
                 "loafBlockingMs": 0,
-                "taskMs": 1292.4799999999998,
-                "scriptMs": 596.9389999999999,
-                "layoutMs": 73.93299999999999,
-                "styleMs": 155.486,
-                "layoutCount": 181
+                "taskMs": 1611.663,
+                "scriptMs": 701.995,
+                "layoutMs": 84.20799999999998,
+                "styleMs": 205.49,
+                "layoutCount": 173
               },
               {
-                "presentedAllPct": 58.1267217630854,
-                "partialPct": 41.32231404958678,
-                "droppedPct": 0.5509641873278237,
-                "rafFps": 59.310079507566044,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 34,
-                "longFramesPct": 1.0810810810810811,
-                "loafBlockingMs": 0,
-                "taskMs": 1268.87,
-                "scriptMs": 592.8399999999999,
-                "layoutMs": 68.717,
-                "styleMs": 149.02100000000002,
-                "layoutCount": 178
-              },
-              {
-                "presentedAllPct": 60.33057851239669,
-                "partialPct": 39.11845730027548,
-                "droppedPct": 0.5509641873278237,
-                "rafFps": 59.29936511005833,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 34,
-                "longFramesPct": 1.0869565217391304,
-                "loafBlockingMs": 0,
-                "taskMs": 1310.094,
-                "scriptMs": 611.403,
-                "layoutMs": 69.635,
-                "styleMs": 152.92799999999997,
-                "layoutCount": 179
-              },
-              {
-                "presentedAllPct": 58.5635359116022,
-                "partialPct": 41.43646408839779,
+                "presentedAllPct": 61.51685393258427,
+                "partialPct": 38.48314606741573,
                 "droppedPct": 0,
-                "rafFps": 59.30198645451895,
-                "p95FrameMs": 17.58999999999951,
-                "maxFrameMs": 34,
-                "longFramesPct": 1.092896174863388,
+                "rafFps": 57.10045809407058,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 100,
+                "longFramesPct": 2.2598870056497176,
                 "loafBlockingMs": 0,
-                "taskMs": 1197.168,
-                "scriptMs": 556.907,
-                "layoutMs": 65.34799999999998,
-                "styleMs": 143.40200000000002,
-                "layoutCount": 178
+                "taskMs": 1824.2839999999999,
+                "scriptMs": 767.8570000000001,
+                "layoutMs": 93.779,
+                "styleMs": 226.562,
+                "layoutCount": 167
+              },
+              {
+                "presentedAllPct": 61.452513966480446,
+                "partialPct": 38.547486033519554,
+                "droppedPct": 0,
+                "rafFps": 57.745661010387764,
+                "p95FrameMs": 16.70000000000032,
+                "maxFrameMs": 100.09999999999991,
+                "longFramesPct": 1.1173184357541899,
+                "loafBlockingMs": 0,
+                "taskMs": 1450.959,
+                "scriptMs": 653.7940000000001,
+                "layoutMs": 75.02799999999999,
+                "styleMs": 186.84699999999998,
+                "layoutCount": 174
               }
             ]
           }
@@ -2724,215 +2724,215 @@
           "samples": {
             "ag-grid": [
               {
-                "presentedAllPct": 83.68794326241135,
-                "partialPct": 16.312056737588655,
+                "presentedAllPct": 100,
+                "partialPct": 0,
                 "droppedPct": 0,
-                "rafFps": 59.96641880546893,
-                "p95FrameMs": 17.4,
-                "maxFrameMs": 17.699999999999818,
+                "rafFps": 60.000983622682334,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 384.1699999999999,
-                "scriptMs": 161.05899999999994,
-                "layoutMs": 48.07800000000001,
-                "styleMs": 28.833000000000006,
-                "layoutCount": 144
+                "taskMs": 620.8159999999998,
+                "scriptMs": 200.27000000000007,
+                "layoutMs": 64.238,
+                "styleMs": 36.919,
+                "layoutCount": 150
               },
               {
-                "presentedAllPct": 86.3013698630137,
-                "partialPct": 13.698630136986301,
+                "presentedAllPct": 100,
+                "partialPct": 0,
                 "droppedPct": 0,
-                "rafFps": 59.95028512940489,
-                "p95FrameMs": 17.400000000000045,
-                "maxFrameMs": 17.59999999999991,
+                "rafFps": 60.00393468424159,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.799999999999727,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 376.892,
-                "scriptMs": 155.3469999999999,
-                "layoutMs": 47.318,
-                "styleMs": 28.584,
-                "layoutCount": 144
+                "taskMs": 610.2869999999998,
+                "scriptMs": 195.2339999999999,
+                "layoutMs": 56.794,
+                "styleMs": 37.006,
+                "layoutCount": 150
               },
               {
-                "presentedAllPct": 92.90780141843972,
-                "partialPct": 7.092198581560284,
+                "presentedAllPct": 100,
+                "partialPct": 0,
                 "droppedPct": 0,
-                "rafFps": 59.950285129404875,
-                "p95FrameMs": 17.3900000000001,
-                "maxFrameMs": 17.700000000000273,
+                "rafFps": 60.005882543895304,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 412.99900000000014,
-                "scriptMs": 176.14699999999993,
-                "layoutMs": 52.934,
-                "styleMs": 34.224,
+                "taskMs": 587.5250000000001,
+                "scriptMs": 190.56799999999984,
+                "layoutMs": 54.440000000000005,
+                "styleMs": 36.391,
+                "layoutCount": 152
+              },
+              {
+                "presentedAllPct": 100,
+                "partialPct": 0,
+                "droppedPct": 0,
+                "rafFps": 60.00394736711606,
+                "p95FrameMs": 16.700000000000728,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 573.229,
+                "scriptMs": 191.68200000000013,
+                "layoutMs": 54.891999999999996,
+                "styleMs": 35.219,
+                "layoutCount": 150
+              },
+              {
+                "presentedAllPct": 100,
+                "partialPct": 0,
+                "droppedPct": 0,
+                "rafFps": 60.000983622682334,
+                "p95FrameMs": 16.80000000000016,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 466.888,
+                "scriptMs": 193.18199999999996,
+                "layoutMs": 56.29200000000001,
+                "styleMs": 35.831999999999994,
                 "layoutCount": 146
               },
               {
-                "presentedAllPct": 94.44444444444444,
-                "partialPct": 5.555555555555555,
+                "presentedAllPct": 82.08955223880598,
+                "partialPct": 17.91044776119403,
                 "droppedPct": 0,
-                "rafFps": 59.953207252875806,
-                "p95FrameMs": 17.399999999999636,
-                "maxFrameMs": 17.699999999999818,
+                "rafFps": 60.00292697204741,
+                "p95FrameMs": 16.70000000000068,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 481.49299999999994,
-                "scriptMs": 175.253,
-                "layoutMs": 52.417,
-                "styleMs": 34.333000000000006,
-                "layoutCount": 146
+                "taskMs": 618.3620000000003,
+                "scriptMs": 200.66300000000004,
+                "layoutMs": 57.43599999999999,
+                "styleMs": 36.388999999999996,
+                "layoutCount": 150
               },
               {
-                "presentedAllPct": 86.01398601398601,
-                "partialPct": 13.986013986013987,
-                "droppedPct": 0,
-                "rafFps": 59.97852476235339,
-                "p95FrameMs": 17.49000000000001,
-                "maxFrameMs": 17.59999999999991,
+                "presentedAllPct": 83.33333333333334,
+                "partialPct": 15.909090909090908,
+                "droppedPct": 0.7575757575757576,
+                "rafFps": 60.00193176951063,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 386.13700000000017,
-                "scriptMs": 159.07400000000004,
-                "layoutMs": 49.342999999999996,
-                "styleMs": 28.660999999999998,
+                "taskMs": 467.9239999999998,
+                "scriptMs": 194.45099999999994,
+                "layoutMs": 57.028,
+                "styleMs": 37.074,
                 "layoutCount": 146
-              },
-              {
-                "presentedAllPct": 86.52482269503547,
-                "partialPct": 13.47517730496454,
-                "droppedPct": 0,
-                "rafFps": 59.948734163139854,
-                "p95FrameMs": 17.59999999999991,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 496.9540000000001,
-                "scriptMs": 172.37500000000006,
-                "layoutMs": 54.096,
-                "styleMs": 31.223999999999993,
-                "layoutCount": 146
-              },
-              {
-                "presentedAllPct": 86.01398601398601,
-                "partialPct": 13.986013986013987,
-                "droppedPct": 0,
-                "rafFps": 59.9522136989346,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 402.312,
-                "scriptMs": 164.97300000000016,
-                "layoutMs": 51.516000000000005,
-                "styleMs": 30.269000000000005,
-                "layoutCount": 144
               }
             ],
             "infinite": [
               {
-                "presentedAllPct": 88.96551724137932,
-                "partialPct": 11.03448275862069,
+                "presentedAllPct": 96.55172413793103,
+                "partialPct": 3.4482758620689653,
                 "droppedPct": 0,
-                "rafFps": 59.95028512940489,
-                "p95FrameMs": 17.40000000000009,
-                "maxFrameMs": 17.600000000000364,
+                "rafFps": 60.0029269720474,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 342.975,
-                "scriptMs": 107.08600000000001,
-                "layoutMs": 8.29,
-                "styleMs": 34.163,
-                "layoutCount": 36
-              },
-              {
-                "presentedAllPct": 88.35616438356165,
-                "partialPct": 11.643835616438356,
-                "droppedPct": 0,
-                "rafFps": 59.94444173692676,
-                "p95FrameMs": 17.300000000000182,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 324.4819999999999,
-                "scriptMs": 103.75299999999999,
-                "layoutMs": 8.193999999999997,
-                "styleMs": 33.396,
-                "layoutCount": 36
-              },
-              {
-                "presentedAllPct": 89.43661971830986,
-                "partialPct": 10.56338028169014,
-                "droppedPct": 0,
-                "rafFps": 59.967748437814954,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.700000000000273,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 358.655,
-                "scriptMs": 121.1049999999999,
-                "layoutMs": 9.08,
-                "styleMs": 37.339,
-                "layoutCount": 36
-              },
-              {
-                "presentedAllPct": 81.5068493150685,
-                "partialPct": 18.493150684931507,
-                "droppedPct": 0,
-                "rafFps": 59.95028512940489,
-                "p95FrameMs": 17.5,
-                "maxFrameMs": 17.600000000000364,
-                "longFramesPct": 0,
-                "loafBlockingMs": 0,
-                "taskMs": 322.59100000000007,
-                "scriptMs": 104.51999999999995,
-                "layoutMs": 8.157999999999998,
-                "styleMs": 32.364,
+                "taskMs": 394.14799999999997,
+                "scriptMs": 126.73,
+                "layoutMs": 10.158000000000001,
+                "styleMs": 38.423,
                 "layoutCount": 36
               },
               {
                 "presentedAllPct": 96.5034965034965,
                 "partialPct": 3.4965034965034967,
                 "droppedPct": 0,
-                "rafFps": 59.951444284794135,
-                "p95FrameMs": 17.200000000000273,
-                "maxFrameMs": 17.600000000000364,
+                "rafFps": 60.00198353664585,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 364.4459999999999,
-                "scriptMs": 121.633,
-                "layoutMs": 9.059000000000001,
-                "styleMs": 37.377,
+                "taskMs": 407.39599999999984,
+                "scriptMs": 129.1920000000001,
+                "layoutMs": 10.343000000000002,
+                "styleMs": 42.365,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 89.5104895104895,
-                "partialPct": 10.48951048951049,
+                "presentedAllPct": 94.52054794520548,
+                "partialPct": 5.47945205479452,
                 "droppedPct": 0,
-                "rafFps": 59.95085995085994,
-                "p95FrameMs": 17.40000000000009,
-                "maxFrameMs": 17.700000000000273,
+                "rafFps": 60.00485893004019,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 352.538,
-                "scriptMs": 111.97599999999997,
-                "layoutMs": 9.026,
-                "styleMs": 35.891,
+                "taskMs": 369.8999999999999,
+                "scriptMs": 121.68999999999997,
+                "layoutMs": 9.877,
+                "styleMs": 35.367999999999995,
                 "layoutCount": 36
               },
               {
-                "presentedAllPct": 81.5068493150685,
-                "partialPct": 18.493150684931507,
+                "presentedAllPct": 94.4055944055944,
+                "partialPct": 5.594405594405594,
                 "droppedPct": 0,
-                "rafFps": 59.952618092152974,
-                "p95FrameMs": 17.470000000000027,
-                "maxFrameMs": 17.59999999999991,
+                "rafFps": 60.0049590875279,
+                "p95FrameMs": 16.799999999999727,
+                "maxFrameMs": 16.800000000000182,
                 "longFramesPct": 0,
                 "loafBlockingMs": 0,
-                "taskMs": 396.54999999999995,
-                "scriptMs": 111.14299999999999,
-                "layoutMs": 8.793000000000001,
-                "styleMs": 35.403000000000006,
+                "taskMs": 391.54399999999987,
+                "scriptMs": 127.37900000000002,
+                "layoutMs": 10.182,
+                "styleMs": 37.152,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 90.19607843137256,
+                "partialPct": 8.49673202614379,
+                "droppedPct": 1.3071895424836601,
+                "rafFps": 60.002926972047426,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 416.644,
+                "scriptMs": 130.45400000000006,
+                "layoutMs": 10.341,
+                "styleMs": 38.228,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 96.47887323943662,
+                "partialPct": 3.5211267605633805,
+                "droppedPct": 0,
+                "rafFps": 60.0030001500075,
+                "p95FrameMs": 16.800000000000182,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 387.5850000000001,
+                "scriptMs": 123.29299999999999,
+                "layoutMs": 10.138,
+                "styleMs": 36.519999999999996,
+                "layoutCount": 36
+              },
+              {
+                "presentedAllPct": 96.55172413793103,
+                "partialPct": 3.4482758620689653,
+                "droppedPct": 0,
+                "rafFps": 60.00588254389529,
+                "p95FrameMs": 16.700000000000273,
+                "maxFrameMs": 16.800000000000182,
+                "longFramesPct": 0,
+                "loafBlockingMs": 0,
+                "taskMs": 400.0079999999999,
+                "scriptMs": 129.58199999999997,
+                "layoutMs": 11.129999999999999,
+                "styleMs": 38.888,
                 "layoutCount": 36
               }
             ]
@@ -2970,18 +2970,11 @@
           "samples": {
             "ag-grid": [
               {
-                "blankPct": 2.535211267605634,
+                "blankPct": 2.73972602739726,
                 "wrongPct": 0,
-                "badFramesPct": 12.676056338028168,
+                "badFramesPct": 13.698630136986301,
                 "worstFrameOkPct": 80,
-                "frames": 71
-              },
-              {
-                "blankPct": 2.1333333333333333,
-                "wrongPct": 0,
-                "badFramesPct": 10.666666666666668,
-                "worstFrameOkPct": 80,
-                "frames": 75
+                "frames": 73
               },
               {
                 "blankPct": 2.191780821917808,
@@ -2991,83 +2984,90 @@
                 "frames": 73
               },
               {
-                "blankPct": 1.9178082191780823,
+                "blankPct": 1.891891891891892,
                 "wrongPct": 0,
-                "badFramesPct": 9.58904109589041,
+                "badFramesPct": 9.45945945945946,
                 "worstFrameOkPct": 80,
-                "frames": 73
+                "frames": 74
               },
               {
-                "blankPct": 2.8169014084507045,
+                "blankPct": 3.2432432432432434,
                 "wrongPct": 0,
-                "badFramesPct": 14.084507042253522,
+                "badFramesPct": 16.216216216216218,
                 "worstFrameOkPct": 80,
-                "frames": 71
+                "frames": 74
               },
               {
-                "blankPct": 2.8169014084507045,
+                "blankPct": 1.0810810810810811,
                 "wrongPct": 0,
-                "badFramesPct": 14.084507042253522,
+                "badFramesPct": 5.405405405405405,
                 "worstFrameOkPct": 80,
-                "frames": 71
+                "frames": 74
               },
               {
-                "blankPct": 3.5616438356164384,
+                "blankPct": 3.5135135135135136,
                 "wrongPct": 0,
-                "badFramesPct": 17.80821917808219,
+                "badFramesPct": 17.56756756756757,
                 "worstFrameOkPct": 80,
-                "frames": 73
+                "frames": 74
+              },
+              {
+                "blankPct": 1.891891891891892,
+                "wrongPct": 0,
+                "badFramesPct": 9.45945945945946,
+                "worstFrameOkPct": 80,
+                "frames": 74
               }
             ],
             "infinite": [
               {
                 "blankPct": 0,
-                "wrongPct": 48.50526315789473,
-                "badFramesPct": 89.33333333333333,
-                "worstFrameOkPct": 0,
-                "frames": 75
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 71.11842105263158,
+                "wrongPct": 59.285714285714285,
                 "badFramesPct": 87.5,
                 "worstFrameOkPct": 0,
-                "frames": 48
+                "frames": 56
               },
               {
                 "blankPct": 0,
-                "wrongPct": 70.98684210526316,
-                "badFramesPct": 89.58333333333334,
+                "wrongPct": 68.3538633818589,
+                "badFramesPct": 85.1063829787234,
+                "worstFrameOkPct": 0,
+                "frames": 47
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 66.35964912280701,
+                "badFramesPct": 83.33333333333334,
                 "worstFrameOkPct": 0,
                 "frames": 48
               },
               {
                 "blankPct": 0,
-                "wrongPct": 68.50698174006445,
-                "badFramesPct": 83.6734693877551,
+                "wrongPct": 63.78088077336198,
+                "badFramesPct": 85.71428571428571,
                 "worstFrameOkPct": 0,
                 "frames": 49
               },
               {
                 "blankPct": 0,
-                "wrongPct": 78.4577723378213,
-                "badFramesPct": 83.72093023255815,
+                "wrongPct": 70.61988304093568,
+                "badFramesPct": 86.66666666666667,
                 "worstFrameOkPct": 0,
-                "frames": 43
+                "frames": 45
               },
               {
                 "blankPct": 0,
-                "wrongPct": 69.93421052631578,
-                "badFramesPct": 89.58333333333334,
+                "wrongPct": 66.62280701754386,
+                "badFramesPct": 85.41666666666666,
                 "worstFrameOkPct": 0,
                 "frames": 48
               },
               {
                 "blankPct": 0,
-                "wrongPct": 78.58017135862913,
-                "badFramesPct": 83.72093023255815,
+                "wrongPct": 78.02310654685493,
+                "badFramesPct": 85.36585365853658,
                 "worstFrameOkPct": 0,
-                "frames": 43
+                "frames": 41
               }
             ]
           }
@@ -3115,27 +3115,6 @@
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 124
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
                 "frames": 123
               },
               {
@@ -3143,17 +3122,22 @@
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 124
+                "frames": 122
               },
               {
                 "blankPct": 0,
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 124
-              }
-            ],
-            "infinite": [
+                "frames": 122
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 122
+              },
               {
                 "blankPct": 0,
                 "wrongPct": 0,
@@ -3166,7 +3150,37 @@
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
+                "frames": 123
+              }
+            ],
+            "infinite": [
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
                 "frames": 124
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 123
+              },
+              {
+                "blankPct": 0,
+                "wrongPct": 0,
+                "badFramesPct": 0,
+                "worstFrameOkPct": 100,
+                "frames": 122
               },
               {
                 "blankPct": 0,
@@ -3187,21 +3201,7 @@
                 "wrongPct": 0,
                 "badFramesPct": 0,
                 "worstFrameOkPct": 100,
-                "frames": 120
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 120
-              },
-              {
-                "blankPct": 0,
-                "wrongPct": 0,
-                "badFramesPct": 0,
-                "worstFrameOkPct": 100,
-                "frames": 121
+                "frames": 123
               }
             ]
           }
@@ -3238,46 +3238,46 @@
           "samples": {
             "ag-grid": [
               {
-                "blankFramesPct": 80,
-                "blankAreaPct": 26.70265407107512,
-                "maxBlankRows": 16,
-                "capturedFrames": 75
+                "blankFramesPct": 28.000000000000004,
+                "blankAreaPct": 12.091767881241564,
+                "maxBlankRows": 18,
+                "capturedFrames": 50
               },
               {
-                "blankFramesPct": 18.91891891891892,
-                "blankAreaPct": 9.264325053798737,
-                "maxBlankRows": 16,
-                "capturedFrames": 74
+                "blankFramesPct": 17.857142857142858,
+                "blankAreaPct": 8.482745324850589,
+                "maxBlankRows": 18,
+                "capturedFrames": 56
               },
               {
-                "blankFramesPct": 16.216216216216218,
-                "blankAreaPct": 5.7628478681110265,
+                "blankFramesPct": 15.789473684210526,
+                "blankAreaPct": 7.102777185879678,
+                "maxBlankRows": 18,
+                "capturedFrames": 57
+              },
+              {
+                "blankFramesPct": 29.629629629629626,
+                "blankAreaPct": 11.196081371519968,
                 "maxBlankRows": 15,
-                "capturedFrames": 74
+                "capturedFrames": 54
               },
               {
-                "blankFramesPct": 25.675675675675674,
-                "blankAreaPct": 11.671590618959039,
+                "blankFramesPct": 22.413793103448278,
+                "blankAreaPct": 7.631811624552097,
+                "maxBlankRows": 17,
+                "capturedFrames": 58
+              },
+              {
+                "blankFramesPct": 26.41509433962264,
+                "blankAreaPct": 10.59251903343264,
+                "maxBlankRows": 18,
+                "capturedFrames": 53
+              },
+              {
+                "blankFramesPct": 15.254237288135593,
+                "blankAreaPct": 6.679018275806857,
                 "maxBlankRows": 16,
-                "capturedFrames": 74
-              },
-              {
-                "blankFramesPct": 6.8493150684931505,
-                "blankAreaPct": 2.6620819699406577,
-                "maxBlankRows": 15,
-                "capturedFrames": 73
-              },
-              {
-                "blankFramesPct": 0,
-                "blankAreaPct": 0,
-                "maxBlankRows": 0,
-                "capturedFrames": 74
-              },
-              {
-                "blankFramesPct": 11.428571428571429,
-                "blankAreaPct": 3.9329091960670906,
-                "maxBlankRows": 11,
-                "capturedFrames": 70
+                "capturedFrames": 59
               }
             ],
             "infinite": [
@@ -3285,7 +3285,7 @@
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 74
+                "capturedFrames": 72
               },
               {
                 "blankFramesPct": 0,
@@ -3297,13 +3297,13 @@
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 75
+                "capturedFrames": 69
               },
               {
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 74
+                "capturedFrames": 73
               },
               {
                 "blankFramesPct": 0,
@@ -3321,7 +3321,7 @@
                 "blankFramesPct": 0,
                 "blankAreaPct": 0,
                 "maxBlankRows": 0,
-                "capturedFrames": 74
+                "capturedFrames": 72
               }
             ]
           }

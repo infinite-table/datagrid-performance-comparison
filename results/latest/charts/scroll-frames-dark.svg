@@ -7,16 +7,16 @@
 <text x="38" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">AG Grid</text>
 <rect x="108.4" y="70" width="12" height="12" rx="3" fill="#3987e5"/>
 <text x="126.4" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Infinite Table</text>
-<text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">300k rows<tspan dx="10" fill="#99a1b3">no significant difference</tspan></text>
-<path d="M20,134H552.7a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
-<text x="565" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">52.3%</text>
-<path d="M20,152H590.6a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
-<text x="603" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">56%</text>
+<text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">300k rows</text>
+<path d="M20,134H521.4a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="533" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">52%</text>
+<path d="M20,152H610.4a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="622" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">61.2%</text>
 <line x1="19.5" y1="132" x2="19.5" y2="168" stroke="#484f58" stroke-width="1"/>
 <text x="20" y="198" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">1M rows</text>
-<path d="M20,206H552.6a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
-<text x="565" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">52.3%</text>
+<path d="M20,206H508.79999999999995a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="521" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">50.7%</text>
 <path d="M20,224H616a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
-<text x="628" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">58.5%</text>
+<text x="628" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">61.7%</text>
 <line x1="19.5" y1="204" x2="19.5" y2="240" stroke="#484f58" stroke-width="1"/>
 </svg>

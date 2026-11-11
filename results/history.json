@@ -2,59 +2,59 @@
   {
     "infinite": "10.1.4",
     "agGrid": "36.3.0",
-    "date": "2026-11-11T17:22:32.873Z",
+    "date": "2026-11-11T17:48:25.714Z",
     "chrome": "136.0.7103.25",
     "headless": true,
     "runs": 7,
-    "machine": "Apple M1 Pro × 10",
-    "os": "Darwin 24.1.0 arm64",
-    "runner": null,
+    "machine": "AMD EPYC 9V45 96-Core Processor × 4",
+    "os": "Linux 7.0.0-1017-azure x64",
+    "runner": "GitHub Actions, ubuntu-24.04",
     "metrics": {
       "300k/mount/visibleMs": {
-        "ag": 197.904,
-        "infinite": 139.899,
+        "ag": 253.711,
+        "infinite": 196.498,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/mount/settledMs": {
-        "ag": 301.815,
-        "infinite": 139.899,
+        "ag": 355.835,
+        "infinite": 196.498,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/mount/scriptMs": {
-        "ag": 179.77700000000002,
-        "infinite": 125.78599999999999,
+        "ag": 232.165,
+        "infinite": 179.01600000000002,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/mount/layoutMs": {
-        "ag": 7.636,
-        "infinite": 2.3289999999999993,
+        "ag": 6.003,
+        "infinite": 3.1080000000000005,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/mount/styleMs": {
-        "ag": 7.760999999999999,
-        "infinite": 3.8240000000000003,
+        "ag": 9.974,
+        "infinite": 5.698999999999999,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/mount/taskMs": {
-        "ag": 204.777,
-        "infinite": 145.439,
+        "ag": 259.953,
+        "infinite": 200.03300000000002,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/mount/heapMB": {
-        "ag": 67.48442840576172,
-        "infinite": 36.56616973876953,
+        "ag": 67.43519592285156,
+        "infinite": 36.60686111450195,
         "winner": "Infinite",
         "unit": "MB",
         "better": "lower"
@@ -67,163 +67,163 @@
         "better": "lower"
       },
       "300k/sort-string/ascVisibleMs": {
-        "ag": 773.614,
-        "infinite": 347.928,
+        "ag": 731.568,
+        "infinite": 353.194,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-string/ascSettledMs": {
-        "ag": 773.614,
-        "infinite": 361.994,
+        "ag": 731.568,
+        "infinite": 364.304,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-string/descVisibleMs": {
-        "ag": 810.352,
-        "infinite": 360.45,
+        "ag": 703.056,
+        "infinite": 343.288,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-string/descSettledMs": {
-        "ag": 810.352,
-        "infinite": 360.45,
+        "ag": 703.056,
+        "infinite": 343.288,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-string/ascScriptMs": {
-        "ag": 762.22,
-        "infinite": 334.7319999999999,
+        "ag": 715.9810000000001,
+        "infinite": 337.12700000000007,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-string/descScriptMs": {
-        "ag": 801.275,
-        "infinite": 346.86400000000003,
+        "ag": 691.1100000000001,
+        "infinite": 326.676,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-number/ascVisibleMs": {
-        "ag": 706.569,
-        "infinite": 306.499,
+        "ag": 627.787,
+        "infinite": 288.472,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-number/ascSettledMs": {
-        "ag": 706.569,
-        "infinite": 312.486,
+        "ag": 627.787,
+        "infinite": 300.347,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-number/descVisibleMs": {
-        "ag": 714.299,
-        "infinite": 313.89,
+        "ag": 631.853,
+        "infinite": 286.508,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-number/descSettledMs": {
-        "ag": 714.299,
-        "infinite": 313.89,
+        "ag": 631.853,
+        "infinite": 286.508,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-number/ascScriptMs": {
-        "ag": 695.1489999999999,
-        "infinite": 294.822,
+        "ag": 612.8710000000001,
+        "infinite": 273.67,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/sort-number/descScriptMs": {
-        "ag": 704.9619999999999,
-        "infinite": 305.017,
+        "ag": 618.9700000000001,
+        "infinite": 270.11299999999994,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-jump/visibleMs": {
-        "ag": 21.015500000000003,
-        "infinite": 27.0975,
+        "ag": 28.39,
+        "infinite": 28.4045,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-jump/visibleMaxMs": {
-        "ag": 39.884,
-        "infinite": 36.656,
-        "winner": "≈",
+        "ag": 46.759,
+        "infinite": 38.733,
+        "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-jump/settledMs": {
-        "ag": 21.015500000000003,
-        "infinite": 27.0975,
+        "ag": 28.39,
+        "infinite": 28.4045,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-jump/scriptMs": {
-        "ag": 133.38300000000004,
-        "infinite": 162.918,
-        "winner": "≈",
+        "ag": 181.23699999999994,
+        "infinite": 164.036,
+        "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/presentedAllPct": {
-        "ag": 52.34159779614325,
-        "infinite": 56.043956043956044,
-        "winner": "≈",
+        "ag": 52,
+        "infinite": 61.15702479338842,
+        "winner": "Infinite",
         "unit": "%",
         "better": "higher"
       },
       "300k/scroll-vertical/partialPct": {
-        "ag": 47.658402203856745,
-        "infinite": 43.956043956043956,
-        "winner": "≈",
+        "ag": 47.714285714285715,
+        "infinite": 38.84297520661157,
+        "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-vertical/droppedPct": {
-        "ag": 0,
+        "ag": 0.2857142857142857,
         "infinite": 0,
         "winner": "≈",
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-vertical/rafFps": {
-        "ag": 59.95165189363416,
-        "infinite": 59.94971959002127,
-        "winner": "≈",
+        "ag": 60.00193554630795,
+        "infinite": 59.35866830118073,
+        "winner": "AG Grid",
         "unit": "fps",
         "better": "higher"
       },
       "300k/scroll-vertical/p95FrameMs": {
-        "ag": 17.5,
-        "infinite": 17.5,
+        "ag": 16.700000000000614,
+        "infinite": 16.79999999999991,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/maxFrameMs": {
-        "ag": 17.700000000000045,
-        "infinite": 17.700000000000273,
-        "winner": "≈",
+        "ag": 16.800000000000182,
+        "infinite": 33.30000000000018,
+        "winner": "AG Grid",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/longFramesPct": {
         "ag": 0,
-        "infinite": 0,
-        "winner": "≈",
+        "infinite": 0.5434782608695652,
+        "winner": "AG Grid",
         "unit": "%",
         "better": "lower"
       },
@@ -235,43 +235,43 @@
         "better": "lower"
       },
       "300k/scroll-vertical/scriptMs": {
-        "ag": 397.728,
-        "infinite": 473.54799999999994,
+        "ag": 501.201,
+        "infinite": 573.9239999999999,
         "winner": "AG Grid",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/layoutMs": {
-        "ag": 78.346,
-        "infinite": 53.657,
+        "ag": 86.92099999999999,
+        "infinite": 66.376,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/styleMs": {
-        "ag": 171.86,
-        "infinite": 122.25599999999999,
+        "ag": 226.89999999999998,
+        "infinite": 152.23700000000002,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/taskMs": {
-        "ag": 1019.6700000000001,
-        "infinite": 1028.507,
+        "ag": 1288.092,
+        "infinite": 1297.944,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-horizontal/presentedAllPct": {
-        "ag": 88.88888888888889,
-        "infinite": 95.77464788732394,
+        "ag": 93.96551724137932,
+        "infinite": 95.83333333333334,
         "winner": "≈",
         "unit": "%",
         "better": "higher"
       },
       "300k/scroll-horizontal/partialPct": {
-        "ag": 11.11111111111111,
-        "infinite": 4.225352112676056,
+        "ag": 3.4482758620689653,
+        "infinite": 4.166666666666666,
         "winner": "≈",
         "unit": "%",
         "better": "lower"
@@ -284,22 +284,22 @@
         "better": "lower"
       },
       "300k/scroll-horizontal/rafFps": {
-        "ag": 59.997073313496905,
-        "infinite": 59.99702965525313,
-        "winner": "≈",
+        "ag": 60.00293129074174,
+        "infinite": 60.000971916569895,
+        "winner": "AG Grid",
         "unit": "fps",
         "better": "higher"
       },
       "300k/scroll-horizontal/p95FrameMs": {
-        "ag": 17.300000000000136,
-        "infinite": 17.205000000000247,
+        "ag": 16.700000000000273,
+        "infinite": 16.700000000000273,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-horizontal/maxFrameMs": {
-        "ag": 17.700000000000045,
-        "infinite": 17.600000000000136,
+        "ag": 16.800000000000182,
+        "infinite": 16.800000000000182,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
@@ -319,35 +319,35 @@
         "better": "lower"
       },
       "300k/scroll-horizontal/scriptMs": {
-        "ag": 170.57799999999995,
-        "infinite": 108.14799999999997,
+        "ag": 225.40799999999993,
+        "infinite": 135.56,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-horizontal/layoutMs": {
-        "ag": 48.818,
-        "infinite": 8.202000000000002,
+        "ag": 66.637,
+        "infinite": 10.866999999999997,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-horizontal/styleMs": {
-        "ag": 30.565999999999995,
-        "infinite": 34.056000000000004,
+        "ag": 39.04600000000001,
+        "infinite": 42.492000000000004,
         "winner": "AG Grid",
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-horizontal/taskMs": {
-        "ag": 413.5799999999999,
-        "infinite": 317.05300000000005,
+        "ag": 599.7629999999999,
+        "infinite": 395.51099999999997,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "300k/correctness-vertical/blankPct": {
-        "ag": 2.0253164556962027,
+        "ag": 2.7848101265822782,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "%",
@@ -355,21 +355,21 @@
       },
       "300k/correctness-vertical/wrongPct": {
         "ag": 0,
-        "infinite": 38.318523581681475,
+        "infinite": 42.30358504958047,
         "winner": "AG Grid",
         "unit": "%",
         "better": "lower"
       },
       "300k/correctness-vertical/badFramesPct": {
-        "ag": 10.126582278481013,
-        "infinite": 90.66666666666666,
+        "ag": 13.924050632911392,
+        "infinite": 89.70588235294117,
         "winner": "AG Grid",
         "unit": "%",
         "better": "lower"
       },
       "300k/correctness-vertical/worstFrameOkPct": {
         "ag": 80,
-        "infinite": 9.473684210526317,
+        "infinite": 0,
         "winner": "AG Grid",
         "unit": "%",
         "better": "higher"
@@ -403,78 +403,78 @@
         "better": "higher"
       },
       "300k/visual-blank-vertical/blankFramesPct": {
-        "ag": 4,
+        "ag": 8.955223880597014,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "300k/visual-blank-vertical/blankAreaPct": {
-        "ag": 0.2878992352676563,
+        "ag": 1.289101053437267,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "300k/visual-blank-vertical/maxBlankRows": {
-        "ag": 2,
+        "ag": 7,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "rows",
         "better": "lower"
       },
       "300k/visual-blank-vertical/capturedFrames": {
-        "ag": 74,
-        "infinite": 74,
-        "winner": "≈",
+        "ag": 65,
+        "infinite": 73,
+        "winner": "Infinite",
         "unit": "",
         "better": "higher"
       },
       "1m/mount/visibleMs": {
-        "ag": 498.485,
-        "infinite": 352.339,
+        "ag": 611.274,
+        "infinite": 410.795,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/settledMs": {
-        "ag": 601.956,
-        "infinite": 352.339,
+        "ag": 713.78,
+        "infinite": 410.795,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/scriptMs": {
-        "ag": 480.173,
-        "infinite": 341.66900000000004,
+        "ag": 589.507,
+        "infinite": 393.5949999999999,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/layoutMs": {
-        "ag": 7.128,
-        "infinite": 2.1329999999999996,
+        "ag": 5.946,
+        "infinite": 3.726,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/styleMs": {
-        "ag": 7.84,
-        "infinite": 3.617,
+        "ag": 10.020000000000001,
+        "infinite": 7.103999999999999,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/taskMs": {
-        "ag": 509.55500000000006,
-        "infinite": 355.012,
+        "ag": 618.557,
+        "infinite": 414.24399999999997,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/heapMB": {
-        "ag": 213.46030044555664,
-        "infinite": 90.68194580078125,
+        "ag": 213.41002655029297,
+        "infinite": 90.67916107177734,
         "winner": "Infinite",
         "unit": "MB",
         "better": "lower"
@@ -487,163 +487,163 @@
         "better": "lower"
       },
       "1m/sort-string/ascVisibleMs": {
-        "ag": 3384.478,
-        "infinite": 1395.127,
+        "ag": 3087.5,
+        "infinite": 1379.748,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-string/ascSettledMs": {
-        "ag": 3384.478,
-        "infinite": 1412.484,
+        "ag": 3087.5,
+        "infinite": 1397.893,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-string/descVisibleMs": {
-        "ag": 3279.365,
-        "infinite": 1380.067,
+        "ag": 3034.113,
+        "infinite": 1585.721,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-string/descSettledMs": {
-        "ag": 3279.365,
-        "infinite": 1380.067,
+        "ag": 3034.113,
+        "infinite": 1585.721,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-string/ascScriptMs": {
-        "ag": 3373.0969999999998,
-        "infinite": 1382.9560000000001,
+        "ag": 3077.7300000000005,
+        "infinite": 1365.363,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-string/descScriptMs": {
-        "ag": 3270.8050000000003,
-        "infinite": 1365.815,
+        "ag": 3022.145,
+        "infinite": 1569.533,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-number/ascVisibleMs": {
-        "ag": 3060.905,
-        "infinite": 1205.483,
+        "ag": 2709.757,
+        "infinite": 1140.076,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-number/ascSettledMs": {
-        "ag": 3060.905,
-        "infinite": 1212.613,
+        "ag": 2709.757,
+        "infinite": 1152.645,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-number/descVisibleMs": {
-        "ag": 3096.462,
-        "infinite": 1288.561,
+        "ag": 2727.606,
+        "infinite": 1141.769,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-number/descSettledMs": {
-        "ag": 3096.462,
-        "infinite": 1288.561,
+        "ag": 2727.606,
+        "infinite": 1141.769,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-number/ascScriptMs": {
-        "ag": 3049.499,
-        "infinite": 1193.028,
+        "ag": 2696.095,
+        "infinite": 1131.719,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/sort-number/descScriptMs": {
-        "ag": 3087.718,
-        "infinite": 1274.81,
+        "ag": 2720.6400000000003,
+        "infinite": 1125.215,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-jump/visibleMs": {
-        "ag": 20.91,
-        "infinite": 23.646,
+        "ag": 27.356499999999997,
+        "infinite": 30.008,
         "winner": "AG Grid",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-jump/visibleMaxMs": {
-        "ag": 35.629,
-        "infinite": 28.257,
+        "ag": 53.142,
+        "infinite": 42.207,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-jump/settledMs": {
-        "ag": 20.91,
-        "infinite": 23.646,
+        "ag": 27.356499999999997,
+        "infinite": 30.008,
         "winner": "AG Grid",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-jump/scriptMs": {
-        "ag": 127.444,
-        "infinite": 142.98699999999997,
+        "ag": 177.1879999999999,
+        "infinite": 178.72200000000015,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/presentedAllPct": {
-        "ag": 52.32876712328767,
-        "infinite": 58.51648351648352,
+        "ag": 50.700280112044815,
+        "infinite": 61.731843575419,
         "winner": "Infinite",
         "unit": "%",
         "better": "higher"
       },
       "1m/scroll-vertical/partialPct": {
-        "ag": 47.671232876712324,
-        "infinite": 41.43646408839779,
+        "ag": 48.882681564245814,
+        "infinite": 38.26815642458101,
         "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "1m/scroll-vertical/droppedPct": {
-        "ag": 0,
+        "ag": 0.554016620498615,
         "infinite": 0,
-        "winner": "≈",
+        "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "1m/scroll-vertical/rafFps": {
-        "ag": 59.949435081890925,
-        "infinite": 59.67356944713244,
-        "winner": "≈",
+        "ag": 59.68319514791754,
+        "infinite": 57.42057734132404,
+        "winner": "AG Grid",
         "unit": "fps",
         "better": "higher"
       },
       "1m/scroll-vertical/p95FrameMs": {
-        "ag": 17.5,
-        "infinite": 17.5,
+        "ag": 16.700000000000728,
+        "infinite": 16.799999999999773,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/maxFrameMs": {
-        "ag": 17.700000000000273,
-        "infinite": 33.5,
-        "winner": "≈",
+        "ag": 33.19999999999982,
+        "infinite": 100,
+        "winner": "AG Grid",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/longFramesPct": {
-        "ag": 0,
-        "infinite": 0.5405405405405406,
-        "winner": "≈",
+        "ag": 0.5405405405405406,
+        "infinite": 1.6853932584269662,
+        "winner": "AG Grid",
         "unit": "%",
         "better": "lower"
       },
@@ -655,43 +655,43 @@
         "better": "lower"
       },
       "1m/scroll-vertical/scriptMs": {
-        "ag": 502.154,
-        "infinite": 592.8399999999999,
-        "winner": "AG Grid",
+        "ag": 679.665,
+        "infinite": 743.826,
+        "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/layoutMs": {
-        "ag": 86.637,
-        "infinite": 69.635,
+        "ag": 99.25999999999999,
+        "infinite": 87.907,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/styleMs": {
-        "ag": 274.07300000000004,
-        "infinite": 152.92799999999997,
+        "ag": 361.57800000000003,
+        "infinite": 219.479,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/taskMs": {
-        "ag": 1319.215,
-        "infinite": 1268.87,
-        "winner": "Infinite",
+        "ag": 1724.988,
+        "infinite": 1705.5179999999998,
+        "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-horizontal/presentedAllPct": {
-        "ag": 86.3013698630137,
-        "infinite": 88.96551724137932,
+        "ag": 100,
+        "infinite": 96.47887323943662,
         "winner": "≈",
         "unit": "%",
         "better": "higher"
       },
       "1m/scroll-horizontal/partialPct": {
-        "ag": 13.698630136986301,
-        "infinite": 11.03448275862069,
+        "ag": 0,
+        "infinite": 3.5211267605633805,
         "winner": "≈",
         "unit": "%",
         "better": "lower"
@@ -704,22 +704,22 @@
         "better": "lower"
       },
       "1m/scroll-horizontal/rafFps": {
-        "ag": 59.9522136989346,
-        "infinite": 59.95085995085994,
+        "ag": 60.00292697204741,
+        "infinite": 60.0030001500075,
         "winner": "≈",
         "unit": "fps",
         "better": "higher"
       },
       "1m/scroll-horizontal/p95FrameMs": {
-        "ag": 17.400000000000045,
-        "infinite": 17.40000000000009,
+        "ag": 16.700000000000728,
+        "infinite": 16.799999999999727,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-horizontal/maxFrameMs": {
-        "ag": 17.699999999999818,
-        "infinite": 17.600000000000364,
+        "ag": 16.800000000000182,
+        "infinite": 16.800000000000182,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
@@ -739,35 +739,35 @@
         "better": "lower"
       },
       "1m/scroll-horizontal/scriptMs": {
-        "ag": 164.97300000000016,
-        "infinite": 111.14299999999999,
+        "ag": 194.45099999999994,
+        "infinite": 127.37900000000002,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-horizontal/layoutMs": {
-        "ag": 51.516000000000005,
-        "infinite": 8.793000000000001,
+        "ag": 56.794,
+        "infinite": 10.182,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-horizontal/styleMs": {
-        "ag": 30.269000000000005,
-        "infinite": 35.403000000000006,
+        "ag": 36.391,
+        "infinite": 38.228,
         "winner": "≈",
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-horizontal/taskMs": {
-        "ag": 402.312,
-        "infinite": 352.538,
+        "ag": 587.5250000000001,
+        "infinite": 394.14799999999997,
         "winner": "Infinite",
         "unit": "ms",
         "better": "lower"
       },
       "1m/correctness-vertical/blankPct": {
-        "ag": 2.535211267605634,
+        "ag": 2.191780821917808,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "%",
@@ -775,14 +775,14 @@
       },
       "1m/correctness-vertical/wrongPct": {
         "ag": 0,
-        "infinite": 70.98684210526316,
+        "infinite": 66.62280701754386,
         "winner": "AG Grid",
         "unit": "%",
         "better": "lower"
       },
       "1m/correctness-vertical/badFramesPct": {
-        "ag": 12.676056338028168,
-        "infinite": 87.5,
+        "ag": 10.95890410958904,
+        "infinite": 85.41666666666666,
         "winner": "AG Grid",
         "unit": "%",
         "better": "lower"
@@ -823,30 +823,30 @@
         "better": "higher"
       },
       "1m/visual-blank-vertical/blankFramesPct": {
-        "ag": 16.216216216216218,
+        "ag": 22.413793103448278,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "1m/visual-blank-vertical/blankAreaPct": {
-        "ag": 5.7628478681110265,
+        "ag": 8.482745324850589,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "%",
         "better": "lower"
       },
       "1m/visual-blank-vertical/maxBlankRows": {
-        "ag": 15,
+        "ag": 18,
         "infinite": 0,
         "winner": "Infinite",
         "unit": "rows",
         "better": "lower"
       },
       "1m/visual-blank-vertical/capturedFrames": {
-        "ag": 74,
-        "infinite": 74,
-        "winner": "≈",
+        "ag": 56,
+        "infinite": 72,
+        "winner": "Infinite",
         "unit": "",
         "better": "higher"
       }

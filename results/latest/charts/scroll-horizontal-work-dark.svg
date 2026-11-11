@@ -8,27 +8,27 @@
 <rect x="108.4" y="70" width="12" height="12" rx="3" fill="#3987e5"/>
 <text x="126.4" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Infinite Table</text>
 <text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Scripting</text>
-<path d="M20,134H263.5a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
-<text x="275" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">171 ms</text>
-<path d="M20,152H172.9a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
-<text x="185" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">108 ms</text>
+<path d="M20,134H241.5a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="253" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">225 ms</text>
+<path d="M20,152H151.6a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="164" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">136 ms</text>
 <line x1="19.5" y1="132" x2="19.5" y2="168" stroke="#484f58" stroke-width="1"/>
 <text x="20" y="198" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Layout</text>
-<path d="M20,206H86.8a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
-<text x="99" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">48.8 ms</text>
-<path d="M20,224H27.9a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
-<text x="40" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">8.2 ms</text>
+<path d="M20,206H82.7a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="95" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">66.6 ms</text>
+<path d="M20,224H26.9a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="39" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">10.9 ms</text>
 <line x1="19.5" y1="204" x2="19.5" y2="240" stroke="#484f58" stroke-width="1"/>
 <text x="20" y="270" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Style recalculation</text>
-<path d="M20,278H60.3a4,4 0 0 1 4,4V288a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
-<text x="72" y="289.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">30.6 ms</text>
-<path d="M20,296H65.4a4,4 0 0 1 4,4V306a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
-<text x="77" y="307.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">34.1 ms</text>
+<path d="M20,278H55.1a4,4 0 0 1 4,4V288a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
+<text x="67" y="289.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">39 ms</text>
+<path d="M20,296H58.5a4,4 0 0 1 4,4V306a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="71" y="307.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">42.5 ms</text>
 <line x1="19.5" y1="276" x2="19.5" y2="312" stroke="#484f58" stroke-width="1"/>
 <text x="20" y="342" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">All tasks</text>
 <path d="M20,350H616a4,4 0 0 1 4,4V360a4,4 0 0 1 -4,4H20Z" fill="#d95926"/>
-<text x="628" y="361.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">414 ms</text>
-<path d="M20,368H476a4,4 0 0 1 4,4V378a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
-<text x="488" y="379.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">317 ms</text>
+<text x="628" y="361.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">600 ms</text>
+<path d="M20,368H411.7a4,4 0 0 1 4,4V378a4,4 0 0 1 -4,4H20Z" fill="#3987e5"/>
+<text x="424" y="379.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">396 ms</text>
 <line x1="19.5" y1="348" x2="19.5" y2="384" stroke="#484f58" stroke-width="1"/>
 </svg>

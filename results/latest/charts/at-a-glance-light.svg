@@ -8,21 +8,21 @@
 <rect x="108.4" y="70" width="12" height="12" rx="3" fill="#2a78d6"/>
 <text x="126.4" y="80" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
 <text x="20" y="126" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Mount: first rows painted</text>
-<path d="M20,134H104.4a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
-<text x="116" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">498 ms</text>
-<path d="M20,152H78.5a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
-<text x="90" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">352 ms</text>
+<path d="M20,134H134.8a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
+<text x="147" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">611 ms</text>
+<path d="M20,152H95.8a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
+<text x="108" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">411 ms</text>
 <line x1="19.5" y1="132" x2="19.5" y2="168" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="198" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Sort a string column</text>
 <path d="M20,206H616a4,4 0 0 1 4,4V216a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
-<text x="628" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,384 ms</text>
-<path d="M20,224H263.3a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
-<text x="275" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,395 ms</text>
+<text x="628" y="217.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,088 ms</text>
+<path d="M20,224H284.1a4,4 0 0 1 4,4V234a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
+<text x="296" y="235.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,380 ms</text>
 <line x1="19.5" y1="204" x2="19.5" y2="240" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="270" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Sort a number column</text>
-<path d="M20,278H558.6a4,4 0 0 1 4,4V288a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
-<text x="571" y="289.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,061 ms</text>
-<path d="M20,296H229.7a4,4 0 0 1 4,4V306a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
-<text x="242" y="307.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,205 ms</text>
+<path d="M20,278H542.6a4,4 0 0 1 4,4V288a4,4 0 0 1 -4,4H20Z" fill="#eb6834"/>
+<text x="555" y="289.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">2,710 ms</text>
+<path d="M20,296H237.6a4,4 0 0 1 4,4V306a4,4 0 0 1 -4,4H20Z" fill="#2a78d6"/>
+<text x="250" y="307.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,140 ms</text>
 <line x1="19.5" y1="276" x2="19.5" y2="312" stroke="#c3c2b7" stroke-width="1"/>
 </svg>

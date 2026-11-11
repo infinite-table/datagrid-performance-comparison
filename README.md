@@ -20,53 +20,53 @@ whole thing is here for you to run.
 
 ## Results
 
-**Infinite Table 10.1.4** vs **AG Grid React 36.3.0** - measured on 2026-11-11, on Apple M1 Pro × 10, Darwin 24.1.0 arm64, in Chrome 136.0.7103.25 (headless). Every value is the median of 7 runs.
+**Infinite Table 10.1.4** vs **AG Grid React 36.3.0** - measured on 2026-11-11, on GitHub Actions, ubuntu-24.04 (AMD EPYC 9V45 96-Core Processor × 4), in Chrome 136.0.7103.25 (headless). Every value is the median of 7 runs.
 
 The absolute numbers depend on the machine - compare the two grids, not the milliseconds. A difference is only called when the 95% confidence interval excludes "no difference".
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/at-a-glance-dark.svg">
-  <img src="results/latest/charts/at-a-glance-light.svg" width="760" alt="At a glance - 1,000,000 rows (lower is better). Mount: first rows painted: AG Grid 498 ms, Infinite Table 352 ms; Sort a string column: AG Grid 3,384 ms, Infinite Table 1,395 ms; Sort a number column: AG Grid 3,061 ms, Infinite Table 1,205 ms.">
+  <img src="results/latest/charts/at-a-glance-light.svg" width="760" alt="At a glance - 1,000,000 rows (lower is better). Mount: first rows painted: AG Grid 611 ms, Infinite Table 411 ms; Sort a string column: AG Grid 3,088 ms, Infinite Table 1,380 ms; Sort a number column: AG Grid 2,710 ms, Infinite Table 1,140 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/mount-dark.svg">
-  <img src="results/latest/charts/mount-light.svg" width="760" alt="Mount time (lower is better). First rows painted, 300k rows: AG Grid 198 ms, Infinite Table 140 ms; Settled (no more DOM changes), 300k rows: AG Grid 302 ms, Infinite Table 140 ms; First rows painted, 1M rows: AG Grid 498 ms, Infinite Table 352 ms; Settled, 1M rows: AG Grid 602 ms, Infinite Table 352 ms.">
+  <img src="results/latest/charts/mount-light.svg" width="760" alt="Mount time (lower is better). First rows painted, 300k rows: AG Grid 254 ms, Infinite Table 196 ms; Settled (no more DOM changes), 300k rows: AG Grid 356 ms, Infinite Table 196 ms; First rows painted, 1M rows: AG Grid 611 ms, Infinite Table 411 ms; Settled, 1M rows: AG Grid 714 ms, Infinite Table 411 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/memory-dark.svg">
-  <img src="results/latest/charts/memory-light.svg" width="760" alt="Memory: JavaScript heap retained by the grid (lower is better). 300k rows: AG Grid 67.5 MB, Infinite Table 36.6 MB; 1M rows: AG Grid 213 MB, Infinite Table 90.7 MB.">
+  <img src="results/latest/charts/memory-light.svg" width="760" alt="Memory: JavaScript heap retained by the grid (lower is better). 300k rows: AG Grid 67.4 MB, Infinite Table 36.6 MB; 1M rows: AG Grid 213 MB, Infinite Table 90.7 MB.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/sort-300k-dark.svg">
-  <img src="results/latest/charts/sort-300k-light.svg" width="760" alt="Sorting 300,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 774 ms, Infinite Table 348 ms; String column, descending: AG Grid 810 ms, Infinite Table 360 ms; Number column, ascending: AG Grid 707 ms, Infinite Table 306 ms; Number column, descending: AG Grid 714 ms, Infinite Table 314 ms.">
+  <img src="results/latest/charts/sort-300k-light.svg" width="760" alt="Sorting 300,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 732 ms, Infinite Table 353 ms; String column, descending: AG Grid 703 ms, Infinite Table 343 ms; Number column, ascending: AG Grid 628 ms, Infinite Table 288 ms; Number column, descending: AG Grid 632 ms, Infinite Table 287 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/sort-1m-dark.svg">
-  <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 3,384 ms, Infinite Table 1,395 ms; String column, descending: AG Grid 3,279 ms, Infinite Table 1,380 ms; Number column, ascending: AG Grid 3,061 ms, Infinite Table 1,205 ms; Number column, descending: AG Grid 3,096 ms, Infinite Table 1,289 ms.">
+  <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 3,088 ms, Infinite Table 1,380 ms; String column, descending: AG Grid 3,034 ms, Infinite Table 1,586 ms; Number column, ascending: AG Grid 2,710 ms, Infinite Table 1,140 ms; Number column, descending: AG Grid 2,728 ms, Infinite Table 1,142 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-jump-dark.svg">
-  <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: AG Grid 21 ms, Infinite Table 27.1 ms; 1M rows: AG Grid 20.9 ms, Infinite Table 23.6 ms.">
+  <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: AG Grid 28.4 ms, Infinite Table 28.4 ms; 1M rows: AG Grid 27.4 ms, Infinite Table 30 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-frames-dark.svg">
-  <img src="results/latest/charts/scroll-frames-light.svg" width="760" alt="Vertical scrolling: frames fully presented (higher is better). 300k rows: AG Grid 52.3%, Infinite Table 56%; 1M rows: AG Grid 52.3%, Infinite Table 58.5%.">
+  <img src="results/latest/charts/scroll-frames-light.svg" width="760" alt="Vertical scrolling: frames fully presented (higher is better). 300k rows: AG Grid 52%, Infinite Table 61.2%; 1M rows: AG Grid 50.7%, Infinite Table 61.7%.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-vertical-work-dark.svg">
-  <img src="results/latest/charts/scroll-vertical-work-light.svg" width="760" alt="Vertical scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 398 ms, Infinite Table 474 ms; Layout: AG Grid 78.3 ms, Infinite Table 53.7 ms; Style recalculation: AG Grid 172 ms, Infinite Table 122 ms; All tasks: AG Grid 1,020 ms, Infinite Table 1,029 ms.">
+  <img src="results/latest/charts/scroll-vertical-work-light.svg" width="760" alt="Vertical scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 501 ms, Infinite Table 574 ms; Layout: AG Grid 86.9 ms, Infinite Table 66.4 ms; Style recalculation: AG Grid 227 ms, Infinite Table 152 ms; All tasks: AG Grid 1,288 ms, Infinite Table 1,298 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-horizontal-work-dark.svg">
-  <img src="results/latest/charts/scroll-horizontal-work-light.svg" width="760" alt="Horizontal scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 171 ms, Infinite Table 108 ms; Layout: AG Grid 48.8 ms, Infinite Table 8.2 ms; Style recalculation: AG Grid 30.6 ms, Infinite Table 34.1 ms; All tasks: AG Grid 414 ms, Infinite Table 317 ms.">
+  <img src="results/latest/charts/scroll-horizontal-work-light.svg" width="760" alt="Horizontal scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 225 ms, Infinite Table 136 ms; Layout: AG Grid 66.6 ms, Infinite Table 10.9 ms; Style recalculation: AG Grid 39 ms, Infinite Table 42.5 ms; All tasks: AG Grid 600 ms, Infinite Table 396 ms.">
 </picture>
 
 <details>
@@ -74,32 +74,32 @@ The absolute numbers depend on the machine - compare the two grids, not the mill
 
 | | AG Grid | Infinite Table | Difference |
 |---|---:|---:|---|
-| Mount - First rows painted, 300k rows | 198 ms | 140 ms | **Infinite Table**: 29% lower |
-| Mount - Settled (no more DOM changes), 300k rows | 302 ms | 140 ms | **Infinite Table**: 2.16× lower |
-| Mount - First rows painted, 1M rows | 498 ms | 352 ms | **Infinite Table**: 29% lower |
-| Mount - Settled, 1M rows | 602 ms | 352 ms | **Infinite Table**: 41% lower |
-| Memory - 300k rows | 67.5 MB | 36.6 MB | **Infinite Table**: 46% lower |
+| Mount - First rows painted, 300k rows | 254 ms | 196 ms | **Infinite Table**: 23% lower |
+| Mount - Settled (no more DOM changes), 300k rows | 356 ms | 196 ms | **Infinite Table**: 45% lower |
+| Mount - First rows painted, 1M rows | 611 ms | 411 ms | **Infinite Table**: 33% lower |
+| Mount - Settled, 1M rows | 714 ms | 411 ms | **Infinite Table**: 42% lower |
+| Memory - 300k rows | 67.4 MB | 36.6 MB | **Infinite Table**: 46% lower |
 | Memory - 1M rows | 213 MB | 90.7 MB | **Infinite Table**: 2.35× lower |
-| Sort, 300k rows - String column, ascending | 774 ms | 348 ms | **Infinite Table**: 2.22× lower |
-| Sort, 300k rows - String column, descending | 810 ms | 360 ms | **Infinite Table**: 2.25× lower |
-| Sort, 300k rows - Number column, ascending | 707 ms | 306 ms | **Infinite Table**: 2.31× lower |
-| Sort, 300k rows - Number column, descending | 714 ms | 314 ms | **Infinite Table**: 2.28× lower |
-| Sort, 1M rows - String column, ascending | 3,384 ms | 1,395 ms | **Infinite Table**: 2.43× lower |
-| Sort, 1M rows - String column, descending | 3,279 ms | 1,380 ms | **Infinite Table**: 2.38× lower |
-| Sort, 1M rows - Number column, ascending | 3,061 ms | 1,205 ms | **Infinite Table**: 2.54× lower |
-| Sort, 1M rows - Number column, descending | 3,096 ms | 1,289 ms | **Infinite Table**: 2.4× lower |
-| Jump to rows painted - 300k rows | 21 ms | 27.1 ms | no significant difference |
-| Jump to rows painted - 1M rows | 20.9 ms | 23.6 ms | **AG Grid**: 12% lower |
-| Vertical scrolling, frames fully presented - 300k rows | 52.3% | 56% | no significant difference |
-| Vertical scrolling, frames fully presented - 1M rows | 52.3% | 58.5% | **Infinite Table**: 6.19 points higher |
-| Vertical scrolling, 300k rows, main-thread work - Scripting | 398 ms | 474 ms | **AG Grid**: 16% lower |
-| Vertical scrolling, 300k rows, main-thread work - Layout | 78.3 ms | 53.7 ms | **Infinite Table**: 32% lower |
-| Vertical scrolling, 300k rows, main-thread work - Style recalculation | 172 ms | 122 ms | **Infinite Table**: 29% lower |
-| Vertical scrolling, 300k rows, main-thread work - All tasks | 1,020 ms | 1,029 ms | no significant difference |
-| Horizontal scrolling, 300k rows, main-thread work - Scripting | 171 ms | 108 ms | **Infinite Table**: 37% lower |
-| Horizontal scrolling, 300k rows, main-thread work - Layout | 48.8 ms | 8.2 ms | **Infinite Table**: 5.95× lower |
-| Horizontal scrolling, 300k rows, main-thread work - Style recalculation | 30.6 ms | 34.1 ms | **AG Grid**: 10% lower |
-| Horizontal scrolling, 300k rows, main-thread work - All tasks | 414 ms | 317 ms | **Infinite Table**: 23% lower |
+| Sort, 300k rows - String column, ascending | 732 ms | 353 ms | **Infinite Table**: 2.07× lower |
+| Sort, 300k rows - String column, descending | 703 ms | 343 ms | **Infinite Table**: 2.05× lower |
+| Sort, 300k rows - Number column, ascending | 628 ms | 288 ms | **Infinite Table**: 2.18× lower |
+| Sort, 300k rows - Number column, descending | 632 ms | 287 ms | **Infinite Table**: 2.21× lower |
+| Sort, 1M rows - String column, ascending | 3,088 ms | 1,380 ms | **Infinite Table**: 2.24× lower |
+| Sort, 1M rows - String column, descending | 3,034 ms | 1,586 ms | **Infinite Table**: 48% lower |
+| Sort, 1M rows - Number column, ascending | 2,710 ms | 1,140 ms | **Infinite Table**: 2.38× lower |
+| Sort, 1M rows - Number column, descending | 2,728 ms | 1,142 ms | **Infinite Table**: 2.39× lower |
+| Jump to rows painted - 300k rows | 28.4 ms | 28.4 ms | no significant difference |
+| Jump to rows painted - 1M rows | 27.4 ms | 30 ms | **AG Grid**: 9% lower |
+| Vertical scrolling, frames fully presented - 300k rows | 52% | 61.2% | **Infinite Table**: 9.16 points higher |
+| Vertical scrolling, frames fully presented - 1M rows | 50.7% | 61.7% | **Infinite Table**: 11 points higher |
+| Vertical scrolling, 300k rows, main-thread work - Scripting | 501 ms | 574 ms | **AG Grid**: 13% lower |
+| Vertical scrolling, 300k rows, main-thread work - Layout | 86.9 ms | 66.4 ms | **Infinite Table**: 24% lower |
+| Vertical scrolling, 300k rows, main-thread work - Style recalculation | 227 ms | 152 ms | **Infinite Table**: 33% lower |
+| Vertical scrolling, 300k rows, main-thread work - All tasks | 1,288 ms | 1,298 ms | no significant difference |
+| Horizontal scrolling, 300k rows, main-thread work - Scripting | 225 ms | 136 ms | **Infinite Table**: 40% lower |
+| Horizontal scrolling, 300k rows, main-thread work - Layout | 66.6 ms | 10.9 ms | **Infinite Table**: 6.13× lower |
+| Horizontal scrolling, 300k rows, main-thread work - Style recalculation | 39 ms | 42.5 ms | **AG Grid**: 8% lower |
+| Horizontal scrolling, 300k rows, main-thread work - All tasks | 600 ms | 396 ms | **Infinite Table**: 34% lower |
 
 </details>
 
@@ -111,7 +111,7 @@ One row for every pair of versions measured so far, newest first. Each cell is *
 
 | Infinite Table | AG Grid | Date | Mount 1M | Sort string 1M | Sort number 1M | Memory 1M | Vertical scroll work 300k | Horizontal scroll work 300k | Machine | Results |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
-| 10.1.4 | 36.3.0 | 2026-11-11 | 352 / 498 | 1,395 / 3,384 | 1,205 / 3,061 | 90.7 / 213 | 1,029 / 1,020 | 317 / 414 | Apple M1 Pro × 10 | [branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.4_ag-grid-36.3.0) |
+| 10.1.4 | 36.3.0 | 2026-11-11 | 411 / 611 | 1,380 / 3,088 | 1,140 / 2,710 | 90.7 / 213 | 1,298 / 1,288 | 396 / 600 | GitHub Actions, ubuntu-24.04 | [branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.4_ag-grid-36.3.0) |
 
 <!-- results:end -->
 
