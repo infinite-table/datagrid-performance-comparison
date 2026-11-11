@@ -381,8 +381,8 @@ export type BenchEnvironment = {
   bodyHeight?: number;
   /**
    * px added to the box of each grid so the bodies have the same height -
-   * 0 for both unless one grid shows something the other doesn't (e.g. the
-   * footer Infinite Table renders when it has no license key)
+   * e.g. to make up for the footer Infinite Table renders when it has no
+   * license key
    */
   boxExtraHeight?: Record<GridName, number>;
 };
@@ -531,18 +531,12 @@ function bodyHeightLine(env: BenchEnvironment) {
   }
   const extra = (Object.keys(GRID_LABELS) as GridName[])
     .filter((grid) => env.boxExtraHeight?.[grid])
-    .map(
-      (grid) =>
-        `the ${GRID_LABELS[grid]} box is ${
-          env.boxExtraHeight![grid]
-        } px taller to make up for what it renders outside the body` +
-        (grid === 'infinite'
-          ? ' - the footer Infinite Table shows without a license key'
-          : ''),
-    );
+    .map((grid) => `${GRID_LABELS[grid]} +${env.boxExtraHeight![grid]} px`);
   return (
     `\n- Grid body: ${env.bodyHeight} px high in both grids` +
-    (extra.length ? ` (${extra.join('; ')})` : '')
+    (extra.length
+      ? ` (to get there, the setup made the boxes taller: ${extra.join(', ')})`
+      : '')
   );
 }
 

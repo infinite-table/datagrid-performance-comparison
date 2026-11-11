@@ -111,9 +111,10 @@ let environment: BenchEnvironment | null = null;
 
 /**
  * px added to the box of each grid (`?extraHeight=`), so both have a body of
- * the same height and render the same number of rows - measured in the setup
- * test. 0 for both, unless one grid shows something the other doesn't: e.g.
- * Infinite Table renders a footer when it has no license key.
+ * the same height and render the same number of rows - worked out in the
+ * setup test. The grids differ by a few px of borders, and by more when one
+ * shows something the other doesn't: Infinite Table renders a footer when it
+ * has no license key.
  */
 let boxExtraHeight: Record<GridName, number> | null = null;
 
@@ -905,36 +906,45 @@ for (const size of SIZES) {
       const bodyHeights: Partial<Record<GridName, number>> = {};
       let rowCount = 0;
 
-      // first, give both grids a body of the same height
-      boxExtraHeight = null;
+      // first, give both grids a body of the same height: measure, make the
+      // box of the shorter one taller, measure again. More than one pass,
+      // because a grid may not turn every extra pixel of its box into a
+      // pixel of body (AG Grid's body grows in steps of 1 or 2).
+      const extra: Record<GridName, number> = { 'ag-grid': 0, infinite: 0 };
       const measured: Partial<Record<GridName, number>> = {};
-      for (const grid of GRIDS) {
-        const { ctx, close } = await openGrid(
-          browser,
-          baseURL!,
-          grid,
-          size,
-          `setup-${size}-${grid}-body`,
-        );
-        try {
-          await ctx.page.evaluate(() => window.__bench!.mount());
-          await settle(ctx.page, 300);
-          measured[grid] = await ctx.page.evaluate(
-            () => window.__bench!.getBodyRect().height,
+      boxExtraHeight = extra;
+      for (let pass = 0; pass < 6; pass++) {
+        for (const grid of GRIDS) {
+          const { ctx, close } = await openGrid(
+            browser,
+            baseURL!,
+            grid,
+            size,
+            `setup-${size}-${grid}-body`,
           );
-        } finally {
-          await close();
+          try {
+            await ctx.page.evaluate(() => window.__bench!.mount());
+            await settle(ctx.page, 300);
+            measured[grid] = await ctx.page.evaluate(
+              () => window.__bench!.getBodyRect().height,
+            );
+          } finally {
+            await close();
+          }
+        }
+        const tallest = Math.max(...GRIDS.map((grid) => measured[grid]!));
+        if (GRIDS.every((grid) => measured[grid] === tallest)) {
+          break;
+        }
+        for (const grid of GRIDS) {
+          extra[grid] += tallest - measured[grid]!;
         }
       }
-      const tallest = Math.max(...GRIDS.map((grid) => measured[grid]!));
-      boxExtraHeight = Object.fromEntries(
-        GRIDS.map((grid) => [grid, tallest - measured[grid]!]),
-      ) as Record<GridName, number>;
       console.log(
         `[setup ${size}] body height ${GRIDS.map(
           (grid) =>
             `${GRID_LABELS[grid]} ${measured[grid]}px` +
-            (boxExtraHeight![grid] ? ` (+${boxExtraHeight![grid]}px box)` : ''),
+            (extra[grid] ? ` (box +${extra[grid]}px)` : ''),
         ).join(', ')}`,
       );
 

@@ -249,8 +249,9 @@ set:
 - **Infinite Table:** see [`InfiniteBenchmark.tsx`](./src/benchmark/InfiniteBenchmark.tsx).
 - **Each page loads only its own grid** - its code and its stylesheet.
 - **The same body height.** The setup measures the scrolling body of both
-  grids and makes the box of the shorter one taller, so both render the same
-  number of rows. See "License key" below for why this is needed.
+  grids and makes the box of the shorter one taller until they match, so both
+  render the same number of rows. See "License key" below for why this is
+  needed.
 
 ### Scenarios
 
@@ -272,8 +273,8 @@ AG Grid Community needs no license key. Infinite Table works without one too,
 but shows a "Powered by Infinite Table" footer, which takes 24px from the
 height of its body. Two things keep that from affecting the results:
 
-- the setup makes the Infinite Table box taller by the difference, so the
-  bodies of the two grids have the same height (the report says by how much)
+- the setup makes the Infinite Table box taller, until the bodies of the two
+  grids have the same height (the report says by how much)
 - the footer sets its own inline styles again every second; the "settled"
   metric ignores those mutations, as it ignores screen-reader announcements
 
