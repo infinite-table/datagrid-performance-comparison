@@ -107,11 +107,11 @@ Every metric of every scenario, with standard deviations and confidence interval
 
 ## History
 
-One row for every pair of versions measured so far, newest first. Each cell is **Infinite Table / AG Grid**; all are times in ms, except memory, in MB - lower is better. Rows measured on different machines can't be compared in absolute terms - compare how the two grids relate. The branch of a row has the code, the lockfile and the full results of that run.
+One row for every pair of versions measured so far, newest first. Each cell is **Infinite Table / AG Grid**; all are times in ms, except memory, in MB - lower is better. Rows measured on different machines can't be compared in absolute terms (hosted runners don't all have the same CPU) - compare how the two grids relate. The branch of a row has the code, the lockfile and the full results of that run.
 
 | Infinite Table | AG Grid | Date | Mount 1M | Sort string 1M | Sort number 1M | Memory 1M | Vertical scroll work 300k | Horizontal scroll work 300k | Machine | Results |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
-| 10.1.4 | 36.3.0 | 2026-11-11 | 411 / 611 | 1,380 / 3,088 | 1,140 / 2,710 | 90.7 / 213 | 1,298 / 1,288 | 396 / 600 | GitHub Actions, ubuntu-24.04 | [branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.4_ag-grid-36.3.0) |
+| 10.1.4 | 36.3.0 | 2026-11-11 | 411 / 611 | 1,380 / 3,088 | 1,140 / 2,710 | 90.7 / 213 | 1,298 / 1,288 | 396 / 600 | GitHub Actions, ubuntu-24.04 · AMD EPYC 9V45 96-Core Processor × 4 | [branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.4_ag-grid-36.3.0) |
 
 <!-- results:end -->
 
@@ -205,9 +205,10 @@ Where the results go:
 - **the [history](#history) table** on `master` has a row for every one of
   them, from [`results/history.json`](./results/history.json)
 
-The hosted runners are shared virtual machines without a GPU: slower and
-noisier than a laptop, so the absolute numbers are higher than the ones in the
-blog post, which was measured on an Apple M1 Pro
+The hosted runners are shared virtual machines without a GPU, and their CPU
+can change from one run to the next (the history table says which one it was).
+So the absolute numbers differ between runs, and from the ones in the blog
+post, which was measured on an Apple M1 Pro
 ([`results/blog-post-2026-11-11`](./results/blog-post-2026-11-11)). What the
 benchmark is after is how the two grids relate - every run alternates between
 them, so both get the same conditions.

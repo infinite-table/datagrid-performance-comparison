@@ -458,6 +458,11 @@ function versionBranch(entry: { infinite: string; agGrid: string }) {
 // README
 // ---------------------------------------------------------------------------
 
+/** where a run was measured - hosted runners don't all have the same CPU */
+function machineOf(entry: HistoryEntry) {
+  return entry.runner ? `${entry.runner} · ${entry.machine}` : entry.machine;
+}
+
 function buildReadmeSection(latest: HistoryEntry, history: HistoryEntry[]) {
   const out: string[] = [];
   const date = latest.date.slice(0, 10);
@@ -562,7 +567,7 @@ function buildReadmeSection(latest: HistoryEntry, history: HistoryEntry[]) {
   out.push(
     `One row for every pair of versions measured so far, newest first. ` +
       `Each cell is **Infinite Table / AG Grid**; all are times in ms, except memory, in MB - lower is better. ` +
-      `Rows measured on different machines can't be compared in absolute terms - compare how the two grids relate. ` +
+      `Rows measured on different machines can't be compared in absolute terms (hosted runners don't all have the same CPU) - compare how the two grids relate. ` +
       `The branch of a row has the code, the lockfile and the full results of that run.`,
   );
   out.push('');
@@ -584,9 +589,9 @@ function buildReadmeSection(latest: HistoryEntry, history: HistoryEntry[]) {
       `| ${entry.infinite} | ${entry.agGrid} | ${entry.date.slice(
         0,
         10,
-      )} | ${cells.join(' | ')} | ${
-        entry.runner ?? entry.machine
-      } | [branch](${REPO_URL}/tree/${branch}) |`,
+      )} | ${cells.join(' | ')} | ${machineOf(
+        entry,
+      )} | [branch](${REPO_URL}/tree/${branch}) |`,
     );
   }
 
