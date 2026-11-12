@@ -211,6 +211,17 @@ async function openGrid(
   };
 }
 
+/**
+ * two bodies show the same rows: at most a pixel apart, and with the same
+ * number of rows in view
+ */
+function sameBodyHeight(a: number, b: number) {
+  return (
+    Math.abs(a - b) <= 1 &&
+    Math.ceil(a / BENCH_ROW_HEIGHT) === Math.ceil(b / BENCH_ROW_HEIGHT)
+  );
+}
+
 async function setThrottle(ctx: RunContext, on: boolean) {
   if (CPU_THROTTLE > 1) {
     await ctx.cdp.send('Emulation.setCPUThrottlingRate', {
@@ -945,13 +956,17 @@ for (const size of SIZES) {
       // boxes of the shorter ones taller, measure again. More than one pass,
       // because a grid may not turn every extra pixel of its box into a
       // pixel of body (AG Grid's body grows in steps of 1 or 2).
+      //
+      // "The same" is to within a pixel, with the same number of rows in
+      // view: with 1M rows the body of AG Grid only takes odd heights and
+      // the one of MUI X only even ones, so they can't be made equal.
       const extra: Partial<Record<GridName, number>> = {};
       const measured: Partial<Record<GridName, number>> = {};
       for (const grid of GRIDS) {
         extra[grid] = 0;
       }
       boxExtraHeight = extra;
-      for (let pass = 0; pass < 6; pass++) {
+      for (let pass = 0; pass < 10; pass++) {
         for (const grid of GRIDS) {
           const { ctx, close } = await openGrid(
             browser,
@@ -971,10 +986,13 @@ for (const size of SIZES) {
           }
         }
         const tallest = Math.max(...GRIDS.map((grid) => measured[grid]!));
-        if (GRIDS.every((grid) => measured[grid] === tallest)) {
+        const tooShort = GRIDS.filter(
+          (grid) => !sameBodyHeight(measured[grid]!, tallest),
+        );
+        if (!tooShort.length) {
           break;
         }
-        for (const grid of GRIDS) {
+        for (const grid of tooShort) {
           extra[grid]! += tallest - measured[grid]!;
         }
       }
@@ -1034,15 +1052,22 @@ for (const size of SIZES) {
         expect(rowTexts[grid], `visible texts of ${grid}`).toEqual(
           rowTexts[reference],
         );
+      }
+      const tallestBody = Math.max(...GRIDS.map((g) => bodyHeights[g]!));
+      for (const grid of GRIDS) {
         expect(
-          bodyHeights[grid],
+          sameBodyHeight(bodyHeights[grid]!, tallestBody),
           `the grid bodies differ in height: ${GRIDS.map(
             (g) => `${GRID_LABELS[g]} ${bodyHeights[g]}px`,
           ).join(', ')}`,
-        ).toBe(bodyHeights[reference]);
+        ).toBe(true);
       }
       expect(rowTexts[reference]![17][0]).toBe('18');
       expect(rowCount).toBe(BENCH_SIZES[size]);
+
+      // from here on every page gets its grid's own scrollbar-to-rows
+      // mapping - also when one of the checks below fails
+      scrollInfo[size] = scroll;
 
       // the grids that show every row must map the scrollbar onto the rows
       // the same way, otherwise the same wheel gesture scrolls a different
@@ -1061,7 +1086,6 @@ for (const size of SIZES) {
             .join(', ')}`,
         ).toBeLessThan(0.01);
       }
-      scrollInfo[size] = scroll;
 
       environment = {
         runId: RUN_ID,
@@ -1076,7 +1100,8 @@ for (const size of SIZES) {
         viewport: `${VIEWPORT.width}×${VIEWPORT.height}`,
         versions,
         baseURL: baseURL!,
-        bodyHeight: bodyHeights[reference],
+        bodyHeight: Math.min(...GRIDS.map((g) => bodyHeights[g]!)),
+        bodyHeightMax: tallestBody,
         boxExtraHeight,
       };
       saveResults(testInfo, (stored) => {

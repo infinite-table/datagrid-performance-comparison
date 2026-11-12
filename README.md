@@ -244,11 +244,9 @@ Where the results go:
 
 The hosted runners are shared virtual machines without a GPU, and their CPU
 can change from one run to the next (the history table says which one it was).
-So the absolute numbers differ between runs, and from the ones in the blog
-post, which was measured on an Apple M1 Pro
-([`results/blog-post-2026-11-12`](./results/blog-post-2026-11-12)). What the
-benchmark is after is how the grids relate - every run goes through all of
-them in turn, so they get the same conditions.
+So the absolute numbers differ between runs. What the benchmark is after is
+how the grids relate - every run goes through all of them in turn, so they
+get the same conditions.
 
 If a run fails, the workflow opens an issue and stops trying those versions
 until the issue is closed.
@@ -284,7 +282,9 @@ Each grid is on its defaults. Only what makes the layouts identical is set:
 - **The same body height.** The setup measures the scrolling body of every
   grid and makes the boxes of the shorter ones taller until they match, so
   all of them render the same number of rows. MUI's footer takes room from
-  its body, and see "License key" below for Infinite Table.
+  its body, and see "License key" below for Infinite Table. With 1M rows the
+  bodies match to within a pixel: there, AG Grid's body only takes odd
+  heights and MUI's only even ones.
 
 What is set for each grid, and why:
 

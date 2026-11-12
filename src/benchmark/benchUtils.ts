@@ -401,8 +401,12 @@ export type BenchEnvironment = {
   viewport: string;
   versions: Partial<Record<GridName, string>>;
   baseURL: string;
-  /** height (px) of the scrolling body - the same for all the grids */
+  /**
+   * height (px) of the scrolling body - the same for all the grids, to
+   * within a pixel: `bodyHeightMax` is the tallest one
+   */
   bodyHeight?: number;
+  bodyHeightMax?: number;
   /**
    * px added to the box of each grid so the bodies have the same height -
    * e.g. to make up for the footer Infinite Table renders when it has no
@@ -621,7 +625,11 @@ function bodyHeightLine(env: BenchEnvironment) {
     (grid) => `${GRID_LABELS[grid]} +${env.boxExtraHeight![grid]} px`,
   );
   return (
-    `\n- Grid body: ${env.bodyHeight} px high in every grid` +
+    `\n- Grid body: ${
+      env.bodyHeightMax != null && env.bodyHeightMax !== env.bodyHeight
+        ? `${env.bodyHeight}-${env.bodyHeightMax} px high, with the same number of rows in view in every grid`
+        : `${env.bodyHeight} px high in every grid`
+    }` +
     (extra.length
       ? ` (to get there, the setup made the boxes taller: ${extra.join(', ')})`
       : '')
