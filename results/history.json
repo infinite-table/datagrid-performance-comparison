@@ -1,29 +1,29 @@
 [
   {
     "versions": {
-      "ag-grid": "36.3.0",
       "mui": "9.17.0",
+      "ag-grid": "36.3.0",
       "tanstack": "9.3.1",
       "infinite": "10.1.5"
     },
-    "date": "2026-11-12T11:39:14.456Z",
+    "date": "2026-11-12T13:40:57.894Z",
     "chrome": "136.0.7103.25",
     "headless": true,
     "runs": 7,
-    "machine": "Apple M1 Pro × 10",
-    "os": "Darwin 24.1.0 arm64",
-    "runner": null,
+    "machine": "AMD EPYC 9V74 80-Core Processor × 4",
+    "os": "Linux 7.0.0-1017-azure x64",
+    "runner": "GitHub Actions, ubuntu-24.04",
     "metrics": {
       "300k/mount/visibleMs": {
         "values": {
-          "ag-grid": 192.169,
-          "mui": 94.029,
-          "tanstack": 108.614,
-          "infinite": 135.223
+          "mui": 275.381,
+          "ag-grid": 322.82,
+          "tanstack": 232.162,
+          "infinite": 246.428
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -31,14 +31,14 @@
       },
       "300k/mount/settledMs": {
         "values": {
-          "ag-grid": 295.347,
-          "mui": 94.029,
-          "tanstack": 108.614,
-          "infinite": 136.02
+          "mui": 275.381,
+          "ag-grid": 425.462,
+          "tanstack": 232.162,
+          "infinite": 246.428
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -46,14 +46,14 @@
       },
       "300k/mount/scriptMs": {
         "values": {
-          "ag-grid": 175.83400000000003,
-          "mui": 82.63099999999999,
-          "tanstack": 101.42500000000001,
-          "infinite": 121.57200000000002
+          "mui": 255.52599999999998,
+          "ag-grid": 297.0559999999999,
+          "tanstack": 219.89399999999998,
+          "infinite": 226.01500000000001
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -61,14 +61,14 @@
       },
       "300k/mount/layoutMs": {
         "values": {
-          "ag-grid": 6.811999999999999,
-          "mui": 5.805,
-          "tanstack": 3.7370000000000005,
-          "infinite": 2.1260000000000003
+          "mui": 6.871,
+          "ag-grid": 7.110999999999999,
+          "tanstack": 6.592,
+          "infinite": 3.5839999999999996
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -76,14 +76,14 @@
       },
       "300k/mount/styleMs": {
         "values": {
-          "ag-grid": 7.121,
-          "mui": 2.668,
-          "tanstack": 1.0600000000000003,
-          "infinite": 3.914
+          "mui": 7.3870000000000005,
+          "ag-grid": 11.921000000000001,
+          "tanstack": 2.578,
+          "infinite": 6.835000000000001
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -91,14 +91,14 @@
       },
       "300k/mount/taskMs": {
         "values": {
-          "ag-grid": 201.72099999999998,
-          "mui": 117.76399999999998,
-          "tanstack": 114.78399999999996,
-          "infinite": 139.918
+          "mui": 307.94999999999993,
+          "ag-grid": 331.8,
+          "tanstack": 234.15199999999996,
+          "infinite": 250.10000000000005
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -106,14 +106,14 @@
       },
       "300k/mount/heapMB": {
         "values": {
-          "ag-grid": 67.4886589050293,
-          "mui": 27.23428726196289,
-          "tanstack": 86.63402557373047,
-          "infinite": 36.57285690307617
+          "mui": 53.942047119140625,
+          "ag-grid": 67.43771362304688,
+          "tanstack": 86.62832641601562,
+          "infinite": 36.622718811035156
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "infinite"
         },
         "unit": "MB",
@@ -121,14 +121,14 @@
       },
       "300k/mount/gridElements": {
         "values": {
+          "mui": 529,
           "ag-grid": 637,
-          "mui": 535,
           "tanstack": 352,
           "infinite": 609
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "mui",
+          "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
         "unit": "",
@@ -136,14 +136,14 @@
       },
       "300k/sort-string/ascVisibleMs": {
         "values": {
-          "ag-grid": 799.646,
-          "mui": 847.71,
-          "tanstack": 1005.466,
-          "infinite": 339.818
+          "mui": 1274.858,
+          "ag-grid": 969.089,
+          "tanstack": 1354.43,
+          "infinite": 487.1
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -151,14 +151,14 @@
       },
       "300k/sort-string/ascSettledMs": {
         "values": {
-          "ag-grid": 799.646,
-          "mui": 847.71,
-          "tanstack": 1005.466,
-          "infinite": 346.787
+          "mui": 1274.858,
+          "ag-grid": 969.089,
+          "tanstack": 1354.43,
+          "infinite": 498.876
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -166,14 +166,14 @@
       },
       "300k/sort-string/descVisibleMs": {
         "values": {
-          "ag-grid": 816.052,
-          "mui": 845.678,
-          "tanstack": 1040.251,
-          "infinite": 332.584
+          "mui": 1204.507,
+          "ag-grid": 1007.66,
+          "tanstack": 1354.117,
+          "infinite": 570.932
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -181,14 +181,14 @@
       },
       "300k/sort-string/descSettledMs": {
         "values": {
-          "ag-grid": 816.052,
-          "mui": 845.678,
-          "tanstack": 1040.251,
-          "infinite": 332.584
+          "mui": 1204.507,
+          "ag-grid": 1007.66,
+          "tanstack": 1354.117,
+          "infinite": 570.932
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -196,14 +196,14 @@
       },
       "300k/sort-string/ascScriptMs": {
         "values": {
-          "ag-grid": 786.7489999999999,
-          "mui": 838.8970000000002,
-          "tanstack": 999.922,
-          "infinite": 326.189
+          "mui": 1262.4370000000001,
+          "ag-grid": 950.988,
+          "tanstack": 1345.437,
+          "infinite": 472.641
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -211,14 +211,14 @@
       },
       "300k/sort-string/descScriptMs": {
         "values": {
-          "ag-grid": 806.6249999999999,
-          "mui": 840.3569999999997,
-          "tanstack": 1035.9769999999999,
-          "infinite": 319.10499999999996
+          "mui": 1196.2679999999998,
+          "ag-grid": 992.8530000000002,
+          "tanstack": 1346.64,
+          "infinite": 554.791
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -226,14 +226,14 @@
       },
       "300k/sort-number/ascVisibleMs": {
         "values": {
-          "ag-grid": 652.939,
-          "mui": 346.287,
-          "tanstack": 760.039,
-          "infinite": 276.561
+          "mui": 649.203,
+          "ag-grid": 879.432,
+          "tanstack": 1082.871,
+          "infinite": 397.661
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -241,14 +241,14 @@
       },
       "300k/sort-number/ascSettledMs": {
         "values": {
-          "ag-grid": 652.939,
-          "mui": 346.287,
-          "tanstack": 760.039,
-          "infinite": 285.539
+          "mui": 649.203,
+          "ag-grid": 879.432,
+          "tanstack": 1082.871,
+          "infinite": 413.852
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -256,14 +256,14 @@
       },
       "300k/sort-number/descVisibleMs": {
         "values": {
-          "ag-grid": 645.441,
-          "mui": 426.833,
-          "tanstack": 728.189,
-          "infinite": 280.162
+          "mui": 885.911,
+          "ag-grid": 861.197,
+          "tanstack": 1019.254,
+          "infinite": 388.969
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -271,14 +271,14 @@
       },
       "300k/sort-number/descSettledMs": {
         "values": {
-          "ag-grid": 645.441,
-          "mui": 426.833,
-          "tanstack": 728.189,
-          "infinite": 280.162
+          "mui": 885.911,
+          "ag-grid": 861.197,
+          "tanstack": 1019.254,
+          "infinite": 388.969
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -286,14 +286,14 @@
       },
       "300k/sort-number/ascScriptMs": {
         "values": {
-          "ag-grid": 642.216,
-          "mui": 336.39200000000005,
-          "tanstack": 754.671,
-          "infinite": 271.267
+          "mui": 637.198,
+          "ag-grid": 859.9469999999999,
+          "tanstack": 1074.344,
+          "infinite": 384.5370000000001
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -301,14 +301,14 @@
       },
       "300k/sort-number/descScriptMs": {
         "values": {
-          "ag-grid": 635.7230000000001,
-          "mui": 421.5549999999999,
-          "tanstack": 723.152,
-          "infinite": 270.96799999999996
+          "mui": 877.3979999999999,
+          "ag-grid": 846.9870000000002,
+          "tanstack": 1011.8429999999998,
+          "infinite": 372.9579999999999
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -316,11 +316,13 @@
       },
       "300k/scroll-jump/visibleMs": {
         "values": {
-          "ag-grid": 28.7785,
-          "tanstack": 9.873000000000001,
-          "infinite": 28.496000000000002
+          "mui": 23.572,
+          "ag-grid": 34.8535,
+          "tanstack": 12.189,
+          "infinite": 35.340999999999994
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "≈",
           "tanstack": "tanstack"
         },
@@ -329,12 +331,14 @@
       },
       "300k/scroll-jump/visibleMaxMs": {
         "values": {
-          "ag-grid": 46.517,
-          "tanstack": 12.924,
-          "infinite": 34.298
+          "mui": 34.825,
+          "ag-grid": 59.621,
+          "tanstack": 23.643,
+          "infinite": 46.64
         },
         "winners": {
-          "ag-grid": "≈",
+          "mui": "mui",
+          "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -342,11 +346,13 @@
       },
       "300k/scroll-jump/settledMs": {
         "values": {
-          "ag-grid": 28.7785,
-          "tanstack": 9.873000000000001,
-          "infinite": 28.496000000000002
+          "mui": 23.572,
+          "ag-grid": 34.8535,
+          "tanstack": 12.189,
+          "infinite": 35.340999999999994
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "≈",
           "tanstack": "tanstack"
         },
@@ -355,12 +361,14 @@
       },
       "300k/scroll-jump/scriptMs": {
         "values": {
-          "ag-grid": 161.04100000000005,
-          "tanstack": 79.793,
-          "infinite": 172.91899999999998
+          "mui": 150.46900000000002,
+          "ag-grid": 226.17399999999998,
+          "tanstack": 81.50400000000002,
+          "infinite": 202.61199999999997
         },
         "winners": {
-          "ag-grid": "≈",
+          "mui": "mui",
+          "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -368,76 +376,88 @@
       },
       "300k/scroll-vertical/presentedAllPct": {
         "values": {
-          "ag-grid": 52.34159779614325,
-          "tanstack": 100,
-          "infinite": 56.43835616438356
+          "mui": 50.27472527472527,
+          "ag-grid": 51.12359550561798,
+          "tanstack": 50.27624309392266,
+          "infinite": 59.11602209944752
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "higher"
       },
       "300k/scroll-vertical/partialPct": {
         "values": {
-          "ag-grid": 47.658402203856745,
-          "tanstack": 0,
-          "infinite": 43.56164383561644
+          "mui": 49.45054945054945,
+          "ag-grid": 48.59550561797753,
+          "tanstack": 49.447513812154696,
+          "infinite": 40.88397790055249
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-vertical/droppedPct": {
         "values": {
-          "ag-grid": 0,
-          "tanstack": 0,
+          "mui": 0.27472527472527475,
+          "ag-grid": 0.2808988764044944,
+          "tanstack": 0.2762430939226519,
           "infinite": 0
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-vertical/rafFps": {
         "values": {
-          "ag-grid": 59.99804114503505,
-          "tanstack": 59.99675693205773,
-          "infinite": 59.67741935483871
+          "mui": 60.0038712174979,
+          "ag-grid": 60.00193554630795,
+          "tanstack": 60.00259470679813,
+          "infinite": 59.03416239233523
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
-          "tanstack": "≈"
+          "tanstack": "tanstack"
         },
         "unit": "fps",
         "better": "higher"
       },
       "300k/scroll-vertical/p95FrameMs": {
         "values": {
-          "ag-grid": 16.980000000000018,
-          "tanstack": 17.18499999999983,
-          "infinite": 17.09999999999991
+          "mui": 16.774999999999636,
+          "ag-grid": 16.774999999999636,
+          "tanstack": 16.700000000000728,
+          "infinite": 16.799999999999727
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
-          "tanstack": "≈"
+          "tanstack": "tanstack"
         },
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/maxFrameMs": {
         "values": {
-          "ag-grid": 17.59999999999991,
-          "tanstack": 17.699999999999818,
-          "infinite": 33.299999999999955
+          "mui": 16.800000000000182,
+          "ag-grid": 16.800000000000182,
+          "tanstack": 16.800000000000182,
+          "infinite": 50
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -446,24 +466,28 @@
       },
       "300k/scroll-vertical/longFramesPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
-          "infinite": 0.5405405405405406
+          "infinite": 1.092896174863388
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-vertical/loafBlockingMs": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -472,11 +496,13 @@
       },
       "300k/scroll-vertical/scriptMs": {
         "values": {
-          "ag-grid": 437.83199999999994,
-          "tanstack": 282.0919999999999,
-          "infinite": 507.17100000000005
+          "mui": 677.491,
+          "ag-grid": 659.858,
+          "tanstack": 428.426,
+          "infinite": 770.8040000000001
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -485,24 +511,28 @@
       },
       "300k/scroll-vertical/layoutMs": {
         "values": {
-          "ag-grid": 86.28000000000002,
-          "tanstack": 64.32499999999999,
-          "infinite": 55.24100000000001
+          "mui": 72.032,
+          "ag-grid": 111.175,
+          "tanstack": 92.08899999999998,
+          "infinite": 87.801
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "ms",
         "better": "lower"
       },
       "300k/scroll-vertical/styleMs": {
         "values": {
-          "ag-grid": 187.979,
-          "tanstack": 29.618,
-          "infinite": 134.50799999999998
+          "mui": 100.25200000000001,
+          "ag-grid": 296.012,
+          "tanstack": 49.467,
+          "infinite": 202.38400000000001
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
@@ -511,12 +541,14 @@
       },
       "300k/scroll-vertical/taskMs": {
         "values": {
-          "ag-grid": 1099.42,
-          "tanstack": 688.5659999999999,
-          "infinite": 1099.022
+          "mui": 1624.5029999999997,
+          "ag-grid": 1630.0240000000001,
+          "tanstack": 1013.0439999999999,
+          "infinite": 1738.648
         },
         "winners": {
-          "ag-grid": "≈",
+          "mui": "mui",
+          "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -524,63 +556,73 @@
       },
       "300k/scroll-horizontal/presentedAllPct": {
         "values": {
-          "ag-grid": 86.98630136986301,
-          "tanstack": 100,
-          "infinite": 88.81118881118881
+          "mui": 79.3103448275862,
+          "ag-grid": 76.38888888888889,
+          "tanstack": 71.42857142857143,
+          "infinite": 95.0354609929078
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "tanstack"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "higher"
       },
       "300k/scroll-horizontal/partialPct": {
         "values": {
-          "ag-grid": 13.013698630136986,
-          "tanstack": 0,
-          "infinite": 11.188811188811188
+          "mui": 19.310344827586206,
+          "ag-grid": 22.22222222222222,
+          "tanstack": 27.500000000000004,
+          "infinite": 4.964539007092199
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "tanstack"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-horizontal/droppedPct": {
         "values": {
-          "ag-grid": 0,
-          "tanstack": 0,
+          "mui": 0.7142857142857143,
+          "ag-grid": 1.36986301369863,
+          "tanstack": 0.7042253521126761,
           "infinite": 0
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/scroll-horizontal/rafFps": {
         "values": {
-          "ag-grid": 59.99707331349689,
-          "tanstack": 59.99998032787529,
-          "infinite": 59.99900489455298
+          "mui": 60.003851860167806,
+          "ag-grid": 60.00193176951063,
+          "tanstack": 60.00193554630795,
+          "infinite": 60.0030001500075
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "fps",
         "better": "higher"
       },
       "300k/scroll-horizontal/p95FrameMs": {
         "values": {
-          "ag-grid": 17.49000000000001,
-          "tanstack": 17.59999999999991,
-          "infinite": 17.569999999999936
+          "mui": 16.799999999999727,
+          "ag-grid": 16.794999999999753,
+          "tanstack": 16.789999999999782,
+          "infinite": 16.700000000000273
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -589,11 +631,13 @@
       },
       "300k/scroll-horizontal/maxFrameMs": {
         "values": {
-          "ag-grid": 17.799999999999727,
-          "tanstack": 17.700000000000273,
-          "infinite": 17.700000000000045
+          "mui": 16.800000000000182,
+          "ag-grid": 16.800000000000182,
+          "tanstack": 16.800000000000182,
+          "infinite": 16.800000000000182
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -602,11 +646,13 @@
       },
       "300k/scroll-horizontal/longFramesPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -615,11 +661,13 @@
       },
       "300k/scroll-horizontal/loafBlockingMs": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -628,11 +676,13 @@
       },
       "300k/scroll-horizontal/scriptMs": {
         "values": {
-          "ag-grid": 179.68700000000004,
-          "tanstack": 206.55100000000004,
-          "infinite": 117.898
+          "mui": 400.83599999999996,
+          "ag-grid": 270.259,
+          "tanstack": 176.626,
+          "infinite": 164.527
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
           "tanstack": "infinite"
         },
@@ -641,11 +691,13 @@
       },
       "300k/scroll-horizontal/layoutMs": {
         "values": {
-          "ag-grid": 53.18900000000001,
-          "tanstack": 36.225,
-          "infinite": 8.901
+          "mui": 49.114000000000004,
+          "ag-grid": 78.939,
+          "tanstack": 54.562,
+          "infinite": 11.866999999999999
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
           "tanstack": "infinite"
         },
@@ -654,11 +706,13 @@
       },
       "300k/scroll-horizontal/styleMs": {
         "values": {
-          "ag-grid": 31.465,
-          "tanstack": 10.690000000000001,
-          "infinite": 38.189
+          "mui": 24.461999999999996,
+          "ag-grid": 46.702999999999996,
+          "tanstack": 15.712,
+          "infinite": 53.424
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -667,11 +721,13 @@
       },
       "300k/scroll-horizontal/taskMs": {
         "values": {
-          "ag-grid": 455.6500000000001,
-          "tanstack": 403.361,
-          "infinite": 341.972
+          "mui": 748.694,
+          "ag-grid": 721.4490000000001,
+          "tanstack": 537.765,
+          "infinite": 495.1469999999999
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
           "tanstack": "infinite"
         },
@@ -680,11 +736,13 @@
       },
       "300k/correctness-vertical/blankPct": {
         "values": {
-          "ag-grid": 1.8421052631578945,
-          "tanstack": 2.0253164556962027,
+          "mui": 0,
+          "ag-grid": 1.8181818181818181,
+          "tanstack": 2.5316455696202533,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
           "tanstack": "infinite"
         },
@@ -693,11 +751,13 @@
       },
       "300k/correctness-vertical/wrongPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
-          "infinite": 64.66165413533834
+          "infinite": 69.01155327342747
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -706,11 +766,13 @@
       },
       "300k/correctness-vertical/badFramesPct": {
         "values": {
-          "ag-grid": 9.210526315789473,
-          "tanstack": 10.126582278481013,
-          "infinite": 86.36363636363636
+          "mui": 0,
+          "ag-grid": 9.090909090909092,
+          "tanstack": 12.658227848101266,
+          "infinite": 83.33333333333334
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -719,11 +781,13 @@
       },
       "300k/correctness-vertical/worstFrameOkPct": {
         "values": {
+          "mui": 100,
           "ag-grid": 80,
           "tanstack": 80,
           "infinite": 0
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -732,11 +796,13 @@
       },
       "300k/correctness-horizontal/blankPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -745,11 +811,13 @@
       },
       "300k/correctness-horizontal/wrongPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -758,11 +826,13 @@
       },
       "300k/correctness-horizontal/badFramesPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -771,11 +841,13 @@
       },
       "300k/correctness-horizontal/worstFrameOkPct": {
         "values": {
+          "mui": 100,
           "ag-grid": 100,
           "tanstack": 100,
           "infinite": 100
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -784,126 +856,134 @@
       },
       "300k/visual-blank-vertical/blankFramesPct": {
         "values": {
-          "ag-grid": 2.7027027027027026,
-          "tanstack": 0,
+          "mui": 0,
+          "ag-grid": 25.925925925925924,
+          "tanstack": 2.857142857142857,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/visual-blank-vertical/blankAreaPct": {
         "values": {
-          "ag-grid": 0.4370947767174182,
-          "tanstack": 0,
+          "mui": 0,
+          "ag-grid": 5.598040685759984,
+          "tanstack": 0.4827613951804321,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "300k/visual-blank-vertical/maxBlankRows": {
         "values": {
-          "ag-grid": 3,
-          "tanstack": 0,
+          "mui": 0,
+          "ag-grid": 13,
+          "tanstack": 5,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "rows",
         "better": "lower"
       },
       "300k/visual-blank-vertical/capturedFrames": {
         "values": {
-          "ag-grid": 74,
-          "tanstack": 73,
-          "infinite": 74
+          "mui": 69,
+          "ag-grid": 55,
+          "tanstack": 70,
+          "infinite": 72
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "",
         "better": "higher"
       },
       "1m/mount/visibleMs": {
         "values": {
-          "ag-grid": 467.139,
-          "mui": 143.712,
-          "tanstack": 373.401,
-          "infinite": 318.124
+          "mui": 744.809,
+          "ag-grid": 808.459,
+          "tanstack": 658.539,
+          "infinite": 565.054
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/settledMs": {
         "values": {
-          "ag-grid": 570.165,
-          "mui": 143.712,
-          "tanstack": 373.401,
-          "infinite": 329.111
+          "mui": 744.809,
+          "ag-grid": 911.238,
+          "tanstack": 658.539,
+          "infinite": 566.705
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/scriptMs": {
         "values": {
-          "ag-grid": 449.0729999999999,
-          "mui": 131.419,
-          "tanstack": 365.813,
-          "infinite": 306.968
+          "mui": 730.7139999999998,
+          "ag-grid": 781.937,
+          "tanstack": 647.79,
+          "infinite": 542.263
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/layoutMs": {
         "values": {
-          "ag-grid": 7.046,
-          "mui": 6.175000000000001,
-          "tanstack": 3.631,
-          "infinite": 2.255000000000001
+          "mui": 4.6499999999999995,
+          "ag-grid": 7.414,
+          "tanstack": 4.343999999999999,
+          "infinite": 3.8910000000000005
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
-          "tanstack": "infinite"
+          "ag-grid": "infinite",
+          "tanstack": "≈"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/styleMs": {
         "values": {
-          "ag-grid": 7.659,
-          "mui": 2.89,
-          "tanstack": 0.889,
-          "infinite": 3.95
+          "mui": 4.812,
+          "ag-grid": 11.863999999999999,
+          "tanstack": 1.863,
+          "infinite": 8.695
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "mui",
+          "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -911,29 +991,29 @@
       },
       "1m/mount/taskMs": {
         "values": {
-          "ag-grid": 476.62599999999986,
-          "mui": 219.1850000000001,
-          "tanstack": 374.77399999999994,
-          "infinite": 321.43100000000004
+          "mui": 748.075,
+          "ag-grid": 824.665,
+          "tanstack": 660.8910000000001,
+          "infinite": 568.777
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/mount/heapMB": {
         "values": {
-          "ag-grid": 213.47396850585938,
-          "mui": 78.82817459106445,
-          "tanstack": 286.8451614379883,
-          "infinite": 90.68833923339844
+          "mui": 149.8776626586914,
+          "ag-grid": 213.3769073486328,
+          "tanstack": 286.8395195007324,
+          "infinite": 90.69598007202148
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "mui": "mui",
           "tanstack": "infinite"
         },
         "unit": "MB",
@@ -941,14 +1021,14 @@
       },
       "1m/mount/gridElements": {
         "values": {
+          "mui": 529,
           "ag-grid": 637,
-          "mui": 535,
           "tanstack": 352,
           "infinite": 609
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "mui",
+          "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
         "unit": "",
@@ -956,14 +1036,14 @@
       },
       "1m/sort-string/ascVisibleMs": {
         "values": {
-          "ag-grid": 3353.097,
-          "mui": 3492.853,
-          "tanstack": 4097.51,
-          "infinite": 1304.571
+          "mui": 5466.138,
+          "ag-grid": 4066.575,
+          "tanstack": 6082.879,
+          "infinite": 2120.094
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -971,14 +1051,14 @@
       },
       "1m/sort-string/ascSettledMs": {
         "values": {
-          "ag-grid": 3353.097,
-          "mui": 3492.853,
-          "tanstack": 4097.51,
-          "infinite": 1311.714
+          "mui": 5466.138,
+          "ag-grid": 4066.575,
+          "tanstack": 6082.879,
+          "infinite": 2129.089
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -986,14 +1066,14 @@
       },
       "1m/sort-string/descVisibleMs": {
         "values": {
-          "ag-grid": 3179.423,
-          "mui": 3590.231,
-          "tanstack": 4098.365,
-          "infinite": 1338.338
+          "mui": 5477.642,
+          "ag-grid": 4140.539,
+          "tanstack": 5848.057,
+          "infinite": 2430.549
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1001,14 +1081,14 @@
       },
       "1m/sort-string/descSettledMs": {
         "values": {
-          "ag-grid": 3179.423,
-          "mui": 3590.231,
-          "tanstack": 4098.365,
-          "infinite": 1338.338
+          "mui": 5477.642,
+          "ag-grid": 4140.539,
+          "tanstack": 5848.057,
+          "infinite": 2430.549
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1016,14 +1096,14 @@
       },
       "1m/sort-string/ascScriptMs": {
         "values": {
-          "ag-grid": 3340.746,
-          "mui": 3484.818,
-          "tanstack": 4091.997999999999,
-          "infinite": 1294.4590000000003
+          "mui": 5454.356,
+          "ag-grid": 4048.4770000000003,
+          "tanstack": 6074.348000000001,
+          "infinite": 2106.3030000000003
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1031,14 +1111,14 @@
       },
       "1m/sort-string/descScriptMs": {
         "values": {
-          "ag-grid": 3170.14,
-          "mui": 3585.4039999999995,
-          "tanstack": 4093.7529999999997,
-          "infinite": 1324.3079999999998
+          "mui": 5469.2080000000005,
+          "ag-grid": 4125.866,
+          "tanstack": 5839.875999999999,
+          "infinite": 2415.1830000000004
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1046,14 +1126,14 @@
       },
       "1m/sort-number/ascVisibleMs": {
         "values": {
-          "ag-grid": 2892.677,
-          "mui": 1545.652,
-          "tanstack": 3583.546,
-          "infinite": 1138.978
+          "mui": 2595.92,
+          "ag-grid": 3306.319,
+          "tanstack": 4510.272,
+          "infinite": 1373.75
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1061,14 +1141,14 @@
       },
       "1m/sort-number/ascSettledMs": {
         "values": {
-          "ag-grid": 2892.677,
-          "mui": 1545.652,
-          "tanstack": 3583.546,
-          "infinite": 1142.985
+          "mui": 2595.92,
+          "ag-grid": 3306.319,
+          "tanstack": 4510.272,
+          "infinite": 1382.897
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1076,14 +1156,14 @@
       },
       "1m/sort-number/descVisibleMs": {
         "values": {
-          "ag-grid": 3015.706,
-          "mui": 2006.714,
-          "tanstack": 3516.346,
-          "infinite": 1186.79
+          "mui": 3760.102,
+          "ag-grid": 3379.034,
+          "tanstack": 4526.637,
+          "infinite": 1478.539
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1091,14 +1171,14 @@
       },
       "1m/sort-number/descSettledMs": {
         "values": {
-          "ag-grid": 3015.706,
-          "mui": 2006.714,
-          "tanstack": 3516.346,
-          "infinite": 1186.79
+          "mui": 3760.102,
+          "ag-grid": 3379.034,
+          "tanstack": 4526.637,
+          "infinite": 1478.539
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1106,14 +1186,14 @@
       },
       "1m/sort-number/ascScriptMs": {
         "values": {
-          "ag-grid": 2880.322,
-          "mui": 1537.4220000000003,
-          "tanstack": 3578.7559999999994,
-          "infinite": 1131.789
+          "mui": 2582.915,
+          "ag-grid": 3287.912,
+          "tanstack": 4502.1,
+          "infinite": 1360.328
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1121,14 +1201,14 @@
       },
       "1m/sort-number/descScriptMs": {
         "values": {
-          "ag-grid": 3006.5180000000005,
-          "mui": 2001.69,
-          "tanstack": 3511.6079999999997,
-          "infinite": 1175.863
+          "mui": 3751.1310000000003,
+          "ag-grid": 3364.6010000000006,
+          "tanstack": 4518.657000000001,
+          "infinite": 1462.218
         },
         "winners": {
-          "ag-grid": "infinite",
           "mui": "infinite",
+          "ag-grid": "infinite",
           "tanstack": "infinite"
         },
         "unit": "ms",
@@ -1136,11 +1216,13 @@
       },
       "1m/scroll-jump/visibleMs": {
         "values": {
-          "ag-grid": 20.1445,
-          "tanstack": 7.182,
-          "infinite": 24.131999999999998
+          "mui": 21.753,
+          "ag-grid": 34.9005,
+          "tanstack": 12.487,
+          "infinite": 40.036
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -1149,12 +1231,14 @@
       },
       "1m/scroll-jump/visibleMaxMs": {
         "values": {
-          "ag-grid": 34.438,
-          "tanstack": 14.629,
-          "infinite": 30.63
+          "mui": 41.172,
+          "ag-grid": 68.246,
+          "tanstack": 34.55,
+          "infinite": 51.515
         },
         "winners": {
-          "ag-grid": "≈",
+          "mui": "mui",
+          "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -1162,11 +1246,13 @@
       },
       "1m/scroll-jump/settledMs": {
         "values": {
-          "ag-grid": 20.1445,
-          "tanstack": 7.182,
-          "infinite": 24.131999999999998
+          "mui": 21.753,
+          "ag-grid": 34.9005,
+          "tanstack": 12.487,
+          "infinite": 40.036
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -1175,12 +1261,14 @@
       },
       "1m/scroll-jump/scriptMs": {
         "values": {
-          "ag-grid": 123.691,
-          "tanstack": 46.20600000000008,
-          "infinite": 141.23399999999998
+          "mui": 147.37599999999995,
+          "ag-grid": 231.50800000000004,
+          "tanstack": 81.42199999999988,
+          "infinite": 236.45899999999997
         },
         "winners": {
-          "ag-grid": "ag-grid",
+          "mui": "mui",
+          "ag-grid": "≈",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -1188,38 +1276,44 @@
       },
       "1m/scroll-vertical/presentedAllPct": {
         "values": {
-          "ag-grid": 53.71900826446281,
-          "tanstack": 100,
-          "infinite": 54.09836065573771
+          "mui": 50.27472527472527,
+          "ag-grid": 49.85994397759104,
+          "tanstack": 50.27472527472527,
+          "infinite": 65.15580736543909
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "tanstack"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "higher"
       },
       "1m/scroll-vertical/partialPct": {
         "values": {
-          "ag-grid": 46.28099173553719,
-          "tanstack": 0,
-          "infinite": 45.90163934426229
+          "mui": 49.447513812154696,
+          "ag-grid": 49.157303370786515,
+          "tanstack": 49.447513812154696,
+          "infinite": 34.27762039660057
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "tanstack"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "1m/scroll-vertical/droppedPct": {
         "values": {
-          "ag-grid": 0,
-          "tanstack": 0,
+          "mui": 0.2762430939226519,
+          "ag-grid": 1.1142061281337048,
+          "tanstack": 0.2762430939226519,
           "infinite": 0
         },
         "winners": {
-          "ag-grid": "≈",
+          "mui": "≈",
+          "ag-grid": "infinite",
           "tanstack": "≈"
         },
         "unit": "%",
@@ -1227,63 +1321,73 @@
       },
       "1m/scroll-vertical/rafFps": {
         "values": {
-          "ag-grid": 59.96452421373936,
-          "tanstack": 59.954382535027705,
-          "infinite": 59.95165189363417
+          "mui": 60.00259470679813,
+          "ag-grid": 59.03606684302213,
+          "tanstack": 60.00193303524805,
+          "infinite": 55.46185781006747
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
         },
         "unit": "fps",
         "better": "higher"
       },
       "1m/scroll-vertical/p95FrameMs": {
         "values": {
-          "ag-grid": 17.3699999999998,
-          "tanstack": 17.485000000000014,
-          "infinite": 17.399999999999977
+          "mui": 16.700000000000728,
+          "ag-grid": 16.800000000000182,
+          "tanstack": 16.700000000000728,
+          "infinite": 16.800000000000182
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "≈",
-          "tanstack": "≈"
+          "tanstack": "tanstack"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/maxFrameMs": {
         "values": {
-          "ag-grid": 17.600000000000364,
-          "tanstack": 17.700000000000273,
-          "infinite": 17.700000000000728
+          "mui": 16.800000000000182,
+          "ag-grid": 33.30000000000018,
+          "tanstack": 16.800000000000182,
+          "infinite": 116.59999999999991
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/scroll-vertical/longFramesPct": {
         "values": {
-          "ag-grid": 0,
+          "mui": 0,
+          "ag-grid": 1.639344262295082,
           "tanstack": 0,
-          "infinite": 0
+          "infinite": 3.508771929824561
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
         },
         "unit": "%",
         "better": "lower"
       },
       "1m/scroll-vertical/loafBlockingMs": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1292,11 +1396,13 @@
       },
       "1m/scroll-vertical/scriptMs": {
         "values": {
-          "ag-grid": 499.46000000000004,
-          "tanstack": 225.7379999999999,
-          "infinite": 558.928
+          "mui": 702.8349999999999,
+          "ag-grid": 865.362,
+          "tanstack": 444.79199999999986,
+          "infinite": 907.6430000000003
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -1305,11 +1411,13 @@
       },
       "1m/scroll-vertical/layoutMs": {
         "values": {
-          "ag-grid": 85.165,
-          "tanstack": 57.993,
-          "infinite": 63.40800000000001
+          "mui": 72.70800000000001,
+          "ag-grid": 120.431,
+          "tanstack": 93.871,
+          "infinite": 104.927
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
@@ -1318,11 +1426,13 @@
       },
       "1m/scroll-vertical/styleMs": {
         "values": {
-          "ag-grid": 265.897,
-          "tanstack": 26.199,
-          "infinite": 150.677
+          "mui": 102.983,
+          "ag-grid": 466.144,
+          "tanstack": 52.08,
+          "infinite": 275.918
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
@@ -1331,11 +1441,13 @@
       },
       "1m/scroll-vertical/taskMs": {
         "values": {
-          "ag-grid": 1344.8220000000001,
-          "tanstack": 622.913,
-          "infinite": 1181.0459999999998
+          "mui": 1692.84,
+          "ag-grid": 2154.694,
+          "tanstack": 1102.56,
+          "infinite": 2081.457
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "infinite",
           "tanstack": "tanstack"
         },
@@ -1344,50 +1456,58 @@
       },
       "1m/scroll-horizontal/presentedAllPct": {
         "values": {
-          "ag-grid": 93.61702127659575,
-          "tanstack": 100,
-          "infinite": 89.43661971830986
+          "mui": 67.2514619883041,
+          "ag-grid": 90.83333333333333,
+          "tanstack": 80.28169014084507,
+          "infinite": 88.1578947368421
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "≈",
-          "tanstack": "tanstack"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "higher"
       },
       "1m/scroll-horizontal/partialPct": {
         "values": {
-          "ag-grid": 6.382978723404255,
-          "tanstack": 0,
-          "infinite": 10.56338028169014
+          "mui": 31.57894736842105,
+          "ag-grid": 8.19672131147541,
+          "tanstack": 19.014084507042252,
+          "infinite": 10.69182389937107
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "≈",
-          "tanstack": "tanstack"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "1m/scroll-horizontal/droppedPct": {
         "values": {
-          "ag-grid": 0,
-          "tanstack": 0,
+          "mui": 1.1695906432748537,
+          "ag-grid": 0.8333333333333334,
+          "tanstack": 0.7042253521126761,
           "infinite": 0
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "1m/scroll-horizontal/rafFps": {
         "values": {
-          "ag-grid": 59.952213698934614,
-          "tanstack": 59.95085995085995,
-          "infinite": 59.9522136989346
+          "mui": 60.000960015360256,
+          "ag-grid": 60.00293129074174,
+          "tanstack": 60.00385186016778,
+          "infinite": 60.0030001500075
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1396,11 +1516,13 @@
       },
       "1m/scroll-horizontal/p95FrameMs": {
         "values": {
-          "ag-grid": 17.49000000000001,
-          "tanstack": 17.49499999999955,
-          "infinite": 17.5
+          "mui": 16.700000000000728,
+          "ag-grid": 16.799999999999272,
+          "tanstack": 16.700000000000728,
+          "infinite": 16.700000000000728
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1409,11 +1531,13 @@
       },
       "1m/scroll-horizontal/maxFrameMs": {
         "values": {
-          "ag-grid": 17.59999999999991,
-          "tanstack": 17.699999999999818,
-          "infinite": 17.699999999999818
+          "mui": 16.800000000000182,
+          "ag-grid": 16.800000000000182,
+          "tanstack": 16.800000000000182,
+          "infinite": 16.800000000000182
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1422,11 +1546,13 @@
       },
       "1m/scroll-horizontal/longFramesPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1435,11 +1561,13 @@
       },
       "1m/scroll-horizontal/loafBlockingMs": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1448,11 +1576,13 @@
       },
       "1m/scroll-horizontal/scriptMs": {
         "values": {
-          "ag-grid": 169.90300000000002,
-          "tanstack": 137.614,
-          "infinite": 111.06899999999997
+          "mui": 397.243,
+          "ag-grid": 262.11699999999996,
+          "tanstack": 176.09300000000005,
+          "infinite": 181.89499999999992
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
           "tanstack": "≈"
         },
@@ -1461,11 +1591,13 @@
       },
       "1m/scroll-horizontal/layoutMs": {
         "values": {
-          "ag-grid": 48.717000000000006,
-          "tanstack": 36.663000000000004,
-          "infinite": 8.5
+          "mui": 49.357,
+          "ag-grid": 78.104,
+          "tanstack": 54.83400000000001,
+          "infinite": 12.864999999999998
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
           "tanstack": "infinite"
         },
@@ -1474,12 +1606,14 @@
       },
       "1m/scroll-horizontal/styleMs": {
         "values": {
-          "ag-grid": 28.947,
-          "tanstack": 10.338999999999999,
-          "infinite": 36.732
+          "mui": 24.858999999999998,
+          "ag-grid": 46.678000000000004,
+          "tanstack": 15.707000000000003,
+          "infinite": 57.432
         },
         "winners": {
-          "ag-grid": "≈",
+          "mui": "mui",
+          "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
         "unit": "ms",
@@ -1487,24 +1621,28 @@
       },
       "1m/scroll-horizontal/taskMs": {
         "values": {
-          "ag-grid": 401.875,
-          "tanstack": 330.827,
-          "infinite": 354.5780000000001
+          "mui": 805.9030000000002,
+          "ag-grid": 664.9090000000002,
+          "tanstack": 471.59700000000004,
+          "infinite": 570.0829999999999
         },
         "winners": {
+          "mui": "infinite",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "tanstack"
         },
         "unit": "ms",
         "better": "lower"
       },
       "1m/correctness-vertical/blankPct": {
         "values": {
-          "ag-grid": 2.2222222222222223,
-          "tanstack": 2.8205128205128207,
+          "mui": 0,
+          "ag-grid": 2.711864406779661,
+          "tanstack": 2.307692307692308,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
           "tanstack": "infinite"
         },
@@ -1513,11 +1651,13 @@
       },
       "1m/correctness-vertical/wrongPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
-          "infinite": 77.3444976076555
+          "infinite": 76.16959064327486
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -1526,11 +1666,13 @@
       },
       "1m/correctness-vertical/badFramesPct": {
         "values": {
-          "ag-grid": 11.11111111111111,
-          "tanstack": 14.102564102564102,
-          "infinite": 86.79245283018868
+          "mui": 0,
+          "ag-grid": 13.559322033898304,
+          "tanstack": 11.538461538461538,
+          "infinite": 80.55555555555556
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -1539,11 +1681,13 @@
       },
       "1m/correctness-vertical/worstFrameOkPct": {
         "values": {
+          "mui": 100,
           "ag-grid": 80,
           "tanstack": 80,
           "infinite": 0
         },
         "winners": {
+          "mui": "mui",
           "ag-grid": "ag-grid",
           "tanstack": "tanstack"
         },
@@ -1552,11 +1696,13 @@
       },
       "1m/correctness-horizontal/blankPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1565,11 +1711,13 @@
       },
       "1m/correctness-horizontal/wrongPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1578,11 +1726,13 @@
       },
       "1m/correctness-horizontal/badFramesPct": {
         "values": {
+          "mui": 0,
           "ag-grid": 0,
           "tanstack": 0,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1591,11 +1741,13 @@
       },
       "1m/correctness-horizontal/worstFrameOkPct": {
         "values": {
+          "mui": 100,
           "ag-grid": 100,
           "tanstack": 100,
           "infinite": 100
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "≈",
           "tanstack": "≈"
         },
@@ -1604,52 +1756,60 @@
       },
       "1m/visual-blank-vertical/blankFramesPct": {
         "values": {
-          "ag-grid": 21.62162162162162,
-          "tanstack": 16.666666666666664,
+          "mui": 0,
+          "ag-grid": 52.77777777777778,
+          "tanstack": 9.523809523809524,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "1m/visual-blank-vertical/blankAreaPct": {
         "values": {
-          "ag-grid": 9.530391764577498,
-          "tanstack": 5.529082245098396,
+          "mui": 0,
+          "ag-grid": 20.571178465915306,
+          "tanstack": 2.6954177897574128,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "%",
         "better": "lower"
       },
       "1m/visual-blank-vertical/maxBlankRows": {
         "values": {
-          "ag-grid": 16,
-          "tanstack": 3,
+          "mui": 0,
+          "ag-grid": 18,
+          "tanstack": 11,
           "infinite": 0
         },
         "winners": {
+          "mui": "≈",
           "ag-grid": "infinite",
-          "tanstack": "≈"
+          "tanstack": "infinite"
         },
         "unit": "rows",
         "better": "lower"
       },
       "1m/visual-blank-vertical/capturedFrames": {
         "values": {
-          "ag-grid": 74,
-          "tanstack": 74,
-          "infinite": 74
+          "mui": 63,
+          "ag-grid": 38,
+          "tanstack": 61,
+          "infinite": 66
         },
         "winners": {
-          "ag-grid": "≈",
-          "tanstack": "≈"
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
         },
         "unit": "",
         "better": "higher"
