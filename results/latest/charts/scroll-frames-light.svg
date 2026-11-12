@@ -5,7 +5,7 @@
 <text x="20" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6b6a66">share of frames that include the grid's latest update · percent · higher is better</text>
 <text x="20" y="90" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">300k rows</text>
 <text x="20" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,98H391.5a4,4 0 0 1 4,4V108a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<path d="M138,98H391.5a4,4 0 0 1 4,4V108a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
 <text x="404" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">52.3%</text>
 <text x="20" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
 <path d="M138,116H626a4,4 0 0 1 4,4V126a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
@@ -16,7 +16,7 @@
 <line x1="137.5" y1="96" x2="137.5" y2="150" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="178" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">1M rows</text>
 <text x="20" y="197.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,186H398.3a4,4 0 0 1 4,4V196a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<path d="M138,186H398.3a4,4 0 0 1 4,4V196a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
 <text x="410" y="197.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">53.7%</text>
 <text x="20" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
 <path d="M138,204H626a4,4 0 0 1 4,4V214a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>

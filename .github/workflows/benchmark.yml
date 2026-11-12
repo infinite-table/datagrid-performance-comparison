@@ -9,7 +9,7 @@
 #
 # The newest versions go to master: package.json, results/latest, the charts
 # and the summary in the README. Every measured set of versions also gets a
-# branch (versions/infinite-<x>_ag-grid-<y>_mui-<z>_tanstack-<w>) with the
+# branch (versions/infinite-<x>_mui-<y>_ag-grid-<z>_tanstack-<w>) with the
 # code, the lockfile and the full results of that run, and its rows in the
 # history table on master.
 name: Benchmark

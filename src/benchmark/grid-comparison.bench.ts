@@ -1,5 +1,5 @@
 /**
- * Infinite Table vs AG Grid, MUI X Data Grid and TanStack Table -
+ * Infinite Table vs MUI X Data Grid, AG Grid and TanStack Table -
  * performance comparison, for each dataset size (300k and 1M rows - see
  * BENCH_SIZES in data.ts).
  *
@@ -29,7 +29,6 @@ import {
   GRID_FULL_NAMES,
   GRID_LABELS,
   GRID_NAMES,
-  GRID_PAGE_SIZE,
   GridName,
   LATENCY_TRACE_CATEGORIES,
   MetricDef,
@@ -184,14 +183,9 @@ async function openGrid(
       dev: b.dev,
       version: b.version,
       rowCount: b.rowCount,
-      pageSize: b.pageSize,
     };
   });
   expect(info.grid).toBe(grid);
-  expect(
-    info.pageSize ?? null,
-    `GRID_PAGE_SIZE in benchUtils.ts has to say how the ${grid} page paginates`,
-  ).toBe(GRID_PAGE_SIZE[grid] ?? null);
   const ratio = scrollInfo[size]?.[grid]?.ratio;
   if (ratio != null) {
     await page.evaluate(
@@ -342,16 +336,8 @@ type Scenario = {
   id: string;
   description: string;
   metrics: MetricDef[];
-  /**
-   * scrolls through the rows - doesn't run for the grids that paginate
-   * (GRID_PAGE_SIZE), where only one page of rows can be scrolled through
-   */
-  scrolls?: boolean;
   run(ctx: RunContext): Promise<Record<string, number>>;
 };
-
-const gridsOf = (scenario: Scenario) =>
-  scenario.scrolls ? GRIDS.filter((grid) => !GRID_PAGE_SIZE[grid]) : GRIDS;
 
 const ms = (key: string, label: string): MetricDef => ({
   key,
@@ -498,7 +484,6 @@ const JUMP_TARGETS = [
 
 const jumpScenario: Scenario = {
   id: 'scroll-jump',
-  scrolls: true,
   description:
     `Programmatic jumps to ${JUMP_TARGETS.length} far-away scroll positions (like dragging the scrollbar thumb). ` +
     'Measured from setting scrollTop to the end of the first frame committed with the first and last visible rows showing the right content, at the right position.',
@@ -553,7 +538,6 @@ const jumpScenario: Scenario = {
 function smoothnessScenario(axis: 'vertical' | 'horizontal'): Scenario {
   return {
     id: `scroll-${axis}`,
-    scrolls: true,
     description:
       (axis === 'vertical'
         ? `Wheel-scroll down ${SCROLL_DISTANCE}px at ${SCROLL_SPEED}px/s`
@@ -671,7 +655,6 @@ function probeScenario(axis: 'vertical' | 'horizontal'): Scenario {
   const speed = axis === 'vertical' ? FAST_SCROLL_SPEED : SCROLL_SPEED;
   return {
     id: `correctness-${axis}`,
-    scrolls: true,
     description:
       `Same kind of ${axis} wheel gesture` +
       (axis === 'vertical' ? `, faster (${speed}px/s)` : '') +
@@ -752,7 +735,6 @@ function probeScenario(axis: 'vertical' | 'horizontal'): Scenario {
 
 const visualScenario: Scenario = {
   id: 'visual-blank-vertical',
-  scrolls: true,
   description:
     `Fast vertical wheel gesture (${FAST_SCROLL_SPEED}px/s) while recording what the compositor actually displays (CDP screencast). ` +
     'Each frame is checked for blank areas: vertical runs of the body with no text where rows should be. ' +
@@ -1027,14 +1009,6 @@ for (const size of SIZES) {
           bodyHeights[grid] = await ctx.page.evaluate(
             () => window.__bench!.getBodyRect().height,
           );
-          if (GRID_PAGE_SIZE[grid]) {
-            console.log(
-              `[setup ${size}] ${GRID_LABELS[grid].padEnd(
-                8,
-              )} paginates, ${GRID_PAGE_SIZE[grid]} rows on a page`,
-            );
-            continue;
-          }
           // how the scrollbar maps onto the rows, and whether the last row
           // can be reached at all - browsers cap element heights, and
           // 1M rows x 40px is more than that
@@ -1122,7 +1096,7 @@ for (const size of SIZES) {
           !!ONLY && !ONLY.includes(scenario.id),
           'not in BENCH_SCENARIOS',
         );
-        const grids = gridsOf(scenario);
+        const grids = GRIDS;
         test.setTimeout((WARMUP + RUNS) * grids.length * 120_000);
         if (!environment || !scrollInfo[size]) {
           // the setup test did not run in this process (e.g. --grep)

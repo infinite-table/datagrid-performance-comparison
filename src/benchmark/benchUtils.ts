@@ -344,14 +344,14 @@ export function bootstrapDiffCI(a: number[], b: number[], iterations = 2000) {
 // results & report
 // ---------------------------------------------------------------------------
 
-export type GridName = 'ag-grid' | 'mui' | 'tanstack' | 'infinite';
+export type GridName = 'mui' | 'ag-grid' | 'tanstack' | 'infinite';
 /** every grid other than Infinite Table - what Infinite is compared against */
 export type OtherGridName = Exclude<GridName, 'infinite'>;
 
 /** the order the grids are listed in, everywhere */
 export const GRID_NAMES: GridName[] = [
-  'ag-grid',
   'mui',
+  'ag-grid',
   'tanstack',
   'infinite',
 ];
@@ -361,27 +361,17 @@ export const OTHER_GRID_NAMES = GRID_NAMES.filter(
 
 /** short names, for table headers and logs */
 export const GRID_LABELS: Record<GridName, string> = {
-  'ag-grid': 'AG Grid',
   mui: 'MUI X',
+  'ag-grid': 'AG Grid',
   tanstack: 'TanStack',
   infinite: 'Infinite',
 };
 export const GRID_FULL_NAMES: Record<GridName, string> = {
-  'ag-grid': 'AG Grid',
   mui: 'MUI X Data Grid',
+  'ag-grid': 'AG Grid',
   tanstack: 'TanStack Table',
   infinite: 'Infinite Table',
 };
-
-/**
- * Grids that always paginate, and the most rows they show on a page. All the
- * rows are loaded, but only one page can be scrolled through - so the
- * scrolling scenarios don't run for them.
- *
- * MUI X Data Grid: the free (MIT) `DataGrid` has at most 100 rows on a page;
- * showing all the rows needs the commercial `DataGridPro`.
- */
-export const GRID_PAGE_SIZE: Partial<Record<GridName, number>> = { mui: 100 };
 
 export type MetricDef = {
   key: string;
@@ -394,7 +384,7 @@ export type ScenarioResult = {
   scenario: string;
   description: string;
   metrics: MetricDef[];
-  /** a grid a scenario doesn't run for has no samples */
+  /** a grid that was not measured (BENCH_GRIDS) has no samples */
   samples: Partial<Record<GridName, Record<string, number>[]>>;
 };
 
@@ -439,7 +429,7 @@ export type SizeResults = {
   size: string;
   rowCount: number;
   checksum: string | null;
-  /** not there for the grids that paginate */
+  /** of the grids that were measured */
   scroll: Partial<Record<GridName, SizeScrollInfo>> | null;
   results: Record<string, ScenarioResult>;
 };
@@ -601,32 +591,23 @@ export function scenarioTable(result: ScenarioResult) {
 }
 
 function scrollTable(scroll: Partial<Record<GridName, SizeScrollInfo>>) {
-  const grids = GRID_NAMES.filter(
-    (grid) => scroll[grid] || GRID_PAGE_SIZE[grid],
-  );
-  const cell = (grid: GridName, value: (s: SizeScrollInfo) => string) => {
-    const s = scroll[grid];
-    return s ? value(s) : 'n/a';
-  };
+  const grids = GRID_NAMES.filter((grid) => scroll[grid]);
   const lines = [
     `| | ${grids.map((g) => GRID_LABELS[g]).join(' | ')} |`,
     `|---|${grids.map(() => '---:').join('|')}|`,
     `| Last row reachable with the scrollbar | ${grids
       .map((g) => {
-        const s = scroll[g];
-        if (!s) {
-          return `**no** - ${GRID_PAGE_SIZE[g]} rows on a page`;
-        }
+        const s = scroll[g]!;
         return s.lastVisibleRow >= s.rowCount
           ? `yes (${s.lastVisibleRow.toLocaleString('en-US')})`
           : `**no** - stops at row ${s.lastVisibleRow.toLocaleString('en-US')}`;
       })
       .join(' | ')} |`,
     `| Native scroll range | ${grids
-      .map((g) => cell(g, (s) => `${s.scrollMax.toLocaleString('en-US')} px`))
+      .map((g) => `${scroll[g]!.scrollMax.toLocaleString('en-US')} px`)
       .join(' | ')} |`,
     `| Content px per scrollbar px | ${grids
-      .map((g) => cell(g, (s) => s.ratio.toFixed(3)))
+      .map((g) => scroll[g]!.ratio.toFixed(3))
       .join(' | ')} |`,
   ];
   return lines.join('\n');
@@ -661,7 +642,7 @@ export function buildReport(
 ) {
   const out: string[] = [];
   const grids = GRID_NAMES.filter((grid) => env.versions[grid]);
-  const paginated = grids.filter((grid) => GRID_PAGE_SIZE[grid]);
+
   out.push(
     `# ${grids
       .map((grid) => GRID_FULL_NAMES[grid])
@@ -690,24 +671,14 @@ export function buildReport(
   out.push(
     `The "Infinite vs ..." columns compare Infinite Table with one other grid: the ratio of the medians (Infinite / other, so < 1 means Infinite has the lower value), its 95% bootstrap confidence interval, and the grid that does better. A grid is only named when the interval excludes 1; "≈" means no significant difference. When the other grid has zeros among its values (e.g. 0% blank samples) a ratio means nothing, so the difference of the medians (Infinite − other) and its interval are shown instead, and a grid is only named when that interval excludes 0.`,
   );
-  if (paginated.length) {
-    out.push('');
-    out.push(
-      paginated
-        .map(
-          (grid) =>
-            `${GRID_FULL_NAMES[grid]} always paginates, with at most ${GRID_PAGE_SIZE[grid]} rows on a page: all the rows are loaded and sorted, but only one page can be scrolled through. So it is in the mount and sort scenarios, and not in the scrolling ones.`,
-        )
-        .join(' '),
-    );
-  }
+
   for (const size of sizes) {
     out.push('');
     out.push(`# ${size.rowCount.toLocaleString('en-US')} rows`);
     if (size.scroll) {
       out.push('');
       out.push(
-        `Scroll range - browsers cap element sizes (Chrome ~16.7M-33.5M px, depending on the version), so a grid has to map the scrollbar onto the rows when the content is taller than that. One that doesn't can't reach its last rows.`,
+        `Scroll range - browsers cap element sizes (Chrome ~16.7M-33.5M px, depending on the version), so a grid has to map the scrollbar onto the rows when the content is taller than that. One that doesn't can't reach its last rows: its scrolling results are for the rows it can reach, and the same wheel gesture goes over fewer rows in it.`,
       );
       out.push('');
       out.push(scrollTable(size.scroll));

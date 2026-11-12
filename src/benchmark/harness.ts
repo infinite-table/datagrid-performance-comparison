@@ -21,7 +21,7 @@ import {
   getDataChecksum,
 } from './data';
 
-export type BenchGridName = 'ag-grid' | 'infinite' | 'mui' | 'tanstack';
+export type BenchGridName = 'mui' | 'ag-grid' | 'tanstack' | 'infinite';
 
 export type BenchRect = {
   left: number;
@@ -33,12 +33,7 @@ export type BenchRect = {
 export type BenchAdapter = {
   grid: BenchGridName;
   version: string;
-  /**
-   * set when the grid always paginates: the most rows it shows on a page.
-   * Only that many rows can be scrolled through, so the scrolling scenarios
-   * don't run for it
-   */
-  pageSize?: number;
+
   /** grid root element - null before mount */
   getRoot(): HTMLElement | null;
   /** element whose native scrollTop drives the vertical scroll */
@@ -356,7 +351,7 @@ function createBench(
   return {
     grid: adapter.grid,
     version: adapter.version,
-    pageSize: adapter.pageSize ?? null,
+
     env: process.env.NODE_ENV,
     dev: typeof __DEV__ !== 'undefined' ? __DEV__ : null,
     rowCount: data.length,

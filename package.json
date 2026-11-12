@@ -1,11 +1,11 @@
 {
-  "name": "infinite-ag-grid-performance-comparison",
+  "name": "datagrid-performance-comparison",
   "version": "1.0.0",
   "private": true,
-  "description": "A reproducible benchmark comparing the Infinite Table, AG Grid, MUI X Data Grid and TanStack Table React DataGrids at 300,000 and 1,000,000 rows",
+  "description": "A reproducible benchmark comparing the Infinite Table, MUI X Data Grid, AG Grid and TanStack Table React DataGrids at 300,000 and 1,000,000 rows",
   "repository": {
     "type": "git",
-    "url": "https://github.com/infinite-table/infinite-ag-grid-performance-comparison.git"
+    "url": "https://github.com/infinite-table/datagrid-performance-comparison.git"
   },
   "scripts": {
     "dev": "next dev",

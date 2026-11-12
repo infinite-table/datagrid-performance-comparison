@@ -40,8 +40,6 @@ const CELL = '.MuiDataGrid-cell[data-field]';
 const adapter: BenchAdapter = {
   grid: 'mui',
   version: __MUI_X_DATA_GRID_VERSION__,
-  // the free DataGrid always paginates, with at most 100 rows on a page
-  pageSize: 100,
   getRoot: root,
   getVerticalScroller: scroller,
   getHorizontalScroller: scroller,
@@ -101,6 +99,13 @@ const adapter: BenchAdapter = {
     ) ?? null,
 };
 
+// The free DataGrid always paginates, with 100 rows on a page by default.
+// A page size of -1 is its documented "all results" value: every row is on
+// one page, which is scrolled through like in the other grids.
+const initialState = {
+  pagination: { paginationModel: { page: 0, pageSize: -1 } },
+};
+
 const style: React.CSSProperties = {
   flex: 1,
   minHeight: 0,
@@ -109,12 +114,11 @@ const style: React.CSSProperties = {
 };
 
 /**
- * MUI X Data Grid (the free, MIT-licensed `DataGrid`) with defaults - only
- * the row height, header height and column widths are set, and the number
- * formatting is turned off, to match the other grids.
- *
- * This edition always paginates, with at most 100 rows on a page, so all the
- * rows are loaded, but only the first 100 can be scrolled through.
+ * MUI X Data Grid (the free, MIT-licensed `DataGrid`) with defaults, except
+ * for what makes the setup match the other grids:
+ *  - same row height / header height / column widths
+ *  - all the rows on one page (see `initialState` above)
+ *  - the number formatting turned off
  */
 function Mui({ data }: { data: BenchRow[] }) {
   return (
@@ -124,6 +128,7 @@ function Mui({ data }: { data: BenchRow[] }) {
         columns={columns}
         rowHeight={BENCH_ROW_HEIGHT}
         columnHeaderHeight={BENCH_HEADER_HEIGHT}
+        initialState={initialState}
       />
     </div>
   );

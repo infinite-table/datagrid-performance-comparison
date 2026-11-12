@@ -66,7 +66,7 @@ const compare = (a, b) => a.localeCompare(b, 'en', { numeric: true });
 
 // what a run is called: in its commit message and in its "failed" issue
 const describe = (v) =>
-  `Infinite Table ${v.infinite}, AG Grid ${v.agGrid}, MUI X Data Grid ${v.mui}, TanStack Table ${v.tanstack}`;
+  `Infinite Table ${v.infinite}, MUI X Data Grid ${v.mui}, AG Grid ${v.agGrid}, TanStack Table ${v.tanstack}`;
 const failureTitle = (versions) => `Benchmark failed: ${describe(versions)}`;
 
 function hasOpenFailureIssue(title) {
@@ -148,6 +148,6 @@ output({
   tanstack,
   newest,
   // the same name as versionBranch() in scripts/update-results.ts
-  branch: `versions/infinite-${infinite}_ag-grid-${agGrid}_mui-${mui}_tanstack-${tanstack}`,
+  branch: `versions/infinite-${infinite}_mui-${mui}_ag-grid-${agGrid}_tanstack-${tanstack}`,
   title: describe(versions),
 });

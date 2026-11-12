@@ -10,12 +10,12 @@ declare const __TANSTACK_TABLE_VERSION__: string;
 
 const GRIDS = [
   { id: 'infinite', name: 'Infinite Table', version: __INFINITE_VERSION__ },
-  { id: 'ag-grid', name: 'AG Grid', version: __AG_GRID_VERSION__ },
   {
     id: 'mui',
     name: 'MUI X Data Grid',
     version: __MUI_X_DATA_GRID_VERSION__,
   },
+  { id: 'ag-grid', name: 'AG Grid', version: __AG_GRID_VERSION__ },
   {
     id: 'tanstack',
     name: 'TanStack Table',
@@ -34,7 +34,7 @@ export default function Index() {
       }}
     >
       <h1 style={{ fontSize: 24 }}>
-        Infinite Table vs AG Grid, MUI X Data Grid and TanStack Table -
+        Infinite Table vs MUI X Data Grid, AG Grid and TanStack Table -
         benchmark pages
       </h1>
       <p>
