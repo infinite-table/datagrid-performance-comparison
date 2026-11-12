@@ -1,0 +1,73 @@
+/* Plain styling for the TanStack Table page - TanStack Table is headless, so
+   the markup and the styles are ours. Kept close to the official
+   "virtualized-columns" example. */
+.container {
+  flex: 1;
+  min-height: 0;
+  /* the scrollable table container */
+  overflow: auto;
+  /* needed for the sticky header */
+  position: relative;
+  border: 1px solid lightgray;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}
+
+.table {
+  display: grid;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.thead {
+  display: grid;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: lightgray;
+}
+
+.tbody {
+  display: grid;
+  /* needed for the absolute positioning of the rows */
+  position: relative;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid lightgray;
+}
+
+.bodyRow {
+  position: absolute;
+}
+
+.th,
+.td {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex: none;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 6px;
+  text-align: left;
+}
+
+.th {
+  border-right: 1px solid lightgray;
+  font-weight: bold;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  /* the whole header cell is the click target */
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}

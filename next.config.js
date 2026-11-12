@@ -1,5 +1,5 @@
-// Next.js is only the bundler and the server here: four static pages, each
-// with one grid - see README.md
+// Next.js is only the bundler and the server here: static pages, each with
+// one grid - see README.md
 const fs = require('fs');
 const path = require('path');
 
@@ -25,6 +25,15 @@ module.exports = {
         ),
         __INFINITE_VERSION__: JSON.stringify(
           readPackageVersion('@infinite-table/infinite-react'),
+        ),
+        __MUI_X_DATA_GRID_VERSION__: JSON.stringify(
+          readPackageVersion('@mui/x-data-grid'),
+        ),
+        __TANSTACK_TABLE_VERSION__: JSON.stringify(
+          readPackageVersion('@tanstack/react-table'),
+        ),
+        __TANSTACK_VIRTUAL_VERSION__: JSON.stringify(
+          readPackageVersion('@tanstack/react-virtual'),
         ),
       }),
     );

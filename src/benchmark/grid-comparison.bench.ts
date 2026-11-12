@@ -1,13 +1,15 @@
 /**
- * AG Grid vs Infinite Table - performance comparison, for each dataset size
- * (300k and 1M rows - see BENCH_SIZES in data.ts).
+ * Infinite Table vs AG Grid, MUI X Data Grid and TanStack Table -
+ * performance comparison, for each dataset size (300k and 1M rows - see
+ * BENCH_SIZES in data.ts).
  *
  * Run with `npm run benchmark` (see README.md next to this file for the
  * methodology, options and how to read the report).
  *
- * Every scenario runs WARMUP + RUNS times per grid, alternating which grid
- * goes first, each run in a fresh browser context (fresh renderer process,
- * cold JIT, empty heap). Results go to benchmark-results/<run id>/.
+ * Every scenario runs WARMUP + RUNS times per grid, changing the order of
+ * the grids from one run to the next, each run in a fresh browser context
+ * (fresh renderer process, cold JIT, empty heap). Results go to
+ * benchmark-results/<run id>/.
  */
 import {
   test,
@@ -24,7 +26,10 @@ import path from 'node:path';
 import {
   BenchEnvironment,
   FRAME_TRACE_CATEGORIES,
+  GRID_FULL_NAMES,
   GRID_LABELS,
+  GRID_NAMES,
+  GRID_PAGE_SIZE,
   GridName,
   LATENCY_TRACE_CATEGORIES,
   MetricDef,
@@ -91,7 +96,22 @@ const RUN_ID = process.env.BENCH_RUN_ID || 'local';
 const RESULTS_ROOT = path.resolve(__dirname, '../../benchmark-results');
 const RESULTS_DIR = path.join(RESULTS_ROOT, RUN_ID);
 
-const GRIDS: GridName[] = ['ag-grid', 'infinite'];
+// BENCH_GRIDS=ag-grid,infinite measures only some of the grids
+const GRIDS: GridName[] = process.env.BENCH_GRIDS
+  ? GRID_NAMES.filter((grid) =>
+      process.env
+        .BENCH_GRIDS!.split(',')
+        .map((s) => s.trim().toLowerCase())
+        .includes(grid),
+    )
+  : GRID_NAMES;
+if (GRIDS.length < 2) {
+  throw new Error(
+    `BENCH_GRIDS needs at least two of ${GRID_NAMES.join(', ')} - got "${
+      process.env.BENCH_GRIDS
+    }"`,
+  );
+}
 const VIEWPORT = { width: 1400, height: 1000 };
 
 // ---------------------------------------------------------------------------
@@ -110,13 +130,22 @@ type RunContext = {
 let environment: BenchEnvironment | null = null;
 
 /**
- * px added to the box of each grid (`?extraHeight=`), so both have a body of
+ * px added to the box of each grid (`?extraHeight=`), so all have a body of
  * the same height and render the same number of rows - worked out in the
  * setup test. The grids differ by a few px of borders, and by more when one
- * shows something the other doesn't: Infinite Table renders a footer when it
- * has no license key.
+ * shows something the others don't: MUI's pagination footer, or the footer
+ * Infinite Table renders when it has no license key.
  */
-let boxExtraHeight: Record<GridName, number> | null = null;
+let boxExtraHeight: Partial<Record<GridName, number>> | null = null;
+
+/**
+ * How each grid maps its scrollbar onto the rows, per size - measured in
+ * the setup test (see calibrateScroll in harness.ts) and given to every page
+ * that is opened after it.
+ */
+const scrollInfo: Partial<
+  Record<BenchSize, Partial<Record<GridName, SizeScrollInfo>>>
+> = {};
 
 async function openGrid(
   browser: Browser,
@@ -155,9 +184,21 @@ async function openGrid(
       dev: b.dev,
       version: b.version,
       rowCount: b.rowCount,
+      pageSize: b.pageSize,
     };
   });
   expect(info.grid).toBe(grid);
+  expect(
+    info.pageSize ?? null,
+    `GRID_PAGE_SIZE in benchUtils.ts has to say how the ${grid} page paginates`,
+  ).toBe(GRID_PAGE_SIZE[grid] ?? null);
+  const ratio = scrollInfo[size]?.[grid]?.ratio;
+  if (ratio != null) {
+    await page.evaluate(
+      (ratio) => window.__bench!.setScrollRatio(ratio),
+      ratio,
+    );
+  }
   if (!ALLOW_DEV && (info.env !== 'production' || info.dev !== false)) {
     throw new Error(
       `The ${grid} page is a ${info.env} build with __DEV__=${info.dev}. ` +
@@ -256,7 +297,7 @@ async function getBodyCenter(page: Page) {
 
 /**
  * Real input through Chrome's input pipeline (wheel events, threaded
- * scrolling), at a constant speed - the same gesture for both grids.
+ * scrolling), at a constant speed - the same gesture for every grid.
  * vertical: one gesture down; horizontal: back-and-forth sweeps
  */
 async function scrollGesture(
@@ -301,8 +342,16 @@ type Scenario = {
   id: string;
   description: string;
   metrics: MetricDef[];
+  /**
+   * scrolls through the rows - doesn't run for the grids that paginate
+   * (GRID_PAGE_SIZE), where only one page of rows can be scrolled through
+   */
+  scrolls?: boolean;
   run(ctx: RunContext): Promise<Record<string, number>>;
 };
+
+const gridsOf = (scenario: Scenario) =>
+  scenario.scrolls ? GRIDS.filter((grid) => !GRID_PAGE_SIZE[grid]) : GRIDS;
 
 const ms = (key: string, label: string): MetricDef => ({
   key,
@@ -449,6 +498,7 @@ const JUMP_TARGETS = [
 
 const jumpScenario: Scenario = {
   id: 'scroll-jump',
+  scrolls: true,
   description:
     `Programmatic jumps to ${JUMP_TARGETS.length} far-away scroll positions (like dragging the scrollbar thumb). ` +
     'Measured from setting scrollTop to the end of the first frame committed with the first and last visible rows showing the right content, at the right position.',
@@ -503,6 +553,7 @@ const jumpScenario: Scenario = {
 function smoothnessScenario(axis: 'vertical' | 'horizontal'): Scenario {
   return {
     id: `scroll-${axis}`,
+    scrolls: true,
     description:
       (axis === 'vertical'
         ? `Wheel-scroll down ${SCROLL_DISTANCE}px at ${SCROLL_SPEED}px/s`
@@ -510,7 +561,7 @@ function smoothnessScenario(axis: 'vertical' | 'horizontal'): Scenario {
             SCROLL_SPEED,
             4000,
           )}px/s`) +
-      ' (Input.synthesizeScrollGesture - real input pipeline, same gesture for both grids). ' +
+      ' (Input.synthesizeScrollGesture - real input pipeline, same gesture for every grid). ' +
       'Frame outcomes come from Chrome\'s compositor (PipelineReporter): "partial" = frame shown without the main thread\'s update, "dropped" = no new frame. ' +
       'rAF frame intervals and Long Animation Frames come from the page.',
     metrics: [
@@ -593,7 +644,7 @@ function smoothnessScenario(axis: 'vertical' | 'horizontal'): Scenario {
         window.__bench!.getScrollPosition(),
       );
       if (axis === 'vertical') {
-        // both grids must have received (and applied) the same scroll
+        // every grid must have received (and applied) the same scroll
         expect(scroll.scrollTop).toBeGreaterThan(SCROLL_DISTANCE * 0.9);
       }
 
@@ -620,6 +671,7 @@ function probeScenario(axis: 'vertical' | 'horizontal'): Scenario {
   const speed = axis === 'vertical' ? FAST_SCROLL_SPEED : SCROLL_SPEED;
   return {
     id: `correctness-${axis}`,
+    scrolls: true,
     description:
       `Same kind of ${axis} wheel gesture` +
       (axis === 'vertical' ? `, faster (${speed}px/s)` : '') +
@@ -700,11 +752,12 @@ function probeScenario(axis: 'vertical' | 'horizontal'): Scenario {
 
 const visualScenario: Scenario = {
   id: 'visual-blank-vertical',
+  scrolls: true,
   description:
     `Fast vertical wheel gesture (${FAST_SCROLL_SPEED}px/s) while recording what the compositor actually displays (CDP screencast). ` +
     'Each frame is checked for blank areas: vertical runs of the body with no text where rows should be. ' +
     'Unlike the correctness probe, this also catches the compositor scrolling ahead of the main thread. ' +
-    'Screencast capture skips frames under load and adds overhead - compare the two grids, not absolute numbers.',
+    'Screencast capture skips frames under load and adds overhead - compare the grids, not absolute numbers.',
   metrics: [
     {
       key: 'blankFramesPct',
@@ -894,24 +947,27 @@ function formatSample(sample: Record<string, number>) {
 for (const size of SIZES) {
   const rowCountLabel = BENCH_SIZES[size].toLocaleString('en-US');
 
-  test.describe(`AG Grid vs Infinite Table - ${rowCountLabel} rows`, () => {
-    test(`setup ${size}: both grids get identical data and a production build`, async ({
+  test.describe(`Grid comparison - ${rowCountLabel} rows`, () => {
+    test(`setup ${size}: all grids get identical data and a production build`, async ({
       browser,
       baseURL,
     }, testInfo) => {
-      const checksums: string[] = [];
-      const rowTexts: (string | null)[][][] = [];
+      const checksums: Partial<Record<GridName, string>> = {};
+      const rowTexts: Partial<Record<GridName, (string | null)[][]>> = {};
       const versions: Partial<Record<GridName, string>> = {};
       const scroll: Partial<Record<GridName, SizeScrollInfo>> = {};
       const bodyHeights: Partial<Record<GridName, number>> = {};
       let rowCount = 0;
 
-      // first, give both grids a body of the same height: measure, make the
-      // box of the shorter one taller, measure again. More than one pass,
+      // first, give every grid a body of the same height: measure, make the
+      // boxes of the shorter ones taller, measure again. More than one pass,
       // because a grid may not turn every extra pixel of its box into a
       // pixel of body (AG Grid's body grows in steps of 1 or 2).
-      const extra: Record<GridName, number> = { 'ag-grid': 0, infinite: 0 };
+      const extra: Partial<Record<GridName, number>> = {};
       const measured: Partial<Record<GridName, number>> = {};
+      for (const grid of GRIDS) {
+        extra[grid] = 0;
+      }
       boxExtraHeight = extra;
       for (let pass = 0; pass < 6; pass++) {
         for (const grid of GRIDS) {
@@ -937,7 +993,7 @@ for (const size of SIZES) {
           break;
         }
         for (const grid of GRIDS) {
-          extra[grid] += tallest - measured[grid]!;
+          extra[grid]! += tallest - measured[grid]!;
         }
       }
       console.log(
@@ -957,20 +1013,28 @@ for (const size of SIZES) {
           `setup-${size}-${grid}`,
         );
         try {
-          checksums.push(
-            await ctx.page.evaluate(() => window.__bench!.getChecksum()),
+          checksums[grid] = await ctx.page.evaluate(() =>
+            window.__bench!.getChecksum(),
           );
           versions[grid] = info.version;
           rowCount = info.rowCount;
           // sanity check the adapter: mount, then read what's rendered
           await ctx.page.evaluate(() => window.__bench!.mount());
           await settle(ctx.page, 300);
-          rowTexts.push(
-            await ctx.page.evaluate(() => window.__bench!.getVisibleTexts(18)),
+          rowTexts[grid] = await ctx.page.evaluate(() =>
+            window.__bench!.getVisibleTexts(18),
           );
           bodyHeights[grid] = await ctx.page.evaluate(
             () => window.__bench!.getBodyRect().height,
           );
+          if (GRID_PAGE_SIZE[grid]) {
+            console.log(
+              `[setup ${size}] ${GRID_LABELS[grid].padEnd(
+                8,
+              )} paginates, ${GRID_PAGE_SIZE[grid]} rows on a page`,
+            );
+            continue;
+          }
           // how the scrollbar maps onto the rows, and whether the last row
           // can be reached at all - browsers cap element heights, and
           // 1M rows x 40px is more than that
@@ -986,25 +1050,44 @@ for (const size of SIZES) {
           await close();
         }
       }
-      expect(checksums[0]).toBe(checksums[1]);
-      // and both render the exact same text in the visible cells
-      expect(rowTexts[0]).toEqual(rowTexts[1]);
-      expect(rowTexts[0][17][0]).toBe('18');
+
+      const reference = GRIDS[0];
+      for (const grid of GRIDS) {
+        expect(checksums[grid], `data checksum of ${grid}`).toBe(
+          checksums[reference],
+        );
+        // and all render the exact same text in the visible cells
+        expect(rowTexts[grid], `visible texts of ${grid}`).toEqual(
+          rowTexts[reference],
+        );
+        expect(
+          bodyHeights[grid],
+          `the grid bodies differ in height: ${GRIDS.map(
+            (g) => `${GRID_LABELS[g]} ${bodyHeights[g]}px`,
+          ).join(', ')}`,
+        ).toBe(bodyHeights[reference]);
+      }
+      expect(rowTexts[reference]![17][0]).toBe('18');
       expect(rowCount).toBe(BENCH_SIZES[size]);
-      expect(
-        bodyHeights.infinite,
-        `the grid bodies differ in height: AG Grid ${bodyHeights['ag-grid']}px, Infinite ${bodyHeights.infinite}px`,
-      ).toBe(bodyHeights['ag-grid']);
-      // both grids must map the scrollbar onto the rows the same way,
-      // otherwise the same wheel gesture scrolls a different number of rows
-      // in each (the browser's element size limit depends on the display's
-      // scale factor - see --force-device-scale-factor in the config)
-      expect(
-        Math.abs(scroll['ag-grid']!.ratio - scroll.infinite!.ratio),
-        `scroll ratio differs: AG Grid ${scroll['ag-grid']!.ratio}, Infinite ${
-          scroll.infinite!.ratio
-        }`,
-      ).toBeLessThan(0.01);
+
+      // the grids that show every row must map the scrollbar onto the rows
+      // the same way, otherwise the same wheel gesture scrolls a different
+      // number of rows in each (the browser's element size limit depends on
+      // the display's scale factor - see --force-device-scale-factor in the
+      // config). A grid that can't reach its last row doesn't map the
+      // scrollbar at all: it is measured, and the report says where it stops.
+      const complete = GRIDS.filter(
+        (grid) => scroll[grid] && scroll[grid]!.lastVisibleRow >= rowCount,
+      );
+      for (const grid of complete) {
+        expect(
+          Math.abs(scroll[grid]!.ratio - scroll[complete[0]]!.ratio),
+          `scroll ratio differs: ${complete
+            .map((g) => `${GRID_LABELS[g]} ${scroll[g]!.ratio}`)
+            .join(', ')}`,
+        ).toBeLessThan(0.01);
+      }
+      scrollInfo[size] = scroll;
 
       environment = {
         runId: RUN_ID,
@@ -1017,16 +1100,16 @@ for (const size of SIZES) {
         os: `${os.type()} ${os.release()} ${os.arch()}`,
         cpu: `${os.cpus()[0]?.model ?? 'unknown'} × ${os.cpus().length}`,
         viewport: `${VIEWPORT.width}×${VIEWPORT.height}`,
-        versions: versions as Record<GridName, string>,
+        versions,
         baseURL: baseURL!,
-        bodyHeight: bodyHeights.infinite,
+        bodyHeight: bodyHeights[reference],
         boxExtraHeight,
       };
       saveResults(testInfo, (stored) => {
         const sizeResults = getSizeResults(stored, size);
         sizeResults.rowCount = rowCount;
-        sizeResults.checksum = checksums[0];
-        sizeResults.scroll = scroll as Record<GridName, SizeScrollInfo>;
+        sizeResults.checksum = checksums[reference]!;
+        sizeResults.scroll = scroll;
       });
     });
 
@@ -1039,21 +1122,29 @@ for (const size of SIZES) {
           !!ONLY && !ONLY.includes(scenario.id),
           'not in BENCH_SCENARIOS',
         );
-        test.setTimeout((WARMUP + RUNS) * GRIDS.length * 90_000);
-        if (!environment) {
-          environment = readResults().environment;
+        const grids = gridsOf(scenario);
+        test.setTimeout((WARMUP + RUNS) * grids.length * 120_000);
+        if (!environment || !scrollInfo[size]) {
+          // the setup test did not run in this process (e.g. --grep)
+          const stored = readResults();
+          environment = environment ?? stored.environment;
+          scrollInfo[size] =
+            scrollInfo[size] ?? stored.sizes[size]?.scroll ?? {};
         }
         boxExtraHeight = boxExtraHeight ?? environment?.boxExtraHeight ?? null;
 
-        const samples: ScenarioResult['samples'] = {
-          'ag-grid': [],
-          infinite: [],
-        };
+        const samples: ScenarioResult['samples'] = {};
+        for (const grid of grids) {
+          samples[grid] = [];
+        }
 
         for (let i = 0; i < WARMUP + RUNS; i++) {
-          // alternate which grid goes first, so drift (thermal, background
-          // load) affects both equally
-          const order = i % 2 === 0 ? GRIDS : [...GRIDS].reverse();
+          // a different grid goes first in every run, and the order is
+          // reversed every other run, so drift (thermal, background load)
+          // affects all of them equally
+          const start = Math.floor(i / 2) % grids.length;
+          const rotated = [...grids.slice(start), ...grids.slice(0, start)];
+          const order = i % 2 === 0 ? rotated : rotated.reverse();
           for (const grid of order) {
             const runName = `${size}-${scenario.id}-${grid}-${i}`;
             const { ctx, errors, close } = await openGrid(
@@ -1068,7 +1159,7 @@ for (const size of SIZES) {
               expect(errors, `page errors in ${runName}`).toEqual([]);
               const warmup = i < WARMUP;
               if (!warmup) {
-                samples[grid].push(sample);
+                samples[grid]!.push(sample);
               }
               console.log(
                 `[${size} ${scenario.id}] ${

@@ -1,14 +1,21 @@
 /**
- * Used by .github/workflows/benchmark.yml: decides which versions of the two
+ * Used by .github/workflows/benchmark.yml: decides which versions of the
  * grids to measure, and whether there is anything to do.
+ *
+ * A scheduled run looks for a new version of Infinite Table or AG Grid. MUI X
+ * Data Grid and TanStack Table stay on the versions in package.json, unless
+ * a run started by hand asks for another one.
  *
  * Env:
  *   EVENT_NAME      schedule | workflow_dispatch | repository_dispatch
  *   INFINITE        version of @infinite-table/infinite-react ("" or "latest" = latest on npm)
  *   AG_GRID         version of ag-grid-react + ag-grid-community (same)
+ *   MUI             version of @mui/x-data-grid ("" = the one in package.json, "latest" = latest on npm)
+ *   TANSTACK        version of @tanstack/react-table (same)
  *   GH_TOKEN        to look for an open "benchmark failed" issue
  *
- * Outputs (GITHUB_OUTPUT): run, infinite, ag_grid, newest, branch
+ * Outputs (GITHUB_OUTPUT): run, infinite, ag_grid, mui, tanstack, newest,
+ * branch, title
  */
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -19,6 +26,8 @@ const pkg = JSON.parse(
 const current = {
   infinite: pkg.dependencies['@infinite-table/infinite-react'],
   agGrid: pkg.dependencies['ag-grid-react'],
+  mui: pkg.dependencies['@mui/x-data-grid'],
+  tanstack: pkg.dependencies['@tanstack/react-table'],
 };
 
 const scheduled = process.env.EVENT_NAME === 'schedule';
@@ -55,8 +64,10 @@ function output(values) {
 // numeric, so 10.10.0 is newer than 10.9.0
 const compare = (a, b) => a.localeCompare(b, 'en', { numeric: true });
 
-const failureTitle = (infinite, agGrid) =>
-  `Benchmark failed: Infinite Table ${infinite}, AG Grid ${agGrid}`;
+// what a run is called: in its commit message and in its "failed" issue
+const describe = (v) =>
+  `Infinite Table ${v.infinite}, AG Grid ${v.agGrid}, MUI X Data Grid ${v.mui}, TanStack Table ${v.tanstack}`;
+const failureTitle = (versions) => `Benchmark failed: ${describe(versions)}`;
 
 function hasOpenFailureIssue(title) {
   if (!process.env.GH_TOKEN) {
@@ -88,7 +99,12 @@ const infinite = await resolve(
   process.env.INFINITE,
 );
 const agGrid = await resolve('ag-grid-react', process.env.AG_GRID);
-
+const mui = await resolve('@mui/x-data-grid', process.env.MUI || current.mui);
+const tanstack = await resolve(
+  '@tanstack/react-table',
+  process.env.TANSTACK || current.tanstack,
+);
+const versions = { infinite, agGrid, mui, tanstack };
 let run = true;
 let reason = 'asked for';
 
@@ -103,7 +119,7 @@ if (!(await published('ag-grid-community', agGrid))) {
   if (infinite === current.infinite && agGrid === current.agGrid) {
     run = false;
     reason = 'no new versions';
-  } else if (hasOpenFailureIssue(failureTitle(infinite, agGrid))) {
+  } else if (hasOpenFailureIssue(failureTitle(versions))) {
     run = false;
     reason = 'these versions failed before - close the issue to try again';
   } else {
@@ -111,21 +127,27 @@ if (!(await published('ag-grid-community', agGrid))) {
   }
 }
 
-// only the newest versions go to results/latest on master; an older pair
-// gets its branch and its row in the history table
+// only the newest versions go to results/latest on master; older ones get
+// their branch and their rows in the history table
 const newest =
   compare(infinite, current.infinite) >= 0 &&
-  compare(agGrid, current.agGrid) >= 0;
+  compare(agGrid, current.agGrid) >= 0 &&
+  compare(mui, current.mui) >= 0 &&
+  compare(tanstack, current.tanstack) >= 0;
 
 console.log(
-  `installed: Infinite Table ${current.infinite}, AG Grid ${current.agGrid}\n` +
-    `to measure: Infinite Table ${infinite}, AG Grid ${agGrid}\n` +
+  `installed: ${describe(current)}\n` +
+    `to measure: ${describe(versions)}\n` +
     `${run ? 'running' : 'not running'}: ${reason}\n`,
 );
 output({
   run,
   infinite,
   ag_grid: agGrid,
+  mui,
+  tanstack,
   newest,
-  branch: `versions/infinite-${infinite}_ag-grid-${agGrid}`,
+  // the same name as versionBranch() in scripts/update-results.ts
+  branch: `versions/infinite-${infinite}_ag-grid-${agGrid}_mui-${mui}_tanstack-${tanstack}`,
+  title: describe(versions),
 });

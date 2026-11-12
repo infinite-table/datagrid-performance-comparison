@@ -1,14 +1,33 @@
-# Infinite Table vs AG Grid - performance comparison
+# Infinite Table vs AG Grid, MUI X Data Grid and TanStack Table - performance comparison
 
-A reproducible benchmark of two React DataGrids,
-[Infinite Table](https://infinite-table.com) and
-[AG Grid React](https://www.ag-grid.com/react-data-grid/) (Community), at
-300,000 and 1,000,000 rows: mount time, memory, sorting and scrolling.
+A reproducible benchmark of four React DataGrids at 300,000 and 1,000,000
+rows: mount time, memory, sorting and scrolling.
 
-Both grids are installed from npm, render the same data in the same browser,
+- [Infinite Table](https://infinite-table.com)
+- [AG Grid React](https://www.ag-grid.com/react-data-grid/) (Community)
+- [MUI X Data Grid](https://mui.com/x/react-data-grid/) (the free, MIT
+  licensed `DataGrid`)
+- [TanStack Table](https://tanstack.com/table), which is headless, rendered
+  with [TanStack Virtual](https://tanstack.com/virtual) as in its official
+  virtualization example
+
+All of them are installed from npm, render the same data in the same browser,
 and get the same interactions. The benchmark runs again whenever a new version
-of either grid is published, and the results below are updated - or you can
-[run it yourself](#run-it), with any two versions.
+of Infinite Table or AG Grid is published, and the results below are updated -
+or you can [run it yourself](#run-it), with any versions.
+
+Two things to know before reading the numbers - both are explained in
+[What is compared](#what-is-compared):
+
+- **MUI X Data Grid always paginates** in its free edition, with at most 100
+  rows on a page. It loads and sorts all the rows, but it can't scroll through
+  them, so it is in the mount, memory and sorting results and not in the
+  scrolling ones.
+- **TanStack Table renders nothing by itself.** What is measured is TanStack
+  Table plus TanStack Virtual plus the markup of the official example - a
+  much smaller thing than a full grid, with no keyboard navigation, cell
+  selection, column menus or pinned columns. With 1,000,000 rows it can't
+  scroll past row 838,860.
 
 The write-up, with the reasoning behind the methodology:
 [Benchmarking Infinite Table and AG Grid with a million rows](https://infinite-table.com/blog/2026/11/11/benchmarking-infinite-table-and-ag-grid-with-a-million-rows).
@@ -20,88 +39,90 @@ whole thing is here for you to run.
 
 ## Results
 
-**Infinite Table 10.1.4** vs **AG Grid React 36.3.0** - measured on 2026-11-11, on GitHub Actions, ubuntu-24.04 (AMD EPYC 9V45 96-Core Processor × 4), in Chrome 136.0.7103.25 (headless). Every value is the median of 7 runs.
+**Infinite Table 10.1.5** vs **AG Grid React 36.3.0** (Community), **MUI X Data Grid 9.17.0** (the free `DataGrid`) and **TanStack Table 9.3.1** (with TanStack Virtual 3.14.26) - measured on 2026-11-12, on Apple M1 Pro × 10, Darwin 24.1.0 arm64, in Chrome 136.0.7103.25 (headless). Every value is the median of 7 runs.
 
-The absolute numbers depend on the machine - compare the two grids, not the milliseconds. A difference is only called when the 95% confidence interval excludes "no difference".
+The absolute numbers depend on the machine - compare the grids, not the milliseconds. In the table under the charts, a difference is only called when the 95% confidence interval excludes "no difference".
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/at-a-glance-dark.svg">
-  <img src="results/latest/charts/at-a-glance-light.svg" width="760" alt="At a glance - 1,000,000 rows (lower is better). Mount: first rows painted: AG Grid 611 ms, Infinite Table 411 ms; Sort a string column: AG Grid 3,088 ms, Infinite Table 1,380 ms; Sort a number column: AG Grid 2,710 ms, Infinite Table 1,140 ms.">
+  <img src="results/latest/charts/at-a-glance-light.svg" width="760" alt="At a glance - 1,000,000 rows (lower is better). Mount: first rows painted: AG Grid 467 ms, MUI X Data Grid 144 ms, TanStack Table 373 ms, Infinite Table 318 ms; Sort a string column: AG Grid 3,353 ms, MUI X Data Grid 3,493 ms, TanStack Table 4,098 ms, Infinite Table 1,305 ms; Sort a number column: AG Grid 2,893 ms, MUI X Data Grid 1,546 ms, TanStack Table 3,584 ms, Infinite Table 1,139 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/mount-dark.svg">
-  <img src="results/latest/charts/mount-light.svg" width="760" alt="Mount time (lower is better). First rows painted, 300k rows: AG Grid 254 ms, Infinite Table 196 ms; Settled (no more DOM changes), 300k rows: AG Grid 356 ms, Infinite Table 196 ms; First rows painted, 1M rows: AG Grid 611 ms, Infinite Table 411 ms; Settled, 1M rows: AG Grid 714 ms, Infinite Table 411 ms.">
+  <img src="results/latest/charts/mount-light.svg" width="760" alt="Mount time (lower is better). First rows painted, 300k rows: AG Grid 192 ms, MUI X Data Grid 94 ms, TanStack Table 109 ms, Infinite Table 135 ms; Settled (no more DOM changes), 300k rows: AG Grid 295 ms, MUI X Data Grid 94 ms, TanStack Table 109 ms, Infinite Table 136 ms; First rows painted, 1M rows: AG Grid 467 ms, MUI X Data Grid 144 ms, TanStack Table 373 ms, Infinite Table 318 ms; Settled, 1M rows: AG Grid 570 ms, MUI X Data Grid 144 ms, TanStack Table 373 ms, Infinite Table 329 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/memory-dark.svg">
-  <img src="results/latest/charts/memory-light.svg" width="760" alt="Memory: JavaScript heap retained by the grid (lower is better). 300k rows: AG Grid 67.4 MB, Infinite Table 36.6 MB; 1M rows: AG Grid 213 MB, Infinite Table 90.7 MB.">
+  <img src="results/latest/charts/memory-light.svg" width="760" alt="Memory: JavaScript heap retained by the grid (lower is better). 300k rows: AG Grid 67.5 MB, MUI X Data Grid 27.2 MB, TanStack Table 86.6 MB, Infinite Table 36.6 MB; 1M rows: AG Grid 213 MB, MUI X Data Grid 78.8 MB, TanStack Table 287 MB, Infinite Table 90.7 MB.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/sort-300k-dark.svg">
-  <img src="results/latest/charts/sort-300k-light.svg" width="760" alt="Sorting 300,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 732 ms, Infinite Table 353 ms; String column, descending: AG Grid 703 ms, Infinite Table 343 ms; Number column, ascending: AG Grid 628 ms, Infinite Table 288 ms; Number column, descending: AG Grid 632 ms, Infinite Table 287 ms.">
+  <img src="results/latest/charts/sort-300k-light.svg" width="760" alt="Sorting 300,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 800 ms, MUI X Data Grid 848 ms, TanStack Table 1,005 ms, Infinite Table 340 ms; String column, descending: AG Grid 816 ms, MUI X Data Grid 846 ms, TanStack Table 1,040 ms, Infinite Table 333 ms; Number column, ascending: AG Grid 653 ms, MUI X Data Grid 346 ms, TanStack Table 760 ms, Infinite Table 277 ms; Number column, descending: AG Grid 645 ms, MUI X Data Grid 427 ms, TanStack Table 728 ms, Infinite Table 280 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/sort-1m-dark.svg">
-  <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 3,088 ms, Infinite Table 1,380 ms; String column, descending: AG Grid 3,034 ms, Infinite Table 1,586 ms; Number column, ascending: AG Grid 2,710 ms, Infinite Table 1,140 ms; Number column, descending: AG Grid 2,728 ms, Infinite Table 1,142 ms.">
+  <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: AG Grid 3,353 ms, MUI X Data Grid 3,493 ms, TanStack Table 4,098 ms, Infinite Table 1,305 ms; String column, descending: AG Grid 3,179 ms, MUI X Data Grid 3,590 ms, TanStack Table 4,098 ms, Infinite Table 1,338 ms; Number column, ascending: AG Grid 2,893 ms, MUI X Data Grid 1,546 ms, TanStack Table 3,584 ms, Infinite Table 1,139 ms; Number column, descending: AG Grid 3,016 ms, MUI X Data Grid 2,007 ms, TanStack Table 3,516 ms, Infinite Table 1,187 ms.">
 </picture>
 
-The string column is lowercase a-z text, sorted in an `en-US` browser. That is the best case for how Infinite Table compares strings - see [String sorting](#string-sorting) before reading too much into it. The number column has no such condition.
+The string column is lowercase a-z text, sorted in an `en-US` browser. The grids do not compare strings the same way, and the result depends on the browser locale - see [String sorting](#string-sorting).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-jump-dark.svg">
-  <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: AG Grid 28.4 ms, Infinite Table 28.4 ms; 1M rows: AG Grid 27.4 ms, Infinite Table 30 ms.">
+  <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: AG Grid 28.8 ms, TanStack Table 9.87 ms, Infinite Table 28.5 ms; 1M rows: AG Grid 20.1 ms, TanStack Table 7.18 ms, Infinite Table 24.1 ms.">
 </picture>
+
+MUI X Data Grid is not in the scrolling charts: it always paginates, with at most 100 rows on a page, so there is one page to scroll through - see [What is compared](#what-is-compared). With 1M rows, TanStack Table (with TanStack Virtual) cannot scroll past row 838,860 - see [Scroll range](#scroll-range).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-frames-dark.svg">
-  <img src="results/latest/charts/scroll-frames-light.svg" width="760" alt="Vertical scrolling: frames fully presented (higher is better). 300k rows: AG Grid 52%, Infinite Table 61.2%; 1M rows: AG Grid 50.7%, Infinite Table 61.7%.">
+  <img src="results/latest/charts/scroll-frames-light.svg" width="760" alt="Vertical scrolling: frames fully presented (higher is better). 300k rows: AG Grid 52.3%, TanStack Table 100%, Infinite Table 56.4%; 1M rows: AG Grid 53.7%, TanStack Table 100%, Infinite Table 54.1%.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-vertical-work-dark.svg">
-  <img src="results/latest/charts/scroll-vertical-work-light.svg" width="760" alt="Vertical scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 501 ms, Infinite Table 574 ms; Layout: AG Grid 86.9 ms, Infinite Table 66.4 ms; Style recalculation: AG Grid 227 ms, Infinite Table 152 ms; All tasks: AG Grid 1,288 ms, Infinite Table 1,298 ms.">
+  <img src="results/latest/charts/scroll-vertical-work-light.svg" width="760" alt="Vertical scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 438 ms, TanStack Table 282 ms, Infinite Table 507 ms; Layout: AG Grid 86.3 ms, TanStack Table 64.3 ms, Infinite Table 55.2 ms; Style recalculation: AG Grid 188 ms, TanStack Table 29.6 ms, Infinite Table 135 ms; All tasks: AG Grid 1,099 ms, TanStack Table 689 ms, Infinite Table 1,099 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-horizontal-work-dark.svg">
-  <img src="results/latest/charts/scroll-horizontal-work-light.svg" width="760" alt="Horizontal scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 225 ms, Infinite Table 136 ms; Layout: AG Grid 66.6 ms, Infinite Table 10.9 ms; Style recalculation: AG Grid 39 ms, Infinite Table 42.5 ms; All tasks: AG Grid 600 ms, Infinite Table 396 ms.">
+  <img src="results/latest/charts/scroll-horizontal-work-light.svg" width="760" alt="Horizontal scrolling, 300k rows: main-thread work (lower is better). Scripting: AG Grid 180 ms, TanStack Table 207 ms, Infinite Table 118 ms; Layout: AG Grid 53.2 ms, TanStack Table 36.2 ms, Infinite Table 8.9 ms; Style recalculation: AG Grid 31.5 ms, TanStack Table 10.7 ms, Infinite Table 38.2 ms; All tasks: AG Grid 456 ms, TanStack Table 403 ms, Infinite Table 342 ms.">
 </picture>
 
 <details>
-<summary>The same numbers, as a table</summary>
+<summary>The same numbers, as a table - and how Infinite Table compares with each grid</summary>
 
-| | AG Grid | Infinite Table | Difference |
-|---|---:|---:|---|
-| Mount - First rows painted, 300k rows | 254 ms | 196 ms | **Infinite Table**: 23% lower |
-| Mount - Settled (no more DOM changes), 300k rows | 356 ms | 196 ms | **Infinite Table**: 45% lower |
-| Mount - First rows painted, 1M rows | 611 ms | 411 ms | **Infinite Table**: 33% lower |
-| Mount - Settled, 1M rows | 714 ms | 411 ms | **Infinite Table**: 42% lower |
-| Memory - 300k rows | 67.4 MB | 36.6 MB | **Infinite Table**: 46% lower |
-| Memory - 1M rows | 213 MB | 90.7 MB | **Infinite Table**: 2.35× lower |
-| Sort, 300k rows - String column, ascending | 732 ms | 353 ms | **Infinite Table**: 2.07× lower |
-| Sort, 300k rows - String column, descending | 703 ms | 343 ms | **Infinite Table**: 2.05× lower |
-| Sort, 300k rows - Number column, ascending | 628 ms | 288 ms | **Infinite Table**: 2.18× lower |
-| Sort, 300k rows - Number column, descending | 632 ms | 287 ms | **Infinite Table**: 2.21× lower |
-| Sort, 1M rows - String column, ascending | 3,088 ms | 1,380 ms | **Infinite Table**: 2.24× lower |
-| Sort, 1M rows - String column, descending | 3,034 ms | 1,586 ms | **Infinite Table**: 48% lower |
-| Sort, 1M rows - Number column, ascending | 2,710 ms | 1,140 ms | **Infinite Table**: 2.38× lower |
-| Sort, 1M rows - Number column, descending | 2,728 ms | 1,142 ms | **Infinite Table**: 2.39× lower |
-| Jump to rows painted - 300k rows | 28.4 ms | 28.4 ms | no significant difference |
-| Jump to rows painted - 1M rows | 27.4 ms | 30 ms | **AG Grid**: 9% lower |
-| Vertical scrolling, frames fully presented - 300k rows | 52% | 61.2% | **Infinite Table**: 9.16 points higher |
-| Vertical scrolling, frames fully presented - 1M rows | 50.7% | 61.7% | **Infinite Table**: 11 points higher |
-| Vertical scrolling, 300k rows, main-thread work - Scripting | 501 ms | 574 ms | **AG Grid**: 13% lower |
-| Vertical scrolling, 300k rows, main-thread work - Layout | 86.9 ms | 66.4 ms | **Infinite Table**: 24% lower |
-| Vertical scrolling, 300k rows, main-thread work - Style recalculation | 227 ms | 152 ms | **Infinite Table**: 33% lower |
-| Vertical scrolling, 300k rows, main-thread work - All tasks | 1,288 ms | 1,298 ms | no significant difference |
-| Horizontal scrolling, 300k rows, main-thread work - Scripting | 225 ms | 136 ms | **Infinite Table**: 40% lower |
-| Horizontal scrolling, 300k rows, main-thread work - Layout | 66.6 ms | 10.9 ms | **Infinite Table**: 6.13× lower |
-| Horizontal scrolling, 300k rows, main-thread work - Style recalculation | 39 ms | 42.5 ms | **AG Grid**: 8% lower |
-| Horizontal scrolling, 300k rows, main-thread work - All tasks | 600 ms | 396 ms | **Infinite Table**: 34% lower |
+| | AG Grid | MUI X Data Grid | TanStack Table | Infinite Table | Infinite Table vs each grid |
+|---|---:|---:|---:|---:|---|
+| Mount - First rows painted, 300k rows | 192 ms | 94 ms | 109 ms | 135 ms | vs AG Grid: **Infinite Table** 30% lower<br>vs MUI X Data Grid: **MUI X Data Grid** 30% lower<br>vs TanStack Table: **TanStack Table** 20% lower |
+| Mount - Settled (no more DOM changes), 300k rows | 295 ms | 94 ms | 109 ms | 136 ms | vs AG Grid: **Infinite Table** 2.17× lower<br>vs MUI X Data Grid: **MUI X Data Grid** 31% lower<br>vs TanStack Table: **TanStack Table** 20% lower |
+| Mount - First rows painted, 1M rows | 467 ms | 144 ms | 373 ms | 318 ms | vs AG Grid: **Infinite Table** 32% lower<br>vs MUI X Data Grid: **MUI X Data Grid** 2.21× lower<br>vs TanStack Table: no significant difference |
+| Mount - Settled, 1M rows | 570 ms | 144 ms | 373 ms | 329 ms | vs AG Grid: **Infinite Table** 42% lower<br>vs MUI X Data Grid: **MUI X Data Grid** 2.29× lower<br>vs TanStack Table: no significant difference |
+| Memory - 300k rows | 67.5 MB | 27.2 MB | 86.6 MB | 36.6 MB | vs AG Grid: **Infinite Table** 46% lower<br>vs MUI X Data Grid: **MUI X Data Grid** 26% lower<br>vs TanStack Table: **Infinite Table** 2.37× lower |
+| Memory - 1M rows | 213 MB | 78.8 MB | 287 MB | 90.7 MB | vs AG Grid: **Infinite Table** 2.35× lower<br>vs MUI X Data Grid: **MUI X Data Grid** 13% lower<br>vs TanStack Table: **Infinite Table** 3.16× lower |
+| Sort, 300k rows - String column, ascending | 800 ms | 848 ms | 1,005 ms | 340 ms | vs AG Grid: **Infinite Table** 2.35× lower<br>vs MUI X Data Grid: **Infinite Table** 2.49× lower<br>vs TanStack Table: **Infinite Table** 2.96× lower |
+| Sort, 300k rows - String column, descending | 816 ms | 846 ms | 1,040 ms | 333 ms | vs AG Grid: **Infinite Table** 2.45× lower<br>vs MUI X Data Grid: **Infinite Table** 2.54× lower<br>vs TanStack Table: **Infinite Table** 3.13× lower |
+| Sort, 300k rows - Number column, ascending | 653 ms | 346 ms | 760 ms | 277 ms | vs AG Grid: **Infinite Table** 2.36× lower<br>vs MUI X Data Grid: **Infinite Table** 20% lower<br>vs TanStack Table: **Infinite Table** 2.75× lower |
+| Sort, 300k rows - Number column, descending | 645 ms | 427 ms | 728 ms | 280 ms | vs AG Grid: **Infinite Table** 2.3× lower<br>vs MUI X Data Grid: **Infinite Table** 34% lower<br>vs TanStack Table: **Infinite Table** 2.6× lower |
+| Sort, 1M rows - String column, ascending | 3,353 ms | 3,493 ms | 4,098 ms | 1,305 ms | vs AG Grid: **Infinite Table** 2.57× lower<br>vs MUI X Data Grid: **Infinite Table** 2.68× lower<br>vs TanStack Table: **Infinite Table** 3.14× lower |
+| Sort, 1M rows - String column, descending | 3,179 ms | 3,590 ms | 4,098 ms | 1,338 ms | vs AG Grid: **Infinite Table** 2.38× lower<br>vs MUI X Data Grid: **Infinite Table** 2.68× lower<br>vs TanStack Table: **Infinite Table** 3.06× lower |
+| Sort, 1M rows - Number column, ascending | 2,893 ms | 1,546 ms | 3,584 ms | 1,139 ms | vs AG Grid: **Infinite Table** 2.54× lower<br>vs MUI X Data Grid: **Infinite Table** 26% lower<br>vs TanStack Table: **Infinite Table** 3.15× lower |
+| Sort, 1M rows - Number column, descending | 3,016 ms | 2,007 ms | 3,516 ms | 1,187 ms | vs AG Grid: **Infinite Table** 2.54× lower<br>vs MUI X Data Grid: **Infinite Table** 41% lower<br>vs TanStack Table: **Infinite Table** 2.96× lower |
+| Jump to rows painted - 300k rows | 28.8 ms | – | 9.87 ms | 28.5 ms | vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 2.89× lower |
+| Jump to rows painted - 1M rows | 20.1 ms | – | 7.18 ms | 24.1 ms | vs AG Grid: **AG Grid** 17% lower<br>vs TanStack Table: **TanStack Table** 3.36× lower |
+| Vertical scrolling, frames fully presented - 300k rows | 52.3% | – | 100% | 56.4% | vs AG Grid: **Infinite Table** 4.1 points higher<br>vs TanStack Table: no significant difference |
+| Vertical scrolling, frames fully presented - 1M rows | 53.7% | – | 100% | 54.1% | vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 45.9 points higher |
+| Vertical scrolling, 300k rows, main-thread work - Scripting | 438 ms | – | 282 ms | 507 ms | vs AG Grid: **AG Grid** 14% lower<br>vs TanStack Table: **TanStack Table** 44% lower |
+| Vertical scrolling, 300k rows, main-thread work - Layout | 86.3 ms | – | 64.3 ms | 55.2 ms | vs AG Grid: **Infinite Table** 36% lower<br>vs TanStack Table: no significant difference |
+| Vertical scrolling, 300k rows, main-thread work - Style recalculation | 188 ms | – | 29.6 ms | 135 ms | vs AG Grid: **Infinite Table** 28% lower<br>vs TanStack Table: **TanStack Table** 4.54× lower |
+| Vertical scrolling, 300k rows, main-thread work - All tasks | 1,099 ms | – | 689 ms | 1,099 ms | vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 37% lower |
+| Horizontal scrolling, 300k rows, main-thread work - Scripting | 180 ms | – | 207 ms | 118 ms | vs AG Grid: **Infinite Table** 34% lower<br>vs TanStack Table: **Infinite Table** 43% lower |
+| Horizontal scrolling, 300k rows, main-thread work - Layout | 53.2 ms | – | 36.2 ms | 8.9 ms | vs AG Grid: **Infinite Table** 5.98× lower<br>vs TanStack Table: **Infinite Table** 4.07× lower |
+| Horizontal scrolling, 300k rows, main-thread work - Style recalculation | 31.5 ms | – | 10.7 ms | 38.2 ms | vs AG Grid: **AG Grid** 18% lower<br>vs TanStack Table: **TanStack Table** 3.57× lower |
+| Horizontal scrolling, 300k rows, main-thread work - All tasks | 456 ms | – | 403 ms | 342 ms | vs AG Grid: **Infinite Table** 25% lower<br>vs TanStack Table: **Infinite Table** 15% lower |
 
 </details>
 
@@ -109,11 +130,16 @@ Every metric of every scenario, with standard deviations and confidence interval
 
 ## History
 
-One row for every pair of versions measured so far, newest first. Each cell is **Infinite Table / AG Grid**; all are times in ms, except memory, in MB - lower is better. Rows measured on different machines can't be compared in absolute terms (hosted runners don't all have the same CPU) - compare how the two grids relate. The branch of a row has the code, the lockfile and the full results of that run.
+Every set of versions measured so far, newest first, with a row for each grid. All the values are times in ms, except memory, in MB - lower is better. Runs measured on different machines can't be compared in absolute terms (hosted runners don't all have the same CPU) - compare how the grids relate within a run. The branch of a run has the code, the lockfile and the full results of that run.
 
-| Infinite Table | AG Grid | Date | Mount 1M | Sort string 1M | Sort number 1M | Memory 1M | Vertical scroll work 300k | Horizontal scroll work 300k | Machine | Results |
-|---|---|---|---:|---:|---:|---:|---:|---:|---|---|
-| 10.1.4 | 36.3.0 | 2026-11-11 | 411 / 611 | 1,380 / 3,088 | 1,140 / 2,710 | 90.7 / 213 | 1,298 / 1,288 | 396 / 600 | GitHub Actions, ubuntu-24.04 · AMD EPYC 9V45 96-Core Processor × 4 | [branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.4_ag-grid-36.3.0) |
+| Run | Grid | Mount 1M | Sort string 1M | Sort number 1M | Memory 1M | Vertical scroll work 300k | Horizontal scroll work 300k |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 2026-11-12<br>Apple M1 Pro × 10<br>[branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.5_ag-grid-36.3.0_mui-9.17.0_tanstack-9.3.1) | Infinite Table 10.1.5 | 318 | 1,305 | 1,139 | 90.7 | 1,099 | 342 |
+|  | AG Grid 36.3.0 | 467 | 3,353 | 2,893 | 213 | 1,099 | 456 |
+|  | MUI X Data Grid 9.17.0 | 144 | 3,493 | 1,546 | 78.8 | – | – |
+|  | TanStack Table 9.3.1 | 373 | 4,098 | 3,584 | 287 | 689 | 403 |
+| 2026-11-11<br>GitHub Actions, ubuntu-24.04 · AMD EPYC 9V45 96-Core Processor × 4<br>[branch](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/tree/versions/infinite-10.1.4_ag-grid-36.3.0) | Infinite Table 10.1.4 | 411 | 1,380 | 1,140 | 90.7 | 1,298 | 396 |
+|  | AG Grid 36.3.0 | 611 | 3,088 | 2,710 | 213 | 1,288 | 600 |
 
 <!-- results:end -->
 
@@ -133,8 +159,8 @@ npx playwright install chromium
 BENCH_HEADLESS=1 npm run benchmark
 ```
 
-A full run takes about 25 minutes on an Apple M1 Pro: 9 scenarios × 2 sizes ×
-2 grids × 8 runs. Without `BENCH_HEADLESS=1` it opens real browser windows -
+A full run takes about 50 minutes on an Apple M1 Pro: 9 scenarios × 2 sizes ×
+4 grids × 8 runs (the 6 scrolling scenarios don't run for MUI X Data Grid). Without `BENCH_HEADLESS=1` it opens real browser windows -
 closer to what users see, but you have to leave the machine alone while they
 come and go.
 
@@ -157,8 +183,9 @@ the code or the installed versions.
 Every run writes two files to `benchmark-results/<run id>/`:
 
 - `report.md` - one table per scenario, with the median and standard deviation
-  of each grid, the ratio between them, its 95% confidence interval, and which
-  grid is better when the difference is significant
+  of each grid and, for Infinite Table against each of the others, the ratio,
+  its 95% confidence interval, and which grid is better when the difference is
+  significant
 - `results.json` - every raw sample of every run
 
 The most recent report is also copied to `benchmark-results/latest.md`.
@@ -172,16 +199,20 @@ report records them.
 ```sh
 npm install @infinite-table/infinite-react@<version>
 npm install ag-grid-community@<version> ag-grid-react@<version>
+npm install @mui/x-data-grid@<version>
+npm install @tanstack/react-table@<version> @tanstack/react-virtual@<version>
 
 BENCH_HEADLESS=1 npm run benchmark
 ```
 
 Keep `ag-grid-community` and `ag-grid-react` on the same version.
 
+To measure only some of the grids, name them: `BENCH_GRIDS=ag-grid,infinite`
+(`ag-grid`, `mui`, `tanstack`, `infinite`).
+
 Infinite Table reaches the last of 1,000,000 rows starting with version
-10.1.4. With older versions the setup of the 1M size fails, because the two
-grids scroll over a different number of rows - use `BENCH_SIZES=300k` for
-those.
+10.1.4. Older versions stop before it, and the report says where - see
+[Scroll range](#scroll-range).
 
 ## How the results above are kept up to date
 
@@ -190,38 +221,39 @@ Actions:
 
 - every 6 hours it looks on npm for a new version of
   `@infinite-table/infinite-react` or `ag-grid-react`. When there is one, it
-  installs it, runs the whole benchmark and commits the results
-- it can also be started by hand, for any pair of versions: Actions >
+  installs it, runs the whole benchmark and commits the results. MUI X Data
+  Grid and TanStack Table stay on the versions in `package.json`
+- it can also be started by hand, for any versions of the four: Actions >
   Benchmark > Run workflow
 - a `repository_dispatch` event of type `new-version` starts it right away,
   for a release pipeline that doesn't want to wait for the schedule
 
 Where the results go:
 
-- **`master`** always has the newest pair of versions: `package.json`,
+- **`master`** always has the newest versions: `package.json`,
   [`results/latest`](./results/latest) (the report and the raw samples) and
   the charts above
-- **a branch for every pair of versions** that was measured -
-  `versions/infinite-<version>_ag-grid-<version>` - with the code, the
-  lockfile and the full results of that run
-- **the [history](#history) table** on `master` has a row for every one of
+- **a branch for every set of versions** that was measured -
+  `versions/infinite-<version>_ag-grid-<version>_mui-<version>_tanstack-<version>` -
+  with the code, the lockfile and the full results of that run
+- **the [history](#history) table** on `master` has the rows of every one of
   them, from [`results/history.json`](./results/history.json)
 
 The hosted runners are shared virtual machines without a GPU, and their CPU
 can change from one run to the next (the history table says which one it was).
 So the absolute numbers differ between runs, and from the ones in the blog
 post, which was measured on an Apple M1 Pro
-([`results/blog-post-2026-11-11`](./results/blog-post-2026-11-11)). What the
-benchmark is after is how the two grids relate - every run alternates between
-them, so both get the same conditions.
+([`results/blog-post-2026-11-12`](./results/blog-post-2026-11-12)). What the
+benchmark is after is how the grids relate - every run goes through all of
+them in turn, so they get the same conditions.
 
-If a run fails, the workflow opens an issue and stops trying that pair of
-versions until the issue is closed.
+If a run fails, the workflow opens an issue and stops trying those versions
+until the issue is closed.
 
 To update the README from a run on your machine:
 `node scripts/update-results.ts <run id>`.
 
-## Look at the two grids
+## Look at the grids
 
 The pages the benchmark measures are ordinary pages you can open and scroll:
 
@@ -230,71 +262,147 @@ npm run benchmark:build
 npm run benchmark:serve     # or: npm run dev
 ```
 
-Then open [localhost:3000](http://localhost:3000) for the list:
-`/benchmark/infinite-300k`, `/benchmark/infinite-1m`,
-`/benchmark/ag-grid-300k` and `/benchmark/ag-grid-1m`. If port 3000 is taken,
+Then open [localhost:3000](http://localhost:3000) for the list - a page for
+each grid and size: `/benchmark/<grid>-<size>`, where the grid is `infinite`,
+`ag-grid`, `mui` or `tanstack` and the size is `300k` or `1m`. If port 3000 is taken,
 pick another one with `npm run benchmark:serve -- -p 4000`.
 
 ## What is compared
 
-Each grid is on its defaults. Only what makes the two layouts identical is
-set:
+Each grid is on its defaults. Only what makes the layouts identical is set:
 
 - **Data:** 300,000 and 1,000,000 rows × 20 columns, generated
-  deterministically ([`data.ts`](./src/benchmark/data.ts)). Both grids import
-  the same module, and the setup checks a checksum and that both grids show
+  deterministically ([`data.ts`](./src/benchmark/data.ts)). Every grid imports
+  the same module, and the setup checks a checksum and that all the grids show
   the same text in the visible cells.
 - **Same row height, header height and column widths.**
-- **AG Grid:** the Quartz theme, all Community modules, `animateRows={false}`
-  (Infinite Table doesn't animate rows on sort, and the animation would make
-  "sorted rows visible" ambiguous) and a `getRowId` (Infinite Table always has
-  a primary key). See [`AgGridBenchmark.tsx`](./src/benchmark/AgGridBenchmark.tsx).
-- **Infinite Table:** see [`InfiniteBenchmark.tsx`](./src/benchmark/InfiniteBenchmark.tsx).
 - **Each page loads only its own grid** - its code and its stylesheet.
-- **The same body height.** The setup measures the scrolling body of both
-  grids and makes the box of the shorter one taller until they match, so both
-  render the same number of rows. See "License key" below for why this is
-  needed.
+- **The same body height.** The setup measures the scrolling body of every
+  grid and makes the boxes of the shorter ones taller until they match, so
+  all of them render the same number of rows. MUI's pagination footer takes
+  about 67px, and see "License key" below for Infinite Table.
+
+What is set for each grid, and why:
+
+- **Infinite Table:** nothing else. See
+  [`InfiniteBenchmark.tsx`](./src/benchmark/InfiniteBenchmark.tsx).
+- **AG Grid:** the Quartz theme, all Community modules, `animateRows={false}`
+  (the other grids don't animate rows on sort, and the animation would make
+  "sorted rows visible" ambiguous) and a `getRowId` (the other grids have a
+  row id too). See [`AgGridBenchmark.tsx`](./src/benchmark/AgGridBenchmark.tsx).
+- **MUI X Data Grid:** the free `DataGrid` from `@mui/x-data-grid`, with the
+  default Material theme. The number columns have `type: 'number'` and a
+  `valueFormatter` that shows the value as it is - by default MUI formats
+  numbers for the locale ("100,000.13"), and the setup needs every grid to
+  show the same text. See [`MuiBenchmark.tsx`](./src/benchmark/MuiBenchmark.tsx).
+- **TanStack Table:** see below, and
+  [`TanStackBenchmark.tsx`](./src/benchmark/TanStackBenchmark.tsx).
+
+### MUI X Data Grid: 100 rows on a page
+
+The free edition of MUI X Data Grid always paginates, and a page has at most
+100 rows. Showing all the rows in one scrollable grid needs `DataGridPro`,
+which is commercial - and this benchmark only uses what you can install and
+run without a license.
+
+So the MUI page gets all the rows (300,000 or 1,000,000), keeps them in
+memory and sorts all of them, but renders the first page. What that means for
+the results:
+
+- **mount, memory and sorting are measured** like for the other grids. The
+  grid still virtualizes the rows of the page, and all the grids have a body
+  of the same height, so the same number of rows is rendered.
+- **the scrolling scenarios don't run for it** - there are 100 rows to scroll
+  through, not 300,000. It is missing from those charts and tables.
+
+### TanStack Table: a headless library and our markup
+
+TanStack Table has the row model and the sorting, and renders nothing. What
+the benchmark measures is the combination its documentation recommends for
+large tables: TanStack Table, [TanStack Virtual](https://tanstack.com/virtual)
+for the rows and the columns, and plain `<table>` markup. The page follows the
+official
+[virtualized-columns example](https://github.com/TanStack/table/tree/main/examples/react/virtualized-columns),
+with the same overscan (5 rows, 3 columns). What we changed:
+
+- a fixed row height, so nothing is measured while scrolling (the example
+  measures every row, for dynamic heights)
+- no column resizing
+- `sortDescFirst: false` - by default the first click on a number column
+  sorts descending; in the other grids it sorts ascending
+- `data-row-index` and `data-column-id` attributes on the cells, for the
+  measuring code
+
+Keep in mind what is being compared when you read its numbers. The other
+three are full grids: keyboard navigation, focus, cell and row selection,
+column menus, resizing, reordering and pinning, accessibility attributes on
+every cell. This page has none of that, and renders far fewer DOM
+elements - which is the point of a headless library, and it is also less work
+on every frame.
+
+### Scroll range
+
+Browsers cap the size of an element (about 33.5M px in Chrome), and 1,000,000
+rows × 40px is 40M px. A grid has to map its scrollbar onto the rows to show
+all of them.
+
+- **Infinite Table and AG Grid** do, and reach the last row.
+- **TanStack Virtual** doesn't: the element is cut at the browser's limit, and
+  the last row that can be scrolled to is 838,860. The 161,140 rows after it
+  are loaded and sorted, and can't be seen. Its 1M scrolling results are for
+  the part that can be reached; and because its scrollbar is not stretched,
+  the same wheel gesture goes over about 20% fewer rows than in the other two
+  grids.
+- **MUI X Data Grid** shows 100 rows.
+
+The report has these numbers for every run, under each size.
 
 ### Scenarios
 
-| Id                       |                                                                                            |
-| ------------------------ | ------------------------------------------------------------------------------------------ |
-| `mount`                  | mount the grid with all rows in memory: time to first rows painted, to settled, heap, DOM  |
-| `sort-string`            | click a string column header - ascending (cold), then descending                           |
-| `sort-number`            | the same, for a number column                                                              |
-| `scroll-jump`            | ten programmatic jumps to far-away scroll positions                                        |
-| `scroll-vertical`        | a wheel gesture down: frame rate, frame outcomes, main-thread work                         |
-| `scroll-horizontal`      | wheel sweeps across all the columns                                                        |
-| `correctness-vertical`   | during a very fast vertical scroll: is every cell there, and is it the right one?          |
-| `correctness-horizontal` | the same, horizontally                                                                     |
-| `visual-blank-vertical`  | a screencast of a very fast scroll: how many blank rows does the compositor actually show? |
+| Id                       |                                                                                            | Grids           |
+| ------------------------ | ------------------------------------------------------------------------------------------ | --------------- |
+| `mount`                  | mount the grid with all rows in memory: time to first rows painted, to settled, heap, DOM  | all             |
+| `sort-string`            | click a string column header - ascending (cold), then descending                           | all             |
+| `sort-number`            | the same, for a number column                                                              | all             |
+| `scroll-jump`            | ten programmatic jumps to far-away scroll positions                                        | all but MUI X   |
+| `scroll-vertical`        | a wheel gesture down: frame rate, frame outcomes, main-thread work                         | all but MUI X   |
+| `scroll-horizontal`      | wheel sweeps across all the columns                                                        | all but MUI X   |
+| `correctness-vertical`   | during a very fast vertical scroll: is every cell there, and is it the right one?          | all but MUI X   |
+| `correctness-horizontal` | the same, horizontally                                                                     | all but MUI X   |
+| `visual-blank-vertical`  | a screencast of a very fast scroll: how many blank rows does the compositor actually show? | all but MUI X   |
 
 ### String sorting
 
-The string result is for **an `en-US` browser and ASCII text**, and does not
-carry over to every setup:
+The string column is lowercase a-z text, and the browser runs as `en-US`. The
+four grids don't compare strings the same way by default:
 
-- By default the two grids don't compare strings the same way. Infinite Table
-  uses the order of the browser's locale (`localeCompare`). AG Grid compares
-  character codes (`<`), which is cheaper, but puts "Zebra" before "apple".
-  The sorted column is lowercase a-z, where both give the same order.
-- Chrome has a fast path for locale-aware comparison of ASCII text, in
-  `en-US` and a few other locales (`en-GB`, `de`, `fr`, but not `en-AU`,
-  `de-DE` or `fr-FR`). The benchmark browser runs as `en-US`.
-- In the other locales, or when the text has accented characters, that
-  comparison is several times slower. There, sorting a string column in
-  Infinite Table 10.1.4 takes about as long as in AG Grid, not half as long.
+- **Infinite Table** uses the order of the browser's locale.
+- **MUI X Data Grid** uses the order of the browser's locale too (an
+  `Intl.Collator`).
+- **AG Grid** compares character codes (`<`), which puts "Zebra" before
+  "apple".
+- **TanStack Table** picks its `text` sorting for this column: it compares the
+  lowercased values by character code.
+
+For lowercase a-z all four give the same order, which the benchmark checks.
+
+How long a locale-aware comparison takes depends on the browser locale: Chrome
+has a fast path for ASCII text in `en-US` and a few other locales (`en-GB`,
+`de`, `fr`, but not `en-AU`, `de-DE` or `fr-FR`). In the locales without it,
+Infinite Table 10.1.5 sorts a string column about 1.2× faster than AG Grid,
+not 2.5× (in 10.1.4 it was a little slower than AG Grid there). We have not
+measured the other two grids in other locales.
 
 Sorting a number column doesn't depend on any of this.
 
 ## License key
 
-AG Grid Community needs no license key. Infinite Table works without one too,
-but shows a "Powered by Infinite Table" footer, which takes 24px from the
-height of its body. Two things keep that from affecting the results:
+AG Grid Community, the free MUI X Data Grid and TanStack Table need no
+license key. Infinite Table works without one too, but shows a "Powered by
+Infinite Table" footer, which takes 24px from the height of its body. Two
+things keep that from affecting the results:
 
-- the setup makes the Infinite Table box taller, until the bodies of the two
+- the setup makes the Infinite Table box taller, until the bodies of all the
   grids have the same height (the report says by how much)
 - the footer sets its own inline styles again every second; the "settled"
   metric ignores those mutations, as it ignores screen-reader announcements
@@ -307,9 +415,10 @@ and set it there to measure the grid without the footer, then build again.
 
 - **Production builds only.** The spec refuses a development build
   (`BENCH_ALLOW_DEV=1` to try it against `next dev` anyway).
-- **Fresh browser context per run**, A/B interleaved: every scenario runs
-  `BENCH_WARMUP` + `BENCH_RUNS` times per grid, alternating which grid goes
-  first; warmup runs are discarded.
+- **Fresh browser context per run**, interleaved: every scenario runs
+  `BENCH_WARMUP` + `BENCH_RUNS` times per grid, going through all the grids
+  in each run and changing their order from one run to the next; warmup runs
+  are discarded.
 - **Latency from traces**, as in
   [js-framework-benchmark](https://github.com/krausest/js-framework-benchmark):
   from the input (pointerdown, `setState`, setting `scrollTop`) to the end of
@@ -320,7 +429,7 @@ and set it there to measure the grid without the footer, then build again.
     We don't use js-framework-benchmark's "last rAF/timer" rule, because grids
     schedule debounce timers that do no visible work.
 - **Scrolling uses real input**: `Input.synthesizeScrollGesture` (Chrome's
-  input pipeline, threaded scrolling), the same gesture for both grids.
+  input pipeline, threaded scrolling), the same gesture for every grid.
   - frame outcomes from the compositor's `PipelineReporter` trace events:
     presented with the main-thread update, presented without it ("partial" -
     the compositor scrolled what it had), or dropped
@@ -337,7 +446,7 @@ and set it there to measure the grid without the footer, then build again.
   more than that. The setup scrolls each grid to the middle and to the end, to
   report whether the last row is reachable and how the scrollbar maps onto the
   rows. The probes and jumps use that mapping, so they measure rendering - not
-  mapping differences.
+  mapping differences. See [Scroll range](#scroll-range).
 - **Sandboxed Chromium**: the benchmark turns Chromium's sandbox on
   (Playwright turns it off by default), as in real Chrome. Without it, on
   macOS, the first hover recompute after a layout change under the mouse
@@ -347,14 +456,16 @@ and set it there to measure the grid without the footer, then build again.
 - **Fixed display scale**: Chromium runs with `--force-device-scale-factor=1`.
   The largest element a page can have depends on the scale factor of the
   display the window is on (about 33.5M px at 1x, 16.7M px at 2x), whatever
-  the emulated `deviceScaleFactor`. Pinning it gives both grids the same limit
-  on every machine; the setup fails if their scroll ranges differ.
-- **Statistics**: medians, with a 95% bootstrap confidence interval of the
-  ratio of medians (Infinite / AG Grid). A winner is only named when the
-  interval excludes 1. When AG Grid has zeros among its values (0% blank
+  the emulated `deviceScaleFactor`. Pinning it gives every grid the same limit
+  on every machine; the setup fails if the grids that reach their last row
+  don't map the scrollbar the same way.
+- **Statistics**: medians. Infinite Table is compared with each of the other
+  grids: a 95% bootstrap confidence interval of the ratio of medians
+  (Infinite / other), and a grid is only named as better when the interval
+  excludes 1. When the other grid has zeros among its values (0% blank
   samples, no long frames...), a ratio means nothing - the difference of
-  medians (Infinite − AG Grid) is used instead, and its interval has to
-  exclude 0.
+  medians (Infinite − other) is used instead, and its interval has to exclude
+  0. The other grids are not compared with each other.
 
 Compare the grids, not the absolute numbers - they depend on the machine, and
 the screencast in particular adds overhead.
@@ -365,6 +476,7 @@ the screencast in particular adds overhead.
 | ---------------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------- |
 | `BENCH_SIZES`                                  | `300k,1m`        | dataset sizes to run                                                                         |
 | `BENCH_SCENARIOS`                              | all              | comma separated scenario ids, e.g. `mount,scroll-jump`                                       |
+| `BENCH_GRIDS`                                  | all              | comma separated grids, at least two of `ag-grid`, `mui`, `tanstack`, `infinite`              |
 | `BENCH_RUNS` / `BENCH_WARMUP`                  | `7` / `1`        | measured / discarded runs per grid per scenario                                              |
 | `BENCH_CPU_THROTTLE`                           | `1`              | CDP CPU throttling rate during measurements - `4` is closer to a mid-range laptop            |
 | `BENCH_HEADLESS`                               | off              | `1` = Chromium's new headless mode (headed by default - closest to real vsync and GPU)       |
@@ -380,9 +492,9 @@ the screencast in particular adds overhead.
 
 | File                                                         |                                                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| `src/pages/benchmark/<grid>-<size>.tsx`                      | the four pages that are measured                                                      |
+| `src/pages/benchmark/<grid>-<size>.tsx`                      | the pages that are measured, one for each grid and size                               |
 | `src/benchmark/data.ts`                                      | the deterministic dataset                                                             |
-| `src/benchmark/AgGridBenchmark.tsx`, `InfiniteBenchmark.tsx` | each grid with its defaults + its DOM adapter                                         |
+| `src/benchmark/<Grid>Benchmark.tsx`                          | each grid with its defaults + its DOM adapter (AG Grid, Infinite, MUI, TanStack)      |
 | `src/benchmark/BenchmarkPage.tsx`, `harness.ts`              | identical page shell; `window.__bench` - what the spec calls in the page              |
 | `src/benchmark/grid-comparison.bench.ts`                     | the Playwright spec: scenarios, runs, report                                          |
 | `src/benchmark/benchUtils.ts`                                | trace parsing, statistics, report                                                     |
@@ -402,6 +514,7 @@ where the benchmark runs against the grid's source instead of the npm package.
 If you find a flaw in the methodology, a setting that unfairly favors one
 grid, or a scenario that's missing, please
 [open an issue](https://github.com/infinite-table/infinite-ag-grid-performance-comparison/issues)
-or send a pull request. That goes double for the AG Grid team: if there's a
-configuration you'd recommend for a fair comparison, we'll gladly add it and
-run the numbers again.
+or send a pull request. That goes double for the AG Grid, MUI X and TanStack
+teams: if there's a configuration you'd recommend for a fair comparison - or a
+better way to render TanStack Table - we'll gladly add it and run the numbers
+again.

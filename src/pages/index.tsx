@@ -5,10 +5,22 @@ import { BENCH_SIZES, BenchSize } from '../benchmark/data';
 // defined in next.config.js - the installed versions
 declare const __AG_GRID_VERSION__: string;
 declare const __INFINITE_VERSION__: string;
+declare const __MUI_X_DATA_GRID_VERSION__: string;
+declare const __TANSTACK_TABLE_VERSION__: string;
 
 const GRIDS = [
   { id: 'infinite', name: 'Infinite Table', version: __INFINITE_VERSION__ },
   { id: 'ag-grid', name: 'AG Grid', version: __AG_GRID_VERSION__ },
+  {
+    id: 'mui',
+    name: 'MUI X Data Grid',
+    version: __MUI_X_DATA_GRID_VERSION__,
+  },
+  {
+    id: 'tanstack',
+    name: 'TanStack Table',
+    version: __TANSTACK_TABLE_VERSION__,
+  },
 ];
 
 // the pages the benchmark measures - open them to scroll the grids yourself
@@ -22,7 +34,8 @@ export default function Index() {
       }}
     >
       <h1 style={{ fontSize: 24 }}>
-        Infinite Table vs AG Grid - benchmark pages
+        Infinite Table vs AG Grid, MUI X Data Grid and TanStack Table -
+        benchmark pages
       </h1>
       <p>
         Each page renders one grid with the same generated data. The benchmark

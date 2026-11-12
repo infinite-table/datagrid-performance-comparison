@@ -1,15 +1,17 @@
-# Runs the benchmark for new versions of the two grids and publishes the results:
+# Runs the benchmark for new versions of the grids and publishes the results:
 #
 #  - every 6 hours it looks on npm for a new version of
-#    @infinite-table/infinite-react or ag-grid-react, and measures it
+#    @infinite-table/infinite-react or ag-grid-react, and measures it. MUI X
+#    Data Grid and TanStack Table stay on the versions in package.json
 #  - `repository_dispatch` (type `new-version`) does the same right away -
 #    for a release pipeline that doesn't want to wait for the schedule
-#  - by hand (Actions > Benchmark > Run workflow), for any pair of versions
+#  - by hand (Actions > Benchmark > Run workflow), for any versions
 #
 # The newest versions go to master: package.json, results/latest, the charts
-# and the summary in the README. Every measured pair of versions also gets a
-# branch (versions/infinite-<x>_ag-grid-<y>) with the code, the lockfile and
-# the full results of that run, and a row in the history table on master.
+# and the summary in the README. Every measured set of versions also gets a
+# branch (versions/infinite-<x>_ag-grid-<y>_mui-<z>_tanstack-<w>) with the
+# code, the lockfile and the full results of that run, and its rows in the
+# history table on master.
 name: Benchmark
 
 on:
@@ -25,6 +27,12 @@ on:
       ag_grid_version:
         description: 'ag-grid-react + ag-grid-community version'
         default: latest
+      mui_version:
+        description: '@mui/x-data-grid version - empty = the one in package.json'
+        default: ''
+      tanstack_version:
+        description: '@tanstack/react-table version - empty = the one in package.json'
+        default: ''
       publish:
         description: 'Commit the results (off = only upload them as an artifact)'
         type: boolean
@@ -56,8 +64,11 @@ jobs:
       run: ${{ steps.versions.outputs.run }}
       infinite: ${{ steps.versions.outputs.infinite }}
       ag_grid: ${{ steps.versions.outputs.ag_grid }}
+      mui: ${{ steps.versions.outputs.mui }}
+      tanstack: ${{ steps.versions.outputs.tanstack }}
       newest: ${{ steps.versions.outputs.newest }}
       branch: ${{ steps.versions.outputs.branch }}
+      title: ${{ steps.versions.outputs.title }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
@@ -69,10 +80,12 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           INFINITE: ${{ inputs.infinite_version || github.event.client_payload.infinite_version }}
           AG_GRID: ${{ inputs.ag_grid_version || github.event.client_payload.ag_grid_version }}
+          MUI: ${{ inputs.mui_version || github.event.client_payload.mui_version }}
+          TANSTACK: ${{ inputs.tanstack_version || github.event.client_payload.tanstack_version }}
           GH_TOKEN: ${{ github.token }}
 
   benchmark:
-    name: Infinite Table ${{ needs.check.outputs.infinite }} vs AG Grid ${{ needs.check.outputs.ag_grid }}
+    name: ${{ needs.check.outputs.title }}
     needs: check
     if: needs.check.outputs.run == 'true'
     # pinned, so runs stay comparable for as long as possible
@@ -81,7 +94,10 @@ jobs:
     env:
       INFINITE: ${{ needs.check.outputs.infinite }}
       AG_GRID: ${{ needs.check.outputs.ag_grid }}
+      MUI: ${{ needs.check.outputs.mui }}
+      TANSTACK: ${{ needs.check.outputs.tanstack }}
       BRANCH: ${{ needs.check.outputs.branch }}
+      TITLE: ${{ needs.check.outputs.title }}
       PUBLISH: ${{ github.event_name != 'workflow_dispatch' || inputs.publish }}
     steps:
       - uses: actions/checkout@v5
@@ -97,7 +113,9 @@ jobs:
           npm install --save-exact \
             "@infinite-table/infinite-react@$INFINITE" \
             "ag-grid-community@$AG_GRID" \
-            "ag-grid-react@$AG_GRID"
+            "ag-grid-react@$AG_GRID" \
+            "@mui/x-data-grid@$MUI" \
+            "@tanstack/react-table@$TANSTACK"
           npx playwright install chromium
 
       # Chromium's apt packages. The runner image already has its libraries
@@ -144,10 +162,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          message="Results: Infinite Table $INFINITE, AG Grid $AG_GRID"
-
-          # the branch of this pair of versions: the code, the lockfile and
-          # the full results of this run
+          message="Results: $TITLE"
+          # the branch of these versions: the code, the lockfile and the
+          # full results of this run
           node --no-warnings scripts/update-results.ts ci
           git add package.json package-lock.json README.md results
           git commit -m "$message"
@@ -158,12 +175,12 @@ jobs:
             git pull --rebase origin master
             git push origin HEAD:master
           else
-            # an older pair: master only gets its row in the history table
+            # older versions: master only gets their rows in the history table
             git fetch origin master
             git checkout -B master origin/master
             node --no-warnings scripts/update-results.ts ci --history-only
             git add README.md results
-            git commit -m "History: Infinite Table $INFINITE, AG Grid $AG_GRID"
+            git commit -m "History: $TITLE"
             git push origin HEAD:master
           fi
 
@@ -174,13 +191,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          title="Benchmark failed: Infinite Table $INFINITE, AG Grid $AG_GRID"
+          title="Benchmark failed: $TITLE"
           gh label create benchmark-failed --color B60205 --force \
-            --description "The scheduled benchmark failed for a pair of versions"
+            --description "The scheduled benchmark failed for a set of versions"
           if ! gh issue list --state open --label benchmark-failed --limit 200 \
               --json title --jq '.[].title' | grep -Fxq "$title"; then
             gh issue create --title "$title" --label benchmark-failed --body \
               "The benchmark failed for these versions: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
-          Scheduled runs skip this pair of versions while this issue is open. Close it to have them try again."
+          Scheduled runs skip these versions while this issue is open. Close it to have them try again."
           fi

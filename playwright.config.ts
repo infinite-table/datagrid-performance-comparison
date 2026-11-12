@@ -1,4 +1,4 @@
-// Playwright config for the AG Grid vs Infinite Table benchmark
+// Playwright config for the grid benchmark
 // (src/benchmark/grid-comparison.bench.ts): a production build of the pages,
 // a single worker, no retries and long timeouts. See README.md
 import { PlaywrightTestConfig } from '@playwright/test';
@@ -59,7 +59,7 @@ const config: PlaywrightTestConfig = {
         // have (in CSS px) depends on the scale factor of the display the
         // window is on: ~33.5M px at 1x, ~16.7M px at 2x - whatever
         // deviceScaleFactor the context emulates. With displays of different
-        // densities connected, the two grids could get different limits (and
+        // densities connected, the grids could get different limits (and
         // so a different scrollbar-to-rows ratio at 1M rows) in the same run.
         '--force-device-scale-factor=1',
       ],
