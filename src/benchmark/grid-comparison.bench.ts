@@ -26,7 +26,6 @@ import path from 'node:path';
 import {
   BenchEnvironment,
   FRAME_TRACE_CATEGORIES,
-  GRID_FULL_NAMES,
   GRID_LABELS,
   GRID_NAMES,
   GridName,

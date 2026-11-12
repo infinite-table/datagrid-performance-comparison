@@ -51,7 +51,7 @@ export function parseTrace(buffer: Buffer): Trace {
   const json = JSON.parse(buffer.toString('utf8'));
   const events: TraceEvent[] = Array.isArray(json)
     ? json
-    : (json.traceEvents ?? []);
+    : json.traceEvents ?? [];
 
   // the page's renderer main thread is where our marks are
   const marks = new Map<string, TraceEvent>();
