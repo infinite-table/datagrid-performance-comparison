@@ -2,15 +2,13 @@
  * Used by .github/workflows/benchmark.yml: decides which versions of the
  * grids to measure, and whether there is anything to do.
  *
- * A scheduled run looks for a new version of Infinite Table or AG Grid. MUI X
- * Data Grid and TanStack Table stay on the versions in package.json, unless
- * a run started by hand asks for another one.
+ * A scheduled run looks for a new version of any of the four grids.
  *
  * Env:
  *   EVENT_NAME      schedule | workflow_dispatch | repository_dispatch
  *   INFINITE        version of @infinite-table/infinite-react ("" or "latest" = latest on npm)
  *   AG_GRID         version of ag-grid-react + ag-grid-community (same)
- *   MUI             version of @mui/x-data-grid ("" = the one in package.json, "latest" = latest on npm)
+ *   MUI             version of @mui/x-data-grid (same)
  *   TANSTACK        version of @tanstack/react-table (same)
  *   GH_TOKEN        to look for an open "benchmark failed" issue
  *
@@ -99,11 +97,8 @@ const infinite = await resolve(
   process.env.INFINITE,
 );
 const agGrid = await resolve('ag-grid-react', process.env.AG_GRID);
-const mui = await resolve('@mui/x-data-grid', process.env.MUI || current.mui);
-const tanstack = await resolve(
-  '@tanstack/react-table',
-  process.env.TANSTACK || current.tanstack,
-);
+const mui = await resolve('@mui/x-data-grid', process.env.MUI);
+const tanstack = await resolve('@tanstack/react-table', process.env.TANSTACK);
 const versions = { infinite, agGrid, mui, tanstack };
 let run = true;
 let reason = 'asked for';
@@ -116,7 +111,12 @@ if (!(await published('ag-grid-community', agGrid))) {
   run = false;
   reason = `ag-grid-community@${agGrid} is not on npm yet`;
 } else if (scheduled) {
-  if (infinite === current.infinite && agGrid === current.agGrid) {
+  if (
+    infinite === current.infinite &&
+    mui === current.mui &&
+    agGrid === current.agGrid &&
+    tanstack === current.tanstack
+  ) {
     run = false;
     reason = 'no new versions';
   } else if (hasOpenFailureIssue(failureTitle(versions))) {

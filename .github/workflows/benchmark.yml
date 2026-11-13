@@ -1,8 +1,7 @@
 # Runs the benchmark for new versions of the grids and publishes the results:
 #
-#  - every 6 hours it looks on npm for a new version of
-#    @infinite-table/infinite-react or ag-grid-react, and measures it. MUI X
-#    Data Grid and TanStack Table stay on the versions in package.json
+#  - every 6 hours it looks on npm for a new version of any of the four
+#    grids, and measures it
 #  - `repository_dispatch` (type `new-version`) does the same right away -
 #    for a release pipeline that doesn't want to wait for the schedule
 #  - by hand (Actions > Benchmark > Run workflow), for any versions
@@ -28,11 +27,11 @@ on:
         description: 'ag-grid-react + ag-grid-community version'
         default: latest
       mui_version:
-        description: '@mui/x-data-grid version - empty = the one in package.json'
-        default: ''
+        description: '@mui/x-data-grid version'
+        default: latest
       tanstack_version:
-        description: '@tanstack/react-table version - empty = the one in package.json'
-        default: ''
+        description: '@tanstack/react-table version'
+        default: latest
       publish:
         description: 'Commit the results (off = only upload them as an artifact)'
         type: boolean

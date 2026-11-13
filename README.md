@@ -13,7 +13,7 @@ rows: mount time, memory, sorting and scrolling.
 
 All of them are installed from npm, render the same data in the same browser,
 and get the same interactions. The benchmark runs again whenever a new version
-of Infinite Table or AG Grid is published, and the results below are updated -
+of any of them is published, and the results below are updated -
 or you can [run it yourself](#run-it), with any versions.
 
 Two things to know before reading the numbers - both are explained in
@@ -217,9 +217,9 @@ The [Benchmark workflow](./.github/workflows/benchmark.yml) runs on GitHub
 Actions:
 
 - every 6 hours it looks on npm for a new version of
-  `@infinite-table/infinite-react` or `ag-grid-react`. When there is one, it
-  installs it, runs the whole benchmark and commits the results. MUI X Data
-  Grid and TanStack Table stay on the versions in `package.json`
+  `@infinite-table/infinite-react`, `@mui/x-data-grid`, `ag-grid-react` or
+  `@tanstack/react-table`. When there is one, it installs it, runs the whole
+  benchmark and commits the results
 - it can also be started by hand, for any versions of the four: Actions >
   Benchmark > Run workflow
 - a `repository_dispatch` event of type `new-version` starts it right away,
