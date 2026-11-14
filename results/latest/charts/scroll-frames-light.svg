@@ -5,30 +5,30 @@
 <text x="20" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6b6a66">share of frames that include the grid's latest update · percent · higher is better</text>
 <text x="20" y="90" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">300k rows</text>
 <text x="20" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">MUI X Data Grid</text>
-<path d="M138,98H513.6a4,4 0 0 1 4,4V108a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
-<text x="526" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.3%</text>
+<path d="M138,98H381.4a4,4 0 0 1 4,4V108a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<text x="393" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.3%</text>
 <text x="20" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,116H520a4,4 0 0 1 4,4V126a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
-<text x="532" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">51.1%</text>
+<path d="M138,116H469.4a4,4 0 0 1 4,4V126a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
+<text x="481" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">68.2%</text>
 <text x="20" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
-<path d="M138,134H513.6a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
-<text x="526" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.3%</text>
+<path d="M138,134H626a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
+<text x="638" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">100%</text>
 <text x="20" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
-<path d="M138,152H580.4a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
-<text x="592" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">59.1%</text>
+<path d="M138,152H429.7a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
+<text x="442" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">60.1%</text>
 <line x1="137.5" y1="96" x2="137.5" y2="168" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="196" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">1M rows</text>
 <text x="20" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">MUI X Data Grid</text>
-<path d="M138,204H513.6a4,4 0 0 1 4,4V214a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
-<text x="526" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.3%</text>
+<path d="M138,204H381.4a4,4 0 0 1 4,4V214a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<text x="393" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.3%</text>
 <text x="20" y="233.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,222H510.5a4,4 0 0 1 4,4V232a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
-<text x="522" y="233.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">49.9%</text>
+<path d="M138,222H380.7a4,4 0 0 1 4,4V232a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
+<text x="393" y="233.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.1%</text>
 <text x="20" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
-<path d="M138,240H513.6a4,4 0 0 1 4,4V250a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
-<text x="526" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">50.3%</text>
+<path d="M138,240H626a4,4 0 0 1 4,4V250a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
+<text x="638" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">100%</text>
 <text x="20" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
-<path d="M138,258H626a4,4 0 0 1 4,4V268a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
-<text x="638" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">65.2%</text>
+<path d="M138,258H436.7a4,4 0 0 1 4,4V268a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
+<text x="449" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">61.5%</text>
 <line x1="137.5" y1="202" x2="137.5" y2="274" stroke="#c3c2b7" stroke-width="1"/>
 </svg>

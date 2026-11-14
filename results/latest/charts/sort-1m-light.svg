@@ -5,58 +5,58 @@
 <text x="20" y="56" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#6b6a66">ascending is the first, cold sort · ms · lower is better</text>
 <text x="20" y="90" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">String column, ascending</text>
 <text x="20" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">MUI X Data Grid</text>
-<path d="M138,98H576.1a4,4 0 0 1 4,4V108a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
-<text x="588" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">5,466 ms</text>
+<path d="M138,98H565.2a4,4 0 0 1 4,4V108a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<text x="577" y="109.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,911 ms</text>
 <text x="20" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,116H462.9a4,4 0 0 1 4,4V126a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
-<text x="475" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">4,067 ms</text>
+<path d="M138,116H503.1a4,4 0 0 1 4,4V126a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
+<text x="515" y="127.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,347 ms</text>
 <text x="20" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
-<path d="M138,134H626a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
-<text x="638" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">6,083 ms</text>
+<path d="M138,134H624.8a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
+<text x="637" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">4,452 ms</text>
 <text x="20" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
-<path d="M138,152H305.5a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
-<text x="317" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">2,120 ms</text>
+<path d="M138,152H293.8a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
+<text x="306" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,450 ms</text>
 <line x1="137.5" y1="96" x2="137.5" y2="168" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="196" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">String column, descending</text>
 <text x="20" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">MUI X Data Grid</text>
-<path d="M138,204H577a4,4 0 0 1 4,4V214a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
-<text x="589" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">5,478 ms</text>
+<path d="M138,204H572.4a4,4 0 0 1 4,4V214a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<text x="584" y="215.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,976 ms</text>
 <text x="20" y="233.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,222H468.9a4,4 0 0 1 4,4V232a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
-<text x="481" y="233.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">4,141 ms</text>
+<path d="M138,222H492.6a4,4 0 0 1 4,4V232a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
+<text x="505" y="233.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,253 ms</text>
 <text x="20" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
-<path d="M138,240H607a4,4 0 0 1 4,4V250a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
-<text x="619" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">5,848 ms</text>
+<path d="M138,240H626a4,4 0 0 1 4,4V250a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
+<text x="638" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">4,463 ms</text>
 <text x="20" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
-<path d="M138,258H330.6a4,4 0 0 1 4,4V268a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
-<text x="343" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">2,431 ms</text>
+<path d="M138,258H304.6a4,4 0 0 1 4,4V268a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
+<text x="317" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,547 ms</text>
 <line x1="137.5" y1="202" x2="137.5" y2="274" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="302" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">Number column, ascending</text>
 <text x="20" y="321.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">MUI X Data Grid</text>
-<path d="M138,310H344a4,4 0 0 1 4,4V320a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
-<text x="356" y="321.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">2,596 ms</text>
+<path d="M138,310H376.1a4,4 0 0 1 4,4V320a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<text x="388" y="321.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">2,196 ms</text>
 <text x="20" y="339.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,328H401.4a4,4 0 0 1 4,4V338a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
-<text x="413" y="339.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,306 ms</text>
+<path d="M138,328H509.4a4,4 0 0 1 4,4V338a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
+<text x="521" y="339.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,405 ms</text>
 <text x="20" y="357.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
-<path d="M138,346H498.8a4,4 0 0 1 4,4V356a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
-<text x="511" y="357.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">4,510 ms</text>
+<path d="M138,346H554.5a4,4 0 0 1 4,4V356a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
+<text x="566" y="357.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,814 ms</text>
 <text x="20" y="375.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
-<path d="M138,364H245.1a4,4 0 0 1 4,4V374a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
-<text x="257" y="375.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,374 ms</text>
+<path d="M138,364H271.9a4,4 0 0 1 4,4V374a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
+<text x="284" y="375.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,251 ms</text>
 <line x1="137.5" y1="308" x2="137.5" y2="380" stroke="#c3c2b7" stroke-width="1"/>
 <text x="20" y="408" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#52514e">Number column, descending</text>
 <text x="20" y="427.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">MUI X Data Grid</text>
-<path d="M138,416H438.1a4,4 0 0 1 4,4V426a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
-<text x="450" y="427.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,760 ms</text>
+<path d="M138,416H474.7a4,4 0 0 1 4,4V426a4,4 0 0 1 -4,4H138Z" fill="#eb6834"/>
+<text x="487" y="427.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,091 ms</text>
 <text x="20" y="445.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">AG Grid</text>
-<path d="M138,434H407.3a4,4 0 0 1 4,4V444a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
-<text x="419" y="445.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,379 ms</text>
+<path d="M138,434H514.6a4,4 0 0 1 4,4V444a4,4 0 0 1 -4,4H138Z" fill="#1baf7a"/>
+<text x="527" y="445.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,452 ms</text>
 <text x="20" y="463.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">TanStack Table</text>
-<path d="M138,452H500.1a4,4 0 0 1 4,4V462a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
-<text x="512" y="463.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">4,527 ms</text>
+<path d="M138,452H564.1a4,4 0 0 1 4,4V462a4,4 0 0 1 -4,4H138Z" fill="#eda100"/>
+<text x="576" y="463.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">3,901 ms</text>
 <text x="20" y="481.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#52514e">Infinite Table</text>
-<path d="M138,470H253.60000000000002a4,4 0 0 1 4,4V480a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
-<text x="266" y="481.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,479 ms</text>
+<path d="M138,470H282.9a4,4 0 0 1 4,4V480a4,4 0 0 1 -4,4H138Z" fill="#2a78d6"/>
+<text x="295" y="481.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b">1,351 ms</text>
 <line x1="137.5" y1="414" x2="137.5" y2="486" stroke="#c3c2b7" stroke-width="1"/>
 </svg>
