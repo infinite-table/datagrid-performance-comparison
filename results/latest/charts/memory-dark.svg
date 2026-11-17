@@ -14,7 +14,7 @@
 <path d="M138,134H282.6a4,4 0 0 1 4,4V144a4,4 0 0 1 -4,4H138Z" fill="#c98500"/>
 <text x="295" y="145.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">86.6 MB</text>
 <text x="20" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Infinite Table</text>
-<path d="M138,152H196.7a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H138Z" fill="#3987e5"/>
+<path d="M138,152H196.8a4,4 0 0 1 4,4V162a4,4 0 0 1 -4,4H138Z" fill="#3987e5"/>
 <text x="209" y="163.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">36.6 MB</text>
 <line x1="137.5" y1="96" x2="137.5" y2="168" stroke="#484f58" stroke-width="1"/>
 <text x="20" y="196" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#c3c2b7">1M rows</text>
@@ -29,6 +29,6 @@
 <text x="638" y="251.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">287 MB</text>
 <text x="20" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Infinite Table</text>
 <path d="M138,258H289.5a4,4 0 0 1 4,4V268a4,4 0 0 1 -4,4H138Z" fill="#3987e5"/>
-<text x="301" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">90.6 MB</text>
+<text x="302" y="269.5" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">90.7 MB</text>
 <line x1="137.5" y1="202" x2="137.5" y2="274" stroke="#484f58" stroke-width="1"/>
 </svg>
