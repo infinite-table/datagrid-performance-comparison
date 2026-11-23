@@ -116,7 +116,12 @@ function normalizeEntry(raw: any): HistoryEntry {
 // what the README shows
 // ---------------------------------------------------------------------------
 
-type Row = { label: string; id: string };
+type Row = {
+  label: string;
+  id: string;
+  /** what the chart says for a grid that has no value (default: "not measured") */
+  missing?: string;
+};
 
 type ChartSpec = {
   file: string;
@@ -157,6 +162,51 @@ const workRows = (size: string, scenario: string): Row[] => [
   { label: 'Style recalculation', id: `${size}/${scenario}/styleMs` },
   { label: 'All tasks', id: `${size}/${scenario}/taskMs` },
 ];
+
+/** the live-update scenarios, one row per view */
+const updateRows = (
+  size: string,
+  frequency: 'low' | 'high',
+  metric: string,
+): Row[] => [
+  { label: 'Rows as they are', id: `${size}/updates-${frequency}/${metric}` },
+  {
+    label: 'Sorted by the salary, which the updates change',
+    id: `${size}/updates-${frequency}-sorted/${metric}`,
+  },
+  {
+    label: 'Filtered on the salary',
+    id: `${size}/updates-${frequency}-filtered/${metric}`,
+  },
+  {
+    label: 'Grouped by department, salaries summed',
+    id: `${size}/updates-${frequency}-grouped/${metric}`,
+    missing: 'no grouping and aggregation in this version',
+  },
+];
+
+const updateCharts: ChartSpec[] = Object.keys(SIZE_LABELS).flatMap(
+  (size): ChartSpec[] => {
+    const rows = size === '1m' ? '1,000,000' : '300,000';
+    return [
+      {
+        file: `updates-low-${size}`,
+        context: `Live updates, ${SIZE_LABELS[size]} rows`,
+        title: `Live updates, ${rows} rows: update to rows painted`,
+        subtitle:
+          '1,000 changed rows at a time, median of 10 updates',
+        rows: updateRows(size, 'low', 'visibleMs'),
+      },
+      {
+        file: `updates-high-${size}`,
+        context: `A feed of 50 updates a second, ${SIZE_LABELS[size]} rows, lag at the end`,
+        title: `A feed of 50 updates a second, ${rows} rows: lag at the end`,
+        subtitle: 'from the last update to it being painted',
+        rows: updateRows(size, 'high', 'lagMs'),
+      },
+    ];
+  },
+);
 
 const CHARTS: ChartSpec[] = [
   {
@@ -238,6 +288,21 @@ const CHARTS: ChartSpec[] = [
     subtitle: 'total over the sweeps across all columns',
     rows: workRows('300k', 'scroll-horizontal'),
   },
+  ...updateCharts,
+  {
+    file: 'updates-high-fps-1m',
+    context: 'A feed of 50 updates a second, 1M rows, frame rate',
+    title: 'A feed of 50 updates a second, 1,000,000 rows: frame rate',
+    subtitle: 'main-thread frames a second while the updates come in',
+    rows: updateRows('1m', 'high', 'rafFps'),
+  },
+  {
+    file: 'updates-high-work-1m',
+    context: 'A feed of 50 updates a second, 1M rows, main-thread work',
+    title: 'A feed of 50 updates a second, 1,000,000 rows: main-thread work',
+    subtitle: 'all tasks, over the 4 seconds of the feed',
+    rows: updateRows('1m', 'high', 'taskMs'),
+  },
 ];
 
 /** the columns of the history table */
@@ -248,6 +313,8 @@ const HISTORY_COLUMNS: { label: string; id: string }[] = [
   { label: 'Memory 1M', id: '1m/mount/heapMB' },
   { label: 'Vertical scroll work 300k', id: '300k/scroll-vertical/taskMs' },
   { label: 'Horizontal scroll work 300k', id: '300k/scroll-horizontal/taskMs' },
+  { label: 'Update sorted 1M', id: '1m/updates-low-sorted/visibleMs' },
+  { label: 'Feed lag sorted 1M', id: '1m/updates-high-sorted/lagMs' },
 ];
 
 // ---------------------------------------------------------------------------
@@ -442,7 +509,7 @@ function renderChart(
         out.push(
           `<text x="${barLeft + 8}" y="${
             y + barHeight - 2.5
-          }" ${font} font-size="13" fill="${theme.textMuted}">not measured</text>`,
+          }" ${font} font-size="13" fill="${theme.textMuted}">${escapeXml(row.missing ?? "not measured")}</text>`,
         );
       } else {
         const barWidth = max > 0 ? Math.max(1, (value / max) * barMax) : 1;

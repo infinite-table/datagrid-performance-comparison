@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridInitialState } from '@mui/x-data-grid';
 
 import {
   BENCH_COLUMNS,
@@ -10,7 +10,15 @@ import {
   BenchRow,
 } from './data';
 import { BenchAdapter } from './harness';
-import { BenchmarkPage } from './BenchmarkPage';
+import { BenchGridProps, BenchmarkPage } from './BenchmarkPage';
+import {
+  BENCH_FILTER_FIELD,
+  BENCH_FILTER_MIN,
+  BENCH_SORT_DIR,
+  BENCH_SORT_FIELD,
+  BenchView,
+  applyBenchUpdates,
+} from './updates';
 
 declare const __MUI_X_DATA_GRID_VERSION__: string;
 
@@ -102,8 +110,31 @@ const adapter: BenchAdapter = {
 // The free DataGrid always paginates, with 100 rows on a page by default.
 // A page size of -1 is its documented "all results" value: every row is on
 // one page, which is scrolled through like in the other grids.
-const initialState = {
-  pagination: { paginationModel: { page: 0, pageSize: -1 } },
+const pagination = { paginationModel: { page: 0, pageSize: -1 } };
+
+// the views of the live-update scenarios - see updates.ts. The free
+// DataGrid has no row grouping or aggregation (they are in the paid
+// versions): it has no `grouped` view
+const initialStates: Partial<Record<BenchView, GridInitialState>> = {
+  plain: { pagination },
+  sorted: {
+    pagination,
+    sorting: {
+      sortModel: [
+        { field: BENCH_SORT_FIELD, sort: BENCH_SORT_DIR === -1 ? 'desc' : 'asc' },
+      ],
+    },
+  },
+  filtered: {
+    pagination,
+    filter: {
+      filterModel: {
+        items: [
+          { field: BENCH_FILTER_FIELD, operator: '>=', value: BENCH_FILTER_MIN },
+        ],
+      },
+    },
+  },
 };
 
 const style: React.CSSProperties = {
@@ -119,16 +150,29 @@ const style: React.CSSProperties = {
  *  - same row height / header height / column widths
  *  - all the rows on one page (see `initialState` above)
  *  - the number formatting turned off
+ *
+ * Rows are changed through the `rows` prop: a new array, with the changed
+ * rows in it. The free DataGrid's `apiRef.current.updateRows` takes one row
+ * at a time (more is in the paid versions).
  */
-function Mui({ data }: { data: BenchRow[] }) {
+function Mui({ data, view, onUpdater }: BenchGridProps) {
+  if (view === 'grouped') {
+    throw new Error('The free MUI X DataGrid has no row grouping');
+  }
+  const [rows, setRows] = React.useState(data);
+  React.useEffect(() => {
+    onUpdater((changed) => {
+      setRows((rows) => applyBenchUpdates(rows, changed));
+    });
+  }, [onUpdater]);
   return (
     <div style={style}>
       <DataGrid<BenchRow>
-        rows={data}
+        rows={rows}
         columns={columns}
         rowHeight={BENCH_ROW_HEIGHT}
         columnHeaderHeight={BENCH_HEADER_HEIGHT}
-        initialState={initialState}
+        initialState={initialStates[view]}
       />
     </div>
   );
@@ -140,7 +184,7 @@ export function MuiBenchmark({ rowCount }: { rowCount: number }) {
       title={`MUI X Data Grid ${__MUI_X_DATA_GRID_VERSION__}`}
       rowCount={rowCount}
       adapter={adapter}
-      renderGrid={(data) => <Mui data={data} />}
+      renderGrid={(props) => <Mui {...props} />}
     />
   );
 }
