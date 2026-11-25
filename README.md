@@ -41,18 +41,18 @@ developers find it.
 
 ## Results
 
-**Infinite Table 10.2.0** vs **MUI X Data Grid 9.18.0** (the free `DataGrid`), **AG Grid React 36.3.0** (Community) and **TanStack Table 9.3.1** (with TanStack Virtual 3.14.26) - measured on 2026-11-17, on GitHub Actions, ubuntu-24.04 (Intel(R) Xeon(R) 6975P-C × 4), in Chrome 136.0.7103.25 (headless). Every value is the median of 7 runs.
+**Infinite Table 10.2.1** vs **MUI X Data Grid 9.18.0** (the free `DataGrid`), **AG Grid React 36.3.0** (Community) and **TanStack Table 9.3.1** (with TanStack Virtual 3.14.26) - measured on 2026-11-25, on GitHub Actions, ubuntu-24.04 (AMD EPYC 9V45 96-Core Processor × 4), in Chrome 136.0.7103.25 (headless). Every value is the median of 7 runs.
 
 The absolute numbers depend on the machine - compare the grids, not the milliseconds. In the table under the charts, a difference is only called when the 95% confidence interval excludes "no difference".
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/at-a-glance-dark.svg">
-  <img src="results/latest/charts/at-a-glance-light.svg" width="760" alt="At a glance - 1,000,000 rows (lower is better). Mount: first rows painted: MUI X Data Grid 663 ms, AG Grid 760 ms, TanStack Table 621 ms, Infinite Table 504 ms; Sort a string column: MUI X Data Grid 3,726 ms, AG Grid 3,417 ms, TanStack Table 4,457 ms, Infinite Table 1,443 ms; Sort a number column: MUI X Data Grid 2,159 ms, AG Grid 3,256 ms, TanStack Table 3,652 ms, Infinite Table 1,196 ms.">
+  <img src="results/latest/charts/at-a-glance-light.svg" width="760" alt="At a glance - 1,000,000 rows (lower is better). Mount: first rows painted: MUI X Data Grid 471 ms, AG Grid 577 ms, TanStack Table 459 ms, Infinite Table 347 ms; Sort a string column: MUI X Data Grid 3,869 ms, AG Grid 3,188 ms, TanStack Table 4,298 ms, Infinite Table 1,559 ms; Sort a number column: MUI X Data Grid 2,095 ms, AG Grid 2,846 ms, TanStack Table 3,705 ms, Infinite Table 452 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/mount-dark.svg">
-  <img src="results/latest/charts/mount-light.svg" width="760" alt="Mount time (lower is better). First rows painted, 300k rows: MUI X Data Grid 244 ms, AG Grid 284 ms, TanStack Table 196 ms, Infinite Table 209 ms; Settled (no more DOM changes), 300k rows: MUI X Data Grid 244 ms, AG Grid 385 ms, TanStack Table 196 ms, Infinite Table 210 ms; First rows painted, 1M rows: MUI X Data Grid 663 ms, AG Grid 760 ms, TanStack Table 621 ms, Infinite Table 504 ms; Settled, 1M rows: MUI X Data Grid 663 ms, AG Grid 862 ms, TanStack Table 621 ms, Infinite Table 504 ms.">
+  <img src="results/latest/charts/mount-light.svg" width="760" alt="Mount time (lower is better). First rows painted, 300k rows: MUI X Data Grid 230 ms, AG Grid 248 ms, TanStack Table 180 ms, Infinite Table 194 ms; Settled (no more DOM changes), 300k rows: MUI X Data Grid 230 ms, AG Grid 350 ms, TanStack Table 180 ms, Infinite Table 198 ms; First rows painted, 1M rows: MUI X Data Grid 471 ms, AG Grid 577 ms, TanStack Table 459 ms, Infinite Table 347 ms; Settled, 1M rows: MUI X Data Grid 471 ms, AG Grid 679 ms, TanStack Table 459 ms, Infinite Table 347 ms.">
 </picture>
 
 <picture>
@@ -62,36 +62,36 @@ The absolute numbers depend on the machine - compare the grids, not the millisec
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/sort-300k-dark.svg">
-  <img src="results/latest/charts/sort-300k-light.svg" width="760" alt="Sorting 300,000 rows: click to sorted rows painted (lower is better). String column, ascending: MUI X Data Grid 863 ms, AG Grid 684 ms, TanStack Table 919 ms, Infinite Table 348 ms; String column, descending: MUI X Data Grid 863 ms, AG Grid 655 ms, TanStack Table 923 ms, Infinite Table 356 ms; Number column, ascending: MUI X Data Grid 539 ms, AG Grid 801 ms, TanStack Table 788 ms, Infinite Table 319 ms; Number column, descending: MUI X Data Grid 665 ms, AG Grid 757 ms, TanStack Table 784 ms, Infinite Table 337 ms.">
+  <img src="results/latest/charts/sort-300k-light.svg" width="760" alt="Sorting 300,000 rows: click to sorted rows painted (lower is better). String column, ascending: MUI X Data Grid 782 ms, AG Grid 652 ms, TanStack Table 954 ms, Infinite Table 337 ms; String column, descending: MUI X Data Grid 913 ms, AG Grid 714 ms, TanStack Table 991 ms, Infinite Table 361 ms; Number column, ascending: MUI X Data Grid 404 ms, AG Grid 606 ms, TanStack Table 638 ms, Infinite Table 154 ms; Number column, descending: MUI X Data Grid 537 ms, AG Grid 547 ms, TanStack Table 615 ms, Infinite Table 148 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/sort-1m-dark.svg">
-  <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: MUI X Data Grid 3,726 ms, AG Grid 3,417 ms, TanStack Table 4,457 ms, Infinite Table 1,443 ms; String column, descending: MUI X Data Grid 3,978 ms, AG Grid 3,355 ms, TanStack Table 4,196 ms, Infinite Table 1,489 ms; Number column, ascending: MUI X Data Grid 2,159 ms, AG Grid 3,256 ms, TanStack Table 3,652 ms, Infinite Table 1,196 ms; Number column, descending: MUI X Data Grid 2,974 ms, AG Grid 3,306 ms, TanStack Table 3,579 ms, Infinite Table 1,282 ms.">
+  <img src="results/latest/charts/sort-1m-light.svg" width="760" alt="Sorting 1,000,000 rows: click to sorted rows painted (lower is better). String column, ascending: MUI X Data Grid 3,869 ms, AG Grid 3,188 ms, TanStack Table 4,298 ms, Infinite Table 1,559 ms; String column, descending: MUI X Data Grid 4,146 ms, AG Grid 3,078 ms, TanStack Table 4,418 ms, Infinite Table 1,712 ms; Number column, ascending: MUI X Data Grid 2,095 ms, AG Grid 2,846 ms, TanStack Table 3,705 ms, Infinite Table 452 ms; Number column, descending: MUI X Data Grid 2,903 ms, AG Grid 2,865 ms, TanStack Table 3,564 ms, Infinite Table 495 ms.">
 </picture>
 
 The string column is lowercase a-z text, sorted in an `en-US` browser. The grids do not compare strings the same way - see [String sorting](#string-sorting).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-jump-dark.svg">
-  <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: MUI X Data Grid 22.3 ms, AG Grid 30.6 ms, TanStack Table 10.9 ms, Infinite Table 30.3 ms; 1M rows: MUI X Data Grid 22.7 ms, AG Grid 31 ms, TanStack Table 11.2 ms, Infinite Table 34.1 ms.">
+  <img src="results/latest/charts/scroll-jump-light.svg" width="760" alt="Jumping to a far-away scroll position (lower is better). 300k rows: MUI X Data Grid 17.6 ms, AG Grid 25.3 ms, TanStack Table 9.24 ms, Infinite Table 24.2 ms; 1M rows: MUI X Data Grid 20 ms, AG Grid 28.7 ms, TanStack Table 10.6 ms, Infinite Table 30.9 ms.">
 </picture>
 
 With 1M rows, MUI X Data Grid and TanStack Table (with TanStack Virtual) cannot scroll past row 838,860 - see [Scroll range](#scroll-range).
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-frames-dark.svg">
-  <img src="results/latest/charts/scroll-frames-light.svg" width="760" alt="Vertical scrolling: frames fully presented (higher is better). 300k rows: MUI X Data Grid 50.3%, AG Grid 52.3%, TanStack Table 100%, Infinite Table 59%; 1M rows: MUI X Data Grid 50.3%, AG Grid 50.3%, TanStack Table 50.3%, Infinite Table 61.7%.">
+  <img src="results/latest/charts/scroll-frames-light.svg" width="760" alt="Vertical scrolling: frames fully presented (higher is better). 300k rows: MUI X Data Grid 50.3%, AG Grid 52.3%, TanStack Table 100%, Infinite Table 59.1%; 1M rows: MUI X Data Grid 50.3%, AG Grid 50.8%, TanStack Table 100%, Infinite Table 59.7%.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-vertical-work-dark.svg">
-  <img src="results/latest/charts/scroll-vertical-work-light.svg" width="760" alt="Vertical scrolling, 300k rows: main-thread work (lower is better). Scripting: MUI X Data Grid 435 ms, AG Grid 469 ms, TanStack Table 257 ms, Infinite Table 613 ms; Layout: MUI X Data Grid 50.7 ms, AG Grid 79.1 ms, TanStack Table 64.7 ms, Infinite Table 61.1 ms; Style recalculation: MUI X Data Grid 75.2 ms, AG Grid 231 ms, TanStack Table 32.3 ms, Infinite Table 145 ms; All tasks: MUI X Data Grid 1,146 ms, AG Grid 1,249 ms, TanStack Table 727 ms, Infinite Table 1,317 ms.">
+  <img src="results/latest/charts/scroll-vertical-work-light.svg" width="760" alt="Vertical scrolling, 300k rows: main-thread work (lower is better). Scripting: MUI X Data Grid 517 ms, AG Grid 479 ms, TanStack Table 260 ms, Infinite Table 489 ms; Layout: MUI X Data Grid 55.9 ms, AG Grid 80.8 ms, TanStack Table 66.9 ms, Infinite Table 69.6 ms; Style recalculation: MUI X Data Grid 76.2 ms, AG Grid 218 ms, TanStack Table 37 ms, Infinite Table 155 ms; All tasks: MUI X Data Grid 1,232 ms, AG Grid 1,224 ms, TanStack Table 692 ms, Infinite Table 1,099 ms.">
 </picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="results/latest/charts/scroll-horizontal-work-dark.svg">
-  <img src="results/latest/charts/scroll-horizontal-work-light.svg" width="760" alt="Horizontal scrolling, 300k rows: main-thread work (lower is better). Scripting: MUI X Data Grid 263 ms, AG Grid 180 ms, TanStack Table 115 ms, Infinite Table 125 ms; Layout: MUI X Data Grid 31.7 ms, AG Grid 47.6 ms, TanStack Table 33.9 ms, Infinite Table 8.34 ms; Style recalculation: MUI X Data Grid 18 ms, AG Grid 34.7 ms, TanStack Table 10.2 ms, Infinite Table 36.5 ms; All tasks: MUI X Data Grid 551 ms, AG Grid 483 ms, TanStack Table 374 ms, Infinite Table 354 ms.">
+  <img src="results/latest/charts/scroll-horizontal-work-light.svg" width="760" alt="Horizontal scrolling, 300k rows: main-thread work (lower is better). Scripting: MUI X Data Grid 320 ms, AG Grid 225 ms, TanStack Table 145 ms, Infinite Table 121 ms; Layout: MUI X Data Grid 42.1 ms, AG Grid 64.2 ms, TanStack Table 47.1 ms, Infinite Table 10.7 ms; Style recalculation: MUI X Data Grid 22.4 ms, AG Grid 38.3 ms, TanStack Table 14.4 ms, Infinite Table 42.6 ms; All tasks: MUI X Data Grid 602 ms, AG Grid 582 ms, TanStack Table 439 ms, Infinite Table 360 ms.">
 </picture>
 
 <details>
@@ -99,32 +99,32 @@ With 1M rows, MUI X Data Grid and TanStack Table (with TanStack Virtual) cannot 
 
 | | MUI X Data Grid | AG Grid | TanStack Table | Infinite Table | Infinite Table vs each grid |
 |---|---:|---:|---:|---:|---|
-| Mount - First rows painted, 300k rows | 244 ms | 284 ms | 196 ms | 209 ms | vs MUI X Data Grid: **Infinite Table** 14% lower<br>vs AG Grid: **Infinite Table** 26% lower<br>vs TanStack Table: **TanStack Table** 6% lower |
-| Mount - Settled (no more DOM changes), 300k rows | 244 ms | 385 ms | 196 ms | 210 ms | vs MUI X Data Grid: **Infinite Table** 14% lower<br>vs AG Grid: **Infinite Table** 46% lower<br>vs TanStack Table: **TanStack Table** 6% lower |
-| Mount - First rows painted, 1M rows | 663 ms | 760 ms | 621 ms | 504 ms | vs MUI X Data Grid: **Infinite Table** 24% lower<br>vs AG Grid: **Infinite Table** 34% lower<br>vs TanStack Table: **Infinite Table** 19% lower |
-| Mount - Settled, 1M rows | 663 ms | 862 ms | 621 ms | 504 ms | vs MUI X Data Grid: **Infinite Table** 24% lower<br>vs AG Grid: **Infinite Table** 42% lower<br>vs TanStack Table: **Infinite Table** 19% lower |
+| Mount - First rows painted, 300k rows | 230 ms | 248 ms | 180 ms | 194 ms | vs MUI X Data Grid: **Infinite Table** 16% lower<br>vs AG Grid: **Infinite Table** 22% lower<br>vs TanStack Table: **TanStack Table** 7% lower |
+| Mount - Settled (no more DOM changes), 300k rows | 230 ms | 350 ms | 180 ms | 198 ms | vs MUI X Data Grid: **Infinite Table** 14% lower<br>vs AG Grid: **Infinite Table** 43% lower<br>vs TanStack Table: **TanStack Table** 9% lower |
+| Mount - First rows painted, 1M rows | 471 ms | 577 ms | 459 ms | 347 ms | vs MUI X Data Grid: **Infinite Table** 26% lower<br>vs AG Grid: **Infinite Table** 40% lower<br>vs TanStack Table: **Infinite Table** 25% lower |
+| Mount - Settled, 1M rows | 471 ms | 679 ms | 459 ms | 347 ms | vs MUI X Data Grid: **Infinite Table** 26% lower<br>vs AG Grid: **Infinite Table** 49% lower<br>vs TanStack Table: **Infinite Table** 25% lower |
 | Memory - 300k rows | 54.2 MB | 67.4 MB | 86.6 MB | 36.6 MB | vs MUI X Data Grid: **Infinite Table** 32% lower<br>vs AG Grid: **Infinite Table** 46% lower<br>vs TanStack Table: **Infinite Table** 2.37× lower |
 | Memory - 1M rows | 150 MB | 213 MB | 287 MB | 90.7 MB | vs MUI X Data Grid: **Infinite Table** 40% lower<br>vs AG Grid: **Infinite Table** 2.35× lower<br>vs TanStack Table: **Infinite Table** 3.16× lower |
-| Sort, 300k rows - String column, ascending | 863 ms | 684 ms | 919 ms | 348 ms | vs MUI X Data Grid: **Infinite Table** 2.48× lower<br>vs AG Grid: **Infinite Table** 49% lower<br>vs TanStack Table: **Infinite Table** 2.64× lower |
-| Sort, 300k rows - String column, descending | 863 ms | 655 ms | 923 ms | 356 ms | vs MUI X Data Grid: **Infinite Table** 2.42× lower<br>vs AG Grid: **Infinite Table** 46% lower<br>vs TanStack Table: **Infinite Table** 2.59× lower |
-| Sort, 300k rows - Number column, ascending | 539 ms | 801 ms | 788 ms | 319 ms | vs MUI X Data Grid: **Infinite Table** 41% lower<br>vs AG Grid: **Infinite Table** 2.51× lower<br>vs TanStack Table: **Infinite Table** 2.47× lower |
-| Sort, 300k rows - Number column, descending | 665 ms | 757 ms | 784 ms | 337 ms | vs MUI X Data Grid: **Infinite Table** 49% lower<br>vs AG Grid: **Infinite Table** 2.24× lower<br>vs TanStack Table: **Infinite Table** 2.32× lower |
-| Sort, 1M rows - String column, ascending | 3,726 ms | 3,417 ms | 4,457 ms | 1,443 ms | vs MUI X Data Grid: **Infinite Table** 2.58× lower<br>vs AG Grid: **Infinite Table** 2.37× lower<br>vs TanStack Table: **Infinite Table** 3.09× lower |
-| Sort, 1M rows - String column, descending | 3,978 ms | 3,355 ms | 4,196 ms | 1,489 ms | vs MUI X Data Grid: **Infinite Table** 2.67× lower<br>vs AG Grid: **Infinite Table** 2.25× lower<br>vs TanStack Table: **Infinite Table** 2.82× lower |
-| Sort, 1M rows - Number column, ascending | 2,159 ms | 3,256 ms | 3,652 ms | 1,196 ms | vs MUI X Data Grid: **Infinite Table** 45% lower<br>vs AG Grid: **Infinite Table** 2.72× lower<br>vs TanStack Table: **Infinite Table** 3.05× lower |
-| Sort, 1M rows - Number column, descending | 2,974 ms | 3,306 ms | 3,579 ms | 1,282 ms | vs MUI X Data Grid: **Infinite Table** 2.32× lower<br>vs AG Grid: **Infinite Table** 2.58× lower<br>vs TanStack Table: **Infinite Table** 2.79× lower |
-| Jump to rows painted - 300k rows | 22.3 ms | 30.6 ms | 10.9 ms | 30.3 ms | vs MUI X Data Grid: **MUI X Data Grid** 26% lower<br>vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 2.78× lower |
-| Jump to rows painted - 1M rows | 22.7 ms | 31 ms | 11.2 ms | 34.1 ms | vs MUI X Data Grid: **MUI X Data Grid** 34% lower<br>vs AG Grid: **AG Grid** 9% lower<br>vs TanStack Table: **TanStack Table** 3.04× lower |
-| Vertical scrolling, frames fully presented - 300k rows | 50.3% | 52.3% | 100% | 59% | vs MUI X Data Grid: **Infinite Table** 8.73 points higher<br>vs AG Grid: **Infinite Table** 6.69 points higher<br>vs TanStack Table: **TanStack Table** 41 points higher |
-| Vertical scrolling, frames fully presented - 1M rows | 50.3% | 50.3% | 50.3% | 61.7% | vs MUI X Data Grid: **Infinite Table** 11.4 points higher<br>vs AG Grid: **Infinite Table** 11.4 points higher<br>vs TanStack Table: no significant difference |
-| Vertical scrolling, 300k rows, main-thread work - Scripting | 435 ms | 469 ms | 257 ms | 613 ms | vs MUI X Data Grid: **MUI X Data Grid** 29% lower<br>vs AG Grid: **AG Grid** 24% lower<br>vs TanStack Table: **TanStack Table** 2.38× lower |
-| Vertical scrolling, 300k rows, main-thread work - Layout | 50.7 ms | 79.1 ms | 64.7 ms | 61.1 ms | vs MUI X Data Grid: **MUI X Data Grid** 17% lower<br>vs AG Grid: **Infinite Table** 23% lower<br>vs TanStack Table: **Infinite Table** 5% lower |
-| Vertical scrolling, 300k rows, main-thread work - Style recalculation | 75.2 ms | 231 ms | 32.3 ms | 145 ms | vs MUI X Data Grid: **MUI X Data Grid** 48% lower<br>vs AG Grid: **Infinite Table** 37% lower<br>vs TanStack Table: **TanStack Table** 4.5× lower |
-| Vertical scrolling, 300k rows, main-thread work - All tasks | 1,146 ms | 1,249 ms | 727 ms | 1,317 ms | vs MUI X Data Grid: **MUI X Data Grid** 13% lower<br>vs AG Grid: **AG Grid** 5% lower<br>vs TanStack Table: **TanStack Table** 45% lower |
-| Horizontal scrolling, 300k rows, main-thread work - Scripting | 263 ms | 180 ms | 115 ms | 125 ms | vs MUI X Data Grid: **Infinite Table** 2.11× lower<br>vs AG Grid: **Infinite Table** 31% lower<br>vs TanStack Table: no significant difference |
-| Horizontal scrolling, 300k rows, main-thread work - Layout | 31.7 ms | 47.6 ms | 33.9 ms | 8.34 ms | vs MUI X Data Grid: **Infinite Table** 3.81× lower<br>vs AG Grid: **Infinite Table** 5.71× lower<br>vs TanStack Table: **Infinite Table** 4.07× lower |
-| Horizontal scrolling, 300k rows, main-thread work - Style recalculation | 18 ms | 34.7 ms | 10.2 ms | 36.5 ms | vs MUI X Data Grid: **MUI X Data Grid** 2.02× lower<br>vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 3.57× lower |
-| Horizontal scrolling, 300k rows, main-thread work - All tasks | 551 ms | 483 ms | 374 ms | 354 ms | vs MUI X Data Grid: **Infinite Table** 36% lower<br>vs AG Grid: **Infinite Table** 27% lower<br>vs TanStack Table: **Infinite Table** 5% lower |
+| Sort, 300k rows - String column, ascending | 782 ms | 652 ms | 954 ms | 337 ms | vs MUI X Data Grid: **Infinite Table** 2.32× lower<br>vs AG Grid: **Infinite Table** 48% lower<br>vs TanStack Table: **Infinite Table** 2.83× lower |
+| Sort, 300k rows - String column, descending | 913 ms | 714 ms | 991 ms | 361 ms | vs MUI X Data Grid: **Infinite Table** 2.53× lower<br>vs AG Grid: **Infinite Table** 50% lower<br>vs TanStack Table: **Infinite Table** 2.75× lower |
+| Sort, 300k rows - Number column, ascending | 404 ms | 606 ms | 638 ms | 154 ms | vs MUI X Data Grid: **Infinite Table** 2.63× lower<br>vs AG Grid: **Infinite Table** 3.94× lower<br>vs TanStack Table: **Infinite Table** 4.14× lower |
+| Sort, 300k rows - Number column, descending | 537 ms | 547 ms | 615 ms | 148 ms | vs MUI X Data Grid: **Infinite Table** 3.64× lower<br>vs AG Grid: **Infinite Table** 3.71× lower<br>vs TanStack Table: **Infinite Table** 4.17× lower |
+| Sort, 1M rows - String column, ascending | 3,869 ms | 3,188 ms | 4,298 ms | 1,559 ms | vs MUI X Data Grid: **Infinite Table** 2.48× lower<br>vs AG Grid: **Infinite Table** 2.04× lower<br>vs TanStack Table: **Infinite Table** 2.76× lower |
+| Sort, 1M rows - String column, descending | 4,146 ms | 3,078 ms | 4,418 ms | 1,712 ms | vs MUI X Data Grid: **Infinite Table** 2.42× lower<br>vs AG Grid: **Infinite Table** 44% lower<br>vs TanStack Table: **Infinite Table** 2.58× lower |
+| Sort, 1M rows - Number column, ascending | 2,095 ms | 2,846 ms | 3,705 ms | 452 ms | vs MUI X Data Grid: **Infinite Table** 4.64× lower<br>vs AG Grid: **Infinite Table** 6.3× lower<br>vs TanStack Table: **Infinite Table** 8.2× lower |
+| Sort, 1M rows - Number column, descending | 2,903 ms | 2,865 ms | 3,564 ms | 495 ms | vs MUI X Data Grid: **Infinite Table** 5.87× lower<br>vs AG Grid: **Infinite Table** 5.79× lower<br>vs TanStack Table: **Infinite Table** 7.2× lower |
+| Jump to rows painted - 300k rows | 17.6 ms | 25.3 ms | 9.24 ms | 24.2 ms | vs MUI X Data Grid: **MUI X Data Grid** 27% lower<br>vs AG Grid: **Infinite Table** 4% lower<br>vs TanStack Table: **TanStack Table** 2.62× lower |
+| Jump to rows painted - 1M rows | 20 ms | 28.7 ms | 10.6 ms | 30.9 ms | vs MUI X Data Grid: **MUI X Data Grid** 35% lower<br>vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 2.92× lower |
+| Vertical scrolling, frames fully presented - 300k rows | 50.3% | 52.3% | 100% | 59.1% | vs MUI X Data Grid: **Infinite Table** 8.79 points higher<br>vs AG Grid: **Infinite Table** 6.77 points higher<br>vs TanStack Table: **TanStack Table** 40.9 points higher |
+| Vertical scrolling, frames fully presented - 1M rows | 50.3% | 50.8% | 100% | 59.7% | vs MUI X Data Grid: **Infinite Table** 9.45 points higher<br>vs AG Grid: **Infinite Table** 8.89 points higher<br>vs TanStack Table: **TanStack Table** 40.3 points higher |
+| Vertical scrolling, 300k rows, main-thread work - Scripting | 517 ms | 479 ms | 260 ms | 489 ms | vs MUI X Data Grid: no significant difference<br>vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 47% lower |
+| Vertical scrolling, 300k rows, main-thread work - Layout | 55.9 ms | 80.8 ms | 66.9 ms | 69.6 ms | vs MUI X Data Grid: **MUI X Data Grid** 20% lower<br>vs AG Grid: no significant difference<br>vs TanStack Table: no significant difference |
+| Vertical scrolling, 300k rows, main-thread work - Style recalculation | 76.2 ms | 218 ms | 37 ms | 155 ms | vs MUI X Data Grid: **MUI X Data Grid** 2.04× lower<br>vs AG Grid: **Infinite Table** 29% lower<br>vs TanStack Table: **TanStack Table** 4.2× lower |
+| Vertical scrolling, 300k rows, main-thread work - All tasks | 1,232 ms | 1,224 ms | 692 ms | 1,099 ms | vs MUI X Data Grid: no significant difference<br>vs AG Grid: no significant difference<br>vs TanStack Table: **TanStack Table** 37% lower |
+| Horizontal scrolling, 300k rows, main-thread work - Scripting | 320 ms | 225 ms | 145 ms | 121 ms | vs MUI X Data Grid: **Infinite Table** 2.64× lower<br>vs AG Grid: **Infinite Table** 46% lower<br>vs TanStack Table: **Infinite Table** 17% lower |
+| Horizontal scrolling, 300k rows, main-thread work - Layout | 42.1 ms | 64.2 ms | 47.1 ms | 10.7 ms | vs MUI X Data Grid: **Infinite Table** 3.92× lower<br>vs AG Grid: **Infinite Table** 5.99× lower<br>vs TanStack Table: **Infinite Table** 4.39× lower |
+| Horizontal scrolling, 300k rows, main-thread work - Style recalculation | 22.4 ms | 38.3 ms | 14.4 ms | 42.6 ms | vs MUI X Data Grid: **MUI X Data Grid** 48% lower<br>vs AG Grid: **AG Grid** 10% lower<br>vs TanStack Table: **TanStack Table** 2.97× lower |
+| Horizontal scrolling, 300k rows, main-thread work - All tasks | 602 ms | 582 ms | 439 ms | 360 ms | vs MUI X Data Grid: **Infinite Table** 40% lower<br>vs AG Grid: **Infinite Table** 38% lower<br>vs TanStack Table: **Infinite Table** 18% lower |
 
 </details>
 
@@ -136,6 +136,10 @@ Every set of versions measured so far, newest first, with a row for each grid. A
 
 | Run | Grid | Mount 1M | Sort string 1M | Sort number 1M | Memory 1M | Vertical scroll work 300k | Horizontal scroll work 300k |
 |---|---|---:|---:|---:|---:|---:|---:|
+| 2026-11-25<br>GitHub Actions, ubuntu-24.04 · AMD EPYC 9V45 96-Core Processor × 4<br>[branch](https://github.com/infinite-table/datagrid-performance-comparison/tree/versions/infinite-10.2.1_mui-9.18.0_ag-grid-36.3.0_tanstack-9.3.1) | Infinite Table 10.2.1 | 347 | 1,559 | 452 | 90.7 | 1,099 | 360 |
+|  | MUI X Data Grid 9.18.0 | 471 | 3,869 | 2,095 | 150 | 1,232 | 602 |
+|  | AG Grid 36.3.0 | 577 | 3,188 | 2,846 | 213 | 1,224 | 582 |
+|  | TanStack Table 9.3.1 | 459 | 4,298 | 3,705 | 287 | 692 | 439 |
 | 2026-11-17<br>GitHub Actions, ubuntu-24.04 · Intel(R) Xeon(R) 6975P-C × 4<br>[branch](https://github.com/infinite-table/datagrid-performance-comparison/tree/versions/infinite-10.2.0_mui-9.18.0_ag-grid-36.3.0_tanstack-9.3.1) | Infinite Table 10.2.0 | 504 | 1,443 | 1,196 | 90.7 | 1,317 | 354 |
 |  | MUI X Data Grid 9.18.0 | 663 | 3,726 | 2,159 | 150 | 1,146 | 551 |
 |  | AG Grid 36.3.0 | 760 | 3,417 | 3,256 | 213 | 1,249 | 483 |
