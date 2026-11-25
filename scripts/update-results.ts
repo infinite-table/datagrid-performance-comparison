@@ -293,14 +293,14 @@ const CHARTS: ChartSpec[] = [
     file: 'updates-high-fps-1m',
     context: 'A feed of 50 updates a second, 1M rows, frame rate',
     title: 'A feed of 50 updates a second, 1,000,000 rows: frame rate',
-    subtitle: 'main-thread frames a second while the updates come in',
-    rows: updateRows('1m', 'high', 'rafFps'),
+    subtitle: 'frames the main thread committed a second, until the last update is painted',
+    rows: updateRows('1m', 'high', 'fps'),
   },
   {
     file: 'updates-high-work-1m',
     context: 'A feed of 50 updates a second, 1M rows, main-thread work',
     title: 'A feed of 50 updates a second, 1,000,000 rows: main-thread work',
-    subtitle: 'all tasks, over the 4 seconds of the feed',
+    subtitle: 'all tasks, until the last update is painted',
     rows: updateRows('1m', 'high', 'taskMs'),
   },
 ];
