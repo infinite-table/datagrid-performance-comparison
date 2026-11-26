@@ -4,6 +4,1763 @@
       "mui": "9.18.0",
       "ag-grid": "36.3.0",
       "tanstack": "9.3.1",
+      "infinite": "11.0.0"
+    },
+    "date": "2026-11-26T21:44:41.104Z",
+    "chrome": "136.0.7103.25",
+    "headless": true,
+    "runs": 5,
+    "machine": "AMD EPYC 9V74 80-Core Processor × 4",
+    "os": "Linux 7.0.0-1020-azure x64",
+    "runner": "GitHub Actions, ubuntu-24.04",
+    "metrics": {
+      "1m/mount/visibleMs": {
+        "values": {
+          "mui": 647.714,
+          "ag-grid": 796.04,
+          "tanstack": 657.27,
+          "infinite": 519.03
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/settledMs": {
+        "values": {
+          "mui": 647.714,
+          "ag-grid": 898.488,
+          "tanstack": 657.27,
+          "infinite": 519.03
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/scriptMs": {
+        "values": {
+          "mui": 634.239,
+          "ag-grid": 770.975,
+          "tanstack": 647.2950000000001,
+          "infinite": 492.0089999999999
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/layoutMs": {
+        "values": {
+          "mui": 4.516000000000001,
+          "ag-grid": 6.904000000000001,
+          "tanstack": 4.226,
+          "infinite": 5.4030000000000005
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/styleMs": {
+        "values": {
+          "mui": 4.771,
+          "ag-grid": 11.357,
+          "tanstack": 1.6139999999999999,
+          "infinite": 10.214999999999998
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/taskMs": {
+        "values": {
+          "mui": 651.8519999999999,
+          "ag-grid": 802.9080000000001,
+          "tanstack": 659.6639999999998,
+          "infinite": 522.912
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/mount/heapMB": {
+        "values": {
+          "mui": 150.14415740966797,
+          "ag-grid": 213.41528701782227,
+          "tanstack": 286.84243392944336,
+          "infinite": 90.68926239013672
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "MB",
+        "better": "lower"
+      },
+      "1m/mount/gridElements": {
+        "values": {
+          "mui": 529,
+          "ag-grid": 637,
+          "tanstack": 352,
+          "infinite": 609
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "",
+        "better": "lower"
+      },
+      "1m/sort-string/ascVisibleMs": {
+        "values": {
+          "mui": 4435.118,
+          "ag-grid": 3543.663,
+          "tanstack": 4703.518,
+          "infinite": 1812.799
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/ascSettledMs": {
+        "values": {
+          "mui": 4435.118,
+          "ag-grid": 3543.663,
+          "tanstack": 4703.518,
+          "infinite": 1829.319
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/descVisibleMs": {
+        "values": {
+          "mui": 4472.017,
+          "ag-grid": 3616.691,
+          "tanstack": 4765.227,
+          "infinite": 2059.553
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/descSettledMs": {
+        "values": {
+          "mui": 4472.017,
+          "ag-grid": 3616.691,
+          "tanstack": 4765.227,
+          "infinite": 2059.553
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/ascScriptMs": {
+        "values": {
+          "mui": 4423.856000000001,
+          "ag-grid": 3526.7350000000006,
+          "tanstack": 4695.567999999999,
+          "infinite": 1796.227
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-string/descScriptMs": {
+        "values": {
+          "mui": 4463.824,
+          "ag-grid": 3602.156,
+          "tanstack": 4757.85,
+          "infinite": 2043.1659999999997
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/ascVisibleMs": {
+        "values": {
+          "mui": 2315.124,
+          "ag-grid": 3023.753,
+          "tanstack": 3948,
+          "infinite": 534.045
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/ascSettledMs": {
+        "values": {
+          "mui": 2315.124,
+          "ag-grid": 3023.753,
+          "tanstack": 3948,
+          "infinite": 548.229
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/descVisibleMs": {
+        "values": {
+          "mui": 3182.302,
+          "ag-grid": 3084.24,
+          "tanstack": 3847.388,
+          "infinite": 574.586
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/descSettledMs": {
+        "values": {
+          "mui": 3182.302,
+          "ag-grid": 3084.24,
+          "tanstack": 3847.388,
+          "infinite": 574.586
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/ascScriptMs": {
+        "values": {
+          "mui": 2299.722,
+          "ag-grid": 3006.8959999999997,
+          "tanstack": 3939.444,
+          "infinite": 520.8589999999999
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/sort-number/descScriptMs": {
+        "values": {
+          "mui": 3173.884,
+          "ag-grid": 3073.862,
+          "tanstack": 3839.893,
+          "infinite": 558.384
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/visibleMs": {
+        "values": {
+          "mui": 23.122500000000002,
+          "ag-grid": 34.045,
+          "tanstack": 12.128499999999999,
+          "infinite": 33.803
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "≈",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/visibleMaxMs": {
+        "values": {
+          "mui": 43.265,
+          "ag-grid": 66.972,
+          "tanstack": 34.135,
+          "infinite": 48.676
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/settledMs": {
+        "values": {
+          "mui": 23.122500000000002,
+          "ag-grid": 34.045,
+          "tanstack": 12.128499999999999,
+          "infinite": 33.803
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "≈",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-jump/scriptMs": {
+        "values": {
+          "mui": 154.9560000000001,
+          "ag-grid": 227.10399999999998,
+          "tanstack": 79.40299999999989,
+          "infinite": 203.89000000000013
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/presentedAllPct": {
+        "values": {
+          "mui": 50.27472527472527,
+          "ag-grid": 49.86072423398329,
+          "tanstack": 50,
+          "infinite": 63.098591549295776
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/scroll-vertical/partialPct": {
+        "values": {
+          "mui": 49.45054945054945,
+          "ag-grid": 49.02506963788301,
+          "tanstack": 49.171270718232044,
+          "infinite": 36.901408450704224
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/droppedPct": {
+        "values": {
+          "mui": 0.27472527472527475,
+          "ag-grid": 1.1142061281337048,
+          "tanstack": 0.8287292817679558,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/rafFps": {
+        "values": {
+          "mui": 60.003213075280804,
+          "ag-grid": 59.03416239233524,
+          "tanstack": 59.35866830118073,
+          "infinite": 56.77602503306558
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/scroll-vertical/p95FrameMs": {
+        "values": {
+          "mui": 16.700000000000728,
+          "ag-grid": 16.80000000000016,
+          "tanstack": 16.700000000000728,
+          "infinite": 16.799999999999862
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/maxFrameMs": {
+        "values": {
+          "mui": 16.800000000000182,
+          "ag-grid": 33.399999999999636,
+          "tanstack": 50,
+          "infinite": 116.59999999999991
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/longFramesPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 1.639344262295082,
+          "tanstack": 0.5434782608695652,
+          "infinite": 1.7045454545454544
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "≈",
+          "tanstack": "tanstack"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/loafBlockingMs": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/scriptMs": {
+        "values": {
+          "mui": 656.903,
+          "ag-grid": 840.735,
+          "tanstack": 397.65399999999994,
+          "infinite": 779.9610000000001
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/layoutMs": {
+        "values": {
+          "mui": 65.586,
+          "ag-grid": 108.369,
+          "tanstack": 86.381,
+          "infinite": 99.73599999999999
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/styleMs": {
+        "values": {
+          "mui": 93.881,
+          "ag-grid": 432.693,
+          "tanstack": 46.193,
+          "infinite": 263.75699999999995
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-vertical/taskMs": {
+        "values": {
+          "mui": 1534.299,
+          "ag-grid": 2036.0460000000003,
+          "tanstack": 991.8200000000002,
+          "infinite": 1737.8790000000001
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/presentedAllPct": {
+        "values": {
+          "mui": 65.5367231638418,
+          "ag-grid": 90.9090909090909,
+          "tanstack": 80.28169014084507,
+          "infinite": 95.1048951048951
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/scroll-horizontal/partialPct": {
+        "values": {
+          "mui": 32.7683615819209,
+          "ag-grid": 8.264462809917356,
+          "tanstack": 19.014084507042252,
+          "infinite": 4.895104895104895
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/droppedPct": {
+        "values": {
+          "mui": 1.675977653631285,
+          "ag-grid": 0.8264462809917356,
+          "tanstack": 0.7042253521126761,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/rafFps": {
+        "values": {
+          "mui": 60.00193554630795,
+          "ag-grid": 60.00292697204741,
+          "tanstack": 60.002926972047426,
+          "infinite": 60.0030001500075
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/scroll-horizontal/p95FrameMs": {
+        "values": {
+          "mui": 16.700000000000728,
+          "ag-grid": 16.700000000000728,
+          "tanstack": 16.700000000000728,
+          "infinite": 16.70170000000071
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/maxFrameMs": {
+        "values": {
+          "mui": 16.800000000000182,
+          "ag-grid": 16.800000000000182,
+          "tanstack": 16.800000000000182,
+          "infinite": 16.800000000000182
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/longFramesPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/loafBlockingMs": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/scriptMs": {
+        "values": {
+          "mui": 381.699,
+          "ag-grid": 245.309,
+          "tanstack": 159.659,
+          "infinite": 164.85299999999992
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/layoutMs": {
+        "values": {
+          "mui": 48.437999999999995,
+          "ag-grid": 69.941,
+          "tanstack": 51.281,
+          "infinite": 12.312
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/styleMs": {
+        "values": {
+          "mui": 24.480999999999998,
+          "ag-grid": 44.015,
+          "tanstack": 14.576999999999998,
+          "infinite": 50.445
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "≈",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/scroll-horizontal/taskMs": {
+        "values": {
+          "mui": 775.741,
+          "ag-grid": 596.9780000000001,
+          "tanstack": 431.7359999999999,
+          "infinite": 512.6439999999999
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/blankPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 2.413793103448276,
+          "tanstack": 2.1333333333333333,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/wrongPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 76.86909581646424
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/badFramesPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 12.068965517241379,
+          "tanstack": 10.666666666666668,
+          "infinite": 84.21052631578947
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-vertical/worstFrameOkPct": {
+        "values": {
+          "mui": 100,
+          "ag-grid": 80,
+          "tanstack": 80,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/correctness-horizontal/blankPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-horizontal/wrongPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-horizontal/badFramesPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/correctness-horizontal/worstFrameOkPct": {
+        "values": {
+          "mui": 100,
+          "ag-grid": 100,
+          "tanstack": 100,
+          "infinite": 100
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "%",
+        "better": "higher"
+      },
+      "1m/visual-blank-vertical/blankFramesPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 50,
+          "tanstack": 8.333333333333332,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/visual-blank-vertical/blankAreaPct": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 19.10100695525797,
+          "tanstack": 2.7396049666386815,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "%",
+        "better": "lower"
+      },
+      "1m/visual-blank-vertical/maxBlankRows": {
+        "values": {
+          "mui": 0,
+          "ag-grid": 18,
+          "tanstack": 16,
+          "infinite": 0
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "rows",
+        "better": "lower"
+      },
+      "1m/visual-blank-vertical/capturedFrames": {
+        "values": {
+          "mui": 63,
+          "ag-grid": 39,
+          "tanstack": 61,
+          "infinite": 67
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "",
+        "better": "higher"
+      },
+      "1m/updates-low/visibleMs": {
+        "values": {
+          "mui": 469.377,
+          "ag-grid": 105.466,
+          "tanstack": 481.429,
+          "infinite": 336.957
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low/visibleMaxMs": {
+        "values": {
+          "mui": 675.64,
+          "ag-grid": 125.374,
+          "tanstack": 723.945,
+          "infinite": 418.041
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low/settledMs": {
+        "values": {
+          "mui": 469.377,
+          "ag-grid": 105.466,
+          "tanstack": 481.429,
+          "infinite": 336.957
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low/layoutMs": {
+        "values": {
+          "mui": 3.1620000000000017,
+          "ag-grid": 3.169,
+          "tanstack": 4.359999999999999,
+          "infinite": 2.7739999999999996
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low/styleMs": {
+        "values": {
+          "mui": 1.8450000000000002,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0.2920000000000006
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low/taskMs": {
+        "values": {
+          "mui": 2703.291,
+          "ag-grid": 686.9929999999997,
+          "tanstack": 2658.4070000000006,
+          "infinite": 1791.5810000000004
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-sorted/visibleMs": {
+        "values": {
+          "mui": 2401.201,
+          "ag-grid": 3964.104,
+          "tanstack": 4753.869,
+          "infinite": 494.455
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-sorted/visibleMaxMs": {
+        "values": {
+          "mui": 2735.909,
+          "ag-grid": 4048.739,
+          "tanstack": 5101.435,
+          "infinite": 633.929
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-sorted/settledMs": {
+        "values": {
+          "mui": 2401.201,
+          "ag-grid": 3964.104,
+          "tanstack": 4753.869,
+          "infinite": 494.455
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-sorted/layoutMs": {
+        "values": {
+          "mui": 5.5729999999999995,
+          "ag-grid": 4.714000000000001,
+          "tanstack": 7.74,
+          "infinite": 10.793
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-sorted/styleMs": {
+        "values": {
+          "mui": 13.600999999999999,
+          "ag-grid": 14.829,
+          "tanstack": 6.325000000000001,
+          "infinite": 0.28300000000000025
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-sorted/taskMs": {
+        "values": {
+          "mui": 12299.565,
+          "ag-grid": 19970.301,
+          "tanstack": 24893.755999999998,
+          "infinite": 2643.621
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-filtered/visibleMs": {
+        "values": {
+          "mui": 664.985,
+          "ag-grid": 321.879,
+          "tanstack": 1697.162,
+          "infinite": 267.672
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-filtered/visibleMaxMs": {
+        "values": {
+          "mui": 820.098,
+          "ag-grid": 373.89,
+          "tanstack": 2098.409,
+          "infinite": 357.052
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-filtered/settledMs": {
+        "values": {
+          "mui": 664.985,
+          "ag-grid": 321.879,
+          "tanstack": 1697.162,
+          "infinite": 269.07
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-filtered/layoutMs": {
+        "values": {
+          "mui": 4.161999999999999,
+          "ag-grid": 4.919000000000003,
+          "tanstack": 4.0409999999999995,
+          "infinite": 4.33
+        },
+        "winners": {
+          "mui": "≈",
+          "ag-grid": "≈",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-filtered/styleMs": {
+        "values": {
+          "mui": 3.503999999999999,
+          "ag-grid": 1.8840000000000003,
+          "tanstack": 1.2960000000000003,
+          "infinite": 0.44000000000000117
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-filtered/taskMs": {
+        "values": {
+          "mui": 3473.601,
+          "ag-grid": 1761.5339999999997,
+          "tanstack": 8365.349999999999,
+          "infinite": 1449.1159999999998
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-grouped/visibleMs": {
+        "values": {
+          "tanstack": 1790.562,
+          "infinite": 955.394
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-grouped/visibleMaxMs": {
+        "values": {
+          "tanstack": 2752.488,
+          "infinite": 1151.947
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-grouped/settledMs": {
+        "values": {
+          "tanstack": 1790.562,
+          "infinite": 955.394
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-grouped/layoutMs": {
+        "values": {
+          "tanstack": 2.0829999999999997,
+          "infinite": 1.3339999999999992
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-grouped/styleMs": {
+        "values": {
+          "tanstack": 0,
+          "infinite": 0.37500000000000033
+        },
+        "winners": {
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-low-grouped/taskMs": {
+        "values": {
+          "tanstack": 10144.421000000002,
+          "infinite": 4994.839
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/lagMs": {
+        "values": {
+          "mui": 1124.7349999999997,
+          "ag-grid": 128.73899999999958,
+          "tanstack": 512.402,
+          "infinite": 382.02999999999975
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/delayP95Ms": {
+        "values": {
+          "mui": 558.5750000003726,
+          "ag-grid": 94.55999999998605,
+          "tanstack": 659.4300000000047,
+          "infinite": 339.27499999972065
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/fps": {
+        "values": {
+          "mui": 2.938448322978568,
+          "ag-grid": 10.22211437621129,
+          "tanstack": 1.7957520587175009,
+          "infinite": 4.874691414623842
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/updates-high/p95GapMs": {
+        "values": {
+          "mui": 645.0829000000001,
+          "ag-grid": 117.13735000000003,
+          "tanstack": 763.2918,
+          "infinite": 418.197
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/maxGapMs": {
+        "values": {
+          "mui": 668.479,
+          "ag-grid": 197.709,
+          "tanstack": 788.399,
+          "infinite": 441.531
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/blockingMs": {
+        "values": {
+          "mui": 4435.501,
+          "ag-grid": 1726.196,
+          "tanstack": 4045.7059999999997,
+          "infinite": 3585.2599999999998
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/layoutMs": {
+        "values": {
+          "mui": 2.9890000000000003,
+          "ag-grid": 25.828999999999997,
+          "tanstack": 6.588,
+          "infinite": 5.929
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "infinite",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/styleMs": {
+        "values": {
+          "mui": 1.8779999999999994,
+          "ag-grid": 0,
+          "tanstack": 0,
+          "infinite": 0.28300000000000025
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high/taskMs": {
+        "values": {
+          "mui": 5105.6309999999985,
+          "ag-grid": 4069.0170000000007,
+          "tanstack": 4493.637,
+          "infinite": 4367.716
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "ag-grid",
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/lagMs": {
+        "values": {
+          "mui": 3156.3459999999995,
+          "ag-grid": 8186.107,
+          "tanstack": 5626.558999999999,
+          "infinite": 838.9049999999997
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/delayP95Ms": {
+        "values": {
+          "mui": 2413.8000000002794,
+          "ag-grid": 4077.600000000093,
+          "tanstack": 4876,
+          "infinite": 569.9800000000048
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/fps": {
+        "values": {
+          "mui": 0.5605109393518757,
+          "ag-grid": 0.24658668545328427,
+          "tanstack": 0.20819109110764844,
+          "infinite": 2.90522431963278
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/updates-high-sorted/p95GapMs": {
+        "values": {
+          "mui": 2599.76035,
+          "ag-grid": 7527.966399999999,
+          "tanstack": 5070.946,
+          "infinite": 685.56875
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/maxGapMs": {
+        "values": {
+          "mui": 2632.924,
+          "ag-grid": 7919.676,
+          "tanstack": 5102.096,
+          "infinite": 696.739
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/blockingMs": {
+        "values": {
+          "mui": 6872.4710000000005,
+          "ag-grid": 11760.033,
+          "tanstack": 9490.529999999999,
+          "infinite": 4281.776
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/layoutMs": {
+        "values": {
+          "mui": 3.0869999999999993,
+          "ag-grid": 3.2499999999999996,
+          "tanstack": 3.919999999999998,
+          "infinite": 16.481
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/styleMs": {
+        "values": {
+          "mui": 5.685999999999999,
+          "ag-grid": 9.039,
+          "tanstack": 2.607,
+          "infinite": 0.2970000000000004
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-sorted/taskMs": {
+        "values": {
+          "mui": 7137.468999999999,
+          "ag-grid": 12150.863999999998,
+          "tanstack": 9608.517000000002,
+          "infinite": 4820.428
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/lagMs": {
+        "values": {
+          "mui": 823.134,
+          "ag-grid": 410.09400000000005,
+          "tanstack": 2254.91,
+          "infinite": 334.02599999999984
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/delayP95Ms": {
+        "values": {
+          "mui": 675.9700000001817,
+          "ag-grid": 320.04500000001866,
+          "tanstack": 1823.0000000000002,
+          "infinite": 276.16499999964145
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/fps": {
+        "values": {
+          "mui": 2.081973977823646,
+          "ag-grid": 2.9612122200572473,
+          "tanstack": 0.6415489557988808,
+          "infinite": 6.51092971810593
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/updates-high-filtered/p95GapMs": {
+        "values": {
+          "mui": 745.94125,
+          "ag-grid": 509.15160000000014,
+          "tanstack": 1976.3416000000002,
+          "infinite": 326.1852499999999
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/maxGapMs": {
+        "values": {
+          "mui": 749.404,
+          "ag-grid": 752.301,
+          "tanstack": 2029.057,
+          "infinite": 417.819
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/blockingMs": {
+        "values": {
+          "mui": 4309.5560000000005,
+          "ag-grid": 3501.288,
+          "tanstack": 6018.312,
+          "infinite": 3406.31
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/layoutMs": {
+        "values": {
+          "mui": 4.687,
+          "ag-grid": 8.78,
+          "tanstack": 3.2249999999999996,
+          "infinite": 10.282
+        },
+        "winners": {
+          "mui": "mui",
+          "ag-grid": "ag-grid",
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/styleMs": {
+        "values": {
+          "mui": 3.8469999999999995,
+          "ag-grid": 2.803,
+          "tanstack": 1.112,
+          "infinite": 0.841999999999999
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "infinite",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-filtered/taskMs": {
+        "values": {
+          "mui": 5103.327,
+          "ag-grid": 4358.961000000001,
+          "tanstack": 6236.516,
+          "infinite": 4316.281
+        },
+        "winners": {
+          "mui": "infinite",
+          "ag-grid": "≈",
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/lagMs": {
+        "values": {
+          "tanstack": 3395.4399999999996,
+          "infinite": 1068.4939999999997
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/delayP95Ms": {
+        "values": {
+          "tanstack": 1933.6999999997208,
+          "infinite": 940.9499999999068
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/fps": {
+        "values": {
+          "tanstack": 0.5386649673582496,
+          "infinite": 1.5782569225505136
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "fps",
+        "better": "higher"
+      },
+      "1m/updates-high-grouped/p95GapMs": {
+        "values": {
+          "tanstack": 2103.4532,
+          "infinite": 1075.4385
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/maxGapMs": {
+        "values": {
+          "tanstack": 2155.691,
+          "infinite": 1125.436
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/blockingMs": {
+        "values": {
+          "tanstack": 7165.03,
+          "infinite": 4758.974999999999
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/layoutMs": {
+        "values": {
+          "tanstack": 1.6980000000000015,
+          "infinite": 1.418
+        },
+        "winners": {
+          "tanstack": "≈"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/styleMs": {
+        "values": {
+          "tanstack": 0,
+          "infinite": 0.23800000000000038
+        },
+        "winners": {
+          "tanstack": "tanstack"
+        },
+        "unit": "ms",
+        "better": "lower"
+      },
+      "1m/updates-high-grouped/taskMs": {
+        "values": {
+          "tanstack": 7376.599,
+          "infinite": 5050.03
+        },
+        "winners": {
+          "tanstack": "infinite"
+        },
+        "unit": "ms",
+        "better": "lower"
+      }
+    }
+  },
+  {
+    "versions": {
+      "mui": "9.18.0",
+      "ag-grid": "36.3.0",
+      "tanstack": "9.3.1",
       "infinite": "10.2.1"
     },
     "date": "2026-11-25T10:54:22.499Z",
