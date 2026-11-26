@@ -43,7 +43,7 @@ on:
         description: 'BENCH_SCENARIOS - empty = all'
         default: ''
       runs:
-        description: 'BENCH_RUNS - empty = 7'
+        description: 'BENCH_RUNS - empty = 5'
         default: ''
 
 permissions:

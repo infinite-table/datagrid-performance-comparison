@@ -196,7 +196,7 @@ const updateCharts: ChartSpec[] = Object.keys(SIZE_LABELS).flatMap(
         context: `Live updates, ${SIZE_LABELS[size]} rows`,
         title: `Live updates, ${rows} rows: update to rows painted`,
         subtitle:
-          '1,000 changed rows at a time, median of 10 updates',
+          '1,000 changed rows at a time, median of the updates of a run',
         rows: updateRows(size, 'low', 'visibleMs'),
       },
       {
