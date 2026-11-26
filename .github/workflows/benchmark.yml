@@ -37,7 +37,7 @@ on:
         type: boolean
         default: true
       sizes:
-        description: 'BENCH_SIZES - empty = all. Partial runs are for trying things out: turn "publish" off'
+        description: 'BENCH_SIZES - empty = 1m (what the README shows); 300k,1m adds the 300k rows run to the report'
         default: ''
       scenarios:
         description: 'BENCH_SCENARIOS - empty = all'

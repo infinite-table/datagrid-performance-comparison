@@ -135,7 +135,9 @@ type ChartSpec = {
   note?: string;
 };
 
-const SIZE_LABELS: Record<string, string> = { '300k': '300k', '1m': '1M' };
+// the README shows the 1M rows run: the scheduled runs only measure 1M
+// (BENCH_SIZES in the spec); a 300k run by hand is in its report.md
+const SIZE_LABELS: Record<string, string> = { '1m': '1M' };
 
 const perSize = (label: string, id: string): Row[] =>
   Object.keys(SIZE_LABELS).map((size) => ({
@@ -226,13 +228,11 @@ const CHARTS: ChartSpec[] = [
     title: 'Mount time',
     subtitle: 'from setState, with all the rows already in memory',
     rows: [
-      { label: 'First rows painted, 300k rows', id: '300k/mount/visibleMs' },
-      {
-        label: 'Settled (no more DOM changes), 300k rows',
-        id: '300k/mount/settledMs',
-      },
       { label: 'First rows painted, 1M rows', id: '1m/mount/visibleMs' },
-      { label: 'Settled, 1M rows', id: '1m/mount/settledMs' },
+      {
+        label: 'Settled (no more DOM changes), 1M rows',
+        id: '1m/mount/settledMs',
+      },
     ],
   },
   {
@@ -241,13 +241,6 @@ const CHARTS: ChartSpec[] = [
     title: 'Memory: JavaScript heap retained by the grid',
     subtitle: 'after garbage collection',
     rows: perSize('', 'mount/heapMB'),
-  },
-  {
-    file: 'sort-300k',
-    context: 'Sort, 300k rows',
-    title: 'Sorting 300,000 rows: click to sorted rows painted',
-    subtitle: 'ascending is the first, cold sort',
-    rows: sortRows('300k'),
   },
   {
     file: 'sort-1m',
@@ -276,17 +269,17 @@ const CHARTS: ChartSpec[] = [
   },
   {
     file: 'scroll-vertical-work',
-    context: 'Vertical scrolling, 300k rows, main-thread work',
-    title: 'Vertical scrolling, 300k rows: main-thread work',
+    context: 'Vertical scrolling, 1M rows, main-thread work',
+    title: 'Vertical scrolling, 1M rows: main-thread work',
     subtitle: 'total over the wheel gesture',
-    rows: workRows('300k', 'scroll-vertical'),
+    rows: workRows('1m', 'scroll-vertical'),
   },
   {
     file: 'scroll-horizontal-work',
-    context: 'Horizontal scrolling, 300k rows, main-thread work',
-    title: 'Horizontal scrolling, 300k rows: main-thread work',
+    context: 'Horizontal scrolling, 1M rows, main-thread work',
+    title: 'Horizontal scrolling, 1M rows: main-thread work',
     subtitle: 'total over the sweeps across all columns',
-    rows: workRows('300k', 'scroll-horizontal'),
+    rows: workRows('1m', 'scroll-horizontal'),
   },
   ...updateCharts,
   {
@@ -311,8 +304,8 @@ const HISTORY_COLUMNS: { label: string; id: string }[] = [
   { label: 'Sort string 1M', id: '1m/sort-string/ascVisibleMs' },
   { label: 'Sort number 1M', id: '1m/sort-number/ascVisibleMs' },
   { label: 'Memory 1M', id: '1m/mount/heapMB' },
-  { label: 'Vertical scroll work 300k', id: '300k/scroll-vertical/taskMs' },
-  { label: 'Horizontal scroll work 300k', id: '300k/scroll-horizontal/taskMs' },
+  { label: 'Vertical scroll work 1M', id: '1m/scroll-vertical/taskMs' },
+  { label: 'Horizontal scroll work 1M', id: '1m/scroll-horizontal/taskMs' },
   { label: 'Update sorted 1M', id: '1m/updates-low-sorted/visibleMs' },
   { label: 'Feed lag sorted 1M', id: '1m/updates-high-sorted/lagMs' },
 ];
