@@ -1,7 +1,7 @@
 # MUI X Data Grid vs AG Grid vs TanStack Table vs Infinite Table — benchmark report
 
-- Run: `ci` · 2026-11-26T21:44:41.104Z
-- MUI X Data Grid 9.18.0 · AG Grid 36.3.0 · TanStack Table 9.3.1 · Infinite Table 11.0.0
+- Run: `ci` · 2026-11-27T21:29:04.487Z
+- MUI X Data Grid 9.18.0 · AG Grid 36.3.0 · TanStack Table 9.3.1 · Infinite Table 11.0.1
 - 1,000,000 rows (data checksum `1000000:19e5eebe`) × 20 columns, identical data for every grid
 - Chrome 136.0.7103.25 · headless · CPU throttling 1× · viewport 1400×1000
 - 5 measured runs per grid per scenario (+1 warmup, discarded), interleaved, fresh browser context per run
@@ -27,13 +27,13 @@ Mount the grid with all the rows (data already in memory). "Visible" = from setS
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Time to first rows painted (lower is better) | 648 ms (±20.2) | 796 ms (±17.0) | 657 ms (±12.8) | 519 ms (±19.5) | 0.80 × (0.75–0.85) **Infinite** | 0.65 × (0.62–0.69) **Infinite** | 0.79 × (0.75–0.84) **Infinite** |
-| Time until settled (lower is better) | 648 ms (±20.2) | 898 ms (±16.9) | 657 ms (±12.8) | 519 ms (±19.5) | 0.80 × (0.75–0.85) **Infinite** | 0.58 × (0.55–0.61) **Infinite** | 0.79 × (0.75–0.84) **Infinite** |
-| Main thread: scripting (lower is better) | 634 ms (±20.0) | 771 ms (±16.4) | 647 ms (±12.7) | 492 ms (±19.6) | 0.78 × (0.73–0.82) **Infinite** | 0.64 × (0.61–0.68) **Infinite** | 0.76 × (0.72–0.81) **Infinite** |
-| Main thread: layout (lower is better) | 4.52 ms (±0.13) | 6.90 ms (±0.14) | 4.23 ms (±0.24) | 5.40 ms (±0.69) | 1.20 × (1.11–1.50) **MUI X** | 0.78 × (0.73–0.98) **Infinite** | 1.28 × (1.13–1.60) **TanStack** |
-| Main thread: style recalc (lower is better) | 4.77 ms (±0.11) | 11.4 ms (±0.45) | 1.61 ms (±0.27) | 10.2 ms (±0.27) | 2.14 × (2.10–2.26) **MUI X** | 0.90 × (0.83–0.95) **Infinite** | 6.33 × (4.62–6.68) **TanStack** |
-| Main thread: all tasks (lower is better) | 652 ms (±19.9) | 803 ms (±17.3) | 660 ms (±6.72) | 523 ms (±19.6) | 0.80 × (0.75–0.85) **Infinite** | 0.65 × (0.62–0.69) **Infinite** | 0.79 × (0.76–0.84) **Infinite** |
-| JS heap retained by grid (lower is better) | 150 MB (±0.00) | 213 MB (±0.02) | 287 MB (±0.00) | 90.7 MB (±0.03) | 0.60 × (0.60–0.60) **Infinite** | 0.42 × (0.42–0.43) **Infinite** | 0.32 × (0.32–0.32) **Infinite** |
+| Time to first rows painted (lower is better) | 638 ms (±33.2) | 814 ms (±13.6) | 666 ms (±9.99) | 487 ms (±23.7) | 0.76 × (0.68–0.81) **Infinite** | 0.60 × (0.56–0.63) **Infinite** | 0.73 × (0.69–0.78) **Infinite** |
+| Time until settled (lower is better) | 638 ms (±33.2) | 916 ms (±13.5) | 666 ms (±9.99) | 487 ms (±23.7) | 0.76 × (0.68–0.81) **Infinite** | 0.53 × (0.50–0.56) **Infinite** | 0.73 × (0.69–0.78) **Infinite** |
+| Main thread: scripting (lower is better) | 625 ms (±32.9) | 789 ms (±13.9) | 656 ms (±9.70) | 457 ms (±23.4) | 0.73 × (0.66–0.79) **Infinite** | 0.58 × (0.55–0.62) **Infinite** | 0.70 × (0.66–0.75) **Infinite** |
+| Main thread: layout (lower is better) | 4.40 ms (±0.20) | 7.02 ms (±0.23) | 4.20 ms (±0.13) | 5.07 ms (±0.92) | 1.15 × (1.08–1.63) **MUI X** | 0.72 × (0.69–1.02) ≈ | 1.21 × (1.18–1.70) **TanStack** |
+| Main thread: style recalc (lower is better) | 4.57 ms (±0.12) | 11.3 ms (±0.29) | 1.76 ms (±0.26) | 10.1 ms (±0.21) | 2.22 × (2.12–2.32) **MUI X** | 0.89 × (0.87–0.94) **Infinite** | 5.77 × (4.54–6.45) **TanStack** |
+| Main thread: all tasks (lower is better) | 642 ms (±33.4) | 822 ms (±13.4) | 668 ms (±10.3) | 491 ms (±19.4) | 0.77 × (0.70–0.81) **Infinite** | 0.60 × (0.57–0.63) **Infinite** | 0.74 × (0.71–0.78) **Infinite** |
+| JS heap retained by grid (lower is better) | 150 MB (±0.00) | 213 MB (±0.00) | 287 MB (±0.00) | 90.7 MB (±0.02) | 0.60 × (0.60–0.60) **Infinite** | 0.42 × (0.42–0.42) **Infinite** | 0.32 × (0.32–0.32) **Infinite** |
 | DOM elements in grid (lower is better) | 529 (±0.00) | 637 (±0.00) | 352 (±0.00) | 609 (±0.00) | 1.15 × (1.15–1.15) **MUI X** | 0.96 × (0.96–0.96) **Infinite** | 1.73 × (1.73–1.73) **TanStack** |
 
 ## sort-string - 1,000,000 rows
@@ -42,12 +42,12 @@ Click the "code" column header (string column, unique-ish values) - first click 
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Ascending: click to sorted rows painted (lower is better) | 4435 ms (±102) | 3544 ms (±47.5) | 4704 ms (±92.5) | 1813 ms (±69.0) | 0.41 × (0.39–0.44) **Infinite** | 0.51 × (0.49–0.54) **Infinite** | 0.39 × (0.36–0.41) **Infinite** |
-| Ascending: click to settled (lower is better) | 4435 ms (±102) | 3544 ms (±47.5) | 4704 ms (±92.5) | 1829 ms (±65.9) | 0.41 × (0.39–0.44) **Infinite** | 0.52 × (0.49–0.54) **Infinite** | 0.39 × (0.37–0.41) **Infinite** |
-| Descending: click to sorted rows painted (lower is better) | 4472 ms (±153) | 3617 ms (±90.4) | 4765 ms (±173) | 2060 ms (±73.4) | 0.46 × (0.43–0.47) **Infinite** | 0.57 × (0.53–0.59) **Infinite** | 0.43 × (0.40–0.45) **Infinite** |
-| Descending: click to settled (lower is better) | 4472 ms (±153) | 3617 ms (±90.4) | 4765 ms (±173) | 2060 ms (±73.4) | 0.46 × (0.43–0.47) **Infinite** | 0.57 × (0.53–0.59) **Infinite** | 0.43 × (0.40–0.45) **Infinite** |
-| Ascending: main thread scripting (lower is better) | 4424 ms (±102) | 3527 ms (±48.5) | 4696 ms (±90.2) | 1796 ms (±69.3) | 0.41 × (0.39–0.43) **Infinite** | 0.51 × (0.49–0.54) **Infinite** | 0.38 × (0.36–0.40) **Infinite** |
-| Descending: main thread scripting (lower is better) | 4464 ms (±153) | 3602 ms (±90.0) | 4758 ms (±173) | 2043 ms (±73.6) | 0.46 × (0.42–0.47) **Infinite** | 0.57 × (0.53–0.59) **Infinite** | 0.43 × (0.40–0.45) **Infinite** |
+| Ascending: click to sorted rows painted (lower is better) | 4380 ms (±111) | 3476 ms (±93.7) | 4561 ms (±209) | 1637 ms (±52.0) | 0.37 × (0.36–0.40) **Infinite** | 0.47 × (0.46–0.52) **Infinite** | 0.36 × (0.33–0.38) **Infinite** |
+| Ascending: click to settled (lower is better) | 4380 ms (±111) | 3476 ms (±93.7) | 4561 ms (±209) | 1647 ms (±53.4) | 0.38 × (0.36–0.40) **Infinite** | 0.47 × (0.47–0.52) **Infinite** | 0.36 × (0.33–0.38) **Infinite** |
+| Descending: click to sorted rows painted (lower is better) | 4554 ms (±221) | 3620 ms (±40.9) | 4478 ms (±205) | 1814 ms (±87.5) | 0.40 × (0.39–0.47) **Infinite** | 0.50 × (0.50–0.55) **Infinite** | 0.40 × (0.37–0.45) **Infinite** |
+| Descending: click to settled (lower is better) | 4554 ms (±221) | 3620 ms (±40.9) | 4478 ms (±205) | 1814 ms (±87.5) | 0.40 × (0.39–0.47) **Infinite** | 0.50 × (0.50–0.55) **Infinite** | 0.40 × (0.37–0.45) **Infinite** |
+| Ascending: main thread scripting (lower is better) | 4368 ms (±111) | 3458 ms (±93.7) | 4553 ms (±209) | 1624 ms (±52.7) | 0.37 × (0.36–0.40) **Infinite** | 0.47 × (0.46–0.51) **Infinite** | 0.36 × (0.33–0.38) **Infinite** |
+| Descending: main thread scripting (lower is better) | 4546 ms (±221) | 3606 ms (±40.7) | 4471 ms (±205) | 1797 ms (±87.6) | 0.40 × (0.39–0.47) **Infinite** | 0.50 × (0.49–0.55) **Infinite** | 0.40 × (0.37–0.45) **Infinite** |
 
 ## sort-number - 1,000,000 rows
 
@@ -55,12 +55,12 @@ Click the "salary" column header (number column, unique-ish values) - first clic
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Ascending: click to sorted rows painted (lower is better) | 2315 ms (±67.0) | 3024 ms (±33.7) | 3948 ms (±120) | 534 ms (±11.1) | 0.23 × (0.22–0.24) **Infinite** | 0.18 × (0.17–0.18) **Infinite** | 0.14 × (0.13–0.14) **Infinite** |
-| Ascending: click to settled (lower is better) | 2315 ms (±67.0) | 3024 ms (±33.7) | 3948 ms (±120) | 548 ms (±8.90) | 0.24 × (0.23–0.25) **Infinite** | 0.18 × (0.18–0.18) **Infinite** | 0.14 × (0.13–0.14) **Infinite** |
-| Descending: click to sorted rows painted (lower is better) | 3182 ms (±93.8) | 3084 ms (±19.8) | 3847 ms (±147) | 575 ms (±45.1) | 0.18 × (0.15–0.19) **Infinite** | 0.19 × (0.16–0.19) **Infinite** | 0.15 × (0.13–0.16) **Infinite** |
-| Descending: click to settled (lower is better) | 3182 ms (±93.8) | 3084 ms (±19.8) | 3847 ms (±147) | 575 ms (±45.1) | 0.18 × (0.15–0.19) **Infinite** | 0.19 × (0.16–0.19) **Infinite** | 0.15 × (0.13–0.16) **Infinite** |
-| Ascending: main thread scripting (lower is better) | 2300 ms (±66.6) | 3007 ms (±32.3) | 3939 ms (±120) | 521 ms (±11.2) | 0.23 × (0.22–0.24) **Infinite** | 0.17 × (0.17–0.18) **Infinite** | 0.13 × (0.13–0.14) **Infinite** |
-| Descending: main thread scripting (lower is better) | 3174 ms (±94.0) | 3074 ms (±19.0) | 3840 ms (±147) | 558 ms (±45.0) | 0.18 × (0.15–0.18) **Infinite** | 0.18 × (0.16–0.19) **Infinite** | 0.15 × (0.13–0.15) **Infinite** |
+| Ascending: click to sorted rows painted (lower is better) | 2092 ms (±89.9) | 2890 ms (±23.6) | 3784 ms (±86.3) | 531 ms (±26.4) | 0.25 × (0.23–0.27) **Infinite** | 0.18 × (0.17–0.19) **Infinite** | 0.14 × (0.13–0.15) **Infinite** |
+| Ascending: click to settled (lower is better) | 2092 ms (±89.9) | 2890 ms (±23.6) | 3784 ms (±86.3) | 549 ms (±28.7) | 0.26 × (0.24–0.28) **Infinite** | 0.19 × (0.17–0.20) **Infinite** | 0.14 × (0.13–0.15) **Infinite** |
+| Descending: click to sorted rows painted (lower is better) | 2957 ms (±51.1) | 2923 ms (±166) | 3592 ms (±74.1) | 559 ms (±19.8) | 0.19 × (0.18–0.20) **Infinite** | 0.19 × (0.17–0.20) **Infinite** | 0.16 × (0.15–0.16) **Infinite** |
+| Descending: click to settled (lower is better) | 2957 ms (±51.1) | 2923 ms (±166) | 3592 ms (±74.1) | 559 ms (±19.8) | 0.19 × (0.18–0.20) **Infinite** | 0.19 × (0.17–0.20) **Infinite** | 0.16 × (0.15–0.16) **Infinite** |
+| Ascending: main thread scripting (lower is better) | 2081 ms (±89.9) | 2874 ms (±22.1) | 3776 ms (±86.1) | 517 ms (±26.3) | 0.25 × (0.23–0.26) **Infinite** | 0.18 × (0.17–0.19) **Infinite** | 0.14 × (0.13–0.15) **Infinite** |
+| Descending: main thread scripting (lower is better) | 2947 ms (±50.5) | 2910 ms (±173) | 3583 ms (±74.0) | 544 ms (±19.8) | 0.18 × (0.17–0.19) **Infinite** | 0.19 × (0.17–0.19) **Infinite** | 0.15 × (0.14–0.16) **Infinite** |
 
 ## scroll-jump - 1,000,000 rows
 
@@ -68,10 +68,10 @@ Programmatic jumps to 10 far-away scroll positions (like dragging the scrollbar 
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Jump to rows painted (median of jumps) (lower is better) | 23.1 ms (±0.43) | 34.0 ms (±0.93) | 12.1 ms (±0.27) | 33.8 ms (±1.18) | 1.46 × (1.43–1.55) **MUI X** | 0.99 × (0.94–1.05) ≈ | 2.79 × (2.68–2.96) **TanStack** |
-| Jump to rows painted (worst jump) (lower is better) | 43.3 ms (±1.86) | 67.0 ms (±2.76) | 34.1 ms (±2.27) | 48.7 ms (±1.53) | 1.13 × (1.06–1.18) **MUI X** | 0.73 × (0.69–0.77) **Infinite** | 1.43 × (1.33–1.59) **TanStack** |
-| Jump to settled (median of jumps) (lower is better) | 23.1 ms (±0.43) | 34.0 ms (±0.93) | 12.1 ms (±0.27) | 33.8 ms (±1.18) | 1.46 × (1.43–1.55) **MUI X** | 0.99 × (0.94–1.05) ≈ | 2.79 × (2.68–2.96) **TanStack** |
-| Main thread scripting (all jumps) (lower is better) | 155 ms (±2.15) | 227 ms (±6.01) | 79.4 ms (±3.21) | 204 ms (±1.90) | 1.32 × (1.28–1.33) **MUI X** | 0.90 × (0.87–0.93) **Infinite** | 2.57 × (2.36–2.60) **TanStack** |
+| Jump to rows painted (median of jumps) (lower is better) | 22.3 ms (±0.35) | 33.3 ms (±0.41) | 12.0 ms (±0.22) | 33.7 ms (±0.45) | 1.51 × (1.47–1.55) **MUI X** | 1.01 × (0.99–1.04) ≈ | 2.80 × (2.75–2.90) **TanStack** |
+| Jump to rows painted (worst jump) (lower is better) | 45.1 ms (±1.53) | 63.7 ms (±2.95) | 33.8 ms (±1.27) | 47.9 ms (±1.86) | 1.06 × (1.02–1.13) **MUI X** | 0.75 × (0.70–0.80) **Infinite** | 1.41 × (1.35–1.51) **TanStack** |
+| Jump to settled (median of jumps) (lower is better) | 22.3 ms (±0.35) | 33.3 ms (±0.41) | 12.0 ms (±0.22) | 33.7 ms (±0.45) | 1.51 × (1.47–1.55) **MUI X** | 1.01 × (0.99–1.04) ≈ | 2.80 × (2.75–2.90) **TanStack** |
+| Main thread scripting (all jumps) (lower is better) | 157 ms (±3.84) | 222 ms (±6.60) | 79.5 ms (±5.27) | 203 ms (±3.74) | 1.29 × (1.27–1.36) **MUI X** | 0.91 × (0.88–0.96) **Infinite** | 2.55 × (2.25–2.64) **TanStack** |
 
 ## scroll-vertical - 1,000,000 rows
 
@@ -79,18 +79,18 @@ Wheel-scroll down 24000px at 8000px/s (Input.synthesizeScrollGesture - real inpu
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Frames fully presented (higher is better) | 50.3 % (±0.12) | 49.9 % (±0.12) | 50.0 % (±0.18) | 63.1 % (±1.01) | 1.26 × (1.24–1.29) **Infinite** | 1.27 × (1.25–1.30) **Infinite** | 1.26 × (1.25–1.30) **Infinite** |
-| Frames presented without main-thread update (lower is better) | 49.5 % (±0.12) | 49.0 % (±0.12) | 49.2 % (±0.19) | 36.9 % (±1.01) | 0.75 × (0.71–0.76) **Infinite** | 0.75 × (0.71–0.77) **Infinite** | 0.75 × (0.71–0.77) **Infinite** |
-| Frames dropped (lower is better) | 0.27 % (±0.25) | 1.11 % (±0.20) | 0.83 % (±0.37) | 0.00 % (±0.00) | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
-| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.29) | 59.0 fps (±0.23) | 59.4 fps (±0.43) | 56.8 fps (±0.56) | 0.95 × (0.92–0.96) **MUI X** | 0.96 × (0.94–0.97) **AG Grid** | 0.96 × (0.93–0.96) **TanStack** |
-| p95 rAF frame interval (lower is better) | 16.7 ms (±0.05) | 16.8 ms (±0.00) | 16.7 ms (±0.04) | 16.8 ms (±0.00) | 1.01 × (1.00–1.01) ≈ | 1.00 × (1.00–1.00) ≈ | 1.01 × (1.00–1.01) **TanStack** |
-| Worst rAF frame interval (lower is better) | 16.8 ms (±14.8) | 33.4 ms (±0.05) | 50.0 ms (±18.2) | 117 ms (±9.13) | 6.94 × (2.33–6.95) **MUI X** | 3.49 × (2.99–3.50) **AG Grid** | 2.33 × (2.00–6.94) **TanStack** |
-| rAF intervals > 25ms (lower is better) | 0.00 % (±0.30) | 1.64 % (±0.39) | 0.54 % (±0.46) | 1.70 % (±0.77) | +1.70 (+1.16 to +3.49) **MUI X** | 1.04 × (0.78–2.13) ≈ | +1.16 (+0.61 to +2.94) **TanStack** |
+| Frames fully presented (higher is better) | 50.3 % (±0.12) | 49.7 % (±0.15) | 50.3 % (±0.27) | 62.3 % (±0.79) | 1.24 × (1.23–1.27) **Infinite** | 1.25 × (1.24–1.28) **Infinite** | 1.24 × (1.23–1.27) **Infinite** |
+| Frames presented without main-thread update (lower is better) | 49.4 % (±0.12) | 48.9 % (±0.16) | 49.5 % (±0.27) | 37.7 % (±0.79) | 0.76 × (0.73–0.77) **Infinite** | 0.77 × (0.74–0.78) **Infinite** | 0.76 × (0.73–0.77) **Infinite** |
+| Frames dropped (lower is better) | 0.28 % (±0.25) | 1.40 % (±0.31) | 0.27 % (±0.54) | 0.00 % (±0.00) | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
+| Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.29) | 58.7 fps (±0.35) | 60.0 fps (±0.63) | 56.8 fps (±0.60) | 0.95 × (0.94–0.96) **MUI X** | 0.97 × (0.96–0.98) **AG Grid** | 0.95 × (0.94–0.97) **TanStack** |
+| p95 rAF frame interval (lower is better) | 16.7 ms (±0.05) | 16.8 ms (±0.04) | 16.7 ms (±0.04) | 16.8 ms (±0.00) | 1.01 × (1.00–1.01) ≈ | 1.00 × (1.00–1.01) ≈ | 1.01 × (1.00–1.01) **TanStack** |
+| Worst rAF frame interval (lower is better) | 16.8 ms (±9.09) | 33.4 ms (±7.42) | 16.8 ms (±32.4) | 117 ms (±21.7) | 6.94 × (2.99–6.94) **MUI X** | 3.49 × (2.00–3.49) **AG Grid** | 6.94 × (1.20–6.94) **TanStack** |
+| rAF intervals > 25ms (lower is better) | 0.00 % (±0.49) | 2.20 % (±0.40) | 0.00 % (±0.30) | 1.70 % (±0.53) | +1.70 (+0.62 to +2.87) **MUI X** | 0.78 × (0.61–1.31) ≈ | +1.70 (+1.16 to +2.87) **TanStack** |
 | Long animation frames: total blocking (lower is better) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 (0.00 to 0.00) ≈ | 0.00 (0.00 to 0.00) ≈ |
-| Main thread: scripting (lower is better) | 657 ms (±21.8) | 841 ms (±15.8) | 398 ms (±27.2) | 780 ms (±8.60) | 1.19 × (1.17–1.28) **MUI X** | 0.93 × (0.90–0.95) **Infinite** | 1.96 × (1.75–2.10) **TanStack** |
-| Main thread: layout (lower is better) | 65.6 ms (±1.26) | 108 ms (±3.19) | 86.4 ms (±10.3) | 99.7 ms (±6.74) | 1.52 × (1.48–1.74) **MUI X** | 0.92 × (0.89–1.06) ≈ | 1.15 × (0.92–1.31) ≈ |
-| Main thread: style recalc (lower is better) | 93.9 ms (±2.00) | 433 ms (±7.82) | 46.2 ms (±4.63) | 264 ms (±7.57) | 2.81 × (2.60–2.84) **MUI X** | 0.61 × (0.58–0.63) **Infinite** | 5.71 × (4.67–5.78) **TanStack** |
-| Main thread: all tasks (lower is better) | 1534 ms (±22.8) | 2036 ms (±34.7) | 992 ms (±50.7) | 1738 ms (±23.4) | 1.13 × (1.11–1.17) **MUI X** | 0.85 × (0.83–0.88) **Infinite** | 1.75 × (1.60–1.81) **TanStack** |
+| Main thread: scripting (lower is better) | 608 ms (±53.1) | 778 ms (±43.1) | 352 ms (±18.3) | 753 ms (±30.3) | 1.24 × (1.11–1.38) **MUI X** | 0.97 × (0.84–1.00) ≈ | 2.14 × (1.95–2.25) **TanStack** |
+| Main thread: layout (lower is better) | 61.4 ms (±4.71) | 105 ms (±14.1) | 81.8 ms (±3.43) | 94.2 ms (±3.68) | 1.53 × (1.32–1.58) **MUI X** | 0.89 × (0.72–0.99) **Infinite** | 1.15 × (1.06–1.22) **TanStack** |
+| Main thread: style recalc (lower is better) | 89.4 ms (±4.90) | 414 ms (±9.61) | 44.6 ms (±6.33) | 250 ms (±11.3) | 2.79 × (2.51–2.89) **MUI X** | 0.60 × (0.55–0.62) **Infinite** | 5.60 × (4.36–6.02) **TanStack** |
+| Main thread: all tasks (lower is better) | 1451 ms (±90.9) | 1881 ms (±94.0) | 947 ms (±30.3) | 1660 ms (±56.6) | 1.14 × (1.02–1.21) **MUI X** | 0.88 × (0.77–0.90) **Infinite** | 1.75 × (1.64–1.87) **TanStack** |
 
 ## scroll-horizontal - 1,000,000 rows
 
@@ -98,18 +98,18 @@ Wheel-scroll right/left over all columns, 4 sweeps at 4000px/s (Input.synthesize
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Frames fully presented (higher is better) | 65.5 % (±2.46) | 90.9 % (±13.3) | 80.3 % (±4.16) | 95.1 % (±4.28) | 1.45 × (1.33–1.57) **Infinite** | 1.05 × (0.95–1.47) ≈ | 1.18 × (1.09–1.34) **Infinite** |
-| Frames presented without main-thread update (lower is better) | 32.8 % (±2.38) | 8.26 % (±12.7) | 19.0 % (±3.92) | 4.90 % (±4.28) | 0.15 × (0.11–0.39) **Infinite** | -3.37 (-28.6 to +4.90) ≈ | 0.26 × (0.18–0.67) **Infinite** |
-| Frames dropped (lower is better) | 1.68 % (±0.23) | 0.83 % (±0.61) | 0.70 % (±0.24) | 0.00 % (±0.00) | 0.00 × (0.00–0.00) **Infinite** | -0.83 (-1.73 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** |
+| Frames fully presented (higher is better) | 65.7 % (±1.86) | 100 % (±10.8) | 80.3 % (±0.00) | 89.0 % (±3.78) | 1.35 × (1.32–1.48) **Infinite** | 0.89 × (0.89–1.18) ≈ | 1.11 × (1.11–1.19) **Infinite** |
+| Frames presented without main-thread update (lower is better) | 32.6 % (±1.67) | 0.00 % (±10.2) | 19.0 % (±0.00) | 11.0 % (±3.78) | 0.34 × (0.12–0.35) **Infinite** | +11.0 (-12.2 to +11.2) ≈ | 0.58 × (0.22–0.59) **Infinite** |
+| Frames dropped (lower is better) | 1.62 % (±0.27) | 0.00 % (±0.81) | 0.70 % (±0.00) | 0.00 % (±0.00) | 0.00 × (0.00–0.00) **Infinite** | 0.00 (-1.59 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** |
 | Main thread frame rate (rAF) (higher is better) | 60.0 fps (±0.00) | 60.0 fps (±0.00) | 60.0 fps (±0.00) | 60.0 fps (±0.00) | 1.00 × (1.00–1.00) ≈ | 1.00 × (1.00–1.00) ≈ | 1.00 × (1.00–1.00) ≈ |
-| p95 rAF frame interval (lower is better) | 16.7 ms (±0.04) | 16.7 ms (±0.05) | 16.7 ms (±0.05) | 16.7 ms (±0.04) | 1.00 × (1.00–1.01) ≈ | 1.00 × (0.99–1.01) ≈ | 1.00 × (0.99–1.01) ≈ |
+| p95 rAF frame interval (lower is better) | 16.7 ms (±0.00) | 16.7 ms (±0.00) | 16.7 ms (±0.04) | 16.8 ms (±0.05) | 1.01 × (1.00–1.01) **MUI X** | 1.01 × (1.00–1.01) ≈ | 1.01 × (1.00–1.01) ≈ |
 | Worst rAF frame interval (lower is better) | 16.8 ms (±0.00) | 16.8 ms (±0.00) | 16.8 ms (±0.00) | 16.8 ms (±0.00) | 1.00 × (1.00–1.00) ≈ | 1.00 × (1.00–1.00) ≈ | 1.00 × (1.00–1.00) ≈ |
 | rAF intervals > 25ms (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 (0.00 to 0.00) ≈ | 0.00 (0.00 to 0.00) ≈ |
 | Long animation frames: total blocking (lower is better) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 (0.00 to 0.00) ≈ | 0.00 (0.00 to 0.00) ≈ |
-| Main thread: scripting (lower is better) | 382 ms (±10.7) | 245 ms (±9.33) | 160 ms (±2.78) | 165 ms (±4.00) | 0.43 × (0.42–0.46) **Infinite** | 0.67 × (0.64–0.71) **Infinite** | 1.03 × (1.01–1.09) **TanStack** |
-| Main thread: layout (lower is better) | 48.4 ms (±4.86) | 69.9 ms (±3.05) | 51.3 ms (±3.92) | 12.3 ms (±0.83) | 0.25 × (0.21–0.29) **Infinite** | 0.18 × (0.16–0.20) **Infinite** | 0.24 × (0.21–0.27) **Infinite** |
-| Main thread: style recalc (lower is better) | 24.5 ms (±0.31) | 44.0 ms (±3.59) | 14.6 ms (±0.29) | 50.4 ms (±0.75) | 2.06 × (2.01–2.10) **MUI X** | 1.15 × (0.98–1.19) ≈ | 3.46 × (3.38–3.61) **TanStack** |
-| Main thread: all tasks (lower is better) | 776 ms (±23.8) | 597 ms (±23.7) | 432 ms (±10.6) | 513 ms (±8.27) | 0.66 × (0.64–0.69) **Infinite** | 0.86 × (0.80–0.89) **Infinite** | 1.19 × (1.15–1.23) **TanStack** |
+| Main thread: scripting (lower is better) | 336 ms (±15.5) | 238 ms (±6.73) | 150 ms (±2.86) | 161 ms (±6.33) | 0.48 × (0.43–0.49) **Infinite** | 0.68 × (0.63–0.71) **Infinite** | 1.07 × (1.00–1.12) ≈ |
+| Main thread: layout (lower is better) | 44.6 ms (±1.99) | 64.7 ms (±3.97) | 46.5 ms (±1.55) | 11.4 ms (±0.42) | 0.26 × (0.23–0.28) **Infinite** | 0.18 × (0.16–0.19) **Infinite** | 0.24 × (0.24–0.27) **Infinite** |
+| Main thread: style recalc (lower is better) | 23.1 ms (±1.24) | 42.5 ms (±0.42) | 13.3 ms (±0.26) | 46.6 ms (±2.80) | 2.02 × (1.82–2.21) **MUI X** | 1.10 × (1.05–1.20) **AG Grid** | 3.50 × (3.35–3.84) **TanStack** |
+| Main thread: all tasks (lower is better) | 719 ms (±27.9) | 563 ms (±18.9) | 392 ms (±6.83) | 475 ms (±20.7) | 0.66 × (0.61–0.72) **Infinite** | 0.84 × (0.81–0.93) **Infinite** | 1.21 × (1.18–1.31) **TanStack** |
 
 ## correctness-vertical - 1,000,000 rows
 
@@ -117,9 +117,9 @@ Same kind of vertical wheel gesture, faster (20000px/s). After every painted fra
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Blank samples (lower is better) | 0.00 % (±0.00) | 2.41 % (±0.98) | 2.13 % (±0.92) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
-| Wrong/stale samples (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % (±0.00) | 76.9 % (±1.42) | +76.9 (+74.1 to +77.6) **MUI X** | +76.9 (+74.1 to +77.6) **AG Grid** | +76.9 (+74.1 to +77.6) **TanStack** |
-| Frames with any blank/wrong sample (lower is better) | 0.00 % (±0.00) | 12.1 % (±4.91) | 10.7 % (±4.58) | 84.2 % (±2.93) | +84.2 (+77.8 to +84.6) **MUI X** | 6.98 × (4.74–16.6) **AG Grid** | 7.89 × (5.05–22.2) **TanStack** |
+| Blank samples (lower is better) | 0.00 % (±0.00) | 2.00 % (±0.63) | 2.03 % (±0.49) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
+| Wrong/stale samples (lower is better) | 0.00 % (±0.00) | 0.00 % (±0.00) | 0.00 % (±0.00) | 74.8 % (±1.79) | +74.8 (+74.0 to +78.0) **MUI X** | +74.8 (+74.0 to +78.0) **AG Grid** | +74.8 (+74.0 to +78.0) **TanStack** |
+| Frames with any blank/wrong sample (lower is better) | 0.00 % (±0.00) | 10.0 % (±3.15) | 10.1 % (±2.43) | 82.9 % (±0.97) | +82.9 (+82.1 to +84.6) **MUI X** | 8.29 × (5.06–10.3) **AG Grid** | 8.19 × (5.46–9.36) **TanStack** |
 | Worst frame: correct samples (higher is better) | 100 % (±0.00) | 80.0 % (±0.00) | 80.0 % (±0.00) | 0.00 % (±0.00) | 0.00 × (0.00–0.00) **MUI X** | 0.00 × (0.00–0.00) **AG Grid** | 0.00 × (0.00–0.00) **TanStack** |
 
 ## correctness-horizontal - 1,000,000 rows
@@ -139,10 +139,10 @@ Fast vertical wheel gesture (20000px/s) while recording what the compositor actu
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Captured frames with blank rows (lower is better) | 0.00 % (±0.00) | 50.0 % (±5.96) | 8.33 % (±4.33) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
-| Blank body area (avg over frames) (lower is better) | 0.00 % (±0.00) | 19.1 % (±2.26) | 2.74 % (±1.71) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
-| Worst frame: blank rows (lower is better) | 0.00 rows (±0.00) | 18.0 rows (±0.00) | 16.0 rows (±2.70) | 0.00 rows (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
-| Captured frames (higher is better) | 63.0 (±1.92) | 39.0 (±1.22) | 61.0 (±1.30) | 67.0 (±1.10) | 1.06 × (1.05–1.14) **Infinite** | 1.72 × (1.68–1.81) **Infinite** | 1.10 × (1.08–1.15) **Infinite** |
+| Captured frames with blank rows (lower is better) | 0.00 % (±0.00) | 50.0 % (±6.23) | 11.7 % (±2.81) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
+| Blank body area (avg over frames) (lower is better) | 0.00 % (±0.00) | 18.9 % (±2.79) | 4.04 % (±0.69) | 0.00 % (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
+| Worst frame: blank rows (lower is better) | 0.00 rows (±0.00) | 18.0 rows (±0.00) | 12.0 rows (±2.24) | 0.00 rows (±0.00) | 0.00 (0.00 to 0.00) ≈ | 0.00 × (0.00–0.00) **Infinite** | 0.00 × (0.00–0.00) **Infinite** |
+| Captured frames (higher is better) | 63.0 (±1.92) | 40.0 (±2.35) | 63.0 (±2.88) | 65.0 (±2.68) | 1.03 × (0.98–1.11) ≈ | 1.63 × (1.57–1.86) **Infinite** | 1.03 × (0.98–1.15) ≈ |
 
 ## updates-low - 1,000,000 rows
 
@@ -150,12 +150,12 @@ Live updates, low frequency. The grid shows the rows in the order of the data. 5
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Update to rows painted (median of updates) (lower is better) | 469 ms (±22.2) | 105 ms (±2.45) | 481 ms (±13.7) | 337 ms (±28.2) | 0.72 × (0.67–0.83) **Infinite** | 3.19 × (2.98–3.62) **AG Grid** | 0.70 × (0.65–0.81) **Infinite** |
-| Update to rows painted (worst update) (lower is better) | 676 ms (±44.9) | 125 ms (±2.78) | 724 ms (±10.6) | 418 ms (±22.8) | 0.62 × (0.57–0.69) **Infinite** | 3.33 × (3.20–3.68) **AG Grid** | 0.58 × (0.56–0.64) **Infinite** |
-| Update to settled (median of updates) (lower is better) | 469 ms (±22.2) | 105 ms (±2.45) | 481 ms (±13.7) | 337 ms (±28.2) | 0.72 × (0.67–0.83) **Infinite** | 3.19 × (2.98–3.62) **AG Grid** | 0.70 × (0.65–0.81) **Infinite** |
-| Main thread: layout (all updates) (lower is better) | 3.16 ms (±0.15) | 3.17 ms (±0.14) | 4.36 ms (±0.30) | 2.77 ms (±0.16) | 0.88 × (0.81–0.96) **Infinite** | 0.88 × (0.79–0.92) **Infinite** | 0.64 × (0.58–0.72) **Infinite** |
-| Main thread: style recalc (all updates) (lower is better) | 1.85 ms (±0.09) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.29 ms (±0.02) | 0.16 × (0.15–0.17) **Infinite** | +0.29 (+0.28 to +0.32) **AG Grid** | +0.29 (+0.28 to +0.32) **TanStack** |
-| Main thread: all tasks (all updates) (lower is better) | 2703 ms (±41.0) | 687 ms (±12.6) | 2658 ms (±43.2) | 1792 ms (±106) | 0.66 × (0.62–0.71) **Infinite** | 2.61 × (2.43–2.78) **AG Grid** | 0.67 × (0.63–0.73) **Infinite** |
+| Update to rows painted (median of updates) (lower is better) | 464 ms (±15.1) | 105 ms (±4.50) | 467 ms (±14.7) | 292 ms (±14.6) | 0.63 × (0.61–0.70) **Infinite** | 2.78 × (2.54–3.03) **AG Grid** | 0.63 × (0.59–0.69) **Infinite** |
+| Update to rows painted (worst update) (lower is better) | 683 ms (±69.6) | 125 ms (±4.59) | 728 ms (±6.01) | 396 ms (±22.4) | 0.58 × (0.52–0.69) **Infinite** | 3.18 × (2.99–3.49) **AG Grid** | 0.54 × (0.52–0.60) **Infinite** |
+| Update to settled (median of updates) (lower is better) | 464 ms (±15.1) | 105 ms (±4.50) | 467 ms (±14.7) | 292 ms (±14.6) | 0.63 × (0.61–0.70) **Infinite** | 2.78 × (2.54–3.03) **AG Grid** | 0.63 × (0.59–0.69) **Infinite** |
+| Main thread: layout (all updates) (lower is better) | 3.14 ms (±0.19) | 3.13 ms (±0.19) | 4.20 ms (±0.30) | 2.69 ms (±0.26) | 0.86 × (0.73–0.96) **Infinite** | 0.86 × (0.73–0.96) **Infinite** | 0.64 × (0.55–0.71) **Infinite** |
+| Main thread: style recalc (all updates) (lower is better) | 1.89 ms (±0.07) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.23 ms (±0.05) | 0.12 × (0.11–0.17) **Infinite** | +0.23 (+0.21 to +0.32) **AG Grid** | +0.23 (+0.21 to +0.32) **TanStack** |
+| Main thread: all tasks (all updates) (lower is better) | 2675 ms (±56.9) | 687 ms (±22.7) | 2619 ms (±54.9) | 1561 ms (±84.2) | 0.58 × (0.57–0.65) **Infinite** | 2.27 × (2.13–2.50) **AG Grid** | 0.60 × (0.57–0.65) **Infinite** |
 
 ## updates-low-sorted - 1,000,000 rows
 
@@ -163,12 +163,12 @@ Live updates, low frequency. The grid shows sorted by salary, highest first - th
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Update to rows painted (median of updates) (lower is better) | 2401 ms (±23.6) | 3964 ms (±42.0) | 4754 ms (±76.0) | 494 ms (±14.2) | 0.21 × (0.20–0.22) **Infinite** | 0.12 × (0.12–0.13) **Infinite** | 0.10 × (0.10–0.11) **Infinite** |
-| Update to rows painted (worst update) (lower is better) | 2736 ms (±64.6) | 4049 ms (±72.7) | 5101 ms (±126) | 634 ms (±40.8) | 0.23 × (0.22–0.26) **Infinite** | 0.16 × (0.15–0.17) **Infinite** | 0.12 × (0.12–0.14) **Infinite** |
-| Update to settled (median of updates) (lower is better) | 2401 ms (±23.6) | 3964 ms (±42.0) | 4754 ms (±76.0) | 494 ms (±14.2) | 0.21 × (0.20–0.22) **Infinite** | 0.12 × (0.12–0.13) **Infinite** | 0.10 × (0.10–0.11) **Infinite** |
-| Main thread: layout (all updates) (lower is better) | 5.57 ms (±0.26) | 4.71 ms (±0.21) | 7.74 ms (±0.46) | 10.8 ms (±0.80) | 1.94 × (1.75–2.16) **MUI X** | 2.29 × (2.12–2.55) **AG Grid** | 1.39 × (1.25–1.55) **TanStack** |
-| Main thread: style recalc (all updates) (lower is better) | 13.6 ms (±9.92) | 14.8 ms (±0.82) | 6.33 ms (±0.31) | 0.28 ms (±0.02) | 0.02 × (0.01–0.02) **Infinite** | 0.02 × (0.02–0.02) **Infinite** | 0.04 × (0.04–0.05) **Infinite** |
-| Main thread: all tasks (all updates) (lower is better) | 12300 ms (±168) | 19970 ms (±233) | 24894 ms (±528) | 2644 ms (±58.1) | 0.21 × (0.21–0.22) **Infinite** | 0.13 × (0.13–0.14) **Infinite** | 0.11 × (0.10–0.11) **Infinite** |
+| Update to rows painted (median of updates) (lower is better) | 2247 ms (±48.7) | 3747 ms (±79.6) | 4504 ms (±108) | 484 ms (±16.6) | 0.22 × (0.21–0.23) **Infinite** | 0.13 × (0.12–0.14) **Infinite** | 0.11 × (0.10–0.11) **Infinite** |
+| Update to rows painted (worst update) (lower is better) | 2575 ms (±101) | 3824 ms (±113) | 4781 ms (±323) | 590 ms (±38.4) | 0.23 × (0.21–0.25) **Infinite** | 0.15 × (0.14–0.17) **Infinite** | 0.12 × (0.11–0.14) **Infinite** |
+| Update to settled (median of updates) (lower is better) | 2247 ms (±48.7) | 3747 ms (±79.6) | 4504 ms (±108) | 484 ms (±16.6) | 0.22 × (0.21–0.23) **Infinite** | 0.13 × (0.12–0.14) **Infinite** | 0.11 × (0.10–0.11) **Infinite** |
+| Main thread: layout (all updates) (lower is better) | 5.35 ms (±0.63) | 4.65 ms (±0.19) | 7.79 ms (±1.30) | 10.4 ms (±0.80) | 1.95 × (1.56–2.22) **MUI X** | 2.24 × (2.11–2.55) **AG Grid** | 1.34 × (0.98–1.52) ≈ |
+| Main thread: style recalc (all updates) (lower is better) | 13.2 ms (±1.96) | 14.5 ms (±0.35) | 5.94 ms (±0.28) | 0.26 ms (±0.02) | 0.02 × (0.02–0.02) **Infinite** | 0.02 × (0.02–0.02) **Infinite** | 0.04 × (0.04–0.05) **Infinite** |
+| Main thread: all tasks (all updates) (lower is better) | 11501 ms (±305) | 18785 ms (±492) | 23138 ms (±1059) | 2511 ms (±63.8) | 0.22 × (0.21–0.23) **Infinite** | 0.13 × (0.13–0.14) **Infinite** | 0.11 × (0.10–0.11) **Infinite** |
 
 ## updates-low-filtered - 1,000,000 rows
 
@@ -176,12 +176,12 @@ Live updates, low frequency. The grid shows filtered to a salary of at least 115
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Update to rows painted (median of updates) (lower is better) | 665 ms (±11.3) | 322 ms (±12.7) | 1697 ms (±13.1) | 268 ms (±5.27) | 0.40 × (0.39–0.41) **Infinite** | 0.83 × (0.78–0.85) **Infinite** | 0.16 × (0.15–0.16) **Infinite** |
-| Update to rows painted (worst update) (lower is better) | 820 ms (±7.74) | 374 ms (±10.9) | 2098 ms (±73.2) | 357 ms (±4.95) | 0.44 × (0.43–0.44) **Infinite** | 0.95 × (0.94–1.01) ≈ | 0.17 × (0.16–0.17) **Infinite** |
-| Update to settled (median of updates) (lower is better) | 665 ms (±11.3) | 322 ms (±12.7) | 1697 ms (±13.1) | 269 ms (±5.90) | 0.40 × (0.39–0.41) **Infinite** | 0.84 × (0.78–0.86) **Infinite** | 0.16 × (0.15–0.16) **Infinite** |
-| Main thread: layout (all updates) (lower is better) | 4.16 ms (±0.06) | 4.92 ms (±0.33) | 4.04 ms (±0.14) | 4.33 ms (±0.48) | 1.04 × (0.96–1.26) ≈ | 0.88 × (0.80–1.07) ≈ | 1.07 × (0.99–1.30) ≈ |
-| Main thread: style recalc (all updates) (lower is better) | 3.50 ms (±0.05) | 1.88 ms (±0.23) | 1.30 ms (±0.11) | 0.44 ms (±0.02) | 0.13 × (0.12–0.14) **Infinite** | 0.23 × (0.19–0.26) **Infinite** | 0.34 × (0.29–0.36) **Infinite** |
-| Main thread: all tasks (all updates) (lower is better) | 3474 ms (±44.5) | 1762 ms (±56.1) | 8365 ms (±40.3) | 1449 ms (±23.0) | 0.42 × (0.40–0.42) **Infinite** | 0.82 × (0.77–0.84) **Infinite** | 0.17 × (0.17–0.18) **Infinite** |
+| Update to rows painted (median of updates) (lower is better) | 683 ms (±16.4) | 322 ms (±6.17) | 1696 ms (±67.7) | 286 ms (±12.2) | 0.42 × (0.39–0.44) **Infinite** | 0.89 × (0.82–0.92) **Infinite** | 0.17 × (0.16–0.17) **Infinite** |
+| Update to rows painted (worst update) (lower is better) | 825 ms (±33.8) | 363 ms (±7.02) | 2166 ms (±84.3) | 377 ms (±10.2) | 0.46 × (0.42–0.47) **Infinite** | 1.04 × (0.99–1.06) ≈ | 0.17 × (0.16–0.18) **Infinite** |
+| Update to settled (median of updates) (lower is better) | 683 ms (±16.4) | 322 ms (±6.17) | 1696 ms (±67.7) | 287 ms (±12.3) | 0.42 × (0.39–0.44) **Infinite** | 0.89 × (0.83–0.93) **Infinite** | 0.17 × (0.16–0.18) **Infinite** |
+| Main thread: layout (all updates) (lower is better) | 4.21 ms (±0.08) | 5.08 ms (±0.30) | 3.94 ms (±0.23) | 4.44 ms (±0.40) | 1.05 × (1.00–1.22) **MUI X** | 0.87 × (0.80–1.02) ≈ | 1.13 × (1.01–1.31) **TanStack** |
+| Main thread: style recalc (all updates) (lower is better) | 3.59 ms (±0.04) | 2.00 ms (±0.45) | 1.28 ms (±0.05) | 0.45 ms (±0.02) | 0.12 × (0.12–0.13) **Infinite** | 0.22 × (0.15–0.24) **Infinite** | 0.35 × (0.32–0.37) **Infinite** |
+| Main thread: all tasks (all updates) (lower is better) | 3554 ms (±68.2) | 1777 ms (±28.4) | 8521 ms (±79.8) | 1514 ms (±60.2) | 0.43 × (0.40–0.45) **Infinite** | 0.85 × (0.79–0.89) **Infinite** | 0.18 × (0.17–0.19) **Infinite** |
 
 ## updates-low-grouped - 1,000,000 rows
 
@@ -189,12 +189,12 @@ Live updates, low frequency. The grid shows grouped by department (10 collapsed 
 
 | Metric | TanStack median (sd) | Infinite median (sd) | Infinite vs TanStack |
 |---|---:|---:|---:|
-| Update to rows painted (median of updates) (lower is better) | 1791 ms (±39.0) | 955 ms (±10.3) | 0.53 × (0.51–0.54) **Infinite** |
-| Update to rows painted (worst update) (lower is better) | 2752 ms (±91.0) | 1152 ms (±16.6) | 0.42 × (0.40–0.44) **Infinite** |
-| Update to settled (median of updates) (lower is better) | 1791 ms (±39.0) | 955 ms (±10.3) | 0.53 × (0.51–0.54) **Infinite** |
-| Main thread: layout (all updates) (lower is better) | 2.08 ms (±0.11) | 1.33 ms (±0.10) | 0.64 × (0.58–0.72) **Infinite** |
-| Main thread: style recalc (all updates) (lower is better) | 0.00 ms (±0.00) | 0.38 ms (±0.03) | +0.38 (+0.37 to +0.44) **TanStack** |
-| Main thread: all tasks (all updates) (lower is better) | 10144 ms (±121) | 4995 ms (±36.3) | 0.49 × (0.48–0.50) **Infinite** |
+| Update to rows painted (median of updates) (lower is better) | 1804 ms (±53.9) | 941 ms (±32.8) | 0.52 × (0.51–0.56) **Infinite** |
+| Update to rows painted (worst update) (lower is better) | 2690 ms (±400) | 1113 ms (±36.4) | 0.41 × (0.33–0.45) **Infinite** |
+| Update to settled (median of updates) (lower is better) | 1804 ms (±53.9) | 941 ms (±32.8) | 0.52 × (0.51–0.56) **Infinite** |
+| Main thread: layout (all updates) (lower is better) | 2.08 ms (±0.14) | 1.41 ms (±0.11) | 0.68 × (0.56–0.71) **Infinite** |
+| Main thread: style recalc (all updates) (lower is better) | 0.00 ms (±0.00) | 0.38 ms (±2.29) | +0.38 (+0.32 to +5.49) **TanStack** |
+| Main thread: all tasks (all updates) (lower is better) | 9928 ms (±815) | 4865 ms (±363) | 0.49 × (0.43–0.57) **Infinite** |
 
 ## updates-high - 1,000,000 rows
 
@@ -202,15 +202,15 @@ Live updates, high frequency. The grid shows the rows in the order of the data. 
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Lag at the end: last update to painted (lower is better) | 1125 ms (±70.3) | 129 ms (±30.8) | 512 ms (±122) | 382 ms (±149) | 0.34 × (0.26–0.59) **Infinite** | 2.97 × (1.82–5.18) **AG Grid** | 0.75 × (0.51–1.30) ≈ |
-| Update delay, p95 (lower is better) | 559 ms (±6.04) | 94.6 ms (±5.10) | 659 ms (±17.5) | 339 ms (±28.3) | 0.61 × (0.56–0.69) **Infinite** | 3.59 × (3.31–4.10) **AG Grid** | 0.51 × (0.48–0.59) **Infinite** |
-| Frames committed per second (higher is better) | 2.94 fps (±0.04) | 10.2 fps (±0.44) | 1.80 fps (±0.05) | 4.87 fps (±0.55) | 1.66 × (1.39–1.87) **Infinite** | 0.48 × (0.40–0.54) **AG Grid** | 2.71 × (2.28–3.06) **Infinite** |
-| Gap between frames, p95 (lower is better) | 645 ms (±24.5) | 117 ms (±8.58) | 763 ms (±24.6) | 418 ms (±17.2) | 0.65 × (0.60–0.68) **Infinite** | 3.57 × (3.19–3.92) **AG Grid** | 0.55 × (0.51–0.58) **Infinite** |
-| Longest gap between frames (lower is better) | 668 ms (±32.1) | 198 ms (±9.85) | 788 ms (±26.7) | 442 ms (±44.7) | 0.66 × (0.60–0.80) **Infinite** | 2.23 × (2.04–2.72) **AG Grid** | 0.56 × (0.54–0.68) **Infinite** |
-| Long tasks: total blocking time (lower is better) | 4436 ms (±78.8) | 1726 ms (±90.3) | 4046 ms (±107) | 3585 ms (±176) | 0.81 × (0.78–0.90) **Infinite** | 2.08 × (1.92–2.30) **AG Grid** | 0.89 × (0.84–0.98) **Infinite** |
-| Main thread: layout (lower is better) | 2.99 ms (±0.10) | 25.8 ms (±3.48) | 6.59 ms (±2.33) | 5.93 ms (±0.21) | 1.98 × (1.85–2.09) **MUI X** | 0.23 × (0.18–0.25) **Infinite** | 0.90 × (0.52–1.00) ≈ |
-| Main thread: style recalc (lower is better) | 1.88 ms (±0.07) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.28 ms (±0.03) | 0.15 × (0.14–0.19) **Infinite** | +0.28 (+0.28 to +0.35) **AG Grid** | +0.28 (+0.28 to +0.35) **TanStack** |
-| Main thread: all tasks (lower is better) | 5106 ms (±70.4) | 4069 ms (±30.6) | 4494 ms (±129) | 4368 ms (±149) | 0.86 × (0.83–0.91) **Infinite** | 1.07 × (1.05–1.14) **AG Grid** | 0.97 × (0.92–1.03) ≈ |
+| Lag at the end: last update to painted (lower is better) | 977 ms (±65.5) | 132 ms (±25.3) | 768 ms (±24.8) | 330 ms (±79.0) | 0.34 × (0.27–0.49) **Infinite** | 2.50 × (2.00–3.64) **AG Grid** | 0.43 × (0.35–0.62) **Infinite** |
+| Update delay, p95 (lower is better) | 544 ms (±14.5) | 95.9 ms (±6.38) | 658 ms (±12.2) | 319 ms (±28.7) | 0.59 × (0.52–0.66) **Infinite** | 3.32 × (2.94–3.78) **AG Grid** | 0.48 × (0.43–0.55) **Infinite** |
+| Frames committed per second (higher is better) | 3.03 fps (±0.10) | 10.0 fps (±0.66) | 1.90 fps (±0.01) | 5.80 fps (±0.44) | 1.92 × (1.66–2.01) **Infinite** | 0.58 × (0.50–0.64) **AG Grid** | 3.06 × (2.66–3.20) **Infinite** |
+| Gap between frames, p95 (lower is better) | 611 ms (±11.0) | 129 ms (±12.2) | 768 ms (±9.88) | 374 ms (±28.3) | 0.61 × (0.60–0.71) **Infinite** | 2.91 × (2.65–3.59) **AG Grid** | 0.49 × (0.47–0.56) **Infinite** |
+| Longest gap between frames (lower is better) | 617 ms (±15.3) | 203 ms (±9.49) | 798 ms (±10.7) | 465 ms (±37.5) | 0.75 × (0.65–0.81) **Infinite** | 2.29 × (1.97–2.55) **AG Grid** | 0.58 × (0.50–0.62) **Infinite** |
+| Long tasks: total blocking time (lower is better) | 4277 ms (±62.3) | 1767 ms (±142) | 4272 ms (±25.1) | 3483 ms (±87.1) | 0.81 × (0.80–0.85) **Infinite** | 1.97 × (1.80–2.20) **AG Grid** | 0.82 × (0.81–0.86) **Infinite** |
+| Main thread: layout (lower is better) | 2.77 ms (±0.32) | 25.8 ms (±3.37) | 6.54 ms (±0.16) | 6.36 ms (±0.26) | 2.30 × (1.81–2.31) **MUI X** | 0.25 × (0.20–0.29) **Infinite** | 0.97 × (0.90–1.02) ≈ |
+| Main thread: style recalc (lower is better) | 1.85 ms (±0.11) | 0.00 ms (±0.00) | 0.00 ms (±0.00) | 0.29 ms (±0.03) | 0.16 × (0.14–0.18) **Infinite** | +0.29 (+0.28 to +0.34) **AG Grid** | +0.29 (+0.28 to +0.34) **TanStack** |
+| Main thread: all tasks (lower is better) | 4958 ms (±65.5) | 4077 ms (±23.5) | 4749 ms (±29.5) | 4317 ms (±80.0) | 0.87 × (0.86–0.90) **Infinite** | 1.06 × (1.04–1.09) **AG Grid** | 0.91 × (0.89–0.94) **Infinite** |
 
 ## updates-high-sorted - 1,000,000 rows
 
@@ -218,15 +218,15 @@ Live updates, high frequency. The grid shows sorted by salary, highest first - t
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Lag at the end: last update to painted (lower is better) | 3156 ms (±98.9) | 8186 ms (±196) | 5627 ms (±217) | 839 ms (±142) | 0.27 × (0.21–0.33) **Infinite** | 0.10 × (0.08–0.13) **Infinite** | 0.15 × (0.12–0.18) **Infinite** |
-| Update delay, p95 (lower is better) | 2414 ms (±44.9) | 4078 ms (±191) | 4876 ms (±177) | 570 ms (±38.6) | 0.24 × (0.21–0.25) **Infinite** | 0.14 × (0.12–0.15) **Infinite** | 0.12 × (0.10–0.13) **Infinite** |
-| Frames committed per second (higher is better) | 0.56 fps (±0.01) | 0.25 fps (±0.00) | 0.21 fps (±0.00) | 2.91 fps (±0.09) | 5.18 × (4.99–5.42) **Infinite** | 11.8 × (11.3–12.3) **Infinite** | 14.0 × (13.4–14.8) **Infinite** |
-| Gap between frames, p95 (lower is better) | 2600 ms (±33.5) | 7528 ms (±164) | 5071 ms (±146) | 686 ms (±44.7) | 0.26 × (0.23–0.27) **Infinite** | 0.09 × (0.08–0.09) **Infinite** | 0.14 × (0.12–0.14) **Infinite** |
-| Longest gap between frames (lower is better) | 2633 ms (±38.9) | 7920 ms (±181) | 5102 ms (±154) | 697 ms (±55.0) | 0.26 × (0.25–0.30) **Infinite** | 0.09 × (0.08–0.10) **Infinite** | 0.14 × (0.13–0.15) **Infinite** |
-| Long tasks: total blocking time (lower is better) | 6872 ms (±97.8) | 11760 ms (±195) | 9491 ms (±218) | 4282 ms (±146) | 0.62 × (0.59–0.65) **Infinite** | 0.36 × (0.35–0.38) **Infinite** | 0.45 × (0.42–0.47) **Infinite** |
-| Main thread: layout (lower is better) | 3.09 ms (±0.13) | 3.25 ms (±0.10) | 3.92 ms (±0.16) | 16.5 ms (±0.67) | 5.34 × (4.98–5.74) **MUI X** | 5.07 × (4.85–5.38) **AG Grid** | 4.20 × (4.02–4.59) **TanStack** |
-| Main thread: style recalc (lower is better) | 5.69 ms (±0.06) | 9.04 ms (±0.29) | 2.61 ms (±0.23) | 0.30 ms (±0.03) | 0.05 × (0.04–0.05) **Infinite** | 0.03 × (0.03–0.03) **Infinite** | 0.11 × (0.10–0.12) **Infinite** |
-| Main thread: all tasks (lower is better) | 7137 ms (±98.9) | 12151 ms (±192) | 9609 ms (±217) | 4820 ms (±142) | 0.68 × (0.65–0.70) **Infinite** | 0.40 × (0.38–0.41) **Infinite** | 0.50 × (0.47–0.52) **Infinite** |
+| Lag at the end: last update to painted (lower is better) | 2744 ms (±35.1) | 7546 ms (±258) | 5200 ms (±62.8) | 625 ms (±105) | 0.23 × (0.21–0.30) **Infinite** | 0.08 × (0.07–0.11) **Infinite** | 0.12 × (0.11–0.16) **Infinite** |
+| Update delay, p95 (lower is better) | 2223 ms (±30.6) | 3845 ms (±98.9) | 4643 ms (±103) | 555 ms (±38.8) | 0.25 × (0.22–0.26) **Infinite** | 0.14 × (0.13–0.15) **Infinite** | 0.12 × (0.10–0.13) **Infinite** |
+| Frames committed per second (higher is better) | 0.59 fps (±0.00) | 0.26 fps (±0.01) | 0.22 fps (±0.00) | 3.04 fps (±0.10) | 5.11 × (4.79–5.24) **Infinite** | 11.7 × (10.9–12.2) **Infinite** | 14.0 × (13.1–14.3) **Infinite** |
+| Gap between frames, p95 (lower is better) | 2418 ms (±23.8) | 7136 ms (±139) | 4841 ms (±95.8) | 662 ms (±37.0) | 0.27 × (0.24–0.28) **Infinite** | 0.09 × (0.08–0.09) **Infinite** | 0.14 × (0.12–0.14) **Infinite** |
+| Longest gap between frames (lower is better) | 2447 ms (±29.2) | 7502 ms (±144) | 4869 ms (±103) | 678 ms (±43.5) | 0.28 × (0.26–0.31) **Infinite** | 0.09 × (0.08–0.10) **Infinite** | 0.14 × (0.13–0.16) **Infinite** |
+| Long tasks: total blocking time (lower is better) | 6450 ms (±34.6) | 11133 ms (±253) | 9064 ms (±62.4) | 4069 ms (±82.8) | 0.63 × (0.62–0.65) **Infinite** | 0.37 × (0.35–0.38) **Infinite** | 0.45 × (0.44–0.47) **Infinite** |
+| Main thread: layout (lower is better) | 3.07 ms (±0.05) | 3.38 ms (±0.11) | 3.91 ms (±0.38) | 16.3 ms (±0.47) | 5.29 × (5.03–5.43) **MUI X** | 4.80 × (4.56–5.04) **AG Grid** | 4.16 × (3.50–4.42) **TanStack** |
+| Main thread: style recalc (lower is better) | 5.74 ms (±0.80) | 10.5 ms (±0.67) | 2.56 ms (±0.30) | 0.25 ms (±0.03) | 0.04 × (0.03–0.05) **Infinite** | 0.02 × (0.02–0.03) **Infinite** | 0.10 × (0.08–0.12) **Infinite** |
+| Main thread: all tasks (lower is better) | 6725 ms (±35.1) | 11524 ms (±255) | 9182 ms (±62.8) | 4606 ms (±107) | 0.68 × (0.68–0.72) **Infinite** | 0.40 × (0.38–0.42) **Infinite** | 0.50 × (0.49–0.52) **Infinite** |
 
 ## updates-high-filtered - 1,000,000 rows
 
@@ -234,15 +234,15 @@ Live updates, high frequency. The grid shows filtered to a salary of at least 11
 
 | Metric | MUI X median (sd) | AG Grid median (sd) | TanStack median (sd) | Infinite median (sd) | Infinite vs MUI X | Infinite vs AG Grid | Infinite vs TanStack |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Lag at the end: last update to painted (lower is better) | 823 ms (±52.8) | 410 ms (±50.3) | 2255 ms (±107) | 334 ms (±86.4) | 0.41 × (0.32–0.58) **Infinite** | 0.81 × (0.65–1.19) ≈ | 0.15 × (0.12–0.21) **Infinite** |
-| Update delay, p95 (lower is better) | 676 ms (±5.29) | 320 ms (±3.99) | 1823 ms (±14.1) | 276 ms (±13.8) | 0.41 × (0.39–0.43) **Infinite** | 0.86 × (0.81–0.91) **Infinite** | 0.15 × (0.14–0.16) **Infinite** |
-| Frames committed per second (higher is better) | 2.08 fps (±0.02) | 2.96 fps (±0.03) | 0.64 fps (±0.01) | 6.51 fps (±0.17) | 3.13 × (3.03–3.23) **Infinite** | 2.20 × (2.12–2.27) **Infinite** | 10.1 × (9.83–10.6) **Infinite** |
-| Gap between frames, p95 (lower is better) | 746 ms (±11.2) | 509 ms (±14.2) | 1976 ms (±16.2) | 326 ms (±8.62) | 0.44 × (0.42–0.45) **Infinite** | 0.64 × (0.61–0.66) **Infinite** | 0.17 × (0.16–0.17) **Infinite** |
-| Longest gap between frames (lower is better) | 749 ms (±10.8) | 752 ms (±19.6) | 2029 ms (±12.1) | 418 ms (±18.4) | 0.56 × (0.51–0.58) **Infinite** | 0.56 × (0.51–0.58) **Infinite** | 0.21 × (0.19–0.21) **Infinite** |
-| Long tasks: total blocking time (lower is better) | 4310 ms (±51.5) | 3501 ms (±49.0) | 6018 ms (±107) | 3406 ms (±70.0) | 0.79 × (0.77–0.81) **Infinite** | 0.97 × (0.95–1.00) ≈ | 0.57 × (0.55–0.58) **Infinite** |
-| Main thread: layout (lower is better) | 4.69 ms (±0.23) | 8.78 ms (±0.18) | 3.22 ms (±0.15) | 10.3 ms (±0.25) | 2.19 × (1.99–2.26) **MUI X** | 1.17 × (1.13–1.23) **AG Grid** | 3.19 × (3.00–3.44) **TanStack** |
-| Main thread: style recalc (lower is better) | 3.85 ms (±0.08) | 2.80 ms (±0.09) | 1.11 ms (±0.03) | 0.84 ms (±0.04) | 0.22 × (0.21–0.24) **Infinite** | 0.30 × (0.28–0.33) **Infinite** | 0.76 × (0.72–0.82) **Infinite** |
-| Main thread: all tasks (lower is better) | 5103 ms (±53.6) | 4359 ms (±50.2) | 6237 ms (±107) | 4316 ms (±85.5) | 0.85 × (0.83–0.87) **Infinite** | 0.99 × (0.97–1.02) ≈ | 0.69 × (0.67–0.71) **Infinite** |
+| Lag at the end: last update to painted (lower is better) | 772 ms (±43.6) | 431 ms (±87.6) | 2290 ms (±46.0) | 305 ms (±84.5) | 0.40 × (0.34–0.57) **Infinite** | 0.71 × (0.53–1.08) ≈ | 0.13 × (0.11–0.19) **Infinite** |
+| Update delay, p95 (lower is better) | 668 ms (±3.31) | 321 ms (±5.97) | 1830 ms (±44.1) | 253 ms (±15.7) | 0.38 × (0.36–0.42) **Infinite** | 0.79 × (0.76–0.87) **Infinite** | 0.14 × (0.13–0.15) **Infinite** |
+| Frames committed per second (higher is better) | 2.10 fps (±0.02) | 2.96 fps (±0.05) | 0.64 fps (±0.00) | 6.55 fps (±0.27) | 3.11 × (3.00–3.33) **Infinite** | 2.21 × (2.10–2.37) **Infinite** | 10.3 × (9.89–11.0) **Infinite** |
+| Gap between frames, p95 (lower is better) | 732 ms (±3.69) | 501 ms (±11.1) | 1994 ms (±35.5) | 314 ms (±20.1) | 0.43 × (0.41–0.48) **Infinite** | 0.63 × (0.59–0.70) **Infinite** | 0.16 × (0.15–0.17) **Infinite** |
+| Longest gap between frames (lower is better) | 733 ms (±7.34) | 742 ms (±28.5) | 2038 ms (±41.5) | 389 ms (±20.5) | 0.53 × (0.50–0.57) **Infinite** | 0.52 × (0.48–0.56) **Infinite** | 0.19 × (0.18–0.20) **Infinite** |
+| Long tasks: total blocking time (lower is better) | 4259 ms (±45.2) | 3521 ms (±68.0) | 6053 ms (±46.2) | 3376 ms (±57.0) | 0.79 × (0.77–0.81) **Infinite** | 0.96 × (0.93–0.99) **Infinite** | 0.56 × (0.55–0.57) **Infinite** |
+| Main thread: layout (lower is better) | 4.72 ms (±0.18) | 8.62 ms (±4.09) | 3.38 ms (±0.19) | 10.5 ms (±0.39) | 2.22 × (2.08–2.36) **MUI X** | 1.22 × (0.59–1.29) ≈ | 3.10 × (2.99–3.52) **TanStack** |
+| Main thread: style recalc (lower is better) | 3.80 ms (±0.13) | 2.84 ms (±0.13) | 1.10 ms (±0.18) | 0.85 ms (±0.07) | 0.22 × (0.20–0.24) **Infinite** | 0.30 × (0.27–0.34) **Infinite** | 0.78 × (0.56–0.85) **Infinite** |
+| Main thread: all tasks (lower is better) | 5040 ms (±191) | 4382 ms (±86.9) | 6275 ms (±46.2) | 4288 ms (±83.8) | 0.85 × (0.84–0.93) **Infinite** | 0.98 × (0.95–1.01) ≈ | 0.68 × (0.68–0.71) **Infinite** |
 
 ## updates-high-grouped - 1,000,000 rows
 
@@ -250,12 +250,12 @@ Live updates, high frequency. The grid shows grouped by department (10 collapsed
 
 | Metric | TanStack median (sd) | Infinite median (sd) | Infinite vs TanStack |
 |---|---:|---:|---:|
-| Lag at the end: last update to painted (lower is better) | 3395 ms (±731) | 1068 ms (±579) | 0.31 × (0.30–0.69) **Infinite** |
-| Update delay, p95 (lower is better) | 1934 ms (±91.9) | 941 ms (±15.6) | 0.49 × (0.47–0.53) **Infinite** |
-| Frames committed per second (higher is better) | 0.54 fps (±0.01) | 1.58 fps (±0.11) | 2.93 × (2.55–3.04) **Infinite** |
-| Gap between frames, p95 (lower is better) | 2103 ms (±89.3) | 1075 ms (±95.2) | 0.51 × (0.49–0.61) **Infinite** |
-| Longest gap between frames (lower is better) | 2156 ms (±99.8) | 1125 ms (±141) | 0.52 × (0.50–0.66) **Infinite** |
-| Long tasks: total blocking time (lower is better) | 7165 ms (±708) | 4759 ms (±558) | 0.66 × (0.65–0.85) **Infinite** |
-| Main thread: layout (lower is better) | 1.70 ms (±0.24) | 1.42 ms (±0.06) | 0.84 × (0.79–1.24) ≈ |
-| Main thread: style recalc (lower is better) | 0.00 ms (±0.00) | 0.24 ms (±0.02) | +0.24 (+0.20 to +0.26) **TanStack** |
-| Main thread: all tasks (lower is better) | 7377 ms (±859) | 5050 ms (±579) | 0.68 × (0.62–0.87) **Infinite** |
+| Lag at the end: last update to painted (lower is better) | 3307 ms (±104) | 2189 ms (±536) | 0.66 × (0.30–0.68) **Infinite** |
+| Update delay, p95 (lower is better) | 1884 ms (±66.7) | 931 ms (±22.1) | 0.49 × (0.47–0.52) **Infinite** |
+| Frames committed per second (higher is better) | 0.55 fps (±0.01) | 1.44 fps (±0.12) | 2.63 × (2.35–2.95) **Infinite** |
+| Gap between frames, p95 (lower is better) | 2054 ms (±59.8) | 1227 ms (±76.5) | 0.60 × (0.53–0.63) **Infinite** |
+| Longest gap between frames (lower is better) | 2105 ms (±66.7) | 1296 ms (±84.4) | 0.62 × (0.55–0.65) **Infinite** |
+| Long tasks: total blocking time (lower is better) | 7077 ms (±104) | 5833 ms (±511) | 0.82 × (0.66–0.83) **Infinite** |
+| Main thread: layout (lower is better) | 1.50 ms (±0.03) | 1.46 ms (±0.15) | 0.97 × (0.82–1.11) ≈ |
+| Main thread: style recalc (lower is better) | 0.00 ms (±0.00) | 0.21 ms (±0.05) | +0.21 (+0.16 to +0.29) **TanStack** |
+| Main thread: all tasks (lower is better) | 8029 ms (±474) | 6171 ms (±533) | 0.77 × (0.62–0.86) **Infinite** |
